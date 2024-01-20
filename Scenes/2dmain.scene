@@ -44,7 +44,7 @@
           "Acceleration": 10,
           "GroundAngle": 45,
           "Height": 64,
-          "IgnoreLayers": "player",
+          "IgnoreLayers": "player,bad",
           "Radius": 16,
           "StepHeight": 18
         },
@@ -59,7 +59,8 @@
           "Friction": 7,
           "JumpForce": 200,
           "MaxForce": 50,
-          "Speed": 500
+          "Speed": 500,
+          "Sprint": 1.5
         },
         {
           "__version": 0,
@@ -186,7 +187,8 @@
         {
           "Id": "8ea3d8be-5cd4-430d-a780-b1fb88845aea",
           "Name": "Plane",
-          "Position": "271.5526,204.5551,-3.201454",
+          "Position": "271.5526,188.5552,0",
+          "Scale": "1,1.769026,1",
           "Enabled": true,
           "Components": [
             {
@@ -213,10 +215,10 @@
           ]
         },
         {
-          "Id": "7ee69d36-e6e6-47ab-8622-b440b80c8b1f",
+          "Id": "45b6a1ac-39df-41f6-964a-2fef44f6fe82",
           "Name": "Plane",
-          "Position": "271.5526,182.1552,220.7986",
-          "Rotation": "0.7071068,0,0,0.7071068",
+          "Position": "271.5526,188.5552,444.7986",
+          "Scale": "1,1.769026,1",
           "Enabled": true,
           "Components": [
             {
@@ -271,92 +273,51 @@
               "Surface": null
             }
           ]
+        },
+        {
+          "Id": "933912b4-0807-46da-aa8c-e625a01d8ffe",
+          "Name": "Plane",
+          "Position": "271.5526,143.7552,220.7985",
+          "Rotation": "0.7071068,0,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "0.00465,0.07628,0.2,1"
+            },
+            {
+              "__version": 0,
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
         }
       ]
     },
     {
-      "Id": "d728833e-0439-46b9-bc58-1718bcefacdb",
-      "Name": "badguy",
-      "Position": "-0.00000842075,128,0",
-      "Rotation": "0,0,1,-0.00000004371139",
-      "Tags": "bad",
+      "Id": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
+      "Name": "TerrySpawner",
+      "Position": "-198.6469,-112.3557,141.7877",
       "Enabled": true,
       "Components": [
         {
           "__version": 0,
-          "__type": "SkinnedModelRenderer",
+          "__type": "TerrySpawner",
           "__enabled": true,
-          "BodyGroups": 341,
-          "BoneMergeTarget": null,
-          "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/citizen/citizen.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "CapsuleCollider",
-          "__enabled": true,
-          "End": "0,0,55.6011",
-          "IsTrigger": false,
-          "Radius": 25,
-          "Start": "0,0,0",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__version": 0,
-          "__type": "ModelPhysics",
-          "__enabled": false,
-          "Locking": {},
-          "Model": "models/citizen/citizen.vmdl",
-          "Renderer": "d728833e-0439-46b9-bc58-1718bcefacdb",
-          "RigidbodyFlags": 0
-        }
-      ]
-    },
-    {
-      "Id": "517bdf43-809e-4bd2-8869-37e85c266a9a",
-      "Name": "badguy (1)",
-      "Position": "0.00001124556,-128,0",
-      "Rotation": "0,0,1,-0.00000004371139",
-      "Tags": "bad",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "SkinnedModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 341,
-          "BoneMergeTarget": null,
-          "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/citizen/citizen.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "CapsuleCollider",
-          "__enabled": true,
-          "End": "0,0,55.6011",
-          "IsTrigger": false,
-          "Radius": 25,
-          "Start": "0,0,0",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__version": 0,
-          "__type": "ModelPhysics",
-          "__enabled": false,
-          "Locking": {},
-          "Model": "models/citizen/citizen.vmdl",
-          "Renderer": "517bdf43-809e-4bd2-8869-37e85c266a9a",
-          "RigidbodyFlags": 0
+          "rotation": "-0,0,1,-0.00000004371139",
+          "terry": "prefabs/badguy.prefab"
         }
       ]
     }

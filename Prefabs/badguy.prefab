@@ -1,0 +1,49 @@
+{
+  "RootObject": {
+    "Id": "f9c8e48e-1270-49e1-ba24-455620a78452",
+    "Name": "badguy",
+    "Tags": "bad",
+    "Enabled": true,
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "SkinnedModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 341,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/citizen/citizen.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__version": 0,
+        "__type": "CapsuleCollider",
+        "__enabled": true,
+        "End": "0,0,55.6011",
+        "IsTrigger": false,
+        "Radius": 25,
+        "Start": "0,0,0",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__version": 0,
+        "__type": "CharacterController",
+        "__enabled": true,
+        "Acceleration": 10,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "player",
+        "Radius": 16,
+        "StepHeight": 18
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

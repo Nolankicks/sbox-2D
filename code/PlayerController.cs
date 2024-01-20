@@ -7,7 +7,7 @@ using Sandbox.Citizen;
 
 public sealed class PlayerController : Component
 {
-	
+	[Property] public float Sprint {get; set;} = 3;
 	[Property] public float AirControl {get; set;} = 0.1f;
 	[Property] public float Speed { get; set; } = 100;
 	[Property] public float MaxForce {get; set;} = 50f;
@@ -21,6 +21,7 @@ public sealed class PlayerController : Component
 	public Vector3 WishVelocity = Vector3.Zero;
 	private TimeSince inputTime;
 	Vector3 movement;
+	public bool IsSprinting;
 	public bool IsRunning;
 	protected override void OnStart()
 	{
@@ -28,13 +29,15 @@ public sealed class PlayerController : Component
 	}
 	protected override void OnUpdate()
 	{
-		
+		IsSprinting = Input.Down("Run");
 		var cam = Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
 		var campos = eye.Transform.Position;
 		cam.Transform.Position = campos + Vector3.Backward * 5000f;
 
-
-
+		if (GameObject.Transform.Position.x != 0 )
+		{
+			GameObject.Transform.Position = GameObject.Transform.Position.WithX(0);
+		}
 		
 
 
@@ -94,9 +97,12 @@ public sealed class PlayerController : Component
 			inputTime = 0;
 			body.Transform.Rotation = Rotation.FromYaw(-90);
 		}
+
+		
 		WishVelocity = WishVelocity.WithZ(0);
 		if(!WishVelocity.IsNearZeroLength) WishVelocity = WishVelocity.Normal;
 		WishVelocity *= Speed;
+
 	}
 
 	private void UpdateAnimations()
