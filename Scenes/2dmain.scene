@@ -1,0 +1,194 @@
+{
+  "Id": "6c81aa7f-2c8c-42db-938c-790e829c7c49",
+  "GameObjects": [
+    {
+      "Id": "8cd80a0e-d923-49cd-899a-3d6f9ad0c48e",
+      "Name": "Sun",
+      "Position": "-93.56157,43.42819,122.6602",
+      "Rotation": "-0.00000002046098,0.3432782,-0.000000000000000401287,0.9392339",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "DirectionalLight",
+          "__enabled": true,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+      "Name": "Player",
+      "Tags": "player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "CapsuleCollider",
+          "__enabled": false,
+          "End": "0,0,54.91737",
+          "IsTrigger": false,
+          "Radius": 25,
+          "Start": "0,0,30.37598",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "player",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__version": 0,
+          "__type": "PlayerController",
+          "__enabled": true,
+          "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
+          "Friction": 6,
+          "Gravity": "0,0,800",
+          "JumpForce": 200,
+          "Speed": 100
+        }
+      ],
+      "Children": [
+        {
+          "Id": "1d9e9f4b-0ab0-414c-86fc-7439c6a6ca31",
+          "Name": "body",
+          "Rotation": "0,0,1,-0.00000004371139",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 341,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__version": 0,
+              "__type": "CitizenAnimationHelper",
+              "__enabled": true,
+              "BodyWeight": 1,
+              "EyeSource": null,
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": null,
+              "LookAtEnabled": false,
+              "Target": "1d9e9f4b-0ab0-414c-86fc-7439c6a6ca31"
+            }
+          ]
+        },
+        {
+          "Id": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
+          "Name": "eye",
+          "Position": "0,0,64",
+          "Tags": "player",
+          "Enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "8ea3d8be-5cd4-430d-a780-b1fb88845aea",
+      "Name": "Plane",
+      "Position": "0,0,-32",
+      "Scale": "5,5,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "b6637926-972c-4ba8-aba5-34618d6c7321",
+      "Name": "2D Skybox",
+      "Position": "3792543,374909.2,-325590.2",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SkyBox2D",
+          "__enabled": true,
+          "SkyMaterial": "materials/skybox/light_test_sky_sunny02.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "b5eac303-5b17-4413-99de-ea4873673443",
+      "Name": "Camera",
+      "Position": "-544,0,59.31516",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": true,
+          "OrthographicHeight": 200,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "2dmain",
+  "Description": "",
+  "__references": []
+}
