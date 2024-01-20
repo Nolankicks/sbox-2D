@@ -317,7 +317,60 @@
           "__type": "TerrySpawner",
           "__enabled": true,
           "rotation": "-0,0,1,-0.00000004371139",
-          "terry": "prefabs/badguy.prefab"
+          "terry": "de12a866-f86b-4d28-9771-195ad24e0a2d"
+        }
+      ]
+    },
+    {
+      "Id": "0f861851-d64a-4aa5-bdb2-cd562eabdffc",
+      "Name": "Bullet",
+      "Position": "192,150.7984,32",
+      "Scale": "0.5,0.5,0.5",
+      "Enabled": true,
+      "__Prefab": "prefabs/bullet.prefab"
+    },
+    {
+      "Id": "de12a866-f86b-4d28-9771-195ad24e0a2d",
+      "Name": "badguy",
+      "Position": "288,64,-224",
+      "Tags": "bad",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SkinnedModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "CapsuleCollider",
+          "__enabled": true,
+          "End": "0,0,55.6011",
+          "IsTrigger": false,
+          "Radius": 25,
+          "Start": "0,0,0",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "Shooter",
+          "__enabled": true,
+          "bullet": "prefabs/bullet.prefab"
+        },
+        {
+          "__version": 0,
+          "__type": "TerryManager",
+          "__enabled": true,
+          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
         }
       ]
     }

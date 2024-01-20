@@ -31,14 +31,14 @@
       },
       {
         "__version": 0,
-        "__type": "CharacterController",
+        "__type": "Shooter",
         "__enabled": true,
-        "Acceleration": 10,
-        "GroundAngle": 45,
-        "Height": 64,
-        "IgnoreLayers": "player",
-        "Radius": 16,
-        "StepHeight": 18
+        "bullet": "prefabs/bullet.prefab"
+      },
+      {
+        "__version": 0,
+        "__type": "TerryManager",
+        "__enabled": true
       }
     ]
   },

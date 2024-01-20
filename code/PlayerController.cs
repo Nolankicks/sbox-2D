@@ -96,6 +96,7 @@ public sealed class PlayerController : Component
 			WishVelocity += Vector3.Right * Friction * Speed * Time.Delta;
 			inputTime = 0;
 			body.Transform.Rotation = Rotation.FromYaw(-90);
+			
 		}
 
 		

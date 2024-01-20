@@ -1,0 +1,121 @@
+{
+  "RootObject": {
+    "Id": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+    "Name": "Player",
+    "Tags": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "CapsuleCollider",
+        "__enabled": true,
+        "End": "0,0,54.91737",
+        "IsTrigger": false,
+        "Radius": 25,
+        "Start": "0,0,30.37598",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__version": 0,
+        "__type": "CharacterController",
+        "__enabled": true,
+        "Acceleration": 10,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "player,bad",
+        "Radius": 16,
+        "StepHeight": 18
+      },
+      {
+        "__version": 0,
+        "__type": "PlayerController",
+        "__enabled": true,
+        "AirControl": 0.1,
+        "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+        "cc": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+        "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
+        "Friction": 7,
+        "JumpForce": 200,
+        "MaxForce": 50,
+        "Speed": 500,
+        "Sprint": 1.5
+      },
+      {
+        "__version": 0,
+        "__type": "Attack",
+        "__enabled": true,
+        "animationHelper": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+        "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+        "Damage": 10,
+        "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
+        "holdTypes": "Swing",
+        "Ignore": null,
+        "ParticleEffect": null,
+        "ragdoll": "prefabs/ragdoll.prefab",
+        "Range": 100,
+        "rotation": "-0,0,1,-0.00000004371139",
+        "soundEvent": "sounds/physics/breaking/break_pottery.sound"
+      }
+    ],
+    "Children": [
+      {
+        "Id": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
+        "Name": "eye",
+        "Position": "0,0,64",
+        "Tags": "player",
+        "Enabled": true
+      },
+      {
+        "Id": "41f6be6d-8be0-49c2-8988-7c04db658e01",
+        "Name": "Clothing",
+        "Position": "226.5872,17.69665,22.27161",
+        "Tags": "player",
+        "Enabled": true
+      },
+      {
+        "Id": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+        "Name": "body",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Tags": "player",
+        "Enabled": true,
+        "Components": [
+          {
+            "__version": 0,
+            "__type": "SkinnedModelRenderer",
+            "__enabled": true,
+            "BodyGroups": 341,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__version": 0,
+            "__type": "CitizenAnimationHelper",
+            "__enabled": true,
+            "BodyWeight": 1,
+            "EyeSource": null,
+            "EyesWeight": 1,
+            "HeadWeight": 1,
+            "Height": 1,
+            "IkLeftFoot": null,
+            "IkLeftHand": null,
+            "IkRightFoot": null,
+            "IkRightHand": null,
+            "LookAt": null,
+            "LookAtEnabled": false,
+            "Target": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
