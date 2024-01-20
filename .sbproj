@@ -1,7 +1,7 @@
 {
-  "Title": "2d game test",
+  "Title": "Only2Up",
   "Type": "game",
-  "Org": "local",
+  "Org": "nolankicks",
   "Ident": "2d_game_test",
   "Tags": null,
   "Schema": 1,

@@ -1,0 +1,48 @@
+{
+  "RootObject": {
+    "Id": "ece094c0-7e0a-4748-bcb8-0ec9a0abb62e",
+    "Name": "Ragdoll",
+    "Position": "-0.000005375083,64,0",
+    "Rotation": "0,0,1,-0.00000004371139",
+    "Enabled": true,
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "SkinnedModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 341,
+        "BoneMergeTarget": null,
+        "CreateBoneObjects": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/citizen/citizen.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__version": 0,
+        "__type": "CapsuleCollider",
+        "__enabled": false,
+        "End": "0,0,55.6011",
+        "IsTrigger": false,
+        "Radius": 25,
+        "Start": "0,0,0",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__version": 0,
+        "__type": "ModelPhysics",
+        "__enabled": true,
+        "Locking": {},
+        "Model": "models/citizen/citizen.vmdl",
+        "Renderer": "ece094c0-7e0a-4748-bcb8-0ec9a0abb62e",
+        "RigidbodyFlags": 0
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

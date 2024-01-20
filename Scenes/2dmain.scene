@@ -12,6 +12,8 @@
           "__version": 0,
           "__type": "DirectionalLight",
           "__enabled": true,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
           "LightColor": "0.91373,0.98039,1,1",
           "Shadows": true,
           "SkyColor": "0.05882,0.07451,0.08235,1"
@@ -27,7 +29,7 @@
         {
           "__version": 0,
           "__type": "CapsuleCollider",
-          "__enabled": false,
+          "__enabled": true,
           "End": "0,0,54.91737",
           "IsTrigger": false,
           "Radius": 25,
@@ -50,35 +52,49 @@
           "__version": 0,
           "__type": "PlayerController",
           "__enabled": true,
-          "body": "1d9e9f4b-0ab0-414c-86fc-7439c6a6ca31",
+          "AirControl": 0.1,
+          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+          "cc": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
-          "Friction": 6,
-          "Gravity": "0,0,800",
+          "Friction": 7,
           "JumpForce": 200,
-          "Speed": 100
+          "MaxForce": 50,
+          "Speed": 500
         },
         {
           "__version": 0,
-          "__type": "Rigidbody",
+          "__type": "Attack",
           "__enabled": true,
-          "AngularDamping": 0,
-          "Gravity": false,
-          "LinearDamping": 0,
-          "Locking": {
-            "X": true,
-            "Y": true,
-            "Z": true,
-            "Pitch": true,
-            "Yaw": true,
-            "Roll": true
-          },
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
+          "animationHelper": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+          "Damage": 10,
+          "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
+          "holdTypes": "Swing",
+          "Ignore": null,
+          "ParticleEffect": null,
+          "ragdoll": "prefabs/ragdoll.prefab",
+          "Range": 100,
+          "rotation": "-0,0,1,-0.00000004371139",
+          "soundEvent": "sounds/physics/breaking/break_pottery.sound"
         }
       ],
       "Children": [
         {
-          "Id": "1d9e9f4b-0ab0-414c-86fc-7439c6a6ca31",
+          "Id": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
+          "Name": "eye",
+          "Position": "0,0,64",
+          "Tags": "player",
+          "Enabled": true
+        },
+        {
+          "Id": "41f6be6d-8be0-49c2-8988-7c04db658e01",
+          "Name": "Clothing",
+          "Position": "226.5872,17.69665,22.27161",
+          "Tags": "player",
+          "Enabled": true
+        },
+        {
+          "Id": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
           "Name": "body",
           "Rotation": "0,0,1,-0.00000004371139",
           "Tags": "player",
@@ -112,16 +128,9 @@
               "IkRightHand": null,
               "LookAt": null,
               "LookAtEnabled": false,
-              "Target": "1d9e9f4b-0ab0-414c-86fc-7439c6a6ca31"
+              "Target": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
             }
           ]
-        },
-        {
-          "Id": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
-          "Name": "eye",
-          "Position": "0,0,64",
-          "Tags": "player",
-          "Enabled": true
         }
       ]
     },
@@ -156,7 +165,7 @@
           "FieldOfView": 60,
           "IsMainCamera": true,
           "Orthographic": true,
-          "OrthographicHeight": 400,
+          "OrthographicHeight": 359,
           "Priority": 1,
           "RenderExcludeTags": "",
           "RenderTags": "",
@@ -178,66 +187,6 @@
           "Id": "8ea3d8be-5cd4-430d-a780-b1fb88845aea",
           "Name": "Plane",
           "Position": "271.5526,204.5551,-3.201454",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "ModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "0.00465,0.07628,0.2,1"
-            },
-            {
-              "__version": 0,
-              "__type": "BoxCollider",
-              "__enabled": true,
-              "Center": "0,0,0",
-              "IsTrigger": false,
-              "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
-            }
-          ]
-        },
-        {
-          "Id": "abd812af-e8d4-4e06-a26c-6b0c34aed0bc",
-          "Name": "Plane",
-          "Position": "271.5526,191.7552,60.79855",
-          "Scale": "1,0.2962794,0.3914111",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "ModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 18446744073709551615,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/dev/box.vmdl",
-              "RenderType": "On",
-              "Tint": "0.00465,0.07628,0.2,1"
-            },
-            {
-              "__version": 0,
-              "__type": "BoxCollider",
-              "__enabled": true,
-              "Center": "0,0,0",
-              "IsTrigger": false,
-              "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null
-            }
-          ]
-        },
-        {
-          "Id": "f779c6c1-f019-4671-b792-a998b9a779e0",
-          "Name": "Plane",
-          "Position": "271.5526,220.5552,124.7986",
-          "Scale": "1,0.2962794,0.3914111",
           "Enabled": true,
           "Components": [
             {
@@ -326,10 +275,90 @@
       ]
     },
     {
-      "Id": "3045cdbb-b362-48cc-8f1e-b852c0bb98d3",
-      "Name": "Spawn Platform",
-      "Position": "-506.73,-10.24672,198.9479",
-      "Enabled": true
+      "Id": "d728833e-0439-46b9-bc58-1718bcefacdb",
+      "Name": "badguy",
+      "Position": "-0.00000842075,128,0",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "bad",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SkinnedModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "CapsuleCollider",
+          "__enabled": true,
+          "End": "0,0,55.6011",
+          "IsTrigger": false,
+          "Radius": 25,
+          "Start": "0,0,0",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "ModelPhysics",
+          "__enabled": false,
+          "Locking": {},
+          "Model": "models/citizen/citizen.vmdl",
+          "Renderer": "d728833e-0439-46b9-bc58-1718bcefacdb",
+          "RigidbodyFlags": 0
+        }
+      ]
+    },
+    {
+      "Id": "517bdf43-809e-4bd2-8869-37e85c266a9a",
+      "Name": "badguy (1)",
+      "Position": "0.00001124556,-128,0",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "bad",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SkinnedModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "CapsuleCollider",
+          "__enabled": true,
+          "End": "0,0,55.6011",
+          "IsTrigger": false,
+          "Radius": 25,
+          "Start": "0,0,0",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "ModelPhysics",
+          "__enabled": false,
+          "Locking": {},
+          "Model": "models/citizen/citizen.vmdl",
+          "Renderer": "517bdf43-809e-4bd2-8869-37e85c266a9a",
+          "RigidbodyFlags": 0
+        }
+      ]
     }
   ],
   "SceneProperties": {
