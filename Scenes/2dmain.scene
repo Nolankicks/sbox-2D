@@ -50,11 +50,30 @@
           "__version": 0,
           "__type": "PlayerController",
           "__enabled": true,
+          "body": "1d9e9f4b-0ab0-414c-86fc-7439c6a6ca31",
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "Friction": 6,
           "Gravity": "0,0,800",
           "JumpForce": 200,
           "Speed": 100
+        },
+        {
+          "__version": 0,
+          "__type": "Rigidbody",
+          "__enabled": true,
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": true,
+            "Y": true,
+            "Z": true,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ],
       "Children": [
@@ -107,36 +126,6 @@
       ]
     },
     {
-      "Id": "8ea3d8be-5cd4-430d-a780-b1fb88845aea",
-      "Name": "Plane",
-      "Position": "0,0,-32",
-      "Scale": "5,5,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/dev/box.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
       "Id": "b6637926-972c-4ba8-aba5-34618d6c7321",
       "Name": "2D Skybox",
       "Position": "3792543,374909.2,-325590.2",
@@ -146,7 +135,7 @@
           "__version": 0,
           "__type": "SkyBox2D",
           "__enabled": true,
-          "SkyMaterial": "materials/skybox/light_test_sky_sunny02.vmat",
+          "SkyMaterial": "materials/skybox/light_test_sky_night_basic.vmat",
           "Tint": "1,1,1,1"
         }
       ]
@@ -154,7 +143,7 @@
     {
       "Id": "b5eac303-5b17-4413-99de-ea4873673443",
       "Name": "Camera",
-      "Position": "-544,0,59.31516",
+      "Position": "-672,0,59.31516",
       "Tags": "maincamera",
       "Enabled": true,
       "Components": [
@@ -167,7 +156,7 @@
           "FieldOfView": 60,
           "IsMainCamera": true,
           "Orthographic": true,
-          "OrthographicHeight": 200,
+          "OrthographicHeight": 400,
           "Priority": 1,
           "RenderExcludeTags": "",
           "RenderTags": "",
@@ -177,6 +166,170 @@
           "ZNear": 10
         }
       ]
+    },
+    {
+      "Id": "036f5166-91a3-4fd4-8c16-272f9e1d2e2e",
+      "Name": "Objects",
+      "Position": "-1389.763,-2077.552,-28.79855",
+      "Scale": "5,10,1",
+      "Enabled": true,
+      "Children": [
+        {
+          "Id": "8ea3d8be-5cd4-430d-a780-b1fb88845aea",
+          "Name": "Plane",
+          "Position": "271.5526,204.5551,-3.201454",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "0.00465,0.07628,0.2,1"
+            },
+            {
+              "__version": 0,
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "abd812af-e8d4-4e06-a26c-6b0c34aed0bc",
+          "Name": "Plane",
+          "Position": "271.5526,191.7552,60.79855",
+          "Scale": "1,0.2962794,0.3914111",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "0.00465,0.07628,0.2,1"
+            },
+            {
+              "__version": 0,
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "f779c6c1-f019-4671-b792-a998b9a779e0",
+          "Name": "Plane",
+          "Position": "271.5526,220.5552,124.7986",
+          "Scale": "1,0.2962794,0.3914111",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "0.00465,0.07628,0.2,1"
+            },
+            {
+              "__version": 0,
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "7ee69d36-e6e6-47ab-8622-b440b80c8b1f",
+          "Name": "Plane",
+          "Position": "271.5526,182.1552,220.7986",
+          "Rotation": "0.7071068,0,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "0.00465,0.07628,0.2,1"
+            },
+            {
+              "__version": 0,
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "88154fa6-6c6c-4464-8013-e604cc4f4a25",
+          "Name": "Plane",
+          "Position": "271.5526,230.1552,220.7986",
+          "Rotation": "0.7071068,0,0,0.7071068",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "0.00465,0.07628,0.2,1"
+            },
+            {
+              "__version": 0,
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "3045cdbb-b362-48cc-8f1e-b852c0bb98d3",
+      "Name": "Spawn Platform",
+      "Position": "-506.73,-10.24672,198.9479",
+      "Enabled": true
     }
   ],
   "SceneProperties": {

@@ -1,21 +1,25 @@
 using System;
 using System.Linq;
+using System.Runtime;
 using System.Runtime.Intrinsics.X86;
 using Sandbox;
 using Sandbox.Citizen;
 
 public sealed class PlayerController : Component
 {
+	
 	[Property] public Vector3 Gravity { get; set; } = new Vector3( 0, 0, 800 );
 	[Property] public float Speed { get; set; } = 100;
 	
 	[Property] public float Friction { get; set; } = 6;
 	[Property] public float JumpForce { get; set; } = 900;
 	[Property] public GameObject eye {get; set;}
+	[Property] public SkinnedModelRenderer body {get; set;}
 	CitizenAnimationHelper animationHelper;
 	public Vector3 Velocity;
-	private TimeSince timeSinceJump;
+	private TimeSince inputTime;
 	Vector3 movement;
+	public bool IsRunning;
 	protected override void OnStart()
 	{
 		animationHelper = Components.Get<CitizenAnimationHelper>(FindMode.EverythingInSelfAndChildren);
@@ -25,28 +29,34 @@ public sealed class PlayerController : Component
 		
 		var cam = Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
 		var campos = eye.Transform.Position;
-		cam.Transform.Position = campos + Vector3.Backward *500f;
+		cam.Transform.Position = campos + Vector3.Backward * 5000f;
 
 
 		
 		var cc = Components.Get<CharacterController>(FindMode.EnabledInSelf);
+
 			if (Input.Down("Left"))
 			{
+				body.Transform.Rotation = Rotation.FromYaw(90);
 				movement += Vector3.Left * Friction * Speed * Time.Delta;
+				inputTime = 0;
 			}
 			if (Input.Down("Right"))
 			{
+				body.Transform.Rotation = Rotation.FromYaw(-90);
 				movement += Vector3.Right * Friction * Speed * Time.Delta;
+				inputTime = 0;
 			}
 			Transform.Position = Transform.Position.WithY(Math.Clamp(movement.y, -150, 150));
 
 		if ( animationHelper is not null )
 		{
 			animationHelper.IsGrounded = true;
-			animationHelper.WithWishVelocity( -Velocity );
-			animationHelper.WithVelocity( -Velocity );
+			animationHelper.WithWishVelocity( Velocity );
+			animationHelper.WithVelocity( Velocity );
 			animationHelper.Height = 1f;
 			animationHelper.IsGrounded = cc.IsOnGround;
+			animationHelper.MoveStyle = CitizenAnimationHelper.MoveStyles.Run;
 		}
 		if ( cc.IsOnGround )
 		{
@@ -73,11 +83,15 @@ public sealed class PlayerController : Component
 		}
 		if (Input.Pressed ("Jump"))
 		{
-			cc.Punch( Vector3.Up * 300 );
+			cc.Punch( Vector3.Up * 500 );
 			animationHelper?.TriggerJump();
 		Sound.Play( "ui.navigate.forward" );
-			
+	
 
+	}
+	if (inputTime > 0.1f)
+	{
+		body.Transform.Rotation = Rotation.FromYaw(180);
 	}
 
 	}
@@ -98,5 +112,6 @@ public sealed class PlayerController : Component
 		Sound.Play( "ui.navigate.forward" );
 		
 	}
+
 }
 }
