@@ -26,8 +26,12 @@
           "Components": [
             {
               "__version": 0,
-              "__type": "Menu",
-              "__enabled": true
+              "__type": "PlayAgain",
+              "__enabled": true,
+              "buttonSound": "sounds/kenney/ui/ui.button.press.sound",
+              "playSound": true,
+              "text": "Play Again?",
+              "yes": "scenes/2dmain.scene"
             }
           ]
         }
@@ -49,6 +53,48 @@
           "LightColor": "0.91373,0.98039,1,1",
           "Shadows": true,
           "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "Id": "33f6b509-efb0-411b-b8cf-053bbf0b65c5",
+      "Name": "Camera",
+      "Position": "-549.2794,-284.0362,147.9539",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "Id": "222d4615-4205-4a99-a136-5cc52947a612",
+      "Name": "2D Skybox",
+      "Position": "-461.5023,-371.3358,181.5446",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "SkyBox2D",
+          "__enabled": true,
+          "SkyMaterial": "materials/skybox/light_test_sky_night_basic.vmat",
+          "Tint": "0.13023,0.1163,0.1163,1"
         }
       ]
     }

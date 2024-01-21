@@ -72,17 +72,17 @@
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "holdTypes": "Swing",
           "manager": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+          "punchSound": "sounds/punch.sound",
           "ragdoll": "prefabs/ragdoll.prefab",
           "Range": 50,
           "rotation": "-0,0,1,-0.00000004371139",
-          "soundEvent": "sounds/physics/breaking/break_pottery.sound"
+          "soundEvent": "sounds/punch.sound"
         },
         {
           "__version": 0,
           "__type": "HealthManager",
           "__enabled": true,
-          "manager": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
-          "menu": "scenes/2dmain.scene"
+          "manager": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777"
         },
         {
           "__version": 0,
@@ -179,6 +179,12 @@
           "Viewport": "0,0,1,1",
           "ZFar": 10000,
           "ZNear": 10
+        },
+        {
+          "__version": 0,
+          "__type": "Pixelate",
+          "__enabled": true,
+          "Scale": 0.01
         }
       ]
     },
@@ -367,8 +373,7 @@
           "__version": 0,
           "__type": "TerryManager",
           "__enabled": true,
-          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
-          "shooter": null
+          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
         },
         {
           "__version": 0,
@@ -714,7 +719,7 @@
                                     {
                                       "Id": "f63bedda-f6a5-4f18-9b05-5d191666ab41",
                                       "Name": "arm_elbow_helper_L",
-                                      "Position": "0.0000009025711,0.00001012652,-0.00005871374",
+                                      "Position": "0,0,0",
                                       "Rotation": "0.0000003278255,-0.00000005960464,-0.7577646,0.6525283",
                                       "Tags": "bad",
                                       "Enabled": true
@@ -791,12 +796,12 @@
                                                   "__version": 0,
                                                   "__type": "SkinnedModelRenderer",
                                                   "__enabled": true,
-                                                  "BodyGroups": 17685,
+                                                  "BodyGroups": 9493,
                                                   "BoneMergeTarget": "de12a866-f86b-4d28-9771-195ad24e0a2d",
                                                   "CreateBoneObjects": false,
                                                   "MaterialGroup": null,
                                                   "MaterialOverride": null,
-                                                  "Model": "models/weapons/sbox_pistol_usp/v_usp.vmdl",
+                                                  "Model": "models/weapons/sbox_pistol_usp/w_usp.vmdl",
                                                   "RenderType": "On",
                                                   "Tint": "1,1,1,1"
                                                 }
@@ -1065,7 +1070,7 @@
                     {
                       "Id": "735d73d8-6807-4db0-a589-d7be60007150",
                       "Name": "leg_knee_helper_R",
-                      "Position": "0.00000000005081802,0.00000000004229151,-0.00001144409",
+                      "Position": "0,0,0",
                       "Rotation": "0.0000009241048,-0.000001251698,0.7135268,0.7006278",
                       "Tags": "bad",
                       "Enabled": true
@@ -1082,7 +1087,7 @@
                 {
                   "Id": "0b529dd4-2c68-4fb0-bb68-b2b38e251ca5",
                   "Name": "leg_upper_R_twist0",
-                  "Position": "0.00000000008412826,0.00000000001818989,-0.00001907349",
+                  "Position": "0,0,0",
                   "Rotation": "-0.00000002980232,-0.00000008940697,0.000003069639,1",
                   "Tags": "bad",
                   "Enabled": true
@@ -1090,7 +1095,7 @@
                 {
                   "Id": "7519d331-0cc2-47b6-a9bf-b66b71416a94",
                   "Name": "leg_glute_helper_R",
-                  "Position": "0.00001525887,0.00000000007275958,-0.00001907342",
+                  "Position": "0,0,0",
                   "Rotation": "-0.0000009675612,-0.0000006556511,-0.7071051,0.7071084",
                   "Tags": "bad",
                   "Enabled": true
@@ -1148,7 +1153,7 @@
                     {
                       "Id": "beead1f4-5e41-4c06-9d6e-c11da7953f9c",
                       "Name": "leg_knee_helper_L",
-                      "Position": "-0.00001524856,-0.0000005578382,-0.000007629453",
+                      "Position": "0,0,0",
                       "Rotation": "-0.00000301376,-0.000001609325,0.7135276,0.700627",
                       "Tags": "bad",
                       "Enabled": true
@@ -1172,7 +1177,7 @@
                 {
                   "Id": "8b5e1026-cf01-4c09-8bec-a6f473503fa4",
                   "Name": "leg_glute_helper_L",
-                  "Position": "0.00001525883,0.00000000006093615,-0.000007629318",
+                  "Position": "0,0,0",
                   "Rotation": "-0.0000009520198,-0.0000007748604,-0.7071055,0.7071081",
                   "Tags": "bad",
                   "Enabled": true
@@ -1256,7 +1261,8 @@
         {
           "__version": 0,
           "__type": "Manager",
-          "__enabled": true
+          "__enabled": true,
+          "sceneFile": "scenes/2dmenu.scene"
         }
       ]
     },
@@ -1296,6 +1302,6 @@
   "Title": "2dmain",
   "Description": "",
   "__references": [
-    "facepunch.v_usp"
+    "facepunch.w_usp"
   ]
 }

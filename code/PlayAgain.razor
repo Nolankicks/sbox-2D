@@ -1,0 +1,53 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+
+<root>
+	<div class="text">@text</div>
+	<button @onclick=@changeScene>Yes</button>
+	<button @onclick=@changeScene2>No</button>
+</root>
+
+
+
+
+@code
+{
+
+	[Property] public SceneFile yes { get; set; } //allows the scene to be change in the editor
+
+	[Property] public string text { get; set; } = "Hello World";
+	[Property] public SoundEvent buttonSound {get; set;}
+	[Property] public bool playSound {get; set;}
+	
+	
+	void changeScene() //change scene void to load the newScene defined above
+	{
+		Log.Info("aaa");
+		GameManager.ActiveScene.Load(yes);
+		Sound.Play(buttonSound);
+	}	
+
+
+	
+
+	void changeScene2()
+	{
+		Game.Close();
+
+		Sound.Play(buttonSound);
+	}
+	void buttonMusic()
+	{
+		if (playSound = true)
+		{
+			Sound.Play(buttonSound);
+		}
+		
+	}
+		
+
+
+	protected override int BuildHash() => System.HashCode.Combine( yes, text ); //does some hash shit idk
+}

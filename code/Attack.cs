@@ -17,6 +17,7 @@ public sealed class Attack : Component
 	[Property] float Damage { get; set; } = 10.0f;
 	[Property] public Rotation rotation { get; set; }
 	[Property] public Manager manager {get; set;}
+	[Property] public SoundEvent punchSound {get; set;}
 	protected override void OnUpdate()
 	{
 		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );
@@ -25,7 +26,7 @@ public sealed class Attack : Component
 			Fire();
 			
 			animationHelper.Target.Set("b_attack", true);
-
+			Sound.Play(punchSound);
 	}
 
 

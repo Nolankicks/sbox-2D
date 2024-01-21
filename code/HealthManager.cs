@@ -5,7 +5,7 @@ public sealed class HealthManager : Component
 {
 	public float healthNumber = 100;
 	[Property] public Manager manager {get; set;}
-	[Property] public SceneFile menu { get; set; }
+	//[Property] public SceneFile menu { get; set; }
 	
 	protected override void OnFixedUpdate()
 	{

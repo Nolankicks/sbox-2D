@@ -1,0 +1,168 @@
+PlayAgain
+{
+	.toprighttext {
+		font-size: 15px;
+		font-family: 'Poppins', sans-serif;
+		font-weight: bold;
+	  }
+
+	  .credits {
+		position: absolute; 
+		right: 20;
+		bottom: 20;
+		pointer-events: all;
+		flex-direction: row;
+		padding: 25px;
+		color: #ccc;
+		font-family: Poppins;
+		font-size: 50px;
+	  }
+
+
+
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	border-radius: 20px;
+	pointer-events: all;
+	
+
+	.text
+	{position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    pointer-events: all;
+    flex-direction: row;
+    padding: 60px;
+    color: #ccc;
+    font-family: Poppins;
+    font-size: 100px;}
+
+	.bytext
+	{		position: absolute; 
+		left: 20;
+		bottom: 20;
+		pointer-events: all;
+		flex-direction: row;
+		padding: 25px;
+		color: #ccc;
+		font-family: Poppins;
+		font-size: 50px;}
+	
+	
+	button {
+		padding: 5px 10px;
+		color: #aaa;
+		background-color: #161414;
+		margin: 5px;
+		cursor: pointer;
+		opacity: 1;
+		border-radius: 7px;
+		max-width: 300px;
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	  
+		.title {
+		  font-size: 15px;
+		  font-family: 'Poppins', sans-serif;
+		  font-weight: bold;
+		}
+	  
+		&:hover {
+		  opacity: 1;
+		  background-color: #3555d2;
+		  color: #fff;
+		}
+	  
+		&:active {
+		  background-color: #fff;
+		  color: #e41d1d;
+		}
+	  }
+	  exitbutton {
+		padding: 5px 10px;
+		color: #aaa;
+		background-color: #161414;
+		margin: 5px;
+		cursor: pointer;
+		opacity: 1;
+		border-radius: 7px;
+		max-width: 300px;
+		flex-grow: 1;
+		display: flex;
+
+		justify-content: center;
+		position: absolute; 
+		left: 2850;
+		bottom: 0;
+
+		flex-direction: row;
+
+	  
+		.title {
+		  font-size: 15px;
+		  font-family: 'Poppins', sans-serif;
+		  font-weight: bold;
+		}
+	  
+		&:hover {
+		  opacity: 1;
+		  background-color: #3555d2;
+		  color: #fff;
+		}
+	  
+		&:active {
+		  background-color: #fff;
+		  color: #e41d1d;
+		}
+	  }
+	  creditbutton {
+		padding: 5px 10px;
+		color: #aaa;
+		background-color: #161414;
+		margin: 5px;
+		cursor: pointer;
+		opacity: 1;
+		border-radius: 7px;
+		max-width: 300px;
+		flex-grow: 1;
+		display: flex;
+
+		justify-content: center;
+		position: absolute; 
+		left: 2725;
+		bottom: 0;
+
+		flex-direction: row;
+	  
+		.title {
+			font-size: 15px;
+			font-family: 'Poppins', sans-serif;
+			font-weight: bold;
+		  }
+		
+		  &:hover {
+			opacity: 1;
+			background-color: #3555d2;
+			color: #fff;
+		  }
+		
+		  &:active {
+			background-color: #fff;
+			color: #e41d1d;
+		  }
+	  }
+	  
+
+	}

@@ -3,7 +3,7 @@ using Sandbox;
 
 public sealed class Manager : Component
 {
-	
+	[Property] public SceneFile sceneFile {get; set;}
 	public bool Playing { get; private set; } = false;
 	public long Score { get; private set; } = 0;
 	public long HighScore { get; private set; } = 0;
@@ -40,6 +40,7 @@ public sealed class Manager : Component
 
 		Playing = false;
 		Sandbox.Services.Stats.SetValue( "highscore", Score );
+		GameManager.ActiveScene.Load(sceneFile);
 	}
 
 	
@@ -47,7 +48,7 @@ public sealed class Manager : Component
 	{
 		
 		var score = 0;
-		Score += 1;
+		Score += 5;
 		Score += score;
 		if ( Score > HighScore ) HighScore = Score;
 	}
