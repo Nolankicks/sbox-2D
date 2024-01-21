@@ -5,9 +5,10 @@ using Sandbox.Citizen;
 
 public sealed class Attack : Component
 {
+	public TimeSince timeSinceSpawn { get; set; }
 	[Property] float Range { get; set; }
 
-
+	[Property] public GameObject particleEffect {get; set;}
 	[Property] GameObject eye {get; set;}
 	[Property] SkinnedModelRenderer body {get; set;}
 	[Property] CitizenAnimationHelper animationHelper {get; set;}
@@ -38,16 +39,18 @@ public sealed class Attack : Component
 		var tr = Scene.Trace.Ray(camFoward, camFoward + (camFoward * Range)).WithAnyTags("bad").Run();
 		if (tr.Hit)
 		{
-			
-			
+			var lookDir =  body.Transform.Rotation.Forward;
+			timeSinceSpawn = 0;
 			manager.AddScore();
 			Log.Info("test");
 			var trgo = tr.GameObject;
 			var trgoPos = trgo.Transform.Position;
+			
 			Log.Info(trgo.Name);
 			Sound.Play(soundEvent);
 			trgo.Destroy();
 			var ragdollGo = ragdoll.Clone(trgoPos, rotation);
+			particleEffect.Clone(trgoPos);
 			
 			
 		}

@@ -1,8 +1,8 @@
 {
   "RootObject": {
-    "Id": "41f83c16-f9cd-422b-85f2-b41c01353b00",
+    "Id": "331b2f5e-8ce1-49c9-b5cc-009864f90409",
     "Name": "ragdoll",
-    "Tags": "ragdoll",
+    "Tags": "bad",
     "Enabled": true,
     "Components": [
       {
@@ -35,19 +35,8 @@
         "__enabled": true,
         "Locking": {},
         "Model": "models/citizen/citizen.vmdl",
-        "Renderer": "41f83c16-f9cd-422b-85f2-b41c01353b00",
+        "Renderer": "331b2f5e-8ce1-49c9-b5cc-009864f90409",
         "RigidbodyFlags": 0
-      },
-      {
-        "__version": 0,
-        "__type": "CharacterController",
-        "__enabled": true,
-        "Acceleration": 10,
-        "GroundAngle": 45,
-        "Height": 64,
-        "IgnoreLayers": "player",
-        "Radius": 16,
-        "StepHeight": 18
       },
       {
         "__version": 0,
