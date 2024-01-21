@@ -39,6 +39,7 @@ public sealed class Attack : Component
 		if (tr.Hit)
 		{
 			
+			
 			manager.AddScore();
 			Log.Info("test");
 			var trgo = tr.GameObject;
@@ -46,7 +47,9 @@ public sealed class Attack : Component
 			Log.Info(trgo.Name);
 			Sound.Play(soundEvent);
 			trgo.Destroy();
-			ragdoll.Clone(trgoPos, rotation);
+			var ragdollGo = ragdoll.Clone(trgoPos, rotation);
+			
+			
 		}
 	}
 }

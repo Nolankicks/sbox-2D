@@ -2,7 +2,7 @@
   "UI": false,
   "Volume": "1.00,1.00,0",
   "Pitch": "1.00,1.00,0",
-  "Decibels": 70,
+  "Decibels": 85,
   "SelectionMode": "Random",
   "Sounds": [
     "sounds/zapsplat_impacts_body_hit_punch_or_kick_001_90382.vsnd"

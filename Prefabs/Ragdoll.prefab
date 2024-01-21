@@ -1,7 +1,8 @@
 {
   "RootObject": {
-    "Id": "f130d06b-7055-4755-8bae-55901ea0d7b9",
+    "Id": "41f83c16-f9cd-422b-85f2-b41c01353b00",
     "Name": "ragdoll",
+    "Tags": "ragdoll",
     "Enabled": true,
     "Components": [
       {
@@ -34,7 +35,7 @@
         "__enabled": true,
         "Locking": {},
         "Model": "models/citizen/citizen.vmdl",
-        "Renderer": "f130d06b-7055-4755-8bae-55901ea0d7b9",
+        "Renderer": "41f83c16-f9cd-422b-85f2-b41c01353b00",
         "RigidbodyFlags": 0
       },
       {
