@@ -8,7 +8,7 @@ public sealed class TerrySpawner : Component
 {
 	[Property] public GameObject terry {get; set;}
 	public TimeSince timeSinceSpawn {get; set;}
-	[Property] public Rotation rotation {get; set;}
+
 
 	protected override void OnUpdate()
 	{
@@ -23,7 +23,7 @@ public sealed class TerrySpawner : Component
 		var cc = Scene.Components.GetAll<PlayerController>().FirstOrDefault();
 		var terryGo = terry.Clone();
 		terryGo.Transform.Position = new Vector3(0, Random.Shared.Float(-200, 200), 0);
-		terryGo.Transform.Rotation = rotation;
+		
 		timeSinceSpawn = 0;
 		terryGo.Enabled = true;
 	}

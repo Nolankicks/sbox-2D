@@ -1,0 +1,53 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+
+	@if(Leaderboard is not null)
+			{
+				<div class="leaderboard">
+					@foreach(var entry in Leaderboard.Entries)
+					{
+						
+							<div class="rank">@entry.Rank</div>
+							<div class="name">
+								
+								<label>@entry.DisplayName</label>
+							</div>
+							<div class="value">@entry.FormattedValue</div>
+						</div>
+					}
+				</div>
+			}
+</root>
+
+@code
+{
+
+Sandbox.Services.Leaderboards.Board Leaderboard;
+
+	int Highscore = 0;
+
+	async void FetchLeaderboardInfo()
+	{
+		Leaderboard = Sandbox.Services.Leaderboards.Get( "highscore" );
+		Leaderboard.MaxEntries = 10;
+		await Leaderboard.Refresh();
+		foreach (var entry in Leaderboard.Entries)
+		{
+			if (entry.SteamId == Game.SteamId)
+			{
+				Highscore = (int)entry.Value;
+			}
+
+		}
+	}
+
+        }
+
+
+
+
+
+

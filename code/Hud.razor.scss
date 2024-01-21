@@ -1,0 +1,320 @@
+Hud
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-family: Zyzol;
+	font-size: 24px;
+	color: white;
+	text-shadow: 0 0 8px black;
+
+	> .left
+	{
+		position: absolute;
+		top: 0;
+		left: 32px;
+		width: 450px;
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		gap: 64px;
+
+		> div
+		{
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		> .score
+		{
+			font-size: 42px;
+			min-height: 256px;
+			gap: 16px;
+			width: 100%;
+
+			div
+			{
+				flex-direction: column;
+				align-items: center;
+
+				p
+				{
+					font-size: 64px;
+				}
+			}
+
+			.highscore
+			{
+				font-size: 32px;
+
+				p
+				{
+					font-size: 48px;
+				}
+			}
+		
+		}
+
+		> .leaderboard
+		{
+			h1
+			{
+				font-size: 42px;
+			}
+
+			> .entries
+			{
+				flex-direction: column;
+				align-items: center;
+				width: 85%;
+
+				.entry
+				{
+					justify-content: space-between;
+					gap: 8px;
+					width: 100%;
+					padding: 4px 8px;
+
+					.rank
+					{
+						justify-content: flex-end;
+					}
+
+					.name
+					{
+						flex-grow: 1;
+						gap: 8px;
+
+						image
+						{
+							width: 32px;
+							height: 32px;
+						}
+
+						label
+						{
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							max-width: 200px;
+						}
+					}
+
+					&.me
+					{
+						background-color: rgba( white, 0.1 );
+					}
+				}
+			}
+		}
+	}
+
+	> .right
+	{
+		position: absolute;
+		top: 0;
+		right: 32px;
+		width: 450px;
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		gap: 64px;
+
+		> div
+		{
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.up-next
+		{
+			font-size: 42px;
+			min-height: 256px;
+			gap: 16px;
+
+			.emoji
+			{
+				font-size: 92px;
+				transition: font-size 0.1s ease;
+				flex-grow: 1;
+				align-items: center;
+
+				&.emoji-1
+				{
+					font-size: 32px;
+				}
+
+				&.emoji-2
+				{
+					font-size: 48px;
+				}
+
+				&.emoji-3
+				{
+					font-size: 80px;
+				}
+
+				&.emoji-4
+				{
+					font-size: 100px;
+				}
+
+				&.emoji-5
+				{
+					font-size: 128px;
+				}
+
+			}
+		}
+
+		.circle
+		{
+			font-size: 42px;
+			font-weight: 800;
+			color: white;
+			gap: -64px;
+
+			
+			img
+			{
+				width: 100%;
+				aspect-ratio: 1.074;
+			}
+		}
+	}
+
+	.death-bar
+	{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin-bottom: 24px;
+		opacity: 1;
+		transition: opacity 0.2s ease;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+
+		.bar
+		{
+			background-color: black;
+			width: 600px;
+			height: 42px;
+			padding: 4px;
+			
+			.inner
+			{
+				background-color: rgb(82, 79, 79);
+				width: 100%;
+				height: 100%;
+
+				.fill
+				{
+					background-color: rgb(255, 0, 0);
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+
+		p
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			font-size: 28px;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		&:intro
+		{
+			opacity: 0;
+		}
+
+		&:outro
+		{
+			opacity: 0;
+		}
+	}
+
+	.game-over
+	{
+		opacity: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: all 1s ease;
+		background-color: rgba(black, 0.8);
+		z-index: 100;
+		justify-content: center;
+		align-items: center;
+		
+		> .content
+		{
+			transition: all 1s ease;
+			top: 0px;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: 32px;
+
+			h1
+			{
+				font-size: 128px;		
+			}
+
+			> h2
+			{
+				font-size: 42px;
+			}
+
+			> .content
+			{
+				flex-direction: row;
+				gap: 64px;
+
+				.left
+				{
+					flex-direction: column;
+					align-items: center;
+					font-size: 42px;
+
+					.emoji
+					{
+						font-size: 128px;
+					}
+				}
+
+				.right
+				{
+					flex-direction: column;
+					justify-content: center;
+					font-size: 42px;
+					gap: 32px;
+				}
+			}
+
+			&:intro
+			{
+				top: -32px;
+			}
+		}
+
+		&:intro
+		{
+			opacity: 0;
+			
+		}
+
+	}
+}

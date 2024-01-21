@@ -10,7 +10,7 @@ public sealed class TerryManager : Component
 		
 		if (Transform.Rotation != body.Transform.Rotation)
 		{
-			Transform.Rotation = body.Transform.Rotation;
+			Transform.Rotation = body.Transform.Rotation * Rotation.FromYaw(-180);
 		}
 	}
 }

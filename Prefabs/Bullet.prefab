@@ -1,8 +1,7 @@
 {
   "RootObject": {
-    "Id": "0f861851-d64a-4aa5-bdb2-cd562eabdffc",
-    "Name": "Bullet",
-    "Position": "24.82417,150.7984,32",
+    "Id": "f4aeb249-7085-4e27-94a1-41fc8a614bd7",
+    "Name": "bullet",
     "Scale": "0.5,0.5,0.5",
     "Enabled": true,
     "Components": [
@@ -27,6 +26,16 @@
         "Locking": {},
         "RigidbodyFlags": 0,
         "StartAsleep": false
+      },
+      {
+        "__version": 0,
+        "__type": "SphereCollider",
+        "__enabled": true,
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Radius": 10,
+        "Static": false,
+        "Surface": null
       }
     ]
   },

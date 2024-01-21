@@ -18,6 +18,7 @@ public sealed class Attack : Component
 	[Property] GameObject ragdoll { get; set; }
 	[Property] float Damage { get; set; } = 10.0f;
 	[Property] public Rotation rotation { get; set; }
+	[Property] public Manager manager {get; set;}
 	protected override void OnUpdate()
 	{
 		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );
@@ -39,7 +40,7 @@ public sealed class Attack : Component
 		if (tr.Hit)
 		{
 			
-			
+			manager.ScoreSystem();
 			Log.Info("test");
 			var trgo = tr.GameObject;
 			var trgoPos = trgo.Transform.Position;

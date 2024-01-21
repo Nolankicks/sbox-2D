@@ -1,0 +1,71 @@
+Menu {
+    position: absolute;
+    right: 125px;
+    flex-direction: column;
+    height: 800px;
+    width: 450px;
+    background-color: rgba(223, 37, 37, 0.667);
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px;
+
+    #loadingIcon {
+        top: 30%;
+        width: 150px;
+        height: 150px;
+        background-image: url("ui/BufferingCircle.png");
+        background-size: cover;
+    }
+
+    #categoryTitle {
+        color: white;
+        font-family: Poppins;
+        font-size: 36px;
+    }
+
+    #entryList {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+
+        .entry {
+            color: white;
+            font-size: 24px;
+            font-family: Poppins;
+
+            > * {
+                align-items: center;
+            }
+        }
+
+        .rank {
+            font-size: 36px;
+            width: 20%;
+
+            &.first {
+                color: #FFD700;
+                font-size: 48px;
+            }
+
+            &.second {
+                color: #C0C0C0;
+                font-size: 44px;
+            }
+
+            &.third {
+                color: #CD7F32;
+                font-size: 40px;
+            }
+        }
+
+        .name {
+            font-size: 32px;
+            width: 60%;
+        }
+
+        .score {
+            font-size: 32px;
+            width: 20%;
+        }
+    }
+}

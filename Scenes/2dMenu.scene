@@ -1,0 +1,68 @@
+{
+  "Id": "92553664-2042-4cd8-bebb-1a16c768b8b2",
+  "GameObjects": [
+    {
+      "Id": "4386405e-4e96-4f2e-9058-738be5bbacb6",
+      "Name": "Screen",
+      "Position": "-539.4367,-279.5671,144.0982",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ScreenPanel",
+          "__enabled": true,
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        }
+      ],
+      "Children": [
+        {
+          "Id": "c589043a-8dc1-4eff-90c6-056458029140",
+          "Name": "Object",
+          "Position": "-549.1334,-283.9749,147.9",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "Menu",
+              "__enabled": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "15e543c2-6c7c-4c55-aa34-9bbd448e10a7",
+      "Name": "Sun",
+      "Position": "-549.2794,-284.0362,147.9539",
+      "Rotation": "0,0.7071068,0,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "DirectionalLight",
+          "__enabled": true,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "2dmenu",
+  "Description": "",
+  "__references": []
+}

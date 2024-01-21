@@ -31,7 +31,7 @@
           "__type": "CapsuleCollider",
           "__enabled": true,
           "End": "0,0,54.91737",
-          "IsTrigger": false,
+          "IsTrigger": true,
           "Radius": 25,
           "Start": "0,0,30.37598",
           "Static": false,
@@ -72,11 +72,25 @@
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "holdTypes": "Swing",
           "Ignore": null,
+          "manager": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
           "ParticleEffect": null,
           "ragdoll": "prefabs/ragdoll.prefab",
-          "Range": 100,
+          "Range": 50,
           "rotation": "-0,0,1,-0.00000004371139",
           "soundEvent": "sounds/physics/breaking/break_pottery.sound"
+        },
+        {
+          "__version": 0,
+          "__type": "HealthManager",
+          "__enabled": true,
+          "manager": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+          "menu": "scenes/2dmain.scene"
+        },
+        {
+          "__version": 0,
+          "__type": "HealthTrigger",
+          "__enabled": true,
+          "healthManager": "af9abf97-07b0-4ced-abd7-182deb27c5d1"
         }
       ],
       "Children": [
@@ -249,6 +263,7 @@
           "Name": "Plane",
           "Position": "271.5526,230.1552,220.7986",
           "Rotation": "0.7071068,0,0,0.7071068",
+          "Tags": "bullet,shitter",
           "Enabled": true,
           "Components": [
             {
@@ -316,25 +331,57 @@
           "__version": 0,
           "__type": "TerrySpawner",
           "__enabled": true,
-          "rotation": "-0,0,1,-0.00000004371139",
           "terry": "de12a866-f86b-4d28-9771-195ad24e0a2d"
         }
       ]
     },
     {
       "Id": "0f861851-d64a-4aa5-bdb2-cd562eabdffc",
-      "Name": "Bullet",
-      "Position": "192,150.7984,32",
-      "Scale": "0.5,0.5,0.5",
+      "Name": "BulletPrefab",
+      "Position": "192,864,32",
+      "Scale": "0.2,0.2,0.2",
+      "Tags": "bullet",
       "Enabled": true,
-      "__Prefab": "prefabs/bullet.prefab"
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/sphere.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "Rigidbody",
+          "__enabled": true,
+          "AngularDamping": 0,
+          "Gravity": false,
+          "LinearDamping": 0,
+          "Locking": {},
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__version": 0,
+          "__type": "SphereCollider",
+          "__enabled": true,
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Radius": 10,
+          "Static": false,
+          "Surface": null
+        }
+      ]
     },
     {
       "Id": "de12a866-f86b-4d28-9771-195ad24e0a2d",
       "Name": "badguy",
       "Position": "288,64,-224",
       "Tags": "bad",
-      "Enabled": true,
       "Components": [
         {
           "__version": 0,
@@ -364,13 +411,51 @@
           "__version": 0,
           "__type": "Shooter",
           "__enabled": true,
-          "bullet": "prefabs/bullet.prefab"
+          "bullet": "0f861851-d64a-4aa5-bdb2-cd562eabdffc"
         },
         {
           "__version": 0,
           "__type": "TerryManager",
           "__enabled": true,
           "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
+        }
+      ]
+    },
+    {
+      "Id": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+      "Name": "GameManager",
+      "Position": "93.84215,14.61589,69.92529",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "Manager",
+          "__enabled": true,
+          "LeaderboardName": "highscores",
+          "main": "scenes/2dmain.scene"
+        }
+      ]
+    },
+    {
+      "Id": "2482909b-ba17-466f-8475-a6bb9c3fa9bd",
+      "Name": "Screen",
+      "Position": "604.5613,67.40533,83.3748",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ScreenPanel",
+          "__enabled": true,
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__version": 0,
+          "__type": "Hud",
+          "__enabled": true,
+          "manager": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777"
         }
       ]
     }
