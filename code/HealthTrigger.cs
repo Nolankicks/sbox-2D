@@ -27,6 +27,8 @@ public sealed class HealthTrigger : Component, Component.ITriggerListener //Chan
 
     public void OnTriggerEnter( Collider other )
     {
+		if (!other.GameObject.IsValid)
+		return;
 		if (other.Tags.Has( "bullet" ))
 		{
 			Log.Info( "Triggered" );

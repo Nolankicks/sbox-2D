@@ -4,6 +4,7 @@ using Sandbox;
 public sealed class TerryManager : Component
 {
 	[Property] public SkinnedModelRenderer body {get; set;}
+	[Property] public Shooter shooter {get; set;}
 	protected override void OnUpdate()
 	{
 		

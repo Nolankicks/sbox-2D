@@ -67,10 +67,7 @@ public sealed class PlayerController : Component
 	
 
 	}
-	if (inputTime > 0.1f)
-	{
-		body.Transform.Rotation = Rotation.FromYaw(180);
-	}
+
 		UpdateAnimations();
 	}
 	protected override void OnFixedUpdate()

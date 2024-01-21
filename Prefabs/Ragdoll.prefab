@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "b50ed38a-8075-42ea-afae-aaee91447983",
+    "Id": "f130d06b-7055-4755-8bae-55901ea0d7b9",
     "Name": "ragdoll",
     "Enabled": true,
     "Components": [
@@ -34,7 +34,7 @@
         "__enabled": true,
         "Locking": {},
         "Model": "models/citizen/citizen.vmdl",
-        "Renderer": "b50ed38a-8075-42ea-afae-aaee91447983",
+        "Renderer": "f130d06b-7055-4755-8bae-55901ea0d7b9",
         "RigidbodyFlags": 0
       },
       {
@@ -47,6 +47,11 @@
         "IgnoreLayers": "player",
         "Radius": 16,
         "StepHeight": 18
+      },
+      {
+        "__version": 0,
+        "__type": "Despawner",
+        "__enabled": true
       }
     ]
   },

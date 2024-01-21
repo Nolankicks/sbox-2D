@@ -7,9 +7,7 @@ public sealed class Attack : Component
 {
 	[Property] float Range { get; set; }
 
-	[Property] GameObject ParticleEffect { get; set; }
-	
-	[Property] TagSet Ignore { get; set; }
+
 	[Property] GameObject eye {get; set;}
 	[Property] SkinnedModelRenderer body {get; set;}
 	[Property] CitizenAnimationHelper animationHelper {get; set;}
@@ -40,7 +38,7 @@ public sealed class Attack : Component
 		if (tr.Hit)
 		{
 			
-			manager.ScoreSystem();
+			manager.AddScore();
 			Log.Info("test");
 			var trgo = tr.GameObject;
 			var trgoPos = trgo.Transform.Position;

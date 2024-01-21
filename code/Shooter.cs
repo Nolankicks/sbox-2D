@@ -2,11 +2,13 @@ using System;
 using System.Linq;
 using Microsoft.CSharp.RuntimeBinder;
 using Sandbox;
+using Sandbox.Citizen;
 
 public sealed class Shooter : Component
 {
 	public TimeSince timeSinceShoot;
 	[Property] public GameObject bullet {get; set;}
+	[Property] public CitizenAnimationHelper animationHelper {get; set;}
 	protected override void OnStart()
 	{
 		timeSinceShoot = 0;
@@ -14,13 +16,13 @@ public sealed class Shooter : Component
 	protected override void OnFixedUpdate()
 	{
 		
-
+	animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
 		//GameObject.Transform.Rotation = cc.Transform.Rotation;
 		if (timeSinceShoot > 1f)
 		{
 			timeSinceShoot = 0;
 			Shoot();
-			
+			animationHelper.Target.Set("b_attack", true);
 			
 
 		}
