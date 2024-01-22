@@ -8,6 +8,7 @@ public sealed class HealthTrigger : Component, Component.ITriggerListener //Chan
 
 [Property] public HealthManager healthManager {get; set;}
 [Property] public SoundEvent hurtSound {get; set;}
+[Property] public GameObject emitter {get; set;}
  bool _iTouching; 
 
  public void istouching(bool _iTouching)
@@ -28,6 +29,8 @@ public sealed class HealthTrigger : Component, Component.ITriggerListener //Chan
 
     public void OnTriggerEnter( Collider other )
     {
+		var playerPos = GameObject.Transform.Position;
+		var emitterPose = playerPos + Vector3.Up * 64;
 		if (!other.GameObject.IsValid)
 		return;
 		if (other.Tags.Has( "bullet" ))
@@ -35,6 +38,8 @@ public sealed class HealthTrigger : Component, Component.ITriggerListener //Chan
 			Log.Info( "Triggered" );
 			healthManager.healthNumber -= 25;
 			Sound.Play(hurtSound);
+			emitter.Clone(emitterPose);
+			
 		}
 		//Log.Info( "Triggered" );
         //managerref.EndGame();

@@ -12,10 +12,9 @@ public sealed class Attack : Component
 	[Property] GameObject eye {get; set;}
 	[Property] SkinnedModelRenderer body {get; set;}
 	[Property] CitizenAnimationHelper animationHelper {get; set;}
-	[Property] CitizenAnimationHelper.HoldTypes holdTypes {get; set;}
+
 	[Property] SoundEvent soundEvent { get; set; }
 	[Property] GameObject ragdoll { get; set; }
-	[Property] float Damage { get; set; } = 10.0f;
 	[Property] public Rotation rotation { get; set; }
 	[Property] public Manager manager {get; set;}
 	[Property] public SoundEvent punchSound {get; set;}
@@ -49,7 +48,7 @@ public sealed class Attack : Component
 			Log.Info(trgo.Name);
 			Sound.Play(soundEvent);
 			trgo.Destroy();
-			var ragdollGo = ragdoll.Clone(trgoPos, rotation);
+			//var ragdollGo = ragdoll.Clone(trgoPos, rotation);
 			particleEffect.Clone(trgoPos);
 			
 			

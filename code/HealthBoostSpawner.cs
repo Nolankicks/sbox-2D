@@ -13,6 +13,7 @@ public sealed class HealthBoostSpawner : Component
 			var HealthBoostSpawn = healthBoost.Clone();
 			HealthBoostSpawn.Transform.Position = new Vector3(0, Random.Shared.Float(-200, 200), 0);
 			timeSinceSpawn = 0;
+			
 
 		}
 	}

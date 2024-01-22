@@ -2,9 +2,9 @@ HealthUi
 {
 	position: absolute;
 
+
 	right: 0;
 	bottom: 0;
-
 	justify-content: center;
 	align-items: center;
 	font-weight: bold;
@@ -12,6 +12,7 @@ HealthUi
 
 	.health
 	{
+
 		background-color: #0004;
         border-radius: 6px;
         padding: 20px 40px;
@@ -24,4 +25,5 @@ HealthUi
         gap: 32px;
         backdrop-filter: blur( 40px );
 	}
+
 }
