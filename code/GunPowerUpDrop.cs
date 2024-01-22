@@ -15,8 +15,8 @@ public sealed class GunPowerUpDrop : Component, Component.ITriggerListener //Cha
     {
 		if (other.Tags.Has("player"))
 		{
-			attack.HasGun = true;
-			
+			attack.ShowGun = true;
+			GameObject.Destroy();
 		}
 
 
@@ -30,7 +30,7 @@ public sealed class GunPowerUpDrop : Component, Component.ITriggerListener //Cha
     {
 
 		
-	Log.Info("Out");
+
 	
     
 

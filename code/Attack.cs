@@ -20,8 +20,16 @@ public sealed class Attack : Component
 	[Property] public GameObject bullet {get; set;}
 	[Property] public GameObject gun {get; set;}
 	[Property] public bool HasGun = false;
+	[Property] public bool ShowGun = false;
+	
 	protected override void OnUpdate()
 	{
+		if (ShowGun)
+		{
+			gun.Enabled = true;
+		}
+
+
 		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );
 		if(Input.Pressed("attack1"))
 		{	if (!HasGun)
@@ -32,10 +40,13 @@ public sealed class Attack : Component
 			}
 			else
 			{
+				animationHelper.Target.Set("b_attack", true);
 				Log.Info("test");
 				GunPowerUp();
+							
 			}
 	}
+	
 
 
 
@@ -68,10 +79,12 @@ public sealed class Attack : Component
 }
 public void GunPowerUp()
 {
+	var pos = body.Transform.Position + Vector3.Up * 55;
 	HasGun = true;
 	animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
-	var bulletGo = bullet.Clone(body.Transform.World);
+	var bulletGo = bullet.Clone(pos);
 	var rb = bulletGo.Components.GetInAncestorsOrSelf<Rigidbody>();
-	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 100;
+	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 2000 + Vector3.Up * 64;
+	
 }
 }

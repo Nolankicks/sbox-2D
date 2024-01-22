@@ -25,7 +25,7 @@ public sealed class HealthBoost : Component, Component.ITriggerListener //Change
 		healthManager.healthNumber += 50;
 		Sound.Play(healthSound);
 		GameObject.Destroy();
-    crushedCan.Clone(GameObject.Transform.Position);
+    	crushedCan.Clone(GameObject.Transform.Position);
 	}
 		
 

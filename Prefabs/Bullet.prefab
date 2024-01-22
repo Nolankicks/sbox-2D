@@ -1,8 +1,8 @@
 {
   "RootObject": {
-    "Id": "f4aeb249-7085-4e27-94a1-41fc8a614bd7",
+    "Id": "74b7fcbb-df63-4c3f-8ce3-73a5b9ef6009",
     "Name": "bullet",
-    "Scale": "0.5,0.5,0.5",
+    "Scale": "0.2,0.2,0.2",
     "Enabled": true,
     "Components": [
       {
