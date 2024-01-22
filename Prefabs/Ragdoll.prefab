@@ -6,9 +6,7 @@
     "Enabled": true,
     "Components": [
       {
-        "__version": 0,
         "__type": "SkinnedModelRenderer",
-        "__enabled": true,
         "BodyGroups": 341,
         "BoneMergeTarget": null,
         "CreateBoneObjects": false,
@@ -19,7 +17,6 @@
         "Tint": "1,1,1,1"
       },
       {
-        "__version": 0,
         "__type": "CapsuleCollider",
         "__enabled": false,
         "End": "0,0,55.6011",
@@ -30,18 +27,18 @@
         "Surface": null
       },
       {
-        "__version": 0,
         "__type": "ModelPhysics",
-        "__enabled": true,
         "Locking": {},
         "Model": "models/citizen/citizen.vmdl",
-        "Renderer": "331b2f5e-8ce1-49c9-b5cc-009864f90409",
+        "Renderer": {
+          "_type": "component",
+          "go": "331b2f5e-8ce1-49c9-b5cc-009864f90409",
+          "component_type": "SkinnedModelRenderer"
+        },
         "RigidbodyFlags": 0
       },
       {
-        "__version": 0,
-        "__type": "Despawner",
-        "__enabled": true
+        "__type": "Despawner"
       }
     ]
   },

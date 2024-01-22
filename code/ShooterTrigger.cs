@@ -9,6 +9,7 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener //Cha
  bool _iTouching; 
  [Property] public GameObject badguy {get; set;}
  [Property] public GameObject particleEffect {get; set;}
+ [Property] public GameObject ragdoll {get; set;}
 
 
  public void istouching(bool _iTouching)
@@ -31,12 +32,13 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener //Cha
     {
 		if (!other.GameObject.IsValid)
 		return;
-		var pos = badguy.Transform.Position;		
+		var pos = badguy.Transform.Position;	
+		var rot = badguy.Transform.Rotation;	
 		if (other.GameObject.Tags.Has("playerbullet"))
 		{
 			particleEffect.Clone(pos);
 			badguy.Destroy();
-			
+			ragdoll.Clone(pos, rot);
 		}		
 			
 		

@@ -79,6 +79,7 @@ public sealed class Attack : Component
 			//var ragdollGo = ragdoll.Clone(trgoPos, rotation);
 			particleEffect.Clone(trgoPos);
 			timeSincepowerUp = 0;
+			ragdoll.Clone(trgoPos, rotation);
 			}
 			}
 		}
