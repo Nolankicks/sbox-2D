@@ -11,7 +11,7 @@
           "__type": "HealthBoostSpawner",
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 3508.1833
+            "Relative": 883.8779
           }
         }
       ]
@@ -109,7 +109,7 @@
           "rotation": "-0,0,1,-0.00000004371139",
           "soundEvent": "sounds/punch.sound",
           "timeSincepowerUp": {
-            "Relative": 3508.1833
+            "Relative": 883.8779
           }
         },
         {
@@ -1135,23 +1135,6 @@
                   "Enabled": true
                 }
               ]
-            }
-          ]
-        },
-        {
-          "Id": "0907090a-3438-4684-9508-2760c6246e45",
-          "Name": "Collider",
-          "Tags": "player",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "CapsuleCollider",
-              "End": "0,0,54.917",
-              "IsTrigger": false,
-              "Radius": 25,
-              "Start": "0,0,30.376",
-              "Static": false,
-              "Surface": null
             }
           ]
         }
@@ -2366,11 +2349,6 @@
         {
           "__type": "GunPowerUpDrop",
           "announcerVoice": "sounds/youhavereviedagun.sound",
-          "attack": {
-            "_type": "component",
-            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
-            "component_type": "Attack"
-          },
           "equipSound": "sounds/equipsound.sound"
         }
       ]
