@@ -36,6 +36,7 @@ public sealed class Attack : Component
 					HasGun = false;
 					ShowGun = false;
 					gun.Enabled = false;
+					
 				}
 
 		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );
@@ -60,13 +61,11 @@ public sealed class Attack : Component
 		var camFoward = animationHelper.EyeWorldTransform.Position;
 		var tr = Scene.Trace.Ray(camFoward, camFoward + (camFoward * Range)).WithAnyTags("bad").Run();
 		
-			if (Input.Pressed("attack1"))
+			if (Input.Pressed("attack1") && tr.Hit && !HasGun)
 			{
-			if (!HasGun)
-			{
-				Sound.Play(punchSound);
-			if (tr.Hit)
-		{
+			
+			
+		
 			
 			var lookDir =  body.Transform.Rotation.Forward;
 			timeSinceSpawn = 0;
@@ -79,17 +78,17 @@ public sealed class Attack : Component
 			trgo.Destroy();
 			//var ragdollGo = ragdoll.Clone(trgoPos, rotation);
 			particleEffect.Clone(trgoPos);
+			timeSincepowerUp = 0;
 			}
 			}
 		}
-	}
-}
+	
+
 void GunPowerUp()
 {
-	if (Input.Pressed("attack1"))
+	if (Input.Pressed("attack1") && HasGun)
 	{
-		if (HasGun)
-		{
+
 			var camFoward = animationHelper.EyeWorldTransform.Position;
 	var pos = body.Transform.Position + Vector3.Up * 55;
 	HasGun = true;
@@ -98,7 +97,7 @@ void GunPowerUp()
 	var rb = bulletGo.Components.GetInAncestorsOrSelf<Rigidbody>();
 	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 2000 + Vector3.Up * 64;
 	Sound.Play(gunSound);
-		}
+		timeSincepowerUp = 0;
 	}
 	
 
