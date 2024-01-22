@@ -21,6 +21,7 @@ public sealed class Attack : Component
 	[Property] public GameObject gun {get; set;}
 	[Property] public bool HasGun = false;
 	[Property] public bool ShowGun = false;
+	[Property] TimeSince timeSincepowerUp {get; set;}
 	
 	protected override void OnUpdate()
 	{
@@ -43,7 +44,13 @@ public sealed class Attack : Component
 				animationHelper.Target.Set("b_attack", true);
 				Log.Info("test");
 				GunPowerUp();
-							
+				timeSincepowerUp = 0;
+				if (timeSincepowerUp > 10)
+				{
+					HasGun = false;
+					ShowGun = false;
+					gun.Enabled = false;
+				}
 			}
 	}
 	

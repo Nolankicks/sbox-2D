@@ -13,7 +13,7 @@
           "__enabled": true,
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 1580.4077
+            "Relative": 2287.3154
           }
         }
       ]
@@ -84,6 +84,7 @@
           "__type": "Attack",
           "__enabled": true,
           "HasGun": false,
+          "ShowGun": false,
           "animationHelper": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
           "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
           "bullet": "prefabs/bullet.prefab",
@@ -96,7 +97,10 @@
           "ragdoll": "prefabs/ragdoll.prefab",
           "Range": 75,
           "rotation": "-0,0,1,-0.00000004371139",
-          "soundEvent": "sounds/punch.sound"
+          "soundEvent": "sounds/punch.sound",
+          "timeSincepowerUp": {
+            "Relative": 2287.3154
+          }
         },
         {
           "__version": 0,
@@ -2327,6 +2331,7 @@
           "__version": 0,
           "__type": "GunPowerUpDrop",
           "__enabled": true,
+          "announcerVoice": "sounds/youhavereviedagun.sound",
           "attack": "af9abf97-07b0-4ced-abd7-182deb27c5d1"
         }
       ]

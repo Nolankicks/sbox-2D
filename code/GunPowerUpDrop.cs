@@ -5,6 +5,7 @@ public sealed class GunPowerUpDrop : Component, Component.ITriggerListener //Cha
 {
 
  [Property] public Attack attack {get; set;}
+ [Property] public SoundEvent announcerVoice {get; set;}
  
 
 
@@ -16,7 +17,9 @@ public sealed class GunPowerUpDrop : Component, Component.ITriggerListener //Cha
 		if (other.Tags.Has("player"))
 		{
 			attack.ShowGun = true;
+			attack.HasGun = true;
 			GameObject.Destroy();
+			Sound.Play(announcerVoice);
 		}
 
 
