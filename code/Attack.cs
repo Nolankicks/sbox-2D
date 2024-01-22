@@ -46,7 +46,6 @@ public sealed class Attack : Component
 			var trgoPos = trgo.Transform.Position;
 			Sound.Play(deathSound);
 			Log.Info(trgo.Name);
-			Sound.Play(soundEvent);
 			trgo.Destroy();
 			//var ragdollGo = ragdoll.Clone(trgoPos, rotation);
 			particleEffect.Clone(trgoPos);
