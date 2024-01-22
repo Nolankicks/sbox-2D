@@ -12,10 +12,11 @@ public sealed class GunItemSpawner : Component
 		GetRandomNumber();
 		var random = GetRandomNumber();
         
-        Log.Info(random);
+        
 		if (random > 99.9f)
 		{
 			var gunClone = gun.Clone();
+			
 			gunClone.Transform.Position = new Vector3(0, Random.Shared.Float(-150, 150), 0);
 		}
     }

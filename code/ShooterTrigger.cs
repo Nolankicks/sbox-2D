@@ -10,6 +10,7 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener //Cha
  [Property] public GameObject badguy {get; set;}
  [Property] public GameObject particleEffect {get; set;}
 
+
  public void istouching(bool _iTouching)
  {
 		if (_iTouching == true)
@@ -35,6 +36,7 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener //Cha
 		{
 			particleEffect.Clone(pos);
 			badguy.Destroy();
+			
 		}		
 			
 		

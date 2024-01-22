@@ -1,8 +1,7 @@
 {
   "RootObject": {
-    "Id": "fb8e96e0-55fb-4bdb-add9-e4e11de4c813",
-    "Name": "GunItem",
-    "Position": "0,-282.8165,0",
+    "Id": "1e06d7a1-3650-43bc-9587-cdde99141cc6",
+    "Name": "gunitem",
     "Scale": "10,10,10",
     "Enabled": true,
     "Components": [
@@ -30,11 +29,7 @@
       {
         "__type": "GunPowerUpDrop",
         "announcerVoice": "sounds/youhavereviedagun.sound",
-        "attack": {
-          "_type": "component",
-          "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
-          "component_type": "Attack"
-        }
+        "equipSound": "sounds/equipsound.sound"
       }
     ]
   },

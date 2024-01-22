@@ -23,6 +23,7 @@ public sealed class Attack : Component
 	[Property] public bool ShowGun = false;
 	[Property] float gunRange {get; set;}
 	[Property] TimeSince timeSincepowerUp {get; set;}
+	[Property] public SoundEvent gunSound {get; set;}
 	
 	protected override void OnUpdate()
 	{
@@ -51,7 +52,7 @@ public sealed class Attack : Component
 				
 				GunPowerUp();
 				timeSincepowerUp = 0;
-
+				Sound.Play(gunSound);
 			}
 	}
 	

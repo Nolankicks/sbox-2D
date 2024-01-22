@@ -1,0 +1,16 @@
+{
+  "UI": true,
+  "Volume": "1.00,1.00,0",
+  "Pitch": "1.00,1.00,0",
+  "Decibels": 90,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/physics/props/ammo_clip_shotgun/contents_01.vsnd",
+    "sounds/physics/props/ammo_clip_shotgun/contents_02.vsnd",
+    "sounds/physics/props/ammo_clip_shotgun/contents_03.vsnd",
+    "sounds/physics/props/ammo_clip_shotgun/contents_04.vsnd",
+    "sounds/physics/props/ammo_clip_shotgun/contents_05.vsnd",
+    "sounds/physics/props/ammo_clip_shotgun/contents_06.vsnd"
+  ],
+  "__references": []
+}

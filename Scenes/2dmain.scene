@@ -11,7 +11,7 @@
           "__type": "HealthBoostSpawner",
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 1608.3622
+            "Relative": 3508.1833
           }
         }
       ]
@@ -96,6 +96,7 @@
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "gun": "a3f2fcf3-c2f1-49f9-b23e-928abcbedb8f",
           "gunRange": 10000,
+          "gunSound": "sounds/shootsound.sound",
           "manager": {
             "_type": "component",
             "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
@@ -108,7 +109,7 @@
           "rotation": "-0,0,1,-0.00000004371139",
           "soundEvent": "sounds/punch.sound",
           "timeSincepowerUp": {
-            "Relative": 1608.3622
+            "Relative": 3508.1833
           }
         },
         {
@@ -1134,6 +1135,23 @@
                   "Enabled": true
                 }
               ]
+            }
+          ]
+        },
+        {
+          "Id": "0907090a-3438-4684-9508-2760c6246e45",
+          "Name": "Collider",
+          "Tags": "player",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "CapsuleCollider",
+              "End": "0,0,54.917",
+              "IsTrigger": false,
+              "Radius": 25,
+              "Start": "0,0,30.376",
+              "Static": false,
+              "Surface": null
             }
           ]
         }
@@ -2311,9 +2329,49 @@
           "Components": [
             {
               "__type": "GunItemSpawner",
-              "gun": "prefabs/gunitem.prefab"
+              "gun": "85b6c928-87d4-47e2-9370-42ad3c2f61a2"
             }
           ]
+        }
+      ]
+    },
+    {
+      "Id": "85b6c928-87d4-47e2-9370-42ad3c2f61a2",
+      "Name": "gunitem",
+      "Position": "384,-384,-896.6002",
+      "Scale": "10,10,10",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 17685,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/weapons/sbox_pistol_usp/v_usp.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Spinner",
+          "rotation": "0,0,0.008726535,0.9999619"
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,4.499999",
+          "IsTrigger": true,
+          "Scale": "-13.10016,6.699959,9.899861",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "GunPowerUpDrop",
+          "announcerVoice": "sounds/youhavereviedagun.sound",
+          "attack": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "Attack"
+          },
+          "equipSound": "sounds/equipsound.sound"
         }
       ]
     }
