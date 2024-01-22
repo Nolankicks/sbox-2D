@@ -7,7 +7,6 @@ public sealed class Attack : Component
 {
 	public TimeSince timeSinceSpawn { get; set; }
 	[Property] float Range { get; set; }
-
 	[Property] public GameObject particleEffect {get; set;}
 	[Property] GameObject eye {get; set;}
 	[Property] SkinnedModelRenderer body {get; set;}
@@ -18,16 +17,29 @@ public sealed class Attack : Component
 	[Property] public Rotation rotation { get; set; }
 	[Property] public Manager manager {get; set;}
 	[Property] public SoundEvent punchSound {get; set;}
+	[Property] public GameObject bullet {get; set;}
+	[Property] public GameObject gun {get; set;}
+	[Property] public bool HasGun = false;
 	protected override void OnUpdate()
 	{
 		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );
 		if(Input.Pressed("attack1"))
-		{
+		{	if (!HasGun)
+			{
 			Fire();
-			
 			animationHelper.Target.Set("b_attack", true);
 			Sound.Play(punchSound);
+			}
+			else
+			{
+				Log.Info("test");
+				GunPowerUp();
+			}
 	}
+
+
+
+
 
 
 	void Fire()
@@ -53,5 +65,13 @@ public sealed class Attack : Component
 			
 		}
 	}
+}
+public void GunPowerUp()
+{
+	HasGun = true;
+	animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
+	var bulletGo = bullet.Clone(body.Transform.World);
+	var rb = bulletGo.Components.GetInAncestorsOrSelf<Rigidbody>();
+	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 100;
 }
 }

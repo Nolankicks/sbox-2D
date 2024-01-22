@@ -13,7 +13,7 @@
           "__enabled": true,
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 2419.2888
+            "Relative": 4164.1104
           }
         }
       ]
@@ -83,10 +83,13 @@
           "__version": 0,
           "__type": "Attack",
           "__enabled": true,
+          "HasGun": false,
           "animationHelper": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
           "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+          "bullet": null,
           "deathSound": "sounds/deathsound.sound",
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
+          "gun": null,
           "manager": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
           "particleEffect": "prefabs/burst.prefab",
           "punchSound": "sounds/punch.sound",
@@ -108,12 +111,6 @@
           "emitter": "prefabs/burst.prefab",
           "healthManager": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
           "hurtSound": "sounds/kenney/ui/ui.downvote.sound"
-        },
-        {
-          "__version": 0,
-          "__type": "Footstep",
-          "__enabled": true,
-          "Source": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
         }
       ],
       "Children": [
@@ -1426,7 +1423,6 @@
           "Id": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
           "Name": "TerrySpawner",
           "Position": "702.6836,129.6039,-274.7043",
-          "Enabled": true,
           "Components": [
             {
               "__version": 0,
@@ -1435,6 +1431,48 @@
               "terry": "de12a866-f86b-4d28-9771-195ad24e0a2d"
             }
           ]
+        }
+      ]
+    },
+    {
+      "Id": "fb8e96e0-55fb-4bdb-add9-e4e11de4c813",
+      "Name": "GunItem",
+      "Position": "0,-282.8165,0",
+      "Scale": "10,10,10",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 17685,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/weapons/sbox_pistol_usp/v_usp.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__version": 0,
+          "__type": "Spinner",
+          "__enabled": true,
+          "rotation": "0,0,0.008726535,0.9999619"
+        },
+        {
+          "__version": 0,
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,4.499999",
+          "IsTrigger": true,
+          "Scale": "-13.10016,6.699959,9.899861",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__version": 0,
+          "__type": "GunPowerUpDrop",
+          "__enabled": true,
+          "attack": "af9abf97-07b0-4ced-abd7-182deb27c5d1"
         }
       ]
     }
@@ -1452,6 +1490,7 @@
   "Description": "",
   "__references": [
     "caro.sky_001",
+    "facepunch.v_usp",
     "facepunch.w_usp"
   ]
 }

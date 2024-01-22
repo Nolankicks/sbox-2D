@@ -7,6 +7,7 @@ public sealed class HealthBoost : Component, Component.ITriggerListener //Change
  bool _iTouching; 
 
 [Property] public SoundEvent healthSound {get; set;}
+[Property] public GameObject crushedCan {get; set;}
 	
 
 
@@ -24,6 +25,7 @@ public sealed class HealthBoost : Component, Component.ITriggerListener //Change
 		healthManager.healthNumber += 50;
 		Sound.Play(healthSound);
 		GameObject.Destroy();
+    crushedCan.Clone(GameObject.Transform.Position);
 	}
 		
 

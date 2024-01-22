@@ -1,17 +1,10 @@
 {
   "RootObject": {
-    "Id": "93caa79e-c407-443c-867a-43bce05d78be",
-    "Name": "healthboost",
+    "Id": "82314eaa-06aa-453b-a49a-834805635560",
+    "Name": "crushedcan",
     "Scale": "15,15,15",
     "Enabled": true,
     "Components": [
-      {
-        "__version": 0,
-        "__type": "HealthBoost",
-        "__enabled": true,
-        "crushedCan": "prefabs/crushedcan.prefab",
-        "healthSound": "sounds/kenney/ui/ui.favourite.sound"
-      },
       {
         "__version": 0,
         "__type": "ModelRenderer",
@@ -19,15 +12,9 @@
         "BodyGroups": 18446744073709551615,
         "MaterialGroup": null,
         "MaterialOverride": null,
-        "Model": "models/sbox_props/cola_can/cola_can.vmdl",
+        "Model": "models/sbox_props/cola_can/cola_can_gib.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1"
-      },
-      {
-        "__version": 0,
-        "__type": "Spinner",
-        "__enabled": true,
-        "rotation": "0,0,0.008726535,0.9999619"
       },
       {
         "__version": 0,
@@ -37,6 +24,23 @@
         "Model": "models/sbox_props/cola_can/cola_can.vmdl",
         "Static": false,
         "Surface": null
+      },
+      {
+        "__version": 0,
+        "__type": "Spinner",
+        "__enabled": true,
+        "rotation": "0,0,0.008726535,0.9999619"
+      },
+      {
+        "__version": 0,
+        "__type": "CrushedCan",
+        "__enabled": true,
+        "crushedCan": "sounds/deathsound.sound"
+      },
+      {
+        "__version": 0,
+        "__type": "CanDespawner",
+        "__enabled": true
       }
     ]
   },
@@ -44,6 +48,7 @@
   "MenuPath": null,
   "MenuIcon": null,
   "__references": [
+    "facepunch.cola_can_gib",
     "facepunch.soda_can"
   ]
 }
