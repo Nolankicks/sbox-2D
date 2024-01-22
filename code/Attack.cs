@@ -44,7 +44,7 @@ public sealed class Attack : Component
 			Log.Info("test");
 			var trgo = tr.GameObject;
 			var trgoPos = trgo.Transform.Position;
-			Sound.Play()
+			Sound.Play(deathSound);
 			Log.Info(trgo.Name);
 			Sound.Play(soundEvent);
 			trgo.Destroy();
