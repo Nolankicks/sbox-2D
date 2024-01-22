@@ -11,7 +11,7 @@
           "__type": "HealthBoostSpawner",
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 499.27295
+            "Relative": 1418.6737
           }
         }
       ]
@@ -2236,6 +2236,11 @@
             {
               "__type": "ShooterTrigger",
               "badguy": "de12a866-f86b-4d28-9771-195ad24e0a2d",
+              "manager": {
+                "_type": "component",
+                "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+                "component_type": "Manager"
+              },
               "particleEffect": "prefabs/burst.prefab",
               "ragdoll": "prefabs/ragdoll.prefab"
             }

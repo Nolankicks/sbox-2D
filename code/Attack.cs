@@ -39,6 +39,10 @@ public sealed class Attack : Component
 		{
 			timeSinceSpawn = 0;
 		}
+		if (!ShowGun)
+		{
+			gun.Enabled = false;
+		}
 
 		
 
@@ -86,7 +90,7 @@ public sealed class Attack : Component
 			//var ragdollGo = ragdoll.Clone(trgoPos, rotation);
 			particleEffect.Clone(trgoPos);
 			
-			var ragdollClone = ragdoll.Clone(trgoPos + Vector3.Backward * 100, spawnRot);
+			var ragdollClone = ragdoll.Clone(trgoPos + Vector3.Backward * 75, spawnRot);
 			var ragdollRb = ragdollClone.Components.GetInAncestorsOrSelf<Rigidbody>();
 			ragdollRb.Velocity = rotation.Forward * 1000;
 			

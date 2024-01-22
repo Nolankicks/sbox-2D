@@ -1,23 +1,20 @@
 using System;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
+
 using Sandbox;
 
 public sealed class TerrySpawner : Component
 {
 	[Property] public GameObject terry {get; set;}
-	
+	public float GetRandom() => Random.Shared.Float(1, 100);
 	public TimeSince timeSinceSpawn {get; set;}
 
 
 	protected override void OnUpdate()
 	{
 		var cc = Scene.Components.GetAll<CharacterController>();
-		if (timeSinceSpawn > 3f)
-		{
-			SpawnTerry();
-		}
+		
 	}
 	void SpawnTerry()
 	{
@@ -28,4 +25,18 @@ public sealed class TerrySpawner : Component
 		timeSinceSpawn = 0;
 		terryGo.Enabled = true;
 	}
+TimeUntil nextSecond = 0f;
+protected override void OnFixedUpdate(){
+	
+  if(nextSecond){
+	GetRandom();
+    var random = GetRandom();
+		if (random >= 75f)
+		{
+			SpawnTerry();
+		}
+    nextSecond = 1;
+	Log.Info(random);
+  }
+}
 }

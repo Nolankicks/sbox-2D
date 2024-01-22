@@ -31,7 +31,7 @@ public sealed class Shooter : Component
 	void Shoot()
 	{
 		timeSinceShoot = 0;
-		var bulletGo = bullet.Clone(GameObject.Transform.Position + Vector3.Up * 45f);
+		var bulletGo = bullet.Clone(GameObject.Transform.Position + Vector3.Up * 40f);
 		var rb = bulletGo.Components.Get<Rigidbody>();
 		rb.Velocity = GameObject.Transform.Rotation.Forward * 500f;
 	}
