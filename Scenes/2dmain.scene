@@ -11,7 +11,7 @@
           "__type": "HealthBoostSpawner",
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 848.57275
+            "Relative": 499.27295
           }
         }
       ]
@@ -96,6 +96,7 @@
           "deathSound": "sounds/deathsound.sound",
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "gun": "a3f2fcf3-c2f1-49f9-b23e-928abcbedb8f",
+          "GunEnabled": false,
           "gunRange": 10000,
           "gunSound": "sounds/shootsound.sound",
           "manager": {

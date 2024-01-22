@@ -26,6 +26,7 @@ public sealed class Attack : Component
 	[Property] float gunRange {get; set;}
 	[Property] bool GunEnabled {get; set;} = false;
 	[Property] public SoundEvent gunSound {get; set;}
+
 	
 	protected override void OnUpdate()
 	{
@@ -96,6 +97,8 @@ public sealed class Attack : Component
 
 void GunPowerUp()
 {
+	
+	
 	if (timeSinceSpawn > 10)
 	{
 		HasGun = false;
@@ -104,6 +107,7 @@ void GunPowerUp()
 	}
 	if (Input.Pressed("attack1") && HasGun)
 	{
+		
 	GunEnabled = true;
 	var camFoward = animationHelper.EyeWorldTransform.Position;
 	var pos = body.Transform.Position + Vector3.Up * 55;
@@ -111,9 +115,10 @@ void GunPowerUp()
 	animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
 	var bulletGo = bullet.Clone(pos);
 	var rb = bulletGo.Components.GetInAncestorsOrSelf<Rigidbody>();
-	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 2000 + Vector3.Up * 64;
+	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 2000 + Vector3.Up * 55;
 	Sound.Play(gunSound);
 	ShowGun = true;
+	
 	
 	}
 	
