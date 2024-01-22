@@ -1,2 +1,11 @@
-<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
-{ data = {} }
+{
+  "UI": false,
+  "Volume": "1.00,1.00,0",
+  "Pitch": "1.00,1.00,0",
+  "Decibels": 90,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/elevenlabs_2024-01-22t16_29_02_adam_pre_s50_sb75_se0_b_m2.vsnd"
+  ],
+  "__references": []
+}

@@ -29,7 +29,12 @@ public sealed class Attack : Component
 		{
 			gun.Enabled = true;
 		}
-
+						if (timeSincepowerUp > 10)
+				{
+					HasGun = false;
+					ShowGun = false;
+					gun.Enabled = false;
+				}
 
 		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );
 		if(Input.Pressed("attack1"))
@@ -45,12 +50,7 @@ public sealed class Attack : Component
 				Log.Info("test");
 				GunPowerUp();
 				timeSincepowerUp = 0;
-				if (timeSincepowerUp > 10)
-				{
-					HasGun = false;
-					ShowGun = false;
-					gun.Enabled = false;
-				}
+
 			}
 	}
 	

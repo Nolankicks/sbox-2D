@@ -13,7 +13,7 @@
           "__enabled": true,
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 2287.3154
+            "Relative": 319.63434
           }
         }
       ]
@@ -99,7 +99,7 @@
           "rotation": "-0,0,1,-0.00000004371139",
           "soundEvent": "sounds/punch.sound",
           "timeSincepowerUp": {
-            "Relative": 2287.3154
+            "Relative": 319.63434
           }
         },
         {
@@ -2255,6 +2255,13 @@
           "__type": "HealthUi",
           "__enabled": true,
           "health": "af9abf97-07b0-4ced-abd7-182deb27c5d1"
+        },
+        {
+          "__version": 0,
+          "__type": "PowerUpTimeRemaining",
+          "__enabled": true,
+          "attack": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+          "MyStringValue": "Hello World!"
         }
       ]
     },
@@ -2349,8 +2356,6 @@
   "Title": "2dmain",
   "Description": "",
   "__references": [
-    "caro.sky_001",
-    "facepunch.v_usp",
-    "facepunch.w_usp"
+    "caro.sky_001"
   ]
 }
