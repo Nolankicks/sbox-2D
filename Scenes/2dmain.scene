@@ -11,7 +11,7 @@
           "__type": "HealthBoostSpawner",
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 121.20158
+            "Relative": 1608.3622
           }
         }
       ]
@@ -108,7 +108,7 @@
           "rotation": "-0,0,1,-0.00000004371139",
           "soundEvent": "sounds/punch.sound",
           "timeSincepowerUp": {
-            "Relative": 121.20158
+            "Relative": 1608.3622
           }
         },
         {
@@ -2300,6 +2300,18 @@
             {
               "__type": "TerrySpawner",
               "terry": "de12a866-f86b-4d28-9771-195ad24e0a2d"
+            }
+          ]
+        },
+        {
+          "Id": "9370ab63-7554-46b5-9128-39a9bdade34c",
+          "Name": "GunManager",
+          "Position": "-194.3236,-259.3071,92.1468",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "GunItemSpawner",
+              "gun": "prefabs/gunitem.prefab"
             }
           ]
         }

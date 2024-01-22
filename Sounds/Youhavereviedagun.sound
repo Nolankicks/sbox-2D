@@ -1,11 +1,11 @@
 {
-  "UI": false,
+  "UI": true,
   "Volume": "1.00,1.00,0",
   "Pitch": "1.00,1.00,0",
   "Decibels": 90,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/elevenlabs_2024-01-22t16_29_02_adam_pre_s50_sb75_se0_b_m2.vsnd"
+    "sounds/elevenlabs_2024-01-22t19_07_03_adam_pre_s50_sb75_se0_b_m2.vsnd"
   ],
   "__references": []
 }
