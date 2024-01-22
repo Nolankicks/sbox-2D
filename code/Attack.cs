@@ -85,7 +85,7 @@ public sealed class Attack : Component
 		}
 	}
 }
-public void GunPowerUp()
+void GunPowerUp()
 {
 	var camFoward = animationHelper.EyeWorldTransform.Position;
 	var pos = body.Transform.Position + Vector3.Up * 55;

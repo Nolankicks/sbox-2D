@@ -8,12 +8,10 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "HealthBoostSpawner",
-          "__enabled": true,
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 1360.3811
+            "Relative": 121.20158
           }
         }
       ]
@@ -26,9 +24,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "DirectionalLight",
-          "__enabled": true,
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.91373,0.98039,1,1",
@@ -44,9 +40,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "CapsuleCollider",
-          "__enabled": true,
           "End": "0,0,54.91737",
           "IsTrigger": true,
           "Radius": 25,
@@ -55,9 +49,7 @@
           "Surface": null
         },
         {
-          "__version": 0,
           "__type": "CharacterController",
-          "__enabled": true,
           "Acceleration": 10,
           "GroundAngle": 45,
           "Height": 64,
@@ -66,12 +58,18 @@
           "StepHeight": 18
         },
         {
-          "__version": 0,
           "__type": "PlayerController",
-          "__enabled": true,
           "AirControl": 0.1,
-          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
-          "cc": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+          "body": {
+            "_type": "component",
+            "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "cc": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "CharacterController"
+          },
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "Friction": 7,
           "JumpForce": 200,
@@ -80,19 +78,29 @@
           "Sprint": 1.5
         },
         {
-          "__version": 0,
           "__type": "Attack",
-          "__enabled": true,
           "HasGun": false,
           "ShowGun": false,
-          "animationHelper": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
-          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
-          "bullet": null,
+          "animationHelper": {
+            "_type": "component",
+            "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+            "component_type": "CitizenAnimationHelper"
+          },
+          "body": {
+            "_type": "component",
+            "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "bullet": "prefabs/playerbullet.prefab",
           "deathSound": "sounds/deathsound.sound",
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "gun": "a3f2fcf3-c2f1-49f9-b23e-928abcbedb8f",
           "gunRange": 10000,
-          "manager": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+          "manager": {
+            "_type": "component",
+            "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+            "component_type": "Manager"
+          },
           "particleEffect": "prefabs/burst.prefab",
           "punchSound": "sounds/punch.sound",
           "ragdoll": "prefabs/ragdoll.prefab",
@@ -100,21 +108,25 @@
           "rotation": "-0,0,1,-0.00000004371139",
           "soundEvent": "sounds/punch.sound",
           "timeSincepowerUp": {
-            "Relative": 1360.3811
+            "Relative": 121.20158
           }
         },
         {
-          "__version": 0,
           "__type": "HealthManager",
-          "__enabled": true,
-          "manager": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777"
+          "manager": {
+            "_type": "component",
+            "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+            "component_type": "Manager"
+          }
         },
         {
-          "__version": 0,
           "__type": "HealthTrigger",
-          "__enabled": true,
           "emitter": "prefabs/burst.prefab",
-          "healthManager": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+          "healthManager": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "HealthManager"
+          },
           "hurtSound": "sounds/kenney/ui/ui.downvote.sound"
         }
       ],
@@ -134,9 +146,7 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "SkinnedModelRenderer",
-              "__enabled": true,
               "BodyGroups": 21,
               "BoneMergeTarget": null,
               "CreateBoneObjects": true,
@@ -147,9 +157,7 @@
               "Tint": "1,1,1,1"
             },
             {
-              "__version": 0,
               "__type": "CitizenAnimationHelper",
-              "__enabled": true,
               "BodyWeight": 1,
               "EyeSource": null,
               "EyesWeight": 1,
@@ -161,7 +169,11 @@
               "IkRightHand": null,
               "LookAt": null,
               "LookAtEnabled": false,
-              "Target": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
+              "Target": {
+                "_type": "component",
+                "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+                "component_type": "SkinnedModelRenderer"
+              }
             }
           ],
           "Children": [
@@ -180,11 +192,13 @@
                   "Enabled": true,
                   "Components": [
                     {
-                      "__version": 0,
                       "__type": "SkinnedModelRenderer",
-                      "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+                      "BoneMergeTarget": {
+                        "_type": "component",
+                        "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+                        "component_type": "SkinnedModelRenderer"
+                      },
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -202,11 +216,13 @@
                   "Enabled": true,
                   "Components": [
                     {
-                      "__version": 0,
                       "__type": "SkinnedModelRenderer",
-                      "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+                      "BoneMergeTarget": {
+                        "_type": "component",
+                        "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+                        "component_type": "SkinnedModelRenderer"
+                      },
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -224,11 +240,13 @@
                   "Enabled": true,
                   "Components": [
                     {
-                      "__version": 0,
                       "__type": "SkinnedModelRenderer",
-                      "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+                      "BoneMergeTarget": {
+                        "_type": "component",
+                        "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+                        "component_type": "SkinnedModelRenderer"
+                      },
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -246,11 +264,13 @@
                   "Enabled": true,
                   "Components": [
                     {
-                      "__version": 0,
                       "__type": "SkinnedModelRenderer",
-                      "__enabled": true,
                       "BodyGroups": 18446744073709551615,
-                      "BoneMergeTarget": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+                      "BoneMergeTarget": {
+                        "_type": "component",
+                        "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+                        "component_type": "SkinnedModelRenderer"
+                      },
                       "CreateBoneObjects": false,
                       "MaterialGroup": null,
                       "MaterialOverride": null,
@@ -660,9 +680,7 @@
                                                   "Tags": "player",
                                                   "Components": [
                                                     {
-                                                      "__version": 0,
                                                       "__type": "SkinnedModelRenderer",
-                                                      "__enabled": true,
                                                       "BodyGroups": 17685,
                                                       "BoneMergeTarget": null,
                                                       "CreateBoneObjects": false,
@@ -1128,9 +1146,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "SkyBox2D",
-          "__enabled": true,
           "SkyMaterial": "materials/sky/sky_005.vmat",
           "Tint": "1,1,1,1"
         }
@@ -1144,9 +1160,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "CameraComponent",
-          "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 60,
@@ -1162,9 +1176,7 @@
           "ZNear": 10
         },
         {
-          "__version": 0,
           "__type": "Pixelate",
-          "__enabled": true,
           "Scale": 0.01
         }
       ]
@@ -1184,9 +1196,7 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "ModelRenderer",
-              "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -1195,9 +1205,7 @@
               "Tint": "0.00465,0.07628,0.2,1"
             },
             {
-              "__version": 0,
               "__type": "BoxCollider",
-              "__enabled": true,
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
@@ -1214,9 +1222,7 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "ModelRenderer",
-              "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -1225,9 +1231,7 @@
               "Tint": "0.00465,0.07628,0.2,1"
             },
             {
-              "__version": 0,
               "__type": "BoxCollider",
-              "__enabled": true,
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
@@ -1245,9 +1249,7 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "ModelRenderer",
-              "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -1256,9 +1258,7 @@
               "Tint": "0.00465,0.07628,0.2,1"
             },
             {
-              "__version": 0,
               "__type": "BoxCollider",
-              "__enabled": true,
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
@@ -1275,9 +1275,7 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "ModelRenderer",
-              "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -1286,9 +1284,7 @@
               "Tint": "0.00465,0.07628,0.2,1"
             },
             {
-              "__version": 0,
               "__type": "BoxCollider",
-              "__enabled": true,
               "Center": "0,0,0",
               "IsTrigger": false,
               "Scale": "50,50,50",
@@ -1306,9 +1302,7 @@
       "Tags": "bad",
       "Components": [
         {
-          "__version": 0,
           "__type": "SkinnedModelRenderer",
-          "__enabled": true,
           "BodyGroups": 341,
           "BoneMergeTarget": null,
           "CreateBoneObjects": true,
@@ -1319,33 +1313,33 @@
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
           "__type": "CapsuleCollider",
-          "__enabled": true,
           "End": "0,0,55.6011",
-          "IsTrigger": true,
+          "IsTrigger": false,
           "Radius": 25,
           "Start": "0,0,0",
           "Static": false,
           "Surface": null
         },
         {
-          "__version": 0,
           "__type": "Shooter",
-          "__enabled": true,
-          "animationHelper": "de12a866-f86b-4d28-9771-195ad24e0a2d",
-          "bullet": "a07dad86-122d-45e7-b676-76380deba1ce"
+          "animationHelper": {
+            "_type": "component",
+            "go": "de12a866-f86b-4d28-9771-195ad24e0a2d",
+            "component_type": "CitizenAnimationHelper"
+          },
+          "bullet": "prefabs/badguybullet.prefab"
         },
         {
-          "__version": 0,
           "__type": "TerryManager",
-          "__enabled": true,
-          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
+          "body": {
+            "_type": "component",
+            "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+            "component_type": "SkinnedModelRenderer"
+          }
         },
         {
-          "__version": 0,
           "__type": "CitizenAnimationHelper",
-          "__enabled": true,
           "BodyWeight": 1,
           "EyeSource": null,
           "EyesWeight": 1,
@@ -1357,12 +1351,11 @@
           "IkRightHand": null,
           "LookAt": null,
           "LookAtEnabled": false,
-          "Target": "de12a866-f86b-4d28-9771-195ad24e0a2d"
-        },
-        {
-          "__version": 0,
-          "__type": "ShooterTrigger",
-          "__enabled": true
+          "Target": {
+            "_type": "component",
+            "go": "de12a866-f86b-4d28-9771-195ad24e0a2d",
+            "component_type": "SkinnedModelRenderer"
+          }
         }
       ],
       "Children": [
@@ -1691,7 +1684,7 @@
                                     {
                                       "Id": "f63bedda-f6a5-4f18-9b05-5d191666ab41",
                                       "Name": "arm_elbow_helper_L",
-                                      "Position": "0.0000009025711,0.00001012652,-0.00005871374",
+                                      "Position": "0,0,0",
                                       "Rotation": "0.0000003278255,-0.00000005960464,-0.7577646,0.6525283",
                                       "Tags": "bad",
                                       "Enabled": true
@@ -1701,7 +1694,7 @@
                                 {
                                   "Id": "038230c1-9746-47ba-a942-55533c8712b4",
                                   "Name": "arm_upper_L_twist0",
-                                  "Position": "0.00001255768,0.000005564412,-0.00003123288",
+                                  "Position": "0,0,0",
                                   "Tags": "bad",
                                   "Enabled": true
                                 },
@@ -1765,11 +1758,13 @@
                                               "Enabled": true,
                                               "Components": [
                                                 {
-                                                  "__version": 0,
                                                   "__type": "SkinnedModelRenderer",
-                                                  "__enabled": true,
                                                   "BodyGroups": 9493,
-                                                  "BoneMergeTarget": "de12a866-f86b-4d28-9771-195ad24e0a2d",
+                                                  "BoneMergeTarget": {
+                                                    "_type": "component",
+                                                    "go": "de12a866-f86b-4d28-9771-195ad24e0a2d",
+                                                    "component_type": "SkinnedModelRenderer"
+                                                  },
                                                   "CreateBoneObjects": false,
                                                   "MaterialGroup": null,
                                                   "MaterialOverride": null,
@@ -1962,7 +1957,7 @@
                                 {
                                   "Id": "c7c1299b-fb9c-475e-9d5b-0a73a92d0478",
                                   "Name": "arm_upper_R_twist0",
-                                  "Position": "-0.000008667805,0.00002184253,-0.00005258905",
+                                  "Position": "0,0,0",
                                   "Tags": "bad",
                                   "Enabled": true
                                 },
@@ -2042,7 +2037,7 @@
                     {
                       "Id": "735d73d8-6807-4db0-a589-d7be60007150",
                       "Name": "leg_knee_helper_R",
-                      "Position": "0.00000000005081802,0.00000000004229151,-0.00001144409",
+                      "Position": "0,0,0",
                       "Rotation": "0.0000009241048,-0.000001251698,0.7135268,0.7006278",
                       "Tags": "bad",
                       "Enabled": true
@@ -2059,7 +2054,7 @@
                 {
                   "Id": "0b529dd4-2c68-4fb0-bb68-b2b38e251ca5",
                   "Name": "leg_upper_R_twist0",
-                  "Position": "0.00000000008412826,0.00000000001818989,-0.00001907349",
+                  "Position": "0,0,0",
                   "Rotation": "-0.00000002980232,-0.00000008940697,0.000003069639,1",
                   "Tags": "bad",
                   "Enabled": true
@@ -2067,7 +2062,7 @@
                 {
                   "Id": "7519d331-0cc2-47b6-a9bf-b66b71416a94",
                   "Name": "leg_glute_helper_R",
-                  "Position": "0.00001525887,0.00000000007275958,-0.00001907342",
+                  "Position": "0,0,0",
                   "Rotation": "-0.0000009675612,-0.0000006556511,-0.7071051,0.7071084",
                   "Tags": "bad",
                   "Enabled": true
@@ -2125,7 +2120,7 @@
                     {
                       "Id": "beead1f4-5e41-4c06-9d6e-c11da7953f9c",
                       "Name": "leg_knee_helper_L",
-                      "Position": "-0.00001524856,-0.0000005578382,-0.000007629453",
+                      "Position": "0,0,0",
                       "Rotation": "-0.00000301376,-0.000001609325,0.7135276,0.700627",
                       "Tags": "bad",
                       "Enabled": true
@@ -2142,14 +2137,14 @@
                 {
                   "Id": "6ff99ff6-09a8-4246-b3cb-9c6622feeed8",
                   "Name": "leg_upper_L_twist0",
-                  "Position": "0.00000000003774403,0.00000000000682121,-0.000007629395",
+                  "Position": "0,0,0",
                   "Tags": "bad",
                   "Enabled": true
                 },
                 {
                   "Id": "8b5e1026-cf01-4c09-8bec-a6f473503fa4",
                   "Name": "leg_glute_helper_L",
-                  "Position": "0.00001525883,0.00000000006093615,-0.000007629318",
+                  "Position": "0,0,0",
                   "Rotation": "-0.0000009520198,-0.0000007748604,-0.7071055,0.7071081",
                   "Tags": "bad",
                   "Enabled": true
@@ -2221,6 +2216,29 @@
               "Enabled": true
             }
           ]
+        },
+        {
+          "Id": "a4e24707-e3f2-4756-92c7-8cd46cb9d5d7",
+          "Name": "trigger",
+          "Position": "0,0,0",
+          "Tags": "bad",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "CapsuleCollider",
+              "End": "0,0,55.601",
+              "IsTrigger": true,
+              "Radius": 25,
+              "Start": "0,0,0",
+              "Static": false,
+              "Surface": null
+            },
+            {
+              "__type": "ShooterTrigger",
+              "badguy": "de12a866-f86b-4d28-9771-195ad24e0a2d",
+              "particleEffect": "prefabs/burst.prefab"
+            }
+          ]
         }
       ]
     },
@@ -2231,25 +2249,27 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "ScreenPanel",
-          "__enabled": true,
           "AutoScreenScale": true,
           "Opacity": 1,
           "Scale": 1,
           "ZIndex": 100
         },
         {
-          "__version": 0,
           "__type": "Hud",
-          "__enabled": true,
-          "manager": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777"
+          "manager": {
+            "_type": "component",
+            "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+            "component_type": "Manager"
+          }
         },
         {
-          "__version": 0,
           "__type": "HealthUi",
-          "__enabled": true,
-          "health": "af9abf97-07b0-4ced-abd7-182deb27c5d1"
+          "health": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "HealthManager"
+          }
         }
       ]
     },
@@ -2266,9 +2286,7 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "Manager",
-              "__enabled": true,
               "sceneFile": "scenes/2dmenu.scene"
             }
           ]
@@ -2280,86 +2298,10 @@
           "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "TerrySpawner",
-              "__enabled": true,
               "terry": "de12a866-f86b-4d28-9771-195ad24e0a2d"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Id": "fb8e96e0-55fb-4bdb-add9-e4e11de4c813",
-      "Name": "GunItem",
-      "Position": "0,-282.8165,0",
-      "Scale": "10,10,10",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 17685,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/weapons/sbox_pistol_usp/v_usp.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "Spinner",
-          "__enabled": true,
-          "rotation": "0,0,0.008726535,0.9999619"
-        },
-        {
-          "__version": 0,
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,4.499999",
-          "IsTrigger": true,
-          "Scale": "-13.10016,6.699959,9.899861",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__version": 0,
-          "__type": "GunPowerUpDrop",
-          "__enabled": true,
-          "announcerVoice": "sounds/youhavereviedagun.sound",
-          "attack": "af9abf97-07b0-4ced-abd7-182deb27c5d1"
-        }
-      ]
-    },
-    {
-      "Id": "a07dad86-122d-45e7-b676-76380deba1ce",
-      "Name": "Sphere",
-      "Position": "99.65858,-411.5333,4.312561",
-      "Scale": "0.3,0.3,0.3",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/dev/sphere.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__version": 0,
-          "__type": "Rigidbody",
-          "__enabled": true,
-          "AngularDamping": 0,
-          "Gravity": false,
-          "LinearDamping": 0,
-          "Locking": {},
-          "RigidbodyFlags": 0,
-          "StartAsleep": false
         }
       ]
     }

@@ -1,0 +1,45 @@
+{
+  "RootObject": {
+    "Id": "fb8e96e0-55fb-4bdb-add9-e4e11de4c813",
+    "Name": "GunItem",
+    "Position": "0,-282.8165,0",
+    "Scale": "10,10,10",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "BodyGroups": 17685,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/weapons/sbox_pistol_usp/v_usp.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Spinner",
+        "rotation": "0,0,0.008726535,0.9999619"
+      },
+      {
+        "__type": "BoxCollider",
+        "Center": "0,0,4.499999",
+        "IsTrigger": true,
+        "Scale": "-13.10016,6.699959,9.899861",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "GunPowerUpDrop",
+        "announcerVoice": "sounds/youhavereviedagun.sound",
+        "attack": {
+          "_type": "component",
+          "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+          "component_type": "Attack"
+        }
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
