@@ -22,28 +22,31 @@ public sealed class Attack : Component
 	[Property] public GameObject gun {get; set;}
 	[Property] public bool HasGun = false;
 	[Property] public bool ShowGun = false;
+	[Property] public bool Run = false;
 	[Property] float gunRange {get; set;}
-	[Property] TimeSince timeSincepowerUp {get; set;}
+	[Property] bool GunEnabled {get; set;} = false;
 	[Property] public SoundEvent gunSound {get; set;}
 	
 	protected override void OnUpdate()
 	{
+		
 		if (ShowGun)
 		{
 			gun.Enabled = true;
 		}
-						if (timeSincepowerUp > 10f)
-				{
-					HasGun = false;
-					ShowGun = false;
-					gun.Enabled = false;
-					
-				}
+		if (!GunEnabled)
+		{
+			timeSinceSpawn = 0;
+		}
+
+		
 
 		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );
 		if(Input.Pressed("attack1"))
 		{	
 			Fire();
+			
+				
 			GunPowerUp();
 			animationHelper.Target.Set("b_attack", true);
 			
@@ -70,7 +73,7 @@ public sealed class Attack : Component
 			var roation = Rotation.FromYaw(90);
 			var lookDir =  body.Transform.Rotation.Forward;
 			var spawnRot = body.Transform.Rotation * 180;
-			timeSinceSpawn = 0;
+			
 			manager.AddScore();
 			Log.Info("test");
 			var trgo = tr.GameObject;
@@ -81,7 +84,7 @@ public sealed class Attack : Component
 			trgo.Destroy();
 			//var ragdollGo = ragdoll.Clone(trgoPos, rotation);
 			particleEffect.Clone(trgoPos);
-			timeSincepowerUp = 0;
+			
 			var ragdollClone = ragdoll.Clone(trgoPos + Vector3.Backward * 100, spawnRot);
 			var ragdollRb = ragdollClone.Components.GetInAncestorsOrSelf<Rigidbody>();
 			ragdollRb.Velocity = rotation.Forward * 1000;
@@ -93,10 +96,16 @@ public sealed class Attack : Component
 
 void GunPowerUp()
 {
+	if (timeSinceSpawn > 10)
+	{
+		HasGun = false;
+		ShowGun = false;
+		GunEnabled = false;
+	}
 	if (Input.Pressed("attack1") && HasGun)
 	{
-
-			var camFoward = animationHelper.EyeWorldTransform.Position;
+	GunEnabled = true;
+	var camFoward = animationHelper.EyeWorldTransform.Position;
 	var pos = body.Transform.Position + Vector3.Up * 55;
 	HasGun = true;
 	animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
@@ -104,7 +113,8 @@ void GunPowerUp()
 	var rb = bulletGo.Components.GetInAncestorsOrSelf<Rigidbody>();
 	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 2000 + Vector3.Up * 64;
 	Sound.Play(gunSound);
-		timeSincepowerUp = 0;
+	ShowGun = true;
+	
 	}
 	
 

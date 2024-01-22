@@ -11,7 +11,7 @@
           "__type": "HealthBoostSpawner",
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 2433.4014
+            "Relative": 848.57275
           }
         }
       ]
@@ -80,6 +80,7 @@
         {
           "__type": "Attack",
           "HasGun": false,
+          "Run": false,
           "ShowGun": false,
           "animationHelper": {
             "_type": "component",
@@ -107,10 +108,7 @@
           "ragdoll": "prefabs/ragdoll.prefab",
           "Range": 75,
           "rotation": "-0,0,1,-0.00000004371139",
-          "soundEvent": "sounds/punch.sound",
-          "timeSincepowerUp": {
-            "Relative": 2433.4014
-          }
+          "soundEvent": "sounds/punch.sound"
         },
         {
           "__type": "HealthManager",
@@ -1193,7 +1191,7 @@
           "Id": "8ea3d8be-5cd4-430d-a780-b1fb88845aea",
           "Name": "Plane",
           "Position": "271.5526,188.5552,-2.517418",
-          "Scale": "1,1.769026,1",
+          "Scale": "1.369936,1.769026,1",
           "Enabled": true,
           "Components": [
             {
