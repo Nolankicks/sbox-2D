@@ -13,7 +13,7 @@
           "__enabled": true,
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 7552.8
+            "Relative": 1070.2358
           }
         }
       ]
@@ -90,7 +90,7 @@
           "particleEffect": "prefabs/burst.prefab",
           "punchSound": "sounds/punch.sound",
           "ragdoll": "prefabs/ragdoll.prefab",
-          "Range": 50,
+          "Range": 75,
           "rotation": "-0,0,1,-0.00000004371139",
           "soundEvent": "sounds/punch.sound"
         },
@@ -267,7 +267,7 @@
           "__version": 0,
           "__type": "SkyBox2D",
           "__enabled": true,
-          "SkyMaterial": "materials/skybox/light_test_sky_night_basic.vmat",
+          "SkyMaterial": "materials/sky/sky_005.vmat",
           "Tint": "1,1,1,1"
         }
       ]
@@ -315,7 +315,7 @@
         {
           "Id": "8ea3d8be-5cd4-430d-a780-b1fb88845aea",
           "Name": "Plane",
-          "Position": "271.5526,188.5552,0",
+          "Position": "271.5526,188.5552,-2.517418",
           "Scale": "1,1.769026,1",
           "Enabled": true,
           "Components": [
@@ -432,20 +432,6 @@
               "Surface": null
             }
           ]
-        }
-      ]
-    },
-    {
-      "Id": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
-      "Name": "TerrySpawner",
-      "Position": "-198.6469,-112.3557,141.7877",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "TerrySpawner",
-          "__enabled": true,
-          "terry": "de12a866-f86b-4d28-9771-195ad24e0a2d"
         }
       ]
     },
@@ -1381,20 +1367,6 @@
       ]
     },
     {
-      "Id": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
-      "Name": "GameManager",
-      "Position": "93.84215,14.61589,69.92529",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "Manager",
-          "__enabled": true,
-          "sceneFile": "scenes/2dmenu.scene"
-        }
-      ]
-    },
-    {
       "Id": "2482909b-ba17-466f-8475-a6bb9c3fa9bd",
       "Name": "Screen",
       "Position": "604.5613,67.40533,83.3748",
@@ -1422,6 +1394,42 @@
           "health": "af9abf97-07b0-4ced-abd7-182deb27c5d1"
         }
       ]
+    },
+    {
+      "Id": "9ad52cc0-70db-47a3-a9bb-aa3ebd5eb4a1",
+      "Name": "Managers",
+      "Position": "-901.3305,-241.9596,416.492",
+      "Enabled": true,
+      "Children": [
+        {
+          "Id": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+          "Name": "GameManager",
+          "Position": "995.1727,256.5755,-346.5667",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "Manager",
+              "__enabled": true,
+              "sceneFile": "scenes/2dmenu.scene"
+            }
+          ]
+        },
+        {
+          "Id": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
+          "Name": "TerrySpawner",
+          "Position": "702.6836,129.6039,-274.7043",
+          "Enabled": true,
+          "Components": [
+            {
+              "__version": 0,
+              "__type": "TerrySpawner",
+              "__enabled": true,
+              "terry": "de12a866-f86b-4d28-9771-195ad24e0a2d"
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -1436,6 +1444,7 @@
   "Title": "2dmain",
   "Description": "",
   "__references": [
+    "caro.sky_001",
     "facepunch.w_usp"
   ]
 }

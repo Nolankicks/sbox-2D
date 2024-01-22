@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "c8c75991-977d-483c-9c1e-60199ff3dff9",
+    "Id": "90413e83-58ad-44da-b6d5-6cee9258d80b",
     "Name": "burst",
     "Enabled": true,
     "Components": [
@@ -139,7 +139,7 @@
         "Scale": 1,
         "Shadows": false,
         "SortMode": "Unsorted",
-        "Texture": "materials/particles/shapes/circle1.vtex"
+        "Texture": "materials/tools/handle_circle_color_tga_f67bf942.generated.vtex"
       },
       {
         "__version": 0,

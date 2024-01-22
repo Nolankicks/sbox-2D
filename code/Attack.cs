@@ -12,7 +12,7 @@ public sealed class Attack : Component
 	[Property] GameObject eye {get; set;}
 	[Property] SkinnedModelRenderer body {get; set;}
 	[Property] CitizenAnimationHelper animationHelper {get; set;}
-
+	[Property] public SoundEvent deathSound {get; set;}
 	[Property] SoundEvent soundEvent { get; set; }
 	[Property] GameObject ragdoll { get; set; }
 	[Property] public Rotation rotation { get; set; }
@@ -44,7 +44,7 @@ public sealed class Attack : Component
 			Log.Info("test");
 			var trgo = tr.GameObject;
 			var trgoPos = trgo.Transform.Position;
-			
+			Sound.Play()
 			Log.Info(trgo.Name);
 			Sound.Play(soundEvent);
 			trgo.Destroy();
