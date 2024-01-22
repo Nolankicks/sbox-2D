@@ -1,0 +1,48 @@
+{
+  "RootObject": {
+    "Id": "d0ed0d08-ffae-42cd-ba30-bffccfbba247",
+    "Name": "healthboost",
+    "Scale": "15,15,15",
+    "Enabled": true,
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "HealthBoost",
+        "__enabled": true,
+        "healthSound": "sounds/kenney/ui/ui.favourite.sound"
+      },
+      {
+        "__version": 0,
+        "__type": "ModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/sbox_props/cola_can/cola_can.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__version": 0,
+        "__type": "Spinner",
+        "__enabled": true,
+        "rotation": "0,0,0.008726535,0.9999619"
+      },
+      {
+        "__version": 0,
+        "__type": "ModelCollider",
+        "__enabled": true,
+        "IsTrigger": true,
+        "Model": "models/sbox_props/cola_can/cola_can.vmdl",
+        "Static": false,
+        "Surface": null
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "facepunch.soda_can"
+  ]
+}

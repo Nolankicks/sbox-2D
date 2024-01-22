@@ -2,6 +2,23 @@
   "Id": "6c81aa7f-2c8c-42db-938c-790e829c7c49",
   "GameObjects": [
     {
+      "Id": "3fcce9b9-a607-4501-a1af-43a36ad108dd",
+      "Name": "HealthBoost Spawner",
+      "Position": "-174.0669,-185.056,169.606",
+      "Enabled": true,
+      "Components": [
+        {
+          "__version": 0,
+          "__type": "HealthBoostSpawner",
+          "__enabled": true,
+          "healthBoost": "prefabs/healthboost.prefab",
+          "timeSinceSpawn": {
+            "Relative": 6722.9526
+          }
+        }
+      ]
+    },
+    {
       "Id": "8cd80a0e-d923-49cd-899a-3d6f9ad0c48e",
       "Name": "Sun",
       "Position": "-93.56157,43.42819,122.6602",
@@ -75,7 +92,7 @@
           "particleEffect": "prefabs/burst.prefab",
           "punchSound": "sounds/punch.sound",
           "ragdoll": "prefabs/ragdoll.prefab",
-          "Range": 50,
+          "Range": 75,
           "rotation": "-0,0,1,-0.00000004371139",
           "soundEvent": "sounds/punch.sound"
         },
@@ -89,7 +106,8 @@
           "__version": 0,
           "__type": "HealthTrigger",
           "__enabled": true,
-          "healthManager": "af9abf97-07b0-4ced-abd7-182deb27c5d1"
+          "healthManager": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+          "hurtSound": null
         }
       ],
       "Children": [

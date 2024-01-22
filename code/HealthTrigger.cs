@@ -7,6 +7,7 @@ public sealed class HealthTrigger : Component, Component.ITriggerListener //Chan
 {
 
 [Property] public HealthManager healthManager {get; set;}
+[Property] public SoundEvent hurtSound {get; set;}
  bool _iTouching; 
 
  public void istouching(bool _iTouching)
@@ -33,6 +34,7 @@ public sealed class HealthTrigger : Component, Component.ITriggerListener //Chan
 		{
 			Log.Info( "Triggered" );
 			healthManager.healthNumber -= 25;
+			Sound.Play(hurtSound);
 		}
 		//Log.Info( "Triggered" );
         //managerref.EndGame();
