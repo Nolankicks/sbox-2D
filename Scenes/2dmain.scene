@@ -11,7 +11,7 @@
           "__type": "HealthBoostSpawner",
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 2150.8354
+            "Relative": 1170.668
           }
         }
       ]
@@ -109,7 +109,7 @@
           "rotation": "-0,0,1,-0.00000004371139",
           "soundEvent": "sounds/punch.sound",
           "timeSincepowerUp": {
-            "Relative": 2150.8354
+            "Relative": 1170.668
           }
         },
         {
@@ -2238,7 +2238,7 @@
               "__type": "ShooterTrigger",
               "badguy": "de12a866-f86b-4d28-9771-195ad24e0a2d",
               "particleEffect": "prefabs/burst.prefab",
-              "ragdoll": null
+              "ragdoll": "prefabs/ragdoll.prefab"
             }
           ]
         }

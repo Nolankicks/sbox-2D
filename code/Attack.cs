@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.AccessControl;
 using Sandbox;
@@ -66,20 +67,25 @@ public sealed class Attack : Component
 			
 			
 		
-			
+			var roation = Rotation.FromYaw(90);
 			var lookDir =  body.Transform.Rotation.Forward;
+			var spawnRot = body.Transform.Rotation * 180;
 			timeSinceSpawn = 0;
 			manager.AddScore();
 			Log.Info("test");
 			var trgo = tr.GameObject;
 			var trgoPos = trgo.Transform.Position;
+			var ragollPos = trgo.Transform.Position + lookDir * 100;
 			Sound.Play(deathSound);
 			Log.Info(trgo.Name);
 			trgo.Destroy();
 			//var ragdollGo = ragdoll.Clone(trgoPos, rotation);
 			particleEffect.Clone(trgoPos);
 			timeSincepowerUp = 0;
-			ragdoll.Clone(trgoPos, rotation);
+			var ragdollClone = ragdoll.Clone(trgoPos + Vector3.Backward * 100, spawnRot);
+			var ragdollRb = ragdollClone.Components.GetInAncestorsOrSelf<Rigidbody>();
+			ragdollRb.Velocity = rotation.Forward * 1000;
+			
 			}
 			}
 		}

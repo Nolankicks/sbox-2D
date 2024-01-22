@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "331b2f5e-8ce1-49c9-b5cc-009864f90409",
+    "Id": "d4aaba58-f246-4f51-9e92-1984dcbca65a",
     "Name": "ragdoll",
     "Tags": "bad",
     "Enabled": true,
@@ -32,13 +32,22 @@
         "Model": "models/citizen/citizen.vmdl",
         "Renderer": {
           "_type": "component",
-          "go": "331b2f5e-8ce1-49c9-b5cc-009864f90409",
+          "go": "d4aaba58-f246-4f51-9e92-1984dcbca65a",
           "component_type": "SkinnedModelRenderer"
         },
         "RigidbodyFlags": 0
       },
       {
         "__type": "Despawner"
+      },
+      {
+        "__type": "Rigidbody",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
       }
     ]
   },
