@@ -11,7 +11,7 @@
           "__type": "HealthBoostSpawner",
           "healthBoost": "prefabs/healthboost.prefab",
           "timeSinceSpawn": {
-            "Relative": 1170.668
+            "Relative": 2433.4014
           }
         }
       ]
@@ -109,7 +109,7 @@
           "rotation": "-0,0,1,-0.00000004371139",
           "soundEvent": "sounds/punch.sound",
           "timeSincepowerUp": {
-            "Relative": 1170.668
+            "Relative": 2433.4014
           }
         },
         {
