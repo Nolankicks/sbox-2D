@@ -21,6 +21,7 @@ public sealed class Attack : Component
 	[Property] public GameObject gun {get; set;}
 	[Property] public bool HasGun = false;
 	[Property] public bool ShowGun = false;
+	[Property] float gunRange {get; set;}
 	[Property] TimeSince timeSincepowerUp {get; set;}
 	
 	protected override void OnUpdate()
@@ -47,7 +48,7 @@ public sealed class Attack : Component
 			else
 			{
 				animationHelper.Target.Set("b_attack", true);
-				Log.Info("test");
+				
 				GunPowerUp();
 				timeSincepowerUp = 0;
 
@@ -86,12 +87,14 @@ public sealed class Attack : Component
 }
 public void GunPowerUp()
 {
+	var camFoward = animationHelper.EyeWorldTransform.Position;
 	var pos = body.Transform.Position + Vector3.Up * 55;
 	HasGun = true;
 	animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
 	var bulletGo = bullet.Clone(pos);
 	var rb = bulletGo.Components.GetInAncestorsOrSelf<Rigidbody>();
 	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 2000 + Vector3.Up * 64;
+
 	
 }
 }
