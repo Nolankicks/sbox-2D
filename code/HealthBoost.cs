@@ -22,7 +22,15 @@ public sealed class HealthBoost : Component, Component.ITriggerListener //Change
 		var healthManager = other.GameObject.Components.Get<HealthManager>();
 		if (other.Tags.Has("player"))
 	{
+		if (healthManager.healthNumber + 50f < healthManager.maxHealth)
+		{
 		healthManager.healthNumber += 50;
+		}
+		else
+		{
+			healthManager.healthNumber = healthManager.maxHealth;
+		}
+		
 		Sound.Play(healthSound);
 		GameObject.Destroy();
     	crushedCan.Clone(GameObject.Transform.Position);

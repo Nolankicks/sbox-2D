@@ -24,6 +24,7 @@ public sealed class GunPowerUpDrop : Component, Component.ITriggerListener //Cha
 			Sound.Play(announcerVoice);
 			Sound.Play(equipSound);
 			GameObject.Destroy();
+			
 		}
 
 

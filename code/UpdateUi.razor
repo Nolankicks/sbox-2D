@@ -1,0 +1,55 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	@if (manager.testBool)
+	{
+		<div class="title">
+			Upgrade Available
+			Press Q for Max Health Increase
+			Press E for Gun PowerUp
+		</div>
+	}
+</root>
+
+@code
+{
+	[Property] public Manager manager { get; set; }
+	[Property] public HealthManager healthManager { get; set; }
+	[Property, TextArea] public string MyStringValue { get; set; } = "Hello World!";
+	[Property] public TerrySpawner spawner { get; set; }
+	public TimeSince timeSinceUi { get; set; }
+	[Property] public Attack attack { get; set; }
+	protected override void OnUpdate()
+	{
+		if (manager.testBool)
+		{
+			spawner.Enabled = false;
+			if (Input.Pressed("use"))
+			{
+				attack.ShowGun = true;
+				attack.HasGun = true;
+				manager.testBool = false;
+				
+			}
+			if (Input.Pressed("Menu"))
+			{
+				healthManager.maxHealth += 100;
+				healthManager.healthNumber = healthManager.maxHealth;
+				manager.testBool = false;
+			}
+		}
+		else
+		{
+			spawner.Enabled = true;
+		}
+	}
+
+	
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( MyStringValue, manager.testBool, spawner.Enabled, GameObject.Enabled);
+}

@@ -7,12 +7,14 @@ public sealed class Manager : Component
 	public bool Playing { get; private set; } = false;
 	public long Score { get; private set; } = 0;
 	public long HighScore { get; private set; } = 0;
+	[Property] public bool testBool {get; set;}
 
 	public Sandbox.Services.Leaderboards.Board Leaderboard;
 
 	protected override void OnStart()
 	{
 		StartGame();
+		
 	}
 
 	protected override void OnUpdate()
@@ -20,6 +22,14 @@ public sealed class Manager : Component
 		if ( !Playing && Input.Pressed( "Jump" ) )
 		{
 			StartGame();
+		}
+		if (Score == 100 ^ Score == 200 ^ Score == 300 ^ Score == 400 ^ Score == 500 ^ Score == 600 ^ Score == 700 ^ Score == 800 ^ Score == 900 ^ Score == 1000)
+		{
+			testBool = true;
+		}
+		else
+		{
+			testBool = false;
 		}
 	}
 
