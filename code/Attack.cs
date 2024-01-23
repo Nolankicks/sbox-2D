@@ -69,7 +69,7 @@ public sealed class Attack : Component
 		animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Punch;
 		var camFoward = animationHelper.EyeWorldTransform.Position;
 		var tr = Scene.Trace.Ray(camFoward, camFoward + (camFoward * Range)).WithAnyTags("bad").Run();
-		
+
 			if (Input.Pressed("attack1") && tr.Hit && !HasGun)
 			{
 			
@@ -94,6 +94,10 @@ public sealed class Attack : Component
 			var ragdollRb = ragdollClone.Components.GetInAncestorsOrSelf<Rigidbody>();
 			ragdollRb.Velocity = rotation.Forward * 1000;
 			
+			}
+			if (Input.Pressed("attack1") && !HasGun)
+			{
+				Sound.Play(punchSound);
 			}
 			}
 		}
