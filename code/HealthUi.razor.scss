@@ -25,5 +25,21 @@ HealthUi
         gap: 32px;
         backdrop-filter: blur( 40px );
 	}
+	.health2
+	{
+		right : 20;
+		bottom: 0;
+		background-color: #0004;
+        border-radius: 6px;
+        padding: 20px 40px;
+        color: white;
+        font-weight: bolder;
+        font-size: 30px;
+        font-family: poppins;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        backdrop-filter: blur( 40px );
+	}
 
 }
