@@ -2095,6 +2095,18 @@
               }
             }
           ]
+        },
+        {
+          "Id": "df550cfe-61bc-410c-8624-768cd28c7e42",
+          "Name": "PlayMusic",
+          "Position": "116.3402,-200.8769,13.8819",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "PlayMusic",
+              "gameObject": "c2b54d8a-9178-4b23-a0d0-0c6860100053"
+            }
+          ]
         }
       ]
     },
@@ -2151,7 +2163,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 2713.8965
+                "Relative": 203.10587
               }
             }
           ]
@@ -2162,7 +2174,6 @@
       "Id": "c2b54d8a-9178-4b23-a0d0-0c6860100053",
       "Name": "Music",
       "Position": "-672,32,48.99739",
-      "Enabled": true,
       "Components": [
         {
           "__type": "SoundPointComponent",
