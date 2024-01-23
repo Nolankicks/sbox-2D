@@ -133,7 +133,7 @@
               "BodyGroups": 21,
               "BoneMergeTarget": null,
               "CreateBoneObjects": true,
-              "MaterialGroup": null,
+              "MaterialGroup": "default",
               "MaterialOverride": null,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
@@ -2151,10 +2151,31 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 6586.5376
+                "Relative": 2713.8965
               }
             }
           ]
+        }
+      ]
+    },
+    {
+      "Id": "c2b54d8a-9178-4b23-a0d0-0c6860100053",
+      "Name": "Music",
+      "Position": "-672,32,48.99739",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SoundPointComponent",
+          "Force2d": true,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "Repeat": true,
+          "SoundEvent": "sounds/music.sound",
+          "SoundOverride": true,
+          "StopOnNew": false,
+          "Volume": 1
         }
       ]
     }
