@@ -31,7 +31,7 @@ protected override void OnFixedUpdate(){
   if(nextSecond){
 	GetRandom();
     var random = GetRandom();
-		if (random >= 75f)
+		if (random >= 50f)
 		{
 			SpawnTerry();
 		}

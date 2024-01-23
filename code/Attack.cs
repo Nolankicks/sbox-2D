@@ -125,6 +125,7 @@ void GunPowerUp()
 	var rb = bulletGo.Components.GetInAncestorsOrSelf<Rigidbody>();
 	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 2000 + Vector3.Up * 55;
 	Sound.Play(gunSound);
+	
 	ShowGun = true;
 	
 	
