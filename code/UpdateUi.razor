@@ -31,6 +31,7 @@
 				attack.ShowGun = true;
 				attack.HasGun = true;
 				manager.testBool = false;
+				manager.AddScore();
 				
 			}
 			if (Input.Pressed("Menu"))
@@ -38,11 +39,16 @@
 				healthManager.maxHealth += 100;
 				healthManager.healthNumber = healthManager.maxHealth;
 				manager.testBool = false;
+				manager.AddScore(); 
 			}
 		}
 		else
 		{
 			spawner.Enabled = true;
+		}
+		if (manager.testBool)
+		{
+
 		}
 	}
 

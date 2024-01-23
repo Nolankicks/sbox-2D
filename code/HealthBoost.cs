@@ -24,7 +24,7 @@ public sealed class HealthBoost : Component, Component.ITriggerListener //Change
 	{
 		if (healthManager.healthNumber + 50f < healthManager.maxHealth)
 		{
-		healthManager.healthNumber += 50;
+		healthManager.healthNumber += 100;
 		}
 		else
 		{

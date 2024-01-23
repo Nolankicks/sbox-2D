@@ -2,21 +2,6 @@
   "Id": "6c81aa7f-2c8c-42db-938c-790e829c7c49",
   "GameObjects": [
     {
-      "Id": "3fcce9b9-a607-4501-a1af-43a36ad108dd",
-      "Name": "HealthBoost Spawner",
-      "Position": "-174.0669,-185.056,169.606",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "HealthBoostSpawner",
-          "healthBoost": "prefabs/healthboost.prefab",
-          "timeSinceSpawn": {
-            "Relative": 5215.008
-          }
-        }
-      ]
-    },
-    {
       "Id": "8cd80a0e-d923-49cd-899a-3d6f9ad0c48e",
       "Name": "Sun",
       "Position": "-93.56157,43.42819,122.6602",
@@ -2153,6 +2138,21 @@
             {
               "__type": "GunItemSpawner",
               "gun": "prefabs/gunitem.prefab"
+            }
+          ]
+        },
+        {
+          "Id": "3fcce9b9-a607-4501-a1af-43a36ad108dd",
+          "Name": "HealthBoost Spawner",
+          "Position": "727.2636,56.90359,-246.886",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "HealthBoostSpawner",
+              "healthBoost": "prefabs/healthboost.prefab",
+              "timeSinceSpawn": {
+                "Relative": 6586.5376
+              }
             }
           ]
         }

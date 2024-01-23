@@ -9,7 +9,7 @@ public sealed class HealthManager : Component
 	//[Property] public SceneFile menu { get; set; }
 	protected override void OnStart()
 	{
-		maxHealth = 100;
+		maxHealth = 150;
 	}
 	protected override void OnFixedUpdate()
 	{
