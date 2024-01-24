@@ -69,7 +69,7 @@ public sealed class SMG : Component
 		timeSinceShoot = 0;
 		var camFoward = body.Transform.Rotation;
 		
-		var tr = Scene.Trace.Ray(camFoward.Forward, camFoward.Forward + camFoward.Forward * 5000).WithoutTags("player").Run();
+		var tr = Scene.Trace.Ray(body.Transform.Position, body.Transform.Position + camFoward.Forward * 5000).WithoutTags("player").Run();
 
 		if (!tr.Hit) return;
 
