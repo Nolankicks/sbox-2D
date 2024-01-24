@@ -83,7 +83,7 @@
           "deathSound": "sounds/deathsound.sound",
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "gunRange": 10000,
-          "gunSound": "sounds/shootsound.sound",
+          "gunSound": "sounds/guns/m1911/pistol_shoot.sound",
           "impactEffect": "prefabs/impact_default.prefab",
           "manager": {
             "_type": "component",
@@ -116,7 +116,6 @@
         },
         {
           "__type": "HealthTrigger",
-          "__enabled": false,
           "emitter": "prefabs/burst.prefab",
           "healthManager": {
             "_type": "component",
@@ -2238,7 +2237,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 4045.31
+                "Relative": 865.3014
               }
             }
           ]
