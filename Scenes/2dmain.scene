@@ -65,7 +65,7 @@
         {
           "__type": "Attack",
           "HasGunPistol": false,
-          "HasGunSmg": false,
+          "HasGunSmg": true,
           "Run": false,
           "ShowGunPistol": false,
           "ShowGunSmg": false,
@@ -141,7 +141,7 @@
             "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
             "component_type": "CitizenAnimationHelper"
           },
-          "shootSound": "sounds/shootsound.sound"
+          "shootSound": "sounds/guns/f1/ar2_shoot.sound"
         }
       ],
       "Children": [
@@ -2237,7 +2237,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 2184.2937
+                "Relative": 207.50533
               }
             }
           ]
