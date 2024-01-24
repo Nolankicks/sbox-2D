@@ -2137,6 +2137,11 @@
           "Components": [
             {
               "__type": "TerrySpawner",
+              "manager": {
+                "_type": "component",
+                "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+                "component_type": "Manager"
+              },
               "terry": "de12a866-f86b-4d28-9771-195ad24e0a2d"
             }
           ]
@@ -2163,7 +2168,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 207.9575
+                "Relative": 370.5701
               }
             }
           ]
@@ -2203,6 +2208,6 @@
   "Title": "2dmain",
   "Description": "",
   "__references": [
-    "nolankicks.2d_game_test"
+    "caro.sky_001"
   ]
 }
