@@ -9,6 +9,7 @@ public sealed class TerrySpawner : Component
 	[Property] public GameObject terry {get; set;}
 	public float GetRandom() => Random.Shared.Float(1, 100);
 	public TimeSince timeSinceSpawn {get; set;}
+	[Property] public Manager manager {get; set;}
 
 
 	protected override void OnUpdate()
@@ -29,12 +30,43 @@ TimeUntil nextSecond = 0f;
 protected override void OnFixedUpdate(){
 	
   if(nextSecond){
+	var random = GetRandom();
 	GetRandom();
-    var random = GetRandom();
+	if (500 >= manager.Score)
+	{
 		if (random >= 50f)
 		{
 			SpawnTerry();
 		}
+	}
+	if (manager.Score >= 500)	
+	{
+		if (random >= 45f)
+		{
+			SpawnTerry();
+		}
+	}
+	if (manager.Score >= 1000)
+	{
+		if (random >= 40f)
+		{
+			SpawnTerry();
+		}
+	}
+	if (manager.Score >= 1500)
+	{
+		if (random >= 35f)
+		{
+			SpawnTerry();
+		}
+	}
+	if (manager.Score >= 2000)
+	{
+		if (random >= 35f)
+		{
+			SpawnTerry();
+		}
+	}
     nextSecond = 1;
 	Log.Info(random);
   }
