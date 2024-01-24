@@ -31,6 +31,7 @@ public sealed class Attack : Component
 	[Property] public bool PistolGunEnabled {get; set;} = false;
 	[Property] public bool SmgGunEnabled {get; set;} = false;
 	[Property] public SoundEvent gunSound {get; set;}
+	[Property] public GameObject impactEffect {get; set;}
 
 	protected override void OnAwake()
 	{
@@ -135,15 +136,34 @@ void GunPowerUp()
 	{
 	
 	PistolGunEnabled = true;
-	var camFoward = animationHelper.EyeWorldTransform.Position;
-	var pos = body.Transform.Position + Vector3.Up * 55;
-	HasGunPistol = true;
+	var camFoward = body.Transform.Rotation;
 	animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
-	var bulletGo = bullet.Clone(pos);
-	var rb = bulletGo.Components.GetInAncestorsOrSelf<Rigidbody>();
-	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 2000 + Vector3.Up * 55;
 	Sound.Play(gunSound);
+
+	var tr = Scene.Trace.Ray(camFoward.Forward, camFoward.Forward + camFoward.Forward * 5000).WithoutTags("player").Run();
+	if (!tr.Hit) return;
 	
+
+	if (tr.Hit)
+	{
+		Log.Info("hit");
+		var trgo = tr.GameObject;
+		if (trgo.Tags.Has("bad"))
+		{
+			trgo.Destroy();
+			
+			Sound.Play(deathSound, tr.HitPosition);
+			var deathParticle = particleEffect;
+			deathParticle.Clone(new Transform(tr.HitPosition + Vector3.Up * 45, Rotation.LookAt(tr.Normal)));
+			manager.AddScore();
+			
+		}
+
+	}
+	if (impactEffect is not null)
+	{
+		impactEffect.Clone(new Transform(tr.HitPosition +Vector3.Up * 45, Rotation.LookAt(tr.Normal)));
+	}
 	
 	
 	

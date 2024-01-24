@@ -84,6 +84,7 @@
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "gunRange": 10000,
           "gunSound": "sounds/shootsound.sound",
+          "impactEffect": "prefabs/impact_default.prefab",
           "manager": {
             "_type": "component",
             "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
@@ -94,7 +95,7 @@
           "PistolGunEnabled": false,
           "punchSound": "sounds/punch.sound",
           "ragdoll": "prefabs/ragdoll.prefab",
-          "Range": 75,
+          "Range": 15,
           "rotation": "-0,0,1,-0.00000004371139",
           "smg": {
             "_type": "component",
@@ -115,6 +116,7 @@
         },
         {
           "__type": "HealthTrigger",
+          "__enabled": false,
           "emitter": "prefabs/burst.prefab",
           "healthManager": {
             "_type": "component",
@@ -2236,7 +2238,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 2363.0583
+                "Relative": 3990.4507
               }
             }
           ]

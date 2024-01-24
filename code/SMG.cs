@@ -67,9 +67,9 @@ public sealed class SMG : Component
 		playerAnimation.HoldType = CitizenAnimationHelper.HoldTypes.Rifle;
 		if (timeSinceShoot < 0.1f) return;
 		timeSinceShoot = 0;
-		var camFoward = body.Transform.Rotation.Forward;
+		var camFoward = body.Transform.Rotation;
 		
-		var tr = Scene.Trace.Ray(camFoward, camFoward * 5000).WithoutTags("player").Run();
+		var tr = Scene.Trace.Ray(camFoward.Forward, camFoward.Forward + camFoward.Forward * 5000).WithoutTags("player").Run();
 
 		if (!tr.Hit) return;
 
