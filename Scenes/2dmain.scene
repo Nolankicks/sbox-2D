@@ -113,6 +113,15 @@
             "component_type": "HealthManager"
           },
           "hurtSound": "sounds/kenney/ui/ui.downvote.sound"
+        },
+        {
+          "__type": "SMG",
+          "impactEffect": "prefabs/burst.prefab",
+          "playerAnimation": {
+            "_type": "component",
+            "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+            "component_type": "CitizenAnimationHelper"
+          }
         }
       ],
       "Children": [
@@ -2168,7 +2177,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 584.39404
+                "Relative": 2049.7678
               }
             }
           ]
