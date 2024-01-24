@@ -9,6 +9,7 @@ public sealed class SMG : Component
 	[Property] public SoundEvent shootSound { get; set; }
 	[Property] public GameObject body { get; set; }
 	[Property] public Attack attack { get; set; }
+	[Property] public long ammo { get; set; } = 60;
 	TimeSince timeSinceShoot;
 	protected override void OnUpdate()
 	{
@@ -16,11 +17,19 @@ public sealed class SMG : Component
 		{
 			Shoot();
 			playerAnimation.Target.Set("b_attack", true);
+			ammo -= 1;
+		}
+		Log.Info(ammo);
+		if (ammo <= 0)
+		{
+			ammo = 0;
 		}
 	}
 
 	public void Shoot()
 	{
+		if (ammo > 0)
+		{
 		playerAnimation.HoldType = CitizenAnimationHelper.HoldTypes.Rifle;
 		if (timeSinceShoot < 0.1f) return;
 		timeSinceShoot = 0;
@@ -57,5 +66,6 @@ public sealed class SMG : Component
 			impactEffect.Clone(new Transform(tr.HitPosition + Vector3.Up * 45, Rotation.LookAt(tr.Normal)));
 		}
 
+	}
 	}
 }

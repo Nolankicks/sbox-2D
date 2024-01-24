@@ -3,6 +3,7 @@
 @inherits PanelComponent
 
 <root>
+	<div class="health3">Ammo: @smg.ammo</div>
 	<div class="health2">Max Health: @health.maxHealth</div>
  	<div class="health">Health: @health.healthNumber</div>
 	
@@ -13,12 +14,12 @@
 @code
 {
 	 [Property] public HealthManager health { get; set; }
-	
+	[Property] public SMG smg { get; set; }
 	 
 
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
-	protected override int BuildHash() => System.HashCode.Combine(health.healthNumber);
+	protected override int BuildHash() => System.HashCode.Combine(health.healthNumber, health.maxHealth, smg.ammo);
 }

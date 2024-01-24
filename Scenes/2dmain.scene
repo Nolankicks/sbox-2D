@@ -124,6 +124,7 @@
         },
         {
           "__type": "SMG",
+          "ammo": 60,
           "attack": {
             "_type": "component",
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
@@ -2089,6 +2090,11 @@
             "_type": "component",
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
             "component_type": "HealthManager"
+          },
+          "smg": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "SMG"
           }
         }
       ],
@@ -2143,6 +2149,7 @@
       "Id": "9ad52cc0-70db-47a3-a9bb-aa3ebd5eb4a1",
       "Name": "Managers",
       "Position": "-901.3305,-241.9596,416.492",
+      "Enabled": true,
       "Children": [
         {
           "Id": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
@@ -2196,7 +2203,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 4104.903
+                "Relative": 5846.4736
               }
             }
           ]
@@ -2222,6 +2229,28 @@
           "Volume": 1
         }
       ]
+    },
+    {
+      "Id": "4b82b89d-6deb-4a0a-93b9-457e06006be7",
+      "Name": "ammo",
+      "Position": "0,-192,-6.315971",
+      "Scale": "3,3,3",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/items/ammo.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Spinner",
+          "rotation": "0,0,0.008726535,0.9999619"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -2237,6 +2266,7 @@
   "Description": "",
   "__references": [
     "caro.sky_001",
-    "facepunch.w_mp5"
+    "facepunch.w_mp5",
+    "fish.shotgun-ammo"
   ]
 }
