@@ -19,8 +19,8 @@ public sealed class GunPowerUpDrop : Component, Component.ITriggerListener //Cha
 		return;
 		if (other.Tags.Has("player"))
 		{
-			attack.ShowGun = true;
-			attack.HasGun = true;
+			attack.ShowGunPistol = true;
+			attack.HasGunPistol = true;
 			Sound.Play(announcerVoice);
 			Sound.Play(equipSound);
 			GameObject.Destroy();

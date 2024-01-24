@@ -64,9 +64,11 @@
         },
         {
           "__type": "Attack",
-          "HasGun": false,
+          "HasGunPistol": false,
+          "HasGunSmg": false,
           "Run": false,
-          "ShowGun": false,
+          "ShowGunPistol": false,
+          "ShowGunSmg": false,
           "animationHelper": {
             "_type": "component",
             "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
@@ -80,8 +82,6 @@
           "bullet": "prefabs/playerbullet.prefab",
           "deathSound": "sounds/deathsound.sound",
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
-          "gun": "a3f2fcf3-c2f1-49f9-b23e-928abcbedb8f",
-          "GunEnabled": false,
           "gunRange": 10000,
           "gunSound": "sounds/shootsound.sound",
           "manager": {
@@ -90,10 +90,18 @@
             "component_type": "Manager"
           },
           "particleEffect": "prefabs/burst.prefab",
+          "pistol": "884c2ff8-8a75-46a3-acc9-30d184a5e96f",
+          "PistolGunEnabled": false,
           "punchSound": "sounds/punch.sound",
           "ragdoll": "prefabs/ragdoll.prefab",
           "Range": 75,
           "rotation": "-0,0,1,-0.00000004371139",
+          "smg": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "SMG"
+          },
+          "smgGun": "a3f2fcf3-c2f1-49f9-b23e-928abcbedb8f",
           "soundEvent": "sounds/punch.sound"
         },
         {
@@ -116,6 +124,12 @@
         },
         {
           "__type": "SMG",
+          "attack": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "Attack"
+          },
+          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
           "impactEffect": "prefabs/impact_default.prefab",
           "playerAnimation": {
             "_type": "component",
@@ -617,22 +631,27 @@
                                               "Children": [
                                                 {
                                                   "Id": "a3f2fcf3-c2f1-49f9-b23e-928abcbedb8f",
-                                                  "Name": "ViewModel",
+                                                  "Name": "mp5",
                                                   "Position": "4.218343,-1.538712,-5.095881",
-                                                  "Scale": "2,2,2",
+                                                  "Scale": "1.5,1.5,1.5",
                                                   "Components": [
                                                     {
                                                       "__type": "SkinnedModelRenderer",
-                                                      "BodyGroups": 17685,
+                                                      "BodyGroups": 3,
                                                       "BoneMergeTarget": null,
                                                       "CreateBoneObjects": false,
                                                       "MaterialGroup": null,
                                                       "MaterialOverride": null,
-                                                      "Model": "models/weapons/sbox_pistol_usp/w_usp.vmdl",
+                                                      "Model": "models/weapons/sbox_smg_mp5/w_mp5.vmdl",
                                                       "RenderType": "On",
                                                       "Tint": "1,1,1,1"
                                                     }
                                                   ]
+                                                },
+                                                {
+                                                  "Id": "884c2ff8-8a75-46a3-acc9-30d184a5e96f",
+                                                  "Name": "pistol",
+                                                  "Position": "219.6428,-71.43853,25.4388"
                                                 }
                                               ]
                                             },
@@ -2177,7 +2196,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 869.98254
+                "Relative": 4104.903
               }
             }
           ]
@@ -2217,6 +2236,7 @@
   "Title": "2dmain",
   "Description": "",
   "__references": [
-    "caro.sky_001"
+    "caro.sky_001",
+    "facepunch.w_mp5"
   ]
 }

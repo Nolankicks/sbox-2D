@@ -29,6 +29,13 @@ public sealed class PlayerController : Component
 	}
 	protected override void OnUpdate()
 	{
+		if (body.Transform.Rotation != Rotation.FromYaw(90) && body.Transform.Rotation != Rotation.FromYaw(-90))
+		{
+			body.Transform.Rotation = Rotation.FromYaw(90);
+		}
+ 
+
+
 		IsSprinting = Input.Down("Run");
 		var cam = Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
 		var campos = eye.Transform.Position;
