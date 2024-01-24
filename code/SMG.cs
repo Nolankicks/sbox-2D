@@ -5,6 +5,8 @@ public sealed class SMG : Component
 {
 	[Property] public GameObject impactEffect { get; set; }
 	[Property] public CitizenAnimationHelper playerAnimation { get; set; }
+	[Property] public SoundEvent shootSound { get; set; }
+	[Property] public GameObject body { get; set; }
 	TimeSince timeSinceShoot;
 	protected override void OnUpdate()
 	{
@@ -19,8 +21,9 @@ public sealed class SMG : Component
 	{
 		if (timeSinceShoot < 0.1f) return;
 		timeSinceShoot = 0;
-		var camFoward = playerAnimation.EyeWorldTransform.Position;
-		var tr = Scene.Trace.Ray(camFoward, camFoward + camFoward * 5000).WithTag("test").Run();
+		var camFoward = body.Transform.Rotation.Forward;
+		
+		var tr = Scene.Trace.Ray(camFoward, camFoward * 5000).WithoutTags("player").Run();
 
 		if (!tr.Hit) return;
 
@@ -29,7 +32,8 @@ public sealed class SMG : Component
 		{
 			Log.Info("Hit");
 			var trgo = tr.GameObject;
-			trgo.Destroy();
+			//trgo.Destroy();
+			Sound.Play(shootSound);
 		}
 		else
 		{

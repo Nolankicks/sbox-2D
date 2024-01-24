@@ -116,12 +116,13 @@
         },
         {
           "__type": "SMG",
-          "impactEffect": "prefabs/burst.prefab",
+          "impactEffect": "prefabs/impact_default.prefab",
           "playerAnimation": {
             "_type": "component",
             "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
             "component_type": "CitizenAnimationHelper"
-          }
+          },
+          "shootSound": "sounds/shootsound.sound"
         }
       ],
       "Children": [
@@ -2123,7 +2124,6 @@
       "Id": "9ad52cc0-70db-47a3-a9bb-aa3ebd5eb4a1",
       "Name": "Managers",
       "Position": "-901.3305,-241.9596,416.492",
-      "Enabled": true,
       "Children": [
         {
           "Id": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
@@ -2177,7 +2177,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 2049.7678
+                "Relative": 869.98254
               }
             }
           ]
