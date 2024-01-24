@@ -8,7 +8,7 @@
 		<div class="title">
 			Upgrade Available
 			Press Q for Max Health Increase
-			Press E for Gun PowerUp
+			Press E for MP4 PowerUp
 		</div>
 	}
 </root>
@@ -28,8 +28,10 @@
 			spawner.Enabled = false;
 			if (Input.Pressed("use"))
 			{
-				attack.ShowGunPistol = true;
-				attack.HasGunPistol = true;
+				attack.ShowGunSmg = true;
+				attack.HasGunSmg = true;
+				attack.ShowGunPistol = false;
+				attack.HasGunPistol = false;
 				manager.testBool = false;
 				manager.AddScore();
 				

@@ -33,9 +33,11 @@ public sealed class Attack : Component
 
 	protected override void OnAwake()
 	{
+		/*
 		HasGunSmg = true;
 		ShowGunSmg = true;
 		HasGunSmg = true;
+		*/
 	}
 	protected override void OnUpdate()
 	{
@@ -48,7 +50,7 @@ public sealed class Attack : Component
 			smgGun.Enabled = false;
 		}
 		
-		if (ShowGunPistol)
+		if (PistolGunEnabled)
 		{
 			pistol.Enabled = true;
 		}
@@ -87,7 +89,7 @@ public sealed class Attack : Component
 		var camFoward = animationHelper.EyeWorldTransform.Position;
 		var tr = Scene.Trace.Ray(camFoward, camFoward + (camFoward * Range)).WithAnyTags("bad").Run();
 
-			if (Input.Pressed("attack1") && tr.Hit && !HasGunPistol)
+			if (Input.Pressed("attack1") && tr.Hit && !HasGunPistol && !HasGunSmg)
 			{
 			
 			
@@ -132,7 +134,7 @@ void GunPowerUp()
 	}
 	if (Input.Pressed("attack1") && HasGunPistol)
 	{
-		
+	
 	PistolGunEnabled = true;
 	var camFoward = animationHelper.EyeWorldTransform.Position;
 	var pos = body.Transform.Position + Vector3.Up * 55;

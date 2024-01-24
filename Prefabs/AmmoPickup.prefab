@@ -1,0 +1,49 @@
+{
+  "RootObject": {
+    "Id": "4b82b89d-6deb-4a0a-93b9-457e06006be7",
+    "Name": "ammo",
+    "Position": "0,-192,-6.315971",
+    "Scale": "3,3,3",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/items/ammo.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Spinner",
+        "rotation": "0,0,0.008726535,0.9999619"
+      },
+      {
+        "__type": "AmmoPickup",
+        "smg": {
+          "_type": "component",
+          "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+          "component_type": "SMG"
+        }
+      },
+      {
+        "__type": "BoxCollider",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Scale": "31.59998,23.7999,50",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "AmmoSpawner"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "fish.shotgun-ammo"
+  ]
+}

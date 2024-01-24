@@ -90,7 +90,7 @@
             "component_type": "Manager"
           },
           "particleEffect": "prefabs/burst.prefab",
-          "pistol": "884c2ff8-8a75-46a3-acc9-30d184a5e96f",
+          "pistol": "a73e1eaf-3908-44f4-99c1-5da6c5a91d09",
           "PistolGunEnabled": false,
           "punchSound": "sounds/punch.sound",
           "ragdoll": "prefabs/ragdoll.prefab",
@@ -124,7 +124,8 @@
         },
         {
           "__type": "SMG",
-          "ammo": 60,
+          "ableShoot": true,
+          "ammo": 512,
           "attack": {
             "_type": "component",
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
@@ -132,6 +133,7 @@
           },
           "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
           "impactEffect": "prefabs/impact_default.prefab",
+          "maxAmmo": 512,
           "playerAnimation": {
             "_type": "component",
             "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
@@ -650,9 +652,24 @@
                                                   ]
                                                 },
                                                 {
-                                                  "Id": "884c2ff8-8a75-46a3-acc9-30d184a5e96f",
+                                                  "Id": "a73e1eaf-3908-44f4-99c1-5da6c5a91d09",
                                                   "Name": "pistol",
-                                                  "Position": "219.6428,-71.43853,25.4388"
+                                                  "Position": "4.218,-1.539,-5.096",
+                                                  "Rotation": "0,0,0.008726535,0.9999619",
+                                                  "Scale": "2,2,2",
+                                                  "Components": [
+                                                    {
+                                                      "__type": "SkinnedModelRenderer",
+                                                      "BodyGroups": 9495,
+                                                      "BoneMergeTarget": null,
+                                                      "CreateBoneObjects": false,
+                                                      "MaterialGroup": null,
+                                                      "MaterialOverride": null,
+                                                      "Model": "models/weapons/sbox_pistol_usp/w_usp.vmdl",
+                                                      "RenderType": "On",
+                                                      "Tint": "1,1,1,1"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
@@ -2086,6 +2103,11 @@
         },
         {
           "__type": "HealthUi",
+          "attack": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "Attack"
+          },
           "health": {
             "_type": "component",
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
@@ -2203,7 +2225,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 5846.4736
+                "Relative": 5717.3667
               }
             }
           ]
@@ -2229,28 +2251,6 @@
           "Volume": 1
         }
       ]
-    },
-    {
-      "Id": "4b82b89d-6deb-4a0a-93b9-457e06006be7",
-      "Name": "ammo",
-      "Position": "0,-192,-6.315971",
-      "Scale": "3,3,3",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/items/ammo.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Spinner",
-          "rotation": "0,0,0.008726535,0.9999619"
-        }
-      ]
     }
   ],
   "SceneProperties": {
@@ -2267,6 +2267,6 @@
   "__references": [
     "caro.sky_001",
     "facepunch.w_mp5",
-    "fish.shotgun-ammo"
+    "facepunch.w_usp"
   ]
 }

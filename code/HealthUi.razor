@@ -3,7 +3,10 @@
 @inherits PanelComponent
 
 <root>
+	@if (attack.HasGunSmg)
+	{
 	<div class="health3">Ammo: @smg.ammo</div>
+	}
 	<div class="health2">Max Health: @health.maxHealth</div>
  	<div class="health">Health: @health.healthNumber</div>
 	
@@ -15,7 +18,7 @@
 {
 	 [Property] public HealthManager health { get; set; }
 	[Property] public SMG smg { get; set; }
-	 
+	 [Property] public Attack attack { get; set; }
 
 
 	/// <summary>

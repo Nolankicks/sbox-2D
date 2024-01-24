@@ -9,14 +9,30 @@ public sealed class SMG : Component
 	[Property] public SoundEvent shootSound { get; set; }
 	[Property] public GameObject body { get; set; }
 	[Property] public Attack attack { get; set; }
-	[Property] public long ammo { get; set; } = 60;
+	[Property] public long ammo { get; set; } = 120;
 	TimeSince timeSinceShoot;
+	[Property] public bool ableShoot {get; set;} = true; 
+	[Property] public long maxAmmo { get; set; } = 180;
+	public TimeSince timeSinceReload;
 	protected override void OnUpdate()
 	{
-		if (Input.Down("attack2") && attack.HasGunSmg)
+		if (attack.HasGunPistol)
+		{
+			ableShoot = false;
+		}
+		else
+		{
+			ableShoot = true;
+		}
+		if (ammo > maxAmmo)
+		{
+			ammo = maxAmmo;
+		}
+		if (Input.Down("attack1") && attack.HasGunSmg && ableShoot)
 		{
 			Shoot();
 			playerAnimation.Target.Set("b_attack", true);
+			attack.pistol.Enabled = false;
 			ammo -= 1;
 		}
 		Log.Info(ammo);
@@ -24,11 +40,29 @@ public sealed class SMG : Component
 		{
 			ammo = 0;
 		}
+		if (ammo == 0)
+		{
+			attack.ShowGunSmg = false;
+			attack.HasGunSmg = false;
+		}
+		
+		if (ammo == 60)
+		{
+			ableShoot = false;
+		if (Input.Pressed("reload") && attack.HasGunSmg && ammo == 60 )
+		{
+			timeSinceReload = 0;
+			playerAnimation.Target.Set("b_reload", true);
+			ammo -= 1;
+			ableShoot = true;
+		}
+
+		}
 	}
 
 	public void Shoot()
 	{
-		if (ammo > 0)
+		if (ammo > 0 && ableShoot)
 		{
 		playerAnimation.HoldType = CitizenAnimationHelper.HoldTypes.Rifle;
 		if (timeSinceShoot < 0.1f) return;
