@@ -95,7 +95,7 @@ public sealed class Attack : Component
 			{
 			
 			
-		
+			
 			var roation = Rotation.FromYaw(90);
 			var lookDir =  body.Transform.Rotation.Forward;
 			var spawnRot = body.Transform.Rotation * 180;
@@ -105,7 +105,8 @@ public sealed class Attack : Component
 			var trgo = tr.GameObject;
 			var trgoPos = trgo.Transform.Position;
 			var ragollPos = trgo.Transform.Position + lookDir * 100;
-			Sound.Play(deathSound);
+			
+			Sound.Play(deathSound, tr.HitPosition);
 			Log.Info(trgo.Name);
 			trgo.Destroy();
 			//var ragdollGo = ragdoll.Clone(trgoPos, rotation);
@@ -148,10 +149,11 @@ void GunPowerUp()
 	{
 		Log.Info("hit");
 		var trgo = tr.GameObject;
+		Log.Info(trgo);
 		if (trgo.Tags.Has("bad"))
 		{
-			trgo.Destroy();
 			
+			trgo.Destroy();
 			Sound.Play(deathSound, tr.HitPosition);
 			var deathParticle = particleEffect;
 			deathParticle.Clone(new Transform(tr.HitPosition + Vector3.Up * 45, Rotation.LookAt(tr.Normal)));
