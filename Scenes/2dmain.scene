@@ -2238,7 +2238,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 3990.4507
+                "Relative": 4045.31
               }
             }
           ]
@@ -2264,14 +2264,6 @@
           "Volume": 1
         }
       ]
-    },
-    {
-      "Id": "8e31816f-d47b-49c8-a20f-69921e71ad56",
-      "Name": "gunitem",
-      "Position": "4.373188,-494.1693,-6.315964",
-      "Scale": "10,10,10",
-      "Enabled": true,
-      "__Prefab": "prefabs/gunitem.prefab"
     }
   ],
   "SceneProperties": {
