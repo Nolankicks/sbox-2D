@@ -9,14 +9,14 @@ public sealed class SMG : Component
 	[Property] public SoundEvent shootSound { get; set; }
 	[Property] public GameObject body { get; set; }
 	[Property] public Attack attack { get; set; }
-	[Property] public long ammo { get; set; } = 120;
+	[Property] public long ammo { get; set; }
 	TimeSince timeSinceShoot;
 	[Property] public bool ableShoot {get; set;} = true; 
-	[Property] public long maxAmmo { get; set; } = 180;
+	[Property] public long maxAmmo { get; set; }
 	public TimeSince timeSinceReload;
 	protected override void OnUpdate()
 	{
-		if (attack.HasGunPistol)
+		if (attack.PistolGunEnabled)
 		{
 			ableShoot = false;
 		}
@@ -28,7 +28,7 @@ public sealed class SMG : Component
 		{
 			ammo = maxAmmo;
 		}
-		if (Input.Down("attack1") && attack.HasGunSmg && ableShoot)
+		if (Input.Down("attack1") && attack.SmgGunEnabled && ableShoot)
 		{
 			Shoot();
 			playerAnimation.Target.Set("b_attack", true);
@@ -42,8 +42,7 @@ public sealed class SMG : Component
 		}
 		if (ammo == 0)
 		{
-			attack.ShowGunSmg = false;
-			attack.HasGunSmg = false;
+		attack.SmgGunEnabled = false;
 		}
 		
 		if (ammo == 60)
@@ -58,6 +57,7 @@ public sealed class SMG : Component
 		}
 
 		}
+
 	}
 
 	public void Shoot()

@@ -58,7 +58,7 @@ public sealed class Manager : Component
 	{
 		
 		var score = 0;
-		Score += 5;
+		Score += 50;
 		Score += score;
 		if ( Score > HighScore ) HighScore = Score;
 	}

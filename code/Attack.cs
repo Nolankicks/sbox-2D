@@ -28,7 +28,8 @@ public sealed class Attack : Component
 	[Property] public bool HasGunSmg = false;
 	[Property] public bool Run = false;
 	[Property] float gunRange {get; set;}
-	[Property] bool PistolGunEnabled {get; set;} = false;
+	[Property] public bool PistolGunEnabled {get; set;} = false;
+	[Property] public bool SmgGunEnabled {get; set;} = false;
 	[Property] public SoundEvent gunSound {get; set;}
 
 	protected override void OnAwake()
@@ -41,11 +42,11 @@ public sealed class Attack : Component
 	}
 	protected override void OnUpdate()
 	{
-		if (ShowGunSmg)
+		if (SmgGunEnabled)
 		{
 			smgGun.Enabled = true;
 		}
-		if (!ShowGunSmg)
+		if (!SmgGunEnabled)
 		{
 			smgGun.Enabled = false;
 		}
@@ -58,7 +59,7 @@ public sealed class Attack : Component
 		{
 			timeSinceSpawn = 0;
 		}
-		if (!ShowGunPistol)
+		if (!PistolGunEnabled)
 		{
 			pistol.Enabled = false;
 		}
@@ -89,7 +90,7 @@ public sealed class Attack : Component
 		var camFoward = animationHelper.EyeWorldTransform.Position;
 		var tr = Scene.Trace.Ray(camFoward, camFoward + (camFoward * Range)).WithAnyTags("bad").Run();
 
-			if (Input.Pressed("attack1") && tr.Hit && !HasGunPistol && !HasGunSmg)
+			if (Input.Pressed("attack1") && tr.Hit && !PistolGunEnabled && !SmgGunEnabled)
 			{
 			
 			
@@ -114,7 +115,7 @@ public sealed class Attack : Component
 			ragdollRb.Velocity = rotation.Forward * 1000;
 			
 			}
-			if (Input.Pressed("attack1") && !HasGunPistol)
+			if (Input.Pressed("attack1") && !SmgGunEnabled && !PistolGunEnabled)
 			{
 				Sound.Play(punchSound);
 			}
@@ -128,11 +129,9 @@ void GunPowerUp()
 	
 	if (timeSinceSpawn > 10)
 	{
-		HasGunPistol = false;
-		ShowGunPistol = false;
 		PistolGunEnabled = false;
 	}
-	if (Input.Pressed("attack1") && HasGunPistol)
+	if (Input.Pressed("attack1") && PistolGunEnabled)
 	{
 	
 	PistolGunEnabled = true;
@@ -145,7 +144,7 @@ void GunPowerUp()
 	rb.Velocity = animationHelper.EyeWorldTransform.Rotation.Forward * 2000 + Vector3.Up * 55;
 	Sound.Play(gunSound);
 	
-	ShowGunPistol = true;
+	
 	
 	
 	}

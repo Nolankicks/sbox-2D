@@ -21,6 +21,7 @@
 	[Property] public TerrySpawner spawner { get; set; }
 	public TimeSince timeSinceUi { get; set; }
 	[Property] public Attack attack { get; set; }
+	[Property] public SMG smg {get; set;}
 	protected override void OnUpdate()
 	{
 		if (manager.testBool)
@@ -28,12 +29,10 @@
 			spawner.Enabled = false;
 			if (Input.Pressed("use"))
 			{
-				attack.ShowGunSmg = true;
-				attack.HasGunSmg = true;
-				attack.ShowGunPistol = false;
-				attack.HasGunPistol = false;
-				manager.testBool = false;
+				attack.PistolGunEnabled = false;
+				attack.SmgGunEnabled = true;
 				manager.AddScore();
+				smg.ammo = 512;
 				
 			}
 			if (Input.Pressed("Menu"))

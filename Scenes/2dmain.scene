@@ -102,6 +102,7 @@
             "component_type": "SMG"
           },
           "smgGun": "a3f2fcf3-c2f1-49f9-b23e-928abcbedb8f",
+          "SmgGunEnabled": false,
           "soundEvent": "sounds/punch.sound"
         },
         {
@@ -125,7 +126,7 @@
         {
           "__type": "SMG",
           "ableShoot": true,
-          "ammo": 512,
+          "ammo": 0,
           "attack": {
             "_type": "component",
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
@@ -2145,6 +2146,11 @@
                 "component_type": "Manager"
               },
               "MyStringValue": "Hello World!",
+              "smg": {
+                "_type": "component",
+                "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+                "component_type": "SMG"
+              },
               "spawner": {
                 "_type": "component",
                 "go": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
@@ -2211,6 +2217,11 @@
           "Components": [
             {
               "__type": "GunItemSpawner",
+              "attack": {
+                "_type": "component",
+                "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+                "component_type": "Attack"
+              },
               "gun": "prefabs/gunitem.prefab"
             }
           ]
@@ -2225,7 +2236,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 5717.3667
+                "Relative": 2121.7612
               }
             }
           ]
@@ -2251,6 +2262,14 @@
           "Volume": 1
         }
       ]
+    },
+    {
+      "Id": "8e31816f-d47b-49c8-a20f-69921e71ad56",
+      "Name": "gunitem",
+      "Position": "4.373188,-494.1693,-6.315964",
+      "Scale": "10,10,10",
+      "Enabled": true,
+      "__Prefab": "prefabs/gunitem.prefab"
     }
   ],
   "SceneProperties": {
@@ -2266,7 +2285,6 @@
   "Description": "",
   "__references": [
     "caro.sky_001",
-    "facepunch.w_mp5",
-    "facepunch.w_usp"
+    "facepunch.w_mp5"
   ]
 }
