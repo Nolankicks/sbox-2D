@@ -2,13 +2,11 @@
   "RootObject": {
     "Id": "82314eaa-06aa-453b-a49a-834805635560",
     "Name": "crushedcan",
-    "Scale": "15,15,15",
+    "Scale": "10,10,10",
     "Enabled": true,
     "Components": [
       {
-        "__version": 0,
         "__type": "ModelRenderer",
-        "__enabled": true,
         "BodyGroups": 18446744073709551615,
         "MaterialGroup": null,
         "MaterialOverride": null,
@@ -17,30 +15,22 @@
         "Tint": "1,1,1,1"
       },
       {
-        "__version": 0,
         "__type": "ModelCollider",
-        "__enabled": true,
         "IsTrigger": true,
         "Model": "models/sbox_props/cola_can/cola_can.vmdl",
         "Static": false,
         "Surface": null
       },
       {
-        "__version": 0,
         "__type": "Spinner",
-        "__enabled": true,
         "rotation": "0,0,0.008726535,0.9999619"
       },
       {
-        "__version": 0,
         "__type": "CrushedCan",
-        "__enabled": true,
         "crushedCan": "sounds/deathsound.sound"
       },
       {
-        "__version": 0,
-        "__type": "CanDespawner",
-        "__enabled": true
+        "__type": "CanDespawner"
       }
     ]
   },
@@ -48,7 +38,6 @@
   "MenuPath": null,
   "MenuIcon": null,
   "__references": [
-    "facepunch.cola_can_gib",
     "facepunch.soda_can"
   ]
 }

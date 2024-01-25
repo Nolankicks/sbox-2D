@@ -7,6 +7,7 @@ using Sandbox.Citizen;
 public sealed class Attack : Component
 {
 	public TimeSince timeSinceSpawn { get; set; }
+	
 	[Property] float Range { get; set; }
 	[Property] public SMG smg { get; set; }
 	[Property] public GameObject particleEffect {get; set;}
@@ -127,14 +128,17 @@ public sealed class Attack : Component
 
 void GunPowerUp()
 {
-	
-	
+
+		
+		
+
 	if (timeSinceSpawn > 10)
 	{
 		PistolGunEnabled = false;
 	}
 	if (Input.Pressed("attack1") && PistolGunEnabled)
 	{
+			
 	
 	PistolGunEnabled = true;
 	var camFoward = body.Transform.Rotation;

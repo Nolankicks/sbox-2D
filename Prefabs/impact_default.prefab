@@ -1,12 +1,11 @@
 {
   "RootObject": {
-    "Id": "0d80eec7-9acf-4e93-974d-66e8eefe224e",
+    "Id": "a276c117-ec52-4596-9773-32ea9234f45b",
     "Name": "impact_default",
     "Enabled": true,
     "Components": [
       {
         "__type": "ParticleEffect",
-        "__enabled": true,
         "Alpha": {
           "Type": "Curve",
           "CurveA": [
@@ -137,7 +136,6 @@
       },
       {
         "__type": "ParticleSpriteRenderer",
-        "__enabled": true,
         "Additive": false,
         "BlurAmount": 0.5,
         "BlurOpacity": 0.91,
@@ -156,7 +154,6 @@
       },
       {
         "__type": "ParticleConeEmitter",
-        "__enabled": true,
         "Burst": 8,
         "ConeAngle": 70,
         "ConeFar": 16,
@@ -172,14 +169,13 @@
     ],
     "Children": [
       {
-        "Id": "adff0097-5bb0-470c-a350-6f961a05e7ee",
+        "Id": "eb28f638-02b1-417f-8129-9e8810522565",
         "Name": "Smoke",
         "Position": "2.014441,0,0",
         "Enabled": true,
         "Components": [
           {
             "__type": "ParticleEffect",
-            "__enabled": true,
             "Alpha": {
               "Type": "Curve",
               "CurveA": [
@@ -331,7 +327,6 @@
           },
           {
             "__type": "ParticleSpriteRenderer",
-            "__enabled": true,
             "Additive": false,
             "BlurAmount": 0.5,
             "BlurOpacity": 0.91,
@@ -350,7 +345,6 @@
           },
           {
             "__type": "ParticleConeEmitter",
-            "__enabled": true,
             "Burst": 16,
             "ConeAngle": 19.39,
             "ConeFar": 23.679735,
@@ -366,13 +360,12 @@
         ]
       },
       {
-        "Id": "4243cd69-cbed-40e3-94c6-bdabc96e5423",
+        "Id": "8e5880c3-af5b-4887-b7c1-72b9b8bb71b0",
         "Name": "Spark",
         "Enabled": true,
         "Components": [
           {
             "__type": "ParticleEffect",
-            "__enabled": true,
             "Alpha": {
               "CurveA": [
                 {
@@ -485,7 +478,6 @@
           },
           {
             "__type": "ParticleSpriteRenderer",
-            "__enabled": true,
             "Additive": true,
             "BlurAmount": 0.5,
             "BlurOpacity": 0.91,
@@ -504,7 +496,6 @@
           },
           {
             "__type": "ParticleSphereEmitter",
-            "__enabled": true,
             "Burst": 4,
             "Delay": 0,
             "DestroyOnEnd": false,

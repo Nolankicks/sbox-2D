@@ -642,7 +642,7 @@
                                                   "Components": [
                                                     {
                                                       "__type": "SkinnedModelRenderer",
-                                                      "BodyGroups": 3,
+                                                      "BodyGroups": 18446744073709551615,
                                                       "BoneMergeTarget": null,
                                                       "CreateBoneObjects": false,
                                                       "MaterialGroup": null,
@@ -662,7 +662,7 @@
                                                   "Components": [
                                                     {
                                                       "__type": "SkinnedModelRenderer",
-                                                      "BodyGroups": 9495,
+                                                      "BodyGroups": 18446744073709551519,
                                                       "BoneMergeTarget": null,
                                                       "CreateBoneObjects": false,
                                                       "MaterialGroup": null,
@@ -2237,7 +2237,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 77.65435
+                "Relative": 1270.8884
               }
             }
           ]

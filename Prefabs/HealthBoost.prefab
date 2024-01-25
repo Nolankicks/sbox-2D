@@ -2,20 +2,16 @@
   "RootObject": {
     "Id": "93caa79e-c407-443c-867a-43bce05d78be",
     "Name": "healthboost",
-    "Scale": "15,15,15",
+    "Scale": "10,10,10",
     "Enabled": true,
     "Components": [
       {
-        "__version": 0,
         "__type": "HealthBoost",
-        "__enabled": true,
         "crushedCan": "prefabs/crushedcan.prefab",
         "healthSound": "sounds/kenney/ui/ui.favourite.sound"
       },
       {
-        "__version": 0,
         "__type": "ModelRenderer",
-        "__enabled": true,
         "BodyGroups": 18446744073709551615,
         "MaterialGroup": null,
         "MaterialOverride": null,
@@ -24,15 +20,11 @@
         "Tint": "1,1,1,1"
       },
       {
-        "__version": 0,
         "__type": "Spinner",
-        "__enabled": true,
         "rotation": "0,0,0.008726535,0.9999619"
       },
       {
-        "__version": 0,
         "__type": "ModelCollider",
-        "__enabled": true,
         "IsTrigger": true,
         "Model": "models/sbox_props/cola_can/cola_can.vmdl",
         "Static": false,
