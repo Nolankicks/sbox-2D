@@ -135,7 +135,7 @@
           },
           "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
           "impactEffect": "prefabs/impact_default.prefab",
-          "maxAmmo": 512,
+          "maxAmmo": 360,
           "playerAnimation": {
             "_type": "component",
             "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
@@ -2237,7 +2237,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 207.50533
+                "Relative": 207.23473
               }
             }
           ]
