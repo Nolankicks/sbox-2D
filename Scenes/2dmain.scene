@@ -65,7 +65,7 @@
         {
           "__type": "Attack",
           "HasGunPistol": false,
-          "HasGunSmg": true,
+          "HasGunSmg": false,
           "Run": false,
           "ShowGunPistol": false,
           "ShowGunSmg": false,
@@ -116,6 +116,7 @@
         },
         {
           "__type": "HealthTrigger",
+          "__enabled": false,
           "emitter": "prefabs/burst.prefab",
           "healthManager": {
             "_type": "component",
@@ -2188,8 +2189,10 @@
           "Components": [
             {
               "__type": "Manager",
+              "ableToInput": true,
               "sceneFile": "scenes/2dmenu.scene",
-              "testBool": false
+              "testBool": false,
+              "updateUi": null
             }
           ]
         },
@@ -2237,7 +2240,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 1495.6991
+                "Relative": 786.81305
               }
             }
           ]

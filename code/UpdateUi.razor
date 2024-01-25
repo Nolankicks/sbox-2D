@@ -3,7 +3,7 @@
 @inherits PanelComponent
 
 <root>
-	@if (manager.testBool)
+	@if (timeSinceUi <= 10 && manager.testBool)
 	{
 		<div class="title">
 			Upgrade Available
@@ -19,9 +19,10 @@
 	[Property] public HealthManager healthManager { get; set; }
 	[Property, TextArea] public string MyStringValue { get; set; } = "Hello World!";
 	[Property] public TerrySpawner spawner { get; set; }
-	public TimeSince timeSinceUi { get; set; }
+
 	[Property] public Attack attack { get; set; }
 	[Property] public SMG smg {get; set;}
+	public TimeSince timeSinceUi { get; set; }
 	
 	protected override void OnUpdate()
 	{
@@ -31,22 +32,24 @@
 		{
 			
 			spawner.Enabled = false;
-			if (Input.Pressed("use"))
+			timeSinceUi = 0;
+			if (Input.Pressed("use") && manager.ableToInput)
 			{
 				attack.PistolGunEnabled = false;
 				attack.SmgGunEnabled = true;
 				manager.AddScore();
 				smg.ammo = 512;
 				manager.testBool = false;
-				
+				manager.ableToInput = false;
 			}
-			if (Input.Pressed("Menu"))
+			if (Input.Pressed("Menu") && manager.ableToInput)
 			{
 				healthManager.maxHealth += 100;
 				healthManager.healthNumber = healthManager.maxHealth;
 				manager.testBool = false;
 				manager.AddScore();
 				manager.testBool = false;
+				manager.ableToInput = false;
 			}
 		}
 		else
