@@ -24,15 +24,18 @@
 	[Property] public SMG smg {get; set;}
 	protected override void OnUpdate()
 	{
+		var badguys = GameObject.Tags.Has("badguy");
 		if (manager.testBool)
 		{
+			
 			spawner.Enabled = false;
 			if (Input.Pressed("use"))
 			{
 				attack.PistolGunEnabled = false;
 				attack.SmgGunEnabled = true;
-				manager.AddScore();
+				//manager.AddScore();
 				smg.ammo = 512;
+				manager.testBool = false;
 				
 			}
 			if (Input.Pressed("Menu"))
@@ -40,7 +43,8 @@
 				healthManager.maxHealth += 100;
 				healthManager.healthNumber = healthManager.maxHealth;
 				manager.testBool = false;
-				manager.AddScore(); 
+				//manager.AddScore(); 
+				manager.testBool = false;
 			}
 		}
 		else

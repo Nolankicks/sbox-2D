@@ -1122,7 +1122,7 @@
         {
           "Id": "8ea3d8be-5cd4-430d-a780-b1fb88845aea",
           "Name": "Plane",
-          "Position": "271.5526,188.5552,-2.517418",
+          "Position": "271.5526,188.5552,3.382582",
           "Scale": "1.369936,1.769026,1",
           "Enabled": true,
           "Components": [
@@ -2237,7 +2237,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 1613.0258
+                "Relative": 508.17322
               }
             }
           ]

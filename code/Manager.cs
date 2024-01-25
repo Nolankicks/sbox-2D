@@ -27,10 +27,7 @@ public sealed class Manager : Component
 		{
 			testBool = true;
 		}
-		else
-		{
-			testBool = false;
-		}
+
 	}
 
 	public void StartGame()
