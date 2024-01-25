@@ -36,6 +36,15 @@ public sealed class Manager : Component
 		{
 			testBool = false;
 		}
+		if (testBool)
+		{
+			//var badguys = GameObject.Tags.Has("badguy");
+			
+			/*foreach (var badguy in Scene.GetAllComponents<Shooter>())
+			{
+				badguy.Destroy();
+			}*/
+		}
 		
 
 	}
