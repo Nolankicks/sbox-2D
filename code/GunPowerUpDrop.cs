@@ -7,7 +7,8 @@ public sealed class GunPowerUpDrop : Component, Component.ITriggerListener //Cha
 
  [Property] public SoundEvent announcerVoice {get; set;}
 [Property] public SoundEvent equipSound {get; set;}
-//[Property] public Attack attack {get; set;}
+
+[Property] public Attack attack {get; set;}
 
 
 
@@ -17,7 +18,7 @@ public sealed class GunPowerUpDrop : Component, Component.ITriggerListener //Cha
 		var attack = Scene.GetAllComponents<Attack>().FirstOrDefault();
 		if (!other.GameObject.IsValid)
 		return;
-		if (other.Tags.Has("player"))
+		if (other.Tags.Has("player") && !attack.SmgGunEnabled)
 		{
 			attack.PistolGunEnabled = true;
 			Sound.Play(announcerVoice);
