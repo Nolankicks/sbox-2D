@@ -8,7 +8,7 @@
 		<div class="title">
 			Upgrade Available
 			Press Q for Max Health Increase
-			Press E for MP4 PowerUp
+			Press E for MP5 PowerUp
 		</div>
 	}
 </root>
@@ -22,9 +22,11 @@
 	public TimeSince timeSinceUi { get; set; }
 	[Property] public Attack attack { get; set; }
 	[Property] public SMG smg {get; set;}
+	
 	protected override void OnUpdate()
 	{
-		var badguys = GameObject.Tags.Has("badguy");
+
+		
 		if (manager.testBool)
 		{
 			
@@ -33,7 +35,7 @@
 			{
 				attack.PistolGunEnabled = false;
 				attack.SmgGunEnabled = true;
-				//manager.AddScore();
+				manager.AddScore();
 				smg.ammo = 512;
 				manager.testBool = false;
 				
@@ -43,7 +45,7 @@
 				healthManager.maxHealth += 100;
 				healthManager.healthNumber = healthManager.maxHealth;
 				manager.testBool = false;
-				//manager.AddScore(); 
+				manager.AddScore();
 				manager.testBool = false;
 			}
 		}

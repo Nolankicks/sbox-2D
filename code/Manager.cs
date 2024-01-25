@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Microsoft.VisualBasic;
 using Sandbox;
 
 public sealed class Manager : Component
@@ -19,7 +20,8 @@ public sealed class Manager : Component
 
 	protected override void OnUpdate()
 	{
-		if ( !Playing && Input.Pressed( "Jump" ) )
+		
+		if (!Playing && Input.Pressed("Jump"))
 		{
 			StartGame();
 		}
@@ -27,6 +29,11 @@ public sealed class Manager : Component
 		{
 			testBool = true;
 		}
+		else
+		{
+			testBool = false;
+		}
+		
 
 	}
 
