@@ -27,7 +27,7 @@ public sealed class Manager : Component
 		{
 			StartGame();
 		}
-		if (Score == 100 ^ Score == 200 ^ Score == 300 ^ Score == 400 ^ Score == 500 ^ Score == 600 ^ Score == 700 ^ Score == 800 ^ Score == 900 ^ Score == 1000 ^ Score == 1100)
+		if (Score % 100 == 0 && Score != 0)
 		{
 			testBool = true;
 			ableToInput = true;

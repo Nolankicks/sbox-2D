@@ -31,9 +31,10 @@ public sealed class Attack : Component
 	[Property] float gunRange {get; set;}
 	[Property] public bool PistolGunEnabled {get; set;} = false;
 	[Property] public bool SmgGunEnabled {get; set;} = false;
+	[Property] public bool RPGGunEnabled {get; set;} = false;
 	[Property] public SoundEvent gunSound {get; set;}
 	[Property] public GameObject impactEffect {get; set;}
-
+	[Property] public RPG rpg {get; set;}
 	protected override void OnAwake()
 	{
 		/*
@@ -73,7 +74,7 @@ public sealed class Attack : Component
 		{	
 			Fire();
 			
-				
+			
 			GunPowerUp();
 			animationHelper.Target.Set("b_attack", true);
 			

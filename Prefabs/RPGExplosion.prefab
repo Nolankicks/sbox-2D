@@ -1,0 +1,21 @@
+{
+  "RootObject": {
+    "Id": "9fb9e4ef-468a-434f-b7cd-8e29360c568d",
+    "Name": "Explosion",
+    "Position": "-464.8875,-4.232025,141.4627",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "LegacyParticleSystem",
+        "ControlPoints": [],
+        "Looped": false,
+        "Particles": "particles/explosion/barrel_explosion/explosion_fire_ring.vpcf",
+        "PlaybackSpeed": 1
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

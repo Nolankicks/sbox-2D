@@ -1,0 +1,43 @@
+{
+  "RootObject": {
+    "Id": "85622b27-43e6-4339-a54e-9d05ca73683a",
+    "Name": "shell",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "rpg7_rocket.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Rigidbody",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "BoxCollider",
+        "Center": "13.56572,0.240581,1.653239",
+        "IsTrigger": false,
+        "Scale": "42.16209,8.782475,11.0402",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "RPGCollision",
+        "explosion": "prefabs/rpgexplosion.prefab"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

@@ -97,6 +97,12 @@
           "ragdoll": "prefabs/ragdoll.prefab",
           "Range": 15,
           "rotation": "-0,0,1,-0.00000004371139",
+          "rpg": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "RPG"
+          },
+          "RPGGunEnabled": true,
           "smg": {
             "_type": "component",
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
@@ -142,6 +148,24 @@
             "component_type": "CitizenAnimationHelper"
           },
           "shootSound": "sounds/guns/f1/ar2_shoot.sound"
+        },
+        {
+          "__type": "RPG",
+          "animationHelper": {
+            "_type": "component",
+            "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+            "component_type": "CitizenAnimationHelper"
+          },
+          "attack": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "Attack"
+          },
+          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+          "Lifetime": 0,
+          "rpgModel": "efe8f605-bed0-4335-83aa-088eb4be7a91",
+          "shell": "prefabs/shell.prefab",
+          "speed": 0
         }
       ],
       "Children": [
@@ -668,6 +692,22 @@
                                                       "MaterialGroup": null,
                                                       "MaterialOverride": null,
                                                       "Model": "models/weapons/sbox_pistol_usp/w_usp.vmdl",
+                                                      "RenderType": "On",
+                                                      "Tint": "1,1,1,1"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "Id": "efe8f605-bed0-4335-83aa-088eb4be7a91",
+                                                  "Name": "rpg7",
+                                                  "Position": "-14.3457,0.6500848,-0.9439654",
+                                                  "Components": [
+                                                    {
+                                                      "__type": "ModelRenderer",
+                                                      "BodyGroups": 18446744073709551615,
+                                                      "MaterialGroup": null,
+                                                      "MaterialOverride": null,
+                                                      "Model": "rpg7.vmdl",
                                                       "RenderType": "On",
                                                       "Tint": "1,1,1,1"
                                                     }
@@ -2178,7 +2218,6 @@
       "Id": "9ad52cc0-70db-47a3-a9bb-aa3ebd5eb4a1",
       "Name": "Managers",
       "Position": "-901.3305,-241.9596,416.492",
-      "Enabled": true,
       "Children": [
         {
           "Id": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
@@ -2199,7 +2238,6 @@
           "Id": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
           "Name": "TerrySpawner",
           "Position": "702.6836,129.6039,-274.7043",
-          "Enabled": true,
           "Components": [
             {
               "__type": "TerrySpawner",
@@ -2239,7 +2277,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 248.10474
+                "Relative": 4279.6206
               }
             }
           ]
