@@ -40,10 +40,10 @@ public sealed class Manager : Component
 		{
 			//var badguys = GameObject.Tags.Has("badguy");
 			
-			/*foreach (var badguy in Scene.GetAllComponents<Shooter>())
+			foreach (var badguy in Scene.GetAllComponents<Shooter>())
 			{
-				badguy.Destroy();
-			}*/
+				badguy.GameObject.Destroy();
+			}
 		}
 		
 
