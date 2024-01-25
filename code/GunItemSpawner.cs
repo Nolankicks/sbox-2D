@@ -14,7 +14,7 @@ public sealed class GunItemSpawner : Component
 		var random = GetRandomNumber();
         
         
-		if (random > 99.9f && !attack.HasGunPistol)
+		if (random > 99.9f && !attack.SmgGunEnabled && !attack.PistolGunEnabled)
 		{
 			var gunClone = gun.Clone();
 			
