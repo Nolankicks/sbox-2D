@@ -116,7 +116,6 @@
         },
         {
           "__type": "HealthTrigger",
-          "__enabled": false,
           "emitter": "prefabs/burst.prefab",
           "healthManager": {
             "_type": "component",
@@ -2240,7 +2239,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 149.0428
+                "Relative": 248.10474
               }
             }
           ]
