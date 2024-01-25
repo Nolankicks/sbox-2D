@@ -16,7 +16,7 @@ public sealed class HealthManager : Component
 		// /Log.Info(score);
 
 
-		if (healthNumber == 0)
+		if (healthNumber <= 0)
 		{
 			manager.EndGame();
 		}
