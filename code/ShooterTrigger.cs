@@ -42,6 +42,7 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener //Cha
 			ragdoll.Clone(pos + Vector3.Backward * 75, rot);
 			manager.AddScore();
 			particleEffect.Clone(pos);
+			
 		}		
 			
 		

@@ -1,8 +1,7 @@
 {
   "RootObject": {
-    "Id": "9fb9e4ef-468a-434f-b7cd-8e29360c568d",
+    "Id": "ae890081-493a-4c59-9097-8a40fb031b33",
     "Name": "Explosion",
-    "Position": "-464.8875,-4.232025,141.4627",
     "Enabled": true,
     "Components": [
       {
@@ -11,6 +10,9 @@
         "Looped": false,
         "Particles": "particles/explosion/barrel_explosion/explosion_fire_ring.vpcf",
         "PlaybackSpeed": 1
+      },
+      {
+        "__type": "Despawner"
       }
     ]
   },

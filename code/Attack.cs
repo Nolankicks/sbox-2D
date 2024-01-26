@@ -93,7 +93,7 @@ public sealed class Attack : Component
 		var camFoward = animationHelper.EyeWorldTransform.Position;
 		var tr = Scene.Trace.Ray(camFoward, camFoward + (camFoward * Range)).WithAnyTags("bad").Run();
 
-			if (Input.Pressed("attack1") && tr.Hit && !PistolGunEnabled && !SmgGunEnabled)
+			if (Input.Pressed("attack1") && tr.Hit && !PistolGunEnabled && !SmgGunEnabled && !RPGGunEnabled)
 			{
 			
 			

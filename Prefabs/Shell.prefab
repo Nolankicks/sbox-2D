@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "85622b27-43e6-4339-a54e-9d05ca73683a",
+    "Id": "42676aec-f75d-4778-b6e0-eb71ff4b9ffe",
     "Name": "shell",
     "Enabled": true,
     "Components": [
@@ -32,7 +32,10 @@
       },
       {
         "__type": "RPGCollision",
-        "explosion": "prefabs/rpgexplosion.prefab"
+        "explosion": "prefabs/rpgexplosion.prefab",
+        "explosionSound": null,
+        "self": "prefabs/shell.prefab",
+        "trigger": "prefabs/rpgtrigger.prefab"
       }
     ]
   },
