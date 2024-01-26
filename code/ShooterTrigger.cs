@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Runtime.CompilerServices;
 using Microsoft.VisualBasic;
 using Sandbox;
@@ -7,10 +8,11 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener //Cha
 {
 
  bool _iTouching; 
- [Property] public GameObject badguy {get; set;}
- [Property] public GameObject particleEffect {get; set;}
- [Property] public GameObject ragdoll {get; set;}
-[Property] public Manager manager {get; set;}
+[Property] public GameObject badguy {get; set;}
+[Property] public GameObject particleEffect {get; set;}
+[Property] public GameObject zombieRagdoll {get; set;}
+[Property] public GameObject humanRagdoll {get; set;}
+Manager manager => Scene.GetAllComponents<Manager>().FirstOrDefault();
 
  public void istouching(bool _iTouching)
  {
@@ -39,7 +41,15 @@ public sealed class ShooterTrigger : Component, Component.ITriggerListener //Cha
 
 			
 			badguy.Destroy();
-			ragdoll.Clone(pos + Vector3.Backward * 75, rot);
+			
+			if (GameObject.Tags.Has("human"))
+			{
+			humanRagdoll.Clone(pos + Vector3.Backward * 75, rot);
+			}
+			else
+			{
+			zombieRagdoll.Clone(pos + Vector3.Backward * 75, rot);
+			}
 			manager.AddScore();
 			particleEffect.Clone(pos);
 			

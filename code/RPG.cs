@@ -29,7 +29,7 @@ public sealed class RPG : Component
 
 	public void Shoot()
 	{
-		var shellGo = shell.Clone(body.Transform.Position + Vector3.Up * 50f, body.Transform.Rotation);
+		var shellGo = shell.Clone(body.Transform.Position + Vector3.Up * 50f + Vector3.Forward * 50f, body.Transform.Rotation);
 		var rb = shellGo.Components.Get<Rigidbody>();
 		var collider = shellGo.Components.Get<BoxCollider>();
 		rb.Velocity = body.Transform.Rotation.Forward * 1000;

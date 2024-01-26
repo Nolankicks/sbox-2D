@@ -95,7 +95,7 @@
           "pistol": "a73e1eaf-3908-44f4-99c1-5da6c5a91d09",
           "PistolGunEnabled": false,
           "punchSound": "sounds/punch.sound",
-          "Range": 15,
+          "Range": 50,
           "rotation": "-0,0,1,-0.00000004371139",
           "rpg": {
             "_type": "component",
@@ -2156,13 +2156,9 @@
             {
               "__type": "ShooterTrigger",
               "badguy": "de12a866-f86b-4d28-9771-195ad24e0a2d",
-              "manager": {
-                "_type": "component",
-                "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
-                "component_type": "Manager"
-              },
+              "humanRagdoll": null,
               "particleEffect": "prefabs/burst.prefab",
-              "ragdoll": "prefabs/ragdoll.prefab"
+              "zombieRagdoll": null
             }
           ]
         }
@@ -2326,7 +2322,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 4485.5293
+                "Relative": 2392.1914
               }
             }
           ]

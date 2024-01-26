@@ -77,11 +77,11 @@ public sealed class Zombie : Component
 		if (tr.Hit && tr.GameObject.Tags.Has("player"))
         {
            
-            if (timeSinceHit > 1)
+            if (timeSinceHit > 2)
             {
-                health.healthNumber -= 10;
-               timeSinceHit = 0;
-			   Sound.Play(traceHitSound, tr.HitPosition);
+            	health.healthNumber -= 10;
+               	timeSinceHit = 0;
+			   	Sound.Play(traceHitSound, tr.HitPosition);
 			   citizenAnimationHelper.Target.Set("b_attack", true);
             }
             
