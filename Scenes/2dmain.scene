@@ -2247,7 +2247,6 @@
       "Id": "9ad52cc0-70db-47a3-a9bb-aa3ebd5eb4a1",
       "Name": "Managers",
       "Position": "-901.3305,-241.9596,416.492",
-      "Enabled": true,
       "Children": [
         {
           "Id": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
@@ -2268,7 +2267,6 @@
           "Id": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
           "Name": "TerrySpawner",
           "Position": "702.6836,129.6039,-274.7043",
-          "Enabled": true,
           "Components": [
             {
               "__type": "TerrySpawner",
@@ -2309,7 +2307,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 859.70874
+                "Relative": 175.62288
               }
             }
           ]
@@ -2337,9 +2335,9 @@
       ]
     },
     {
-      "Id": "92d056de-03c7-4d71-b07e-7ae19cbcdb3e",
+      "Id": "399f866e-02cf-4810-9c8a-3932fdaee93f",
       "Name": "Zombie",
-      "Position": "0,-174.7659,0",
+      "Position": "0.000006939252,-160,0.5840302",
       "Rotation": "0,0,1,-0.00000004371139",
       "Enabled": true,
       "Components": [
@@ -2348,11 +2346,21 @@
           "BodyGroups": 341,
           "BoneMergeTarget": null,
           "CreateBoneObjects": false,
-          "MaterialGroup": null,
+          "MaterialGroup": "default",
           "MaterialOverride": null,
           "Model": "models/citizen/heads/head_zombie_01/models/head_zombie_01.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Zombie",
+          "body": "399f866e-02cf-4810-9c8a-3932fdaee93f",
+          "characterController": {
+            "_type": "component",
+            "go": "399f866e-02cf-4810-9c8a-3932fdaee93f",
+            "component_type": "CharacterController"
+          },
+          "Speed": 150
         },
         {
           "__type": "CitizenAnimationHelper",
@@ -2369,12 +2377,18 @@
           "LookAtEnabled": false,
           "Target": {
             "_type": "component",
-            "go": "92d056de-03c7-4d71-b07e-7ae19cbcdb3e",
+            "go": "399f866e-02cf-4810-9c8a-3932fdaee93f",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
-          "__type": "Zombie"
+          "__type": "CharacterController",
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
         }
       ]
     }
@@ -2392,6 +2406,7 @@
   "Description": "",
   "__references": [
     "caro.sky_001",
-    "facepunch.w_mp5"
+    "facepunch.w_mp5",
+    "roomfield.head_zombie_01"
   ]
 }

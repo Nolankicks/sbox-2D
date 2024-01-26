@@ -20,6 +20,7 @@ public sealed class Zombie : Component
 		target = controller.GameObject.Transform.Position;
 		BuildWishVelocity();
 		UpdateMovement();
+		UpdateAnimations();
 	}
 
 	void BuildWishVelocity()
@@ -47,5 +48,18 @@ public sealed class Zombie : Component
 		if ( characterController.IsOnGround ) return 6.0f;
 
 		return 0.2f;
+	}
+	void UpdateAnimations()
+	{
+		// Rotate body towards target
+		if ( target != Vector3.Zero )
+		{
+			var targetRot = Rotation.LookAt( target.WithZ( Transform.Position.z ) - Transform.Position, Vector3.Up );
+			body.Transform.Rotation = Rotation.Slerp( body.Transform.Rotation, targetRot, Time.Delta * 10f );
+		}
+
+		citizenAnimationHelper.WithWishVelocity( WishVelocity );
+		citizenAnimationHelper.WithVelocity( characterController.Velocity );
+		
 	}
 }
