@@ -183,7 +183,7 @@
           "Components": [
             {
               "__type": "SkinnedModelRenderer",
-              "BodyGroups": 21,
+              "BodyGroups": 341,
               "BoneMergeTarget": null,
               "CreateBoneObjects": true,
               "MaterialGroup": "default",
@@ -2309,7 +2309,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 54.15485
+                "Relative": 859.70874
               }
             }
           ]
@@ -2333,6 +2333,48 @@
           "SoundOverride": true,
           "StopOnNew": false,
           "Volume": 1
+        }
+      ]
+    },
+    {
+      "Id": "92d056de-03c7-4d71-b07e-7ae19cbcdb3e",
+      "Name": "Zombie",
+      "Position": "0,-174.7659,0",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/citizen/heads/head_zombie_01/models/head_zombie_01.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "CitizenAnimationHelper",
+          "BodyWeight": 1,
+          "EyeSource": null,
+          "EyesWeight": 1,
+          "HeadWeight": 1,
+          "Height": 1,
+          "IkLeftFoot": null,
+          "IkLeftHand": null,
+          "IkRightFoot": null,
+          "IkRightHand": null,
+          "LookAt": null,
+          "LookAtEnabled": false,
+          "Target": {
+            "_type": "component",
+            "go": "92d056de-03c7-4d71-b07e-7ae19cbcdb3e",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Zombie"
         }
       ]
     }
