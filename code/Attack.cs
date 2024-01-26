@@ -16,7 +16,8 @@ public sealed class Attack : Component
 	[Property] CitizenAnimationHelper animationHelper {get; set;}
 	[Property] public SoundEvent deathSound {get; set;}
 	[Property] SoundEvent soundEvent { get; set; }
-	[Property] public GameObject ragdoll { get; set; }
+	[Property] public GameObject humanRagdoll { get; set; }
+	[Property] public GameObject zombieRagdoll { get; set; }	
 	[Property] public Rotation rotation { get; set; }
 	[Property] public Manager manager {get; set;}
 	[Property] public SoundEvent punchSound {get; set;}
@@ -108,7 +109,7 @@ public sealed class Attack : Component
 		//Perform a trace foward
 		animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Punch;
 		var camFoward = body.Transform.Rotation;
-		var tr = Scene.Trace.Ray(body.Transform.Position, body.Transform.Position + camFoward.Forward * 100).Run();
+		var tr = Scene.Trace.Ray(body.Transform.Position, body.Transform.Position + camFoward.Forward * 100).WithTag("bad").Run();
 
 			if (Input.Pressed("attack1") && tr.Hit && !PistolGunEnabled && !SmgGunEnabled && !RPGGunEnabled)
 			{
@@ -117,7 +118,7 @@ public sealed class Attack : Component
 			
 			var roation = Rotation.FromYaw(90);
 			var lookDir =  body.Transform.Rotation.Forward;
-			var spawnRot = body.Transform.Rotation * 180;
+			var spawnRot = body.Transform.Rotation * -1;
 			
 			manager.AddScore();
 			Log.Info("test");
@@ -131,10 +132,13 @@ public sealed class Attack : Component
 			//var ragdollGo = ragdoll.Clone(trgoPos, rotation);
 			particleEffect.Clone(trgoPos);
 			
-			var ragdollClone = ragdoll.Clone(trgoPos + Vector3.Backward * 75, spawnRot);
-			var ragdollRb = ragdollClone.Components.GetInAncestorsOrSelf<Rigidbody>();
-			ragdollRb.Velocity = rotation.Forward * 1000;
-			
+			if (tr.GameObject.Tags.Has("human"))
+			{
+			var huragdollClone = humanRagdoll.Clone(trgoPos + Vector3.Backward * 75, spawnRot);
+			}
+			else
+			{
+			var zoragdollClone = zombieRagdoll.Clone(trgoPos + Vector3.Backward * 75, spawnRot);
 			}
 			if (Input.Pressed("attack1") && !SmgGunEnabled && !PistolGunEnabled && !RPGGunEnabled)
 			{
@@ -195,5 +199,6 @@ void GunPowerUp()
 	
 
 	
+}
 }
 }

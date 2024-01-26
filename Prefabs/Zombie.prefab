@@ -1,0 +1,86 @@
+{
+  "RootObject": {
+    "Id": "399f866e-02cf-4810-9c8a-3932fdaee93f",
+    "Name": "zombie",
+    "Tags": "bad,zombie",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Zombie",
+        "body": {
+          "_type": "component",
+          "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "characterController": {
+          "_type": "component",
+          "go": "399f866e-02cf-4810-9c8a-3932fdaee93f",
+          "component_type": "CharacterController"
+        },
+        "Speed": 150,
+        "traceHitSound": "sounds/hurtsound.sound"
+      },
+      {
+        "__type": "CitizenAnimationHelper",
+        "BodyWeight": 1,
+        "EyeSource": null,
+        "EyesWeight": 1,
+        "HeadWeight": 1,
+        "Height": 1,
+        "IkLeftFoot": null,
+        "IkLeftHand": null,
+        "IkRightFoot": null,
+        "IkRightHand": null,
+        "LookAt": null,
+        "LookAtEnabled": false,
+        "Target": {
+          "_type": "component",
+          "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+          "component_type": "SkinnedModelRenderer"
+        }
+      },
+      {
+        "__type": "CharacterController",
+        "Acceleration": 10,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "bad",
+        "Radius": 16,
+        "StepHeight": 18
+      },
+      {
+        "__type": "CapsuleCollider",
+        "End": "0,0,62.57526",
+        "IsTrigger": false,
+        "Radius": 25,
+        "Start": "0,0,0",
+        "Static": false,
+        "Surface": null
+      }
+    ],
+    "Children": [
+      {
+        "Id": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+        "Name": "body",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "SkinnedModelRenderer",
+            "BodyGroups": 341,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": "models/citizen/skin/citizen_skin_zombie.vmat",
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

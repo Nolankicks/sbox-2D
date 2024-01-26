@@ -84,6 +84,7 @@
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "gunRange": 10000,
           "gunSound": "sounds/guns/m1911/pistol_shoot.sound",
+          "humanRagdoll": "prefabs/ragdoll.prefab",
           "impactEffect": "prefabs/impact_default.prefab",
           "manager": {
             "_type": "component",
@@ -94,7 +95,6 @@
           "pistol": "a73e1eaf-3908-44f4-99c1-5da6c5a91d09",
           "PistolGunEnabled": false,
           "punchSound": "sounds/punch.sound",
-          "ragdoll": "prefabs/ragdoll.prefab",
           "Range": 15,
           "rotation": "-0,0,1,-0.00000004371139",
           "rpg": {
@@ -110,7 +110,8 @@
           },
           "smgGun": "a3f2fcf3-c2f1-49f9-b23e-928abcbedb8f",
           "SmgGunEnabled": false,
-          "soundEvent": "sounds/punch.sound"
+          "soundEvent": "sounds/punch.sound",
+          "zombieRagdoll": "prefabs/zombieragdoll.prefab"
         },
         {
           "__type": "HealthManager",
@@ -1315,7 +1316,7 @@
       "Id": "de12a866-f86b-4d28-9771-195ad24e0a2d",
       "Name": "badguy",
       "Position": "288,64,-224",
-      "Tags": "bad",
+      "Tags": "bad,human",
       "Components": [
         {
           "__type": "SkinnedModelRenderer",
@@ -2284,6 +2285,7 @@
           "Id": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
           "Name": "TerrySpawner",
           "Position": "702.6836,129.6039,-274.7043",
+          "Enabled": true,
           "Components": [
             {
               "__type": "TerrySpawner",
@@ -2300,6 +2302,7 @@
           "Id": "9370ab63-7554-46b5-9128-39a9bdade34c",
           "Name": "GunManager",
           "Position": "-194.3236,-259.3071,92.1468",
+          "Enabled": true,
           "Components": [
             {
               "__type": "GunItemSpawner",
@@ -2317,13 +2320,26 @@
           "Id": "3fcce9b9-a607-4501-a1af-43a36ad108dd",
           "Name": "HealthBoost Spawner",
           "Position": "727.2636,56.90359,-246.886",
+          "Enabled": true,
           "Components": [
             {
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 2712.6619
+                "Relative": 4485.5293
               }
+            }
+          ]
+        },
+        {
+          "Id": "48a7141c-1e2c-4f4c-93c4-6a1c1aea7bc3",
+          "Name": "ZombieSpawner",
+          "Position": "-67.63303,-138.7413,66.1544",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ZombieSpawner",
+              "ZombiePrefab": "prefabs/zombie.prefab"
             }
           ]
         }
@@ -2346,94 +2362,6 @@
           "SoundOverride": true,
           "StopOnNew": false,
           "Volume": 1
-        }
-      ]
-    },
-    {
-      "Id": "399f866e-02cf-4810-9c8a-3932fdaee93f",
-      "Name": "Zombie",
-      "Position": "0.000006939252,-160,0.5840302",
-      "Rotation": "0,0,1,-0.00000004371139",
-      "Tags": "bad",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Zombie",
-          "body": {
-            "_type": "component",
-            "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
-            "component_type": "SkinnedModelRenderer"
-          },
-          "characterController": {
-            "_type": "component",
-            "go": "399f866e-02cf-4810-9c8a-3932fdaee93f",
-            "component_type": "CharacterController"
-          },
-          "health": {
-            "_type": "component",
-            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
-            "component_type": "HealthManager"
-          },
-          "Speed": 150,
-          "traceHitSound": "sounds/hurtsound.sound"
-        },
-        {
-          "__type": "CitizenAnimationHelper",
-          "BodyWeight": 1,
-          "EyeSource": null,
-          "EyesWeight": 1,
-          "HeadWeight": 1,
-          "Height": 1,
-          "IkLeftFoot": null,
-          "IkLeftHand": null,
-          "IkRightFoot": null,
-          "IkRightHand": null,
-          "LookAt": null,
-          "LookAtEnabled": false,
-          "Target": {
-            "_type": "component",
-            "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
-            "component_type": "SkinnedModelRenderer"
-          }
-        },
-        {
-          "__type": "CharacterController",
-          "Acceleration": 10,
-          "GroundAngle": 45,
-          "Height": 64,
-          "IgnoreLayers": "bad",
-          "Radius": 16,
-          "StepHeight": 18
-        },
-        {
-          "__type": "CapsuleCollider",
-          "End": "0,0,62.57526",
-          "IsTrigger": true,
-          "Radius": 25,
-          "Start": "0,0,0",
-          "Static": false,
-          "Surface": null
-        }
-      ],
-      "Children": [
-        {
-          "Id": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
-          "Name": "body",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "SkinnedModelRenderer",
-              "BodyGroups": 341,
-              "BoneMergeTarget": null,
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": "models/citizen/skin/citizen_skin_zombie.vmat",
-              "Model": "models/citizen/citizen.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            }
-          ]
         }
       ]
     }

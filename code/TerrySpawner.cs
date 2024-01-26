@@ -71,5 +71,6 @@ protected override void OnFixedUpdate(){
     nextSecond = 1;
 	Log.Info(random);
   }
+  
 }
 }

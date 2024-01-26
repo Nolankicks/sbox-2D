@@ -87,7 +87,7 @@ public sealed class SMG : Component
 				var deathParticle = attack.particleEffect;
 				deathParticle.Clone(new Transform(tr.HitPosition + Vector3.Up * 45, Rotation.LookAt(tr.Normal)));
 				attack.manager.AddScore();
-				var ragdoll = attack.ragdoll;
+				var ragdoll = attack.humanRagdoll;
 				
 			}
 		}
