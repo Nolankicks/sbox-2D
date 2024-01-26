@@ -1,3 +1,4 @@
+using System.Linq;
 using Sandbox;
 
 public sealed class RPGTrigger : Component, Component.ITriggerListener
@@ -15,11 +16,12 @@ public sealed class RPGTrigger : Component, Component.ITriggerListener
 	}
 	public void OnTriggerEnter( Collider other )
 	{
+		var manager = Scene.GetAllComponents<Manager>().FirstOrDefault();
 		var parent = Components.GetInParent<RPGCollision>();
 		if (other.GameObject.Tags.Has("bad"))
 		{
 		other.GameObject.Destroy();
-		
+		manager.AddScore();
 
 		
 		}

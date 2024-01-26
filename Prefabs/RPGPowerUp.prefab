@@ -10,7 +10,7 @@
         "BodyGroups": 18446744073709551615,
         "MaterialGroup": null,
         "MaterialOverride": null,
-        "Model": "rpg7.vmdl",
+        "Model": "models/rpg7.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
@@ -43,7 +43,7 @@
             "BodyGroups": 18446744073709551615,
             "MaterialGroup": null,
             "MaterialOverride": null,
-            "Model": "rpg7_rocket.vmdl",
+            "Model": "models/rpg7_rocket.vmdl",
             "RenderType": "On",
             "Tint": "1,1,1,1"
           }

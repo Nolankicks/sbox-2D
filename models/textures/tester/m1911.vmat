@@ -1,0 +1,11 @@
+
+Layer0
+{
+	shader "shaders/complex.shader_c"
+
+	TextureColor "models/textures/tester/m1911_color.png"
+	TextureAmbientOcclusion "materials/default/default_ao.tga"
+	TextureNormal "models/textures/tester/m1911_normal.png"
+	TextureRoughness "models/textures/tester/m1911_roughness.png"
+
+}

@@ -5,6 +5,7 @@ using Sandbox.Citizen;
 public sealed class RPG : Component
 {
 	[Property] public Attack attack { get; set; }
+	
 	[Property] public GameObject rpgModel { get; set; }
 	[Property] public GameObject shell { get; set; }
 	[Property] public float speed { get; set; }
