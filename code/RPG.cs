@@ -10,7 +10,7 @@ public sealed class RPG : Component
 	[Property] public float speed { get; set; }
 	[Property] public GameObject body { get; set; }
 	[Property] public float Lifetime { get; set; }
-	[Property] public CitizenAnimationHelper animationHelper { get; set; }	
+	[Property] public CitizenAnimationHelper animationHelper { get; set; }
 	protected override void OnUpdate()
 	{
 		if (attack.RPGGunEnabled)

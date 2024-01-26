@@ -66,7 +66,14 @@ public sealed class Attack : Component
 		{
 			pistol.Enabled = false;
 		}
-
+		if (!RPGGunEnabled)
+		{
+			timeSinceSpawn = 0;
+		}
+		if (timeSinceSpawn > 10)
+		{
+			RPGGunEnabled = false;
+		}
 		
 
 		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );

@@ -5,20 +5,30 @@ using Sandbox;
 public sealed class GunItemSpawner : Component
 {
     
-    float GetRandomNumber() => Random.Shared.Float(0, 100);
-    [Property] public GameObject gun {get; set;}
+    float PistolRandomNumber() => Random.Shared.Float(0, 100);
+	 float RPGRandomNumber() => Random.Shared.Float(0, 100);
+    [Property] public GameObject pistol {get; set;}
+	[Property] public GameObject rpg {get; set;}
 	[Property] public Attack attack {get; set;}
     protected override void OnFixedUpdate()
     {
-		GetRandomNumber();
-		var random = GetRandomNumber();
+		PistolRandomNumber();
+		RPGRandomNumber();
+		var rpgRandom = RPGRandomNumber();
+		var pisolRandom = PistolRandomNumber();
         
         
-		if (random > 99.9f && !attack.SmgGunEnabled && !attack.PistolGunEnabled)
+		if (pisolRandom > 99.9f && !attack.SmgGunEnabled && !attack.PistolGunEnabled && !attack.RPGGunEnabled)
 		{
-			var gunClone = gun.Clone();
+			var pistolClone = pistol.Clone();
 			
-			gunClone.Transform.Position = new Vector3(0, Random.Shared.Float(-150, 150), 0);
+			pistolClone.Transform.Position = new Vector3(0, Random.Shared.Float(150, -500), 0);
+		}
+		if (rpgRandom > 99.9f && !attack.SmgGunEnabled && !attack.PistolGunEnabled && !attack.RPGGunEnabled)
+		{
+			var rpgClone = rpg.Clone();
+			
+			rpgClone.Transform.Position = new Vector3(0, Random.Shared.Float(150, -500), 0);
 		}
     }
     }

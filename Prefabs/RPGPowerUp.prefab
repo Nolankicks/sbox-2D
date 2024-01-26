@@ -1,0 +1,58 @@
+{
+  "RootObject": {
+    "Id": "1281be8c-7f15-42d0-8060-4c517adaf01c",
+    "Name": "rpgpowerup",
+    "Scale": "5,5,5",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "rpg7.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Spinner",
+        "rotation": "0,0,0.008726535,0.9999619"
+      },
+      {
+        "__type": "BoxCollider",
+        "Center": "0,-0.1325703,7.239332",
+        "IsTrigger": true,
+        "Scale": "50,17.38264,17.23322",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "RPGPowerUpTrigger",
+        "powerUpSound": "sounds/youhaverecievedanrpg.sound"
+      }
+    ],
+    "Children": [
+      {
+        "Id": "7c8a7ecc-ba0a-4527-87ca-abf191b6f7c2",
+        "Name": "rpg7_rocket",
+        "Position": "6.4,0,6.483191",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "rpg7_rocket.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

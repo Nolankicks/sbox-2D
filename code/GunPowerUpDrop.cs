@@ -8,7 +8,7 @@ public sealed class GunPowerUpDrop : Component, Component.ITriggerListener //Cha
  [Property] public SoundEvent announcerVoice {get; set;}
 [Property] public SoundEvent equipSound {get; set;}
 
-[Property] public Attack attack {get; set;}
+
 
 
 

@@ -19,10 +19,11 @@ public sealed class RPGTrigger : Component, Component.ITriggerListener
 		if (other.GameObject.Tags.Has("bad"))
 		{
 		other.GameObject.Destroy();
-		GameObject.Destroy();
+		
 
 		
 		}
+		GameObject.Destroy();
 	}
 	public void OnTriggerExit( Collider other )
 	{
