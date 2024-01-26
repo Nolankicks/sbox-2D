@@ -122,7 +122,6 @@
         },
         {
           "__type": "HealthTrigger",
-          "__enabled": false,
           "emitter": "prefabs/burst.prefab",
           "healthManager": {
             "_type": "component",
@@ -675,6 +674,15 @@
                                                       "Model": "models/weapons/sbox_smg_mp5/w_mp5.vmdl",
                                                       "RenderType": "On",
                                                       "Tint": "1,1,1,1"
+                                                    }
+                                                  ],
+                                                  "Children": [
+                                                    {
+                                                      "Id": "1a16be72-11d7-49b3-bc4e-76ec49dfedab",
+                                                      "Name": "hold_R",
+                                                      "Position": "-2.812228,1.025808,3.397254",
+                                                      "Scale": "0.6666666,0.6666666,0.6666666",
+                                                      "Enabled": true
                                                     }
                                                   ]
                                                 },
@@ -2301,7 +2309,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 2217.2593
+                "Relative": 54.15485
               }
             }
           ]
