@@ -36,7 +36,7 @@ public sealed class HealthTrigger : Component, Component.ITriggerListener //Chan
 		if (other.Tags.Has( "bullet" ))
 		{
 			Log.Info( "Triggered" );
-			healthManager.healthNumber -= 25;
+			healthManager.healthNumber -= 15;
 			Sound.Play(hurtSound);
 			emitter.Clone(emitterPose);
 			
