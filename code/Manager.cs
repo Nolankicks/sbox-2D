@@ -11,6 +11,7 @@ public sealed class Manager : Component
 	public long HighScore { get; private set; } = 0;
 	[Property] public bool testBool {get; set;}
 	[Property] public bool ableToInput { get; set; } = false;
+	public bool ShouldAddScore { get; set; } = false;
 
 	public Sandbox.Services.Leaderboards.Board Leaderboard;
 
@@ -22,7 +23,13 @@ public sealed class Manager : Component
 
 	protected override void OnUpdate()
 	{
-		
+		if (ShouldAddScore)
+		{
+			AddScore();
+			ShouldAddScore = false;
+		}
+
+
 		if (!Playing && Input.Pressed("Jump"))
 		{
 			StartGame();

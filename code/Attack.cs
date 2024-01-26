@@ -48,6 +48,8 @@ public sealed class Attack : Component
 		if (SmgGunEnabled)
 		{
 			smgGun.Enabled = true;
+			RPGGunEnabled = false;
+			PistolGunEnabled = false;
 		}
 		if (!SmgGunEnabled)
 		{
@@ -57,8 +59,10 @@ public sealed class Attack : Component
 		if (PistolGunEnabled)
 		{
 			pistol.Enabled = true;
+			RPGGunEnabled = false;
+			SmgGunEnabled = false;
 		}
-		if (!PistolGunEnabled)
+		if (!PistolGunEnabled && !RPGGunEnabled)
 		{
 			timeSinceSpawn = 0;
 		}
@@ -66,13 +70,19 @@ public sealed class Attack : Component
 		{
 			pistol.Enabled = false;
 		}
-		if (!RPGGunEnabled)
-		{
-			timeSinceSpawn = 0;
-		}
+		
 		if (timeSinceSpawn > 10)
 		{
 			RPGGunEnabled = false;
+		}
+		if (!RPGGunEnabled)
+		{
+			rpg.rpgModel.Enabled = false;
+		}
+		if (RPGGunEnabled)
+		{
+			PistolGunEnabled = false;
+			SmgGunEnabled = false;
 		}
 		
 
@@ -126,7 +136,7 @@ public sealed class Attack : Component
 			ragdollRb.Velocity = rotation.Forward * 1000;
 			
 			}
-			if (Input.Pressed("attack1") && !SmgGunEnabled && !PistolGunEnabled)
+			if (Input.Pressed("attack1") && !SmgGunEnabled && !PistolGunEnabled && !RPGGunEnabled)
 			{
 				Sound.Play(punchSound);
 			}

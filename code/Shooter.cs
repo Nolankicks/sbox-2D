@@ -26,6 +26,7 @@ public sealed class Shooter : Component
 			
 
 		}
+
 	}
 
 	void Shoot()

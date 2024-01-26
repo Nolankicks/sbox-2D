@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "1281be8c-7f15-42d0-8060-4c517adaf01c",
+    "Id": "04ce3b73-acfb-40b9-9859-3eced949bda7",
     "Name": "rpgpowerup",
     "Scale": "5,5,5",
     "Enabled": true,
@@ -33,7 +33,7 @@
     ],
     "Children": [
       {
-        "Id": "7c8a7ecc-ba0a-4527-87ca-abf191b6f7c2",
+        "Id": "a374721a-6495-49f5-b83c-42e3bec26402",
         "Name": "rpg7_rocket",
         "Position": "6.4,0,6.483191",
         "Enabled": true,

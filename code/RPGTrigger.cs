@@ -21,14 +21,17 @@ public sealed class RPGTrigger : Component, Component.ITriggerListener
 		if (other.GameObject.Tags.Has("bad"))
 		{
 		other.GameObject.Destroy();
-		manager.AddScore();
-
+		GameObject.Destroy();
+		manager.ShouldAddScore = true;
+		Log.Info("Trigger");
 		
 		}
-		GameObject.Destroy();
+		
 	}
 	public void OnTriggerExit( Collider other )
 	{
-		return;
+			
+		
+		
 	}
 }

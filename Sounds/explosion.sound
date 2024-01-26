@@ -1,0 +1,11 @@
+{
+  "UI": false,
+  "Volume": "1.00,1.00,0",
+  "Pitch": "1.00,1.00,0",
+  "Decibels": 150,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/esm_8bit_explosion_medium_bomb_boom_blast_cannon_retro_old_school_classic_cartoon.vsnd"
+  ],
+  "__references": []
+}

@@ -18,7 +18,7 @@ public sealed class RPGCollision : Component, Component.ICollisionListener
 	{
 		
 		Log.Info("Collision");
-		explosion.Clone(GameObject.Transform.Position, GameObject.Transform.Rotation);
+		
 		explosionCount += 1;
 		
 		collisionCount += 1;
@@ -26,6 +26,7 @@ public sealed class RPGCollision : Component, Component.ICollisionListener
 		{
 			explosion.Clone(GameObject.Transform.Position, GameObject.Transform.Rotation);
 			trigger.Clone(GameObject.Transform.Position, GameObject.Transform.Rotation);
+			Sound.Play(explosionSound, Transform.Position);
 		}
 		if (collisionCount > 0)
 		{

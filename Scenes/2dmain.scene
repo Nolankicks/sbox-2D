@@ -122,6 +122,7 @@
         },
         {
           "__type": "HealthTrigger",
+          "__enabled": false,
           "emitter": "prefabs/burst.prefab",
           "healthManager": {
             "_type": "component",
@@ -2300,7 +2301,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 1687.5459
+                "Relative": 1765.354
               }
             }
           ]
@@ -2326,6 +2327,14 @@
           "Volume": 1
         }
       ]
+    },
+    {
+      "Id": "6b0bbbd1-5d97-4c65-9135-8c67e978afbb",
+      "Name": "rpgpowerup",
+      "Position": "-3.642365,-261.2478,-0.4159546",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "__Prefab": "prefabs/rpgpowerup.prefab"
     }
   ],
   "SceneProperties": {

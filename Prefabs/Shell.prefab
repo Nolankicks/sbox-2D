@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "42676aec-f75d-4778-b6e0-eb71ff4b9ffe",
+    "Id": "811ab617-a3a6-47ad-9853-2794630f5386",
     "Name": "shell",
     "Enabled": true,
     "Components": [
@@ -9,7 +9,7 @@
         "BodyGroups": 18446744073709551615,
         "MaterialGroup": null,
         "MaterialOverride": null,
-        "Model": "rpg7_rocket.vmdl",
+        "Model": "models/rpg7_rocket.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
@@ -33,7 +33,7 @@
       {
         "__type": "RPGCollision",
         "explosion": "prefabs/rpgexplosion.prefab",
-        "explosionSound": null,
+        "explosionSound": "sounds/explosion.sound",
         "self": "prefabs/shell.prefab",
         "trigger": "prefabs/rpgtrigger.prefab"
       }
