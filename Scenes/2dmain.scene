@@ -1136,6 +1136,22 @@
               ]
             }
           ]
+        },
+        {
+          "Id": "d9855516-9c55-4258-96d3-7d7482c095c5",
+          "Name": "collider",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "CapsuleCollider",
+              "End": "0,0,60.66139",
+              "IsTrigger": false,
+              "Radius": 15,
+              "Start": "0,0,2",
+              "Static": false,
+              "Surface": null
+            }
+          ]
         }
       ]
     },
@@ -2247,6 +2263,7 @@
       "Id": "9ad52cc0-70db-47a3-a9bb-aa3ebd5eb4a1",
       "Name": "Managers",
       "Position": "-901.3305,-241.9596,416.492",
+      "Enabled": true,
       "Children": [
         {
           "Id": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
@@ -2283,7 +2300,6 @@
           "Id": "9370ab63-7554-46b5-9128-39a9bdade34c",
           "Name": "GunManager",
           "Position": "-194.3236,-259.3071,92.1468",
-          "Enabled": true,
           "Components": [
             {
               "__type": "GunItemSpawner",
@@ -2301,13 +2317,12 @@
           "Id": "3fcce9b9-a607-4501-a1af-43a36ad108dd",
           "Name": "HealthBoost Spawner",
           "Position": "727.2636,56.90359,-246.886",
-          "Enabled": true,
           "Components": [
             {
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 175.62288
+                "Relative": 2712.6619
               }
             }
           ]
@@ -2339,28 +2354,28 @@
       "Name": "Zombie",
       "Position": "0.000006939252,-160,0.5840302",
       "Rotation": "0,0,1,-0.00000004371139",
+      "Tags": "bad",
       "Enabled": true,
       "Components": [
         {
-          "__type": "SkinnedModelRenderer",
-          "BodyGroups": 341,
-          "BoneMergeTarget": null,
-          "CreateBoneObjects": false,
-          "MaterialGroup": "default",
-          "MaterialOverride": null,
-          "Model": "models/citizen/heads/head_zombie_01/models/head_zombie_01.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
           "__type": "Zombie",
-          "body": "399f866e-02cf-4810-9c8a-3932fdaee93f",
+          "body": {
+            "_type": "component",
+            "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+            "component_type": "SkinnedModelRenderer"
+          },
           "characterController": {
             "_type": "component",
             "go": "399f866e-02cf-4810-9c8a-3932fdaee93f",
             "component_type": "CharacterController"
           },
-          "Speed": 150
+          "health": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "HealthManager"
+          },
+          "Speed": 150,
+          "traceHitSound": "sounds/hurtsound.sound"
         },
         {
           "__type": "CitizenAnimationHelper",
@@ -2377,7 +2392,7 @@
           "LookAtEnabled": false,
           "Target": {
             "_type": "component",
-            "go": "399f866e-02cf-4810-9c8a-3932fdaee93f",
+            "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
             "component_type": "SkinnedModelRenderer"
           }
         },
@@ -2386,9 +2401,39 @@
           "Acceleration": 10,
           "GroundAngle": 45,
           "Height": 64,
-          "IgnoreLayers": "",
+          "IgnoreLayers": "bad",
           "Radius": 16,
           "StepHeight": 18
+        },
+        {
+          "__type": "CapsuleCollider",
+          "End": "0,0,62.57526",
+          "IsTrigger": true,
+          "Radius": 25,
+          "Start": "0,0,0",
+          "Static": false,
+          "Surface": null
+        }
+      ],
+      "Children": [
+        {
+          "Id": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+          "Name": "body",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "BodyGroups": 341,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": "models/citizen/skin/citizen_skin_zombie.vmat",
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
         }
       ]
     }
@@ -2406,7 +2451,6 @@
   "Description": "",
   "__references": [
     "caro.sky_001",
-    "facepunch.w_mp5",
-    "roomfield.head_zombie_01"
+    "facepunch.w_mp5"
   ]
 }

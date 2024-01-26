@@ -35,7 +35,7 @@ public sealed class SMG : Component
 			attack.pistol.Enabled = false;
 			ammo -= 1;
 		}
-		Log.Info(ammo);
+		
 		if (ammo <= 0)
 		{
 			ammo = 0;

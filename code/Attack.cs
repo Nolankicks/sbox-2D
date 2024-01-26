@@ -107,8 +107,8 @@ public sealed class Attack : Component
 	{
 		//Perform a trace foward
 		animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Punch;
-		var camFoward = animationHelper.EyeWorldTransform.Position;
-		var tr = Scene.Trace.Ray(camFoward, camFoward + (camFoward * Range)).WithAnyTags("bad").Run();
+		var camFoward = body.Transform.Rotation;
+		var tr = Scene.Trace.Ray(body.Transform.Position, body.Transform.Position + camFoward.Forward * 100).Run();
 
 			if (Input.Pressed("attack1") && tr.Hit && !PistolGunEnabled && !SmgGunEnabled && !RPGGunEnabled)
 			{

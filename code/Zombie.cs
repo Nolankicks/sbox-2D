@@ -5,22 +5,29 @@ using Sandbox.Citizen;
 public sealed class Zombie : Component
 {
 	CitizenAnimationHelper citizenAnimationHelper => Components.Get<CitizenAnimationHelper>(FindMode.InSelf);
-	[Property] public GameObject body { get; set; }
+	[Property] public SkinnedModelRenderer body { get; set; }
 	[Property] public CharacterController characterController { get; set; }
 	PlayerController controller => Scene.GetAllComponents<PlayerController>().FirstOrDefault();
 	[Property] public float Speed { get; set; }
 	public Vector3 target;
+	[Property] public HealthManager health { get; set; }
 	public Vector3 WishVelocity;
+	[Property] public SoundEvent traceHitSound { get; set; }
+	public TimeSince timeSinceHit = 0;
 	protected override void OnStart()
 	{
 		citizenAnimationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Swing;
 	}
 	protected override void OnUpdate()
 	{
+
+		
 		target = controller.GameObject.Transform.Position;
 		BuildWishVelocity();
 		UpdateMovement();
 		UpdateAnimations();
+		Trace();
+
 	}
 
 	void BuildWishVelocity()
@@ -51,7 +58,7 @@ public sealed class Zombie : Component
 	}
 	void UpdateAnimations()
 	{
-		// Rotate body towards target
+		
 		if ( target != Vector3.Zero )
 		{
 			var targetRot = Rotation.LookAt( target.WithZ( Transform.Position.z ) - Transform.Position, Vector3.Up );
@@ -61,5 +68,22 @@ public sealed class Zombie : Component
 		citizenAnimationHelper.WithWishVelocity( WishVelocity );
 		citizenAnimationHelper.WithVelocity( characterController.Velocity );
 		
+	}
+
+	void Trace()
+	{
+		var lookDir = body.Transform.Rotation;
+		var tr = Scene.Trace.Ray(body.Transform.Position, body.Transform.Position + lookDir.Forward * 50).WithoutTags("bad").Run();
+		if (tr.Hit && tr.GameObject.Tags.Has("player"))
+        {
+           
+            if (timeSinceHit > 1)
+            {
+                health.healthNumber -= 25;
+               timeSinceHit = 0;
+			   Sound.Play(traceHitSound, tr.HitPosition);
+            }
+            
+        }
 	}
 }
