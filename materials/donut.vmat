@@ -4,19 +4,15 @@ Layer0
 {
 	shader "shaders/complex.shader"
 
-	//---- PBR ----
-	F_METALNESS_TEXTURE 1
-	F_SPECULAR 1
-
 	//---- Ambient Occlusion ----
 	g_flAmbientOcclusionDirectDiffuse "0.000"
 	g_flAmbientOcclusionDirectSpecular "0.000"
-	TextureAmbientOcclusion "[1.000000 1.000000 1.000000 0.000000]"
+	TextureAmbientOcclusion "materials/default/default_ao.tga"
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
-	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "duck-hunt-dif.jpg"
+	g_vColorTint "[0.909804 0.631373 0.435294 1.000000]"
+	TextureColor "materials/default/default_color.tga"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -25,14 +21,14 @@ Layer0
 	g_bFogEnabled "1"
 
 	//---- Metalness ----
-	TextureMetalness "DuckHuntv2_Material _25_MetallicSmoothness.png"
+	g_flMetalness "0.000"
 
 	//---- Normal ----
-	TextureNormal "DuckHuntv2_Material _25_Normal.png"
+	TextureNormal "materials/default/default_normal.tga"
 
 	//---- Roughness ----
 	g_flRoughnessScaleFactor "1.000"
-	TextureRoughness "[0.500000 0.500000 0.500000 0.000000]"
+	TextureRoughness "materials/default/default_rough.tga"
 
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"
