@@ -14,7 +14,7 @@ public sealed class DuccBlaster : Component
 		if (Input.Pressed("attack1") && attack.DuccBlasterEnabled)
 		{
 			animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
-			var bulletGo = bullet.Clone(body.Transform.Position + Vector3.Up * 50f + Vector3.Left * 100, body.Transform.Rotation);
+			var bulletGo = bullet.Clone(body.Transform.Position + body.Transform.Rotation.Up * 45f + body.Transform.Rotation.Forward * 100f, body.Transform.Rotation);
 			var rb = bulletGo.Components.Get<Rigidbody>();
 			rb.Velocity = body.Transform.Rotation.Forward * 1000;
 		}

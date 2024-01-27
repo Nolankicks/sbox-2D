@@ -103,7 +103,7 @@
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
             "component_type": "RPG"
           },
-          "RPGGunEnabled": false,
+          "RPGGunEnabled": true,
           "smg": {
             "_type": "component",
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
@@ -172,10 +172,14 @@
         },
         {
           "__type": "DuccBlaster",
-          "animationHelper": null,
+          "animationHelper": {
+            "_type": "component",
+            "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+            "component_type": "CitizenAnimationHelper"
+          },
           "blaster": null,
-          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
-          "bullet": "prefabs/duccbullet.prefab"
+          "bullet": "prefabs/duccbullet.prefab",
+          "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358"
         }
       ],
       "Children": [
@@ -2301,7 +2305,6 @@
           "Id": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
           "Name": "TerrySpawner",
           "Position": "702.6836,129.6039,-274.7043",
-          "Enabled": true,
           "Components": [
             {
               "__type": "TerrySpawner",
@@ -2340,7 +2343,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 3716.5032
+                "Relative": 4880.021
               }
             }
           ]
@@ -2353,6 +2356,21 @@
             {
               "__type": "ZombieSpawner",
               "ZombiePrefab": "prefabs/zombie.prefab"
+            }
+          ]
+        },
+        {
+          "Id": "0183be25-9ed2-4b64-832b-6a816c1c8106",
+          "Name": "Ducc Spawner",
+          "Position": "132.8496,-255.2738,38.00241",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "DuccSpawner",
+              "duccPowerUp": "prefabs/duccspawner.prefab",
+              "timeSinceSpawn": {
+                "Relative": 4880.021
+              }
             }
           ]
         }
@@ -2375,39 +2393,6 @@
           "SoundOverride": true,
           "StopOnNew": false,
           "Volume": 1
-        }
-      ]
-    },
-    {
-      "Id": "e436382a-0003-4dcf-83fe-07ee59b3e45c",
-      "Name": "duckhunt",
-      "Position": "-32,-160,52",
-      "Rotation": "0,0,0.9999999,0.0000001490116",
-      "Scale": "1.3,1.3,1.3",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/duckhunt.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "IsTrigger": true,
-          "Model": "models/duckhunt.vmdl",
-          "Static": false,
-          "Surface": null
-        },
-        {
-          "__type": "Spinner",
-          "rotation": "0,0,0.008726535,0.9999619"
-        },
-        {
-          "__type": "DuccPowerUp"
         }
       ]
     }
