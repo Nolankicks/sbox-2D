@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "399f866e-02cf-4810-9c8a-3932fdaee93f",
+    "Id": "2941ad33-c56a-4694-8d76-9f4e9a0d97cf",
     "Name": "zombie",
     "Tags": "bad,zombie",
     "Enabled": true,
@@ -9,12 +9,12 @@
         "__type": "Zombie",
         "body": {
           "_type": "component",
-          "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+          "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
           "component_type": "SkinnedModelRenderer"
         },
         "characterController": {
           "_type": "component",
-          "go": "399f866e-02cf-4810-9c8a-3932fdaee93f",
+          "go": "2941ad33-c56a-4694-8d76-9f4e9a0d97cf",
           "component_type": "CharacterController"
         },
         "Speed": 150,
@@ -35,7 +35,7 @@
         "LookAtEnabled": false,
         "Target": {
           "_type": "component",
-          "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+          "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
           "component_type": "SkinnedModelRenderer"
         }
       },
@@ -60,17 +60,17 @@
     ],
     "Children": [
       {
-        "Id": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+        "Id": "4e532a09-940c-4440-9134-3f2a6ddb5727",
         "Name": "body",
         "Enabled": true,
         "Components": [
           {
             "__type": "SkinnedModelRenderer",
-            "BodyGroups": 21,
+            "BodyGroups": 341,
             "BoneMergeTarget": null,
             "CreateBoneObjects": false,
             "MaterialGroup": null,
-            "MaterialOverride": null,
+            "MaterialOverride": "models/citizen/skin/citizen_skin_zombie.vmat",
             "Model": "models/citizen/citizen.vmdl",
             "RenderType": "On",
             "Tint": "1,1,1,1"
@@ -78,13 +78,12 @@
         ],
         "Children": [
           {
-            "Id": "79e39af0-abfa-4522-bd9a-4bd040f93499",
+            "Id": "31ac536d-a89b-46b3-95cd-4fcc3c75f693",
             "Name": "Cloths",
             "Position": "73.46608,64.91307,59.23728",
-            "Enabled": true,
             "Children": [
               {
-                "Id": "2fd7a95a-5856-47d7-93f8-b716be0ff9c6",
+                "Id": "1382af9c-e858-435f-a777-930953c97a56",
                 "Name": "gloves",
                 "Position": "72.04712,69.69989,59.23476",
                 "Enabled": true,
@@ -94,7 +93,7 @@
                     "BodyGroups": 18446744073709551615,
                     "BoneMergeTarget": {
                       "_type": "component",
-                      "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+                      "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
                       "component_type": "SkinnedModelRenderer"
                     },
                     "CreateBoneObjects": false,
@@ -107,7 +106,7 @@
                 ]
               },
               {
-                "Id": "02c13727-b091-471a-84cb-8be6959eba4a",
+                "Id": "4166db12-53ef-4ec4-adb4-2adeb9e77d5e",
                 "Name": "head",
                 "Position": "144.0943,139.3998,118.4695",
                 "Enabled": true,
@@ -117,7 +116,7 @@
                     "BodyGroups": 18446744073709551615,
                     "BoneMergeTarget": {
                       "_type": "component",
-                      "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+                      "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
                       "component_type": "SkinnedModelRenderer"
                     },
                     "CreateBoneObjects": false,
@@ -130,7 +129,7 @@
                 ]
               },
               {
-                "Id": "ad9f9cf6-6746-4007-8672-0a177805b358",
+                "Id": "d0c744cf-d163-4a47-9aa8-c35d0e7cabdf",
                 "Name": "shirt",
                 "Position": "72.04712,69.69989,59.23476",
                 "Enabled": true,
@@ -140,7 +139,7 @@
                     "BodyGroups": 18446744073709551615,
                     "BoneMergeTarget": {
                       "_type": "component",
-                      "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+                      "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
                       "component_type": "SkinnedModelRenderer"
                     },
                     "CreateBoneObjects": false,
@@ -153,7 +152,7 @@
                 ]
               },
               {
-                "Id": "db25786c-e8e9-4442-8961-4fdc4c916a33",
+                "Id": "15413c2a-f4ff-4f0b-9528-9b0f081e95f3",
                 "Name": "shoes",
                 "Position": "72.04712,69.69989,59.23476",
                 "Enabled": true,
@@ -163,7 +162,7 @@
                     "BodyGroups": 18446744073709551615,
                     "BoneMergeTarget": {
                       "_type": "component",
-                      "go": "60e754d7-c20f-46cb-bbd4-fd0f67032177",
+                      "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
                       "component_type": "SkinnedModelRenderer"
                     },
                     "CreateBoneObjects": false,
@@ -180,7 +179,7 @@
         ]
       },
       {
-        "Id": "3e543e6b-3506-444e-a230-1e72020f571e",
+        "Id": "304a94dd-102b-4047-8a5b-6b901577bdc6",
         "Name": "trigger",
         "Enabled": true,
         "Components": [
