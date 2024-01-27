@@ -54,6 +54,7 @@ public sealed class Attack : Component
 			smgGun.Enabled = true;
 			RPGGunEnabled = false;
 			PistolGunEnabled = false;
+			DuccBlasterEnabled = false;
 		}
 		if (!SmgGunEnabled)
 		{
@@ -65,6 +66,7 @@ public sealed class Attack : Component
 			pistol.Enabled = true;
 			RPGGunEnabled = false;
 			SmgGunEnabled = false;
+			DuccBlasterEnabled = false;
 		}
 		if (!PistolGunEnabled && !RPGGunEnabled && !DuccBlasterEnabled)
 		{
@@ -79,6 +81,7 @@ public sealed class Attack : Component
 		{
 			RPGGunEnabled = false;
 			DuccBlasterEnabled = false;
+			
 		}
 
 		if (!RPGGunEnabled)
@@ -89,6 +92,7 @@ public sealed class Attack : Component
 		{
 			PistolGunEnabled = false;
 			SmgGunEnabled = false;
+			DuccBlasterEnabled = false;
 		}
 		if (DuccBlasterEnabled)
 		{

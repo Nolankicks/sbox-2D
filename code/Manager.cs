@@ -70,6 +70,10 @@ public sealed class Manager : Component
 			{
 				badguy.GameObject.Destroy();
 			}
+			foreach (var zombie in Scene.GetAllComponents<Zombie>())
+			{
+				zombie.GameObject.Destroy();
+			}
 		}
 		
 		foreach (var platfrom in platforms)
