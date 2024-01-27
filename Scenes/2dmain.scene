@@ -81,6 +81,11 @@
           },
           "bullet": "prefabs/playerbullet.prefab",
           "deathSound": "sounds/deathsound.sound",
+          "duccBlaster": {
+            "_type": "component",
+            "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+            "component_type": "DuccBlaster"
+          },
           "DuccBlasterEnabled": false,
           "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
           "gunRange": 10000,
@@ -103,7 +108,7 @@
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
             "component_type": "RPG"
           },
-          "RPGGunEnabled": true,
+          "RPGGunEnabled": false,
           "smg": {
             "_type": "component",
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
@@ -124,7 +129,6 @@
         },
         {
           "__type": "HealthTrigger",
-          "__enabled": false,
           "emitter": "prefabs/burst.prefab",
           "healthManager": {
             "_type": "component",
@@ -177,9 +181,10 @@
             "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
             "component_type": "CitizenAnimationHelper"
           },
-          "blaster": null,
+          "blaster": "944f5bce-b21e-4a4e-ba64-5400e3cfbe6f",
+          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
           "bullet": "prefabs/duccbullet.prefab",
-          "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358"
+          "quackSound": "sounds/quack.sound"
         }
       ],
       "Children": [
@@ -753,6 +758,24 @@
                                                           "Tint": "1,1,1,1"
                                                         }
                                                       ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "Id": "944f5bce-b21e-4a4e-ba64-5400e3cfbe6f",
+                                                  "Name": "duccblaster",
+                                                  "Position": "0.6517795,-2.34663,2.07641",
+                                                  "Components": [
+                                                    {
+                                                      "__type": "SkinnedModelRenderer",
+                                                      "BodyGroups": 18446744073709551615,
+                                                      "BoneMergeTarget": null,
+                                                      "CreateBoneObjects": false,
+                                                      "MaterialGroup": null,
+                                                      "MaterialOverride": null,
+                                                      "Model": "models/duck_decoration/duck_decoration.vmdl",
+                                                      "RenderType": "On",
+                                                      "Tint": "1,1,1,1"
                                                     }
                                                   ]
                                                 }
@@ -2305,6 +2328,7 @@
           "Id": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
           "Name": "TerrySpawner",
           "Position": "702.6836,129.6039,-274.7043",
+          "Enabled": true,
           "Components": [
             {
               "__type": "TerrySpawner",
@@ -2321,6 +2345,7 @@
           "Id": "9370ab63-7554-46b5-9128-39a9bdade34c",
           "Name": "GunManager",
           "Position": "-194.3236,-259.3071,92.1468",
+          "Enabled": true,
           "Components": [
             {
               "__type": "GunItemSpawner",
@@ -2338,12 +2363,13 @@
           "Id": "3fcce9b9-a607-4501-a1af-43a36ad108dd",
           "Name": "HealthBoost Spawner",
           "Position": "727.2636,56.90359,-246.886",
+          "Enabled": true,
           "Components": [
             {
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 4880.021
+                "Relative": 7142.832
               }
             }
           ]
@@ -2352,6 +2378,7 @@
           "Id": "48a7141c-1e2c-4f4c-93c4-6a1c1aea7bc3",
           "Name": "ZombieSpawner",
           "Position": "-67.63303,-138.7413,66.1544",
+          "Enabled": true,
           "Components": [
             {
               "__type": "ZombieSpawner",
@@ -2369,7 +2396,7 @@
               "__type": "DuccSpawner",
               "duccPowerUp": "prefabs/duccspawner.prefab",
               "timeSinceSpawn": {
-                "Relative": 4880.021
+                "Relative": 7142.832
               }
             }
           ]
@@ -2410,6 +2437,7 @@
   "Description": "",
   "__references": [
     "caro.sky_001",
+    "duccsoft.duck_decoration",
     "facepunch.concrete_trim_02",
     "facepunch.floor_grass_dirt_weed_blend_a",
     "facepunch.w_mp5"

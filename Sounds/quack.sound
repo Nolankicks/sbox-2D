@@ -1,0 +1,11 @@
+{
+  "UI": false,
+  "Volume": "1.00,1.00,0",
+  "Pitch": "1.00,1.00,0",
+  "Decibels": 95,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/075176_duck-quack-40345.vsnd"
+  ],
+  "__references": []
+}

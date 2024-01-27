@@ -38,6 +38,7 @@ public sealed class Attack : Component
 	[Property] public SoundEvent gunSound {get; set;}
 	[Property] public GameObject impactEffect {get; set;}
 	[Property] public RPG rpg {get; set;}
+	[Property] public DuccBlaster duccBlaster {get; set;}
 	protected override void OnAwake()
 	{
 		/*
@@ -65,7 +66,7 @@ public sealed class Attack : Component
 			RPGGunEnabled = false;
 			SmgGunEnabled = false;
 		}
-		if (!PistolGunEnabled && !RPGGunEnabled)
+		if (!PistolGunEnabled && !RPGGunEnabled && !DuccBlasterEnabled)
 		{
 			timeSinceSpawn = 0;
 		}
@@ -77,7 +78,9 @@ public sealed class Attack : Component
 		if (timeSinceSpawn > 10)
 		{
 			RPGGunEnabled = false;
+			DuccBlasterEnabled = false;
 		}
+
 		if (!RPGGunEnabled)
 		{
 			rpg.rpgModel.Enabled = false;
@@ -92,6 +95,12 @@ public sealed class Attack : Component
 			PistolGunEnabled = false;
 			SmgGunEnabled = false;
 			RPGGunEnabled = false;
+			duccBlaster.blaster.Enabled = true;
+			
+		}
+		if (!DuccBlasterEnabled)
+		{
+			duccBlaster.blaster.Enabled = false;
 		}
 		
 		
