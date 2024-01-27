@@ -1203,6 +1203,7 @@
       "Name": "Objects",
       "Position": "-1389.763,-2077.552,-28.79855",
       "Scale": "5,10,1",
+      "Tags": "world",
       "Enabled": true,
       "Children": [
         {
@@ -2271,9 +2272,19 @@
             {
               "__type": "Manager",
               "ableToInput": true,
-              "sceneFile": "scenes/2dmenu.scene",
+              "color": "1,0,0,1",
+              "grasssMaterial": "materials/grass/floor_grass_dirt_weed_blend_a.vmat",
+              "menuScene": null,
+              "overideColor": false,
+              "platforms": [
+                "8ea3d8be-5cd4-430d-a780-b1fb88845aea",
+                "45b6a1ac-39df-41f6-964a-2fef44f6fe82",
+                "88154fa6-6c6c-4464-8013-e604cc4f4a25",
+                "933912b4-0807-46da-aa8c-e625a01d8ffe"
+              ],
+              "stoneMaterial": null,
               "testBool": false,
-              "updateUi": null
+              "theme": "grass"
             }
           ]
         },
@@ -2322,7 +2333,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 2465.1326
+                "Relative": 3272.2725
               }
             }
           ]
@@ -2375,6 +2386,7 @@
   "Description": "",
   "__references": [
     "caro.sky_001",
+    "facepunch.floor_grass_dirt_weed_blend_a",
     "facepunch.w_mp5"
   ]
 }

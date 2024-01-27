@@ -15,8 +15,11 @@ public sealed class Manager : Component
 	public bool ShouldAddScore { get; set; } = false;
 	public enum Theme
 	{
+		
 		none, 
+		[Icon("grass")]
 		grass,
+		[Icon("view_in_ar")]
 		stone
 	}
 	
