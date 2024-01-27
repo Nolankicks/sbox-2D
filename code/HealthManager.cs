@@ -10,6 +10,11 @@ public sealed class HealthManager : Component
 	protected override void OnStart()
 	{
 		maxHealth = 150;
+
+		if (healthNumber >= maxHealth)
+		{
+			healthNumber = maxHealth;
+		}
 	}
 	protected override void OnFixedUpdate()
 	{

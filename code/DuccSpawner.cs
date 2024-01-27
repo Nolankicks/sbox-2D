@@ -12,7 +12,7 @@ public sealed class DuccSpawner : Component
 	
 	void SpawnDucc()
 	{
-		if (!attack.DuccBlasterEnabled)
+		if (!attack.DuccBlasterEnabled && !attack.RPGGunEnabled && !attack.SmgGunEnabled && !attack.PistolGunEnabled)
 		{
 		var duccGo = duccPowerUp.Clone();
 		duccGo.Transform.Position = new Vector3(0, Random.Shared.Float(-200, 200), 50);
@@ -25,7 +25,7 @@ public sealed class DuccSpawner : Component
 		{
 			var random = GetRandom();
 			GetRandom();
-			if (random >= 80f)
+			if (random >= 90f)
 			{
 				SpawnDucc();
 			}
