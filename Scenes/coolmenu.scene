@@ -53,8 +53,7 @@
                 "_type": "component",
                 "go": "0493baa6-8917-4fe9-9bb3-b472e2dfe403",
                 "component_type": "Manager"
-              },
-              "MyStringValue": "Hello World!"
+              }
             }
           ]
         }

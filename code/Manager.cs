@@ -1,17 +1,33 @@
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using Microsoft.VisualBasic;
 using Sandbox;
+using Sandbox.Citizen;
 
 public sealed class Manager : Component
 {
-	[Property] public SceneFile sceneFile {get; set;}
-	[Property] public UpdateUi updateUi {get; set;}
+	[Property] public SceneFile menuScene {get; set;}
 	public bool Playing { get; private set; } = false;
 	public long Score { get; private set; } = 0;
 	public long HighScore { get; private set; } = 0;
 	[Property] public bool testBool {get; set;}
 	[Property] public bool ableToInput { get; set; } = false;
 	public bool ShouldAddScore { get; set; } = false;
+	public enum Theme
+	{
+		none, 
+		grass,
+		stone
+	}
+	
+	[Property] public Theme theme {get; set;}
+	[Property] public Material grasssMaterial {get; set;}
+	[Property] public Material stoneMaterial {get; set;}
+	public Material overrideMaterial {get; set;}
+	[Property] public bool overideColor {get; set;}
+	[Property] Color color {get; set;}
+
+	[Property] List<GameObject> platforms {get; set;}
 
 	public Sandbox.Services.Leaderboards.Board Leaderboard;
 
@@ -53,7 +69,26 @@ public sealed class Manager : Component
 			}
 		}
 		
+		foreach (var platfrom in platforms)
+		{
+			var modelRender = platfrom.Components.Get<ModelRenderer>();
+			if (overideColor)
+			{
+			modelRender.Tint = color;
+			}
+			//theme selection
+			if (theme == Theme.grass)
+			{
+				overrideMaterial = grasssMaterial;
+			}
+			
+			if (theme == Theme.stone)
+			{
+				overrideMaterial = stoneMaterial;
+			}
+			modelRender.MaterialOverride = overrideMaterial;
 
+		}
 	}
 
 	public void StartGame()
@@ -73,7 +108,7 @@ public sealed class Manager : Component
 
 		Playing = false;
 		Sandbox.Services.Stats.SetValue( "highscore", Score );
-		GameManager.ActiveScene.Load(sceneFile);
+		GameManager.ActiveScene.Load(menuScene);
 	}
 
 	

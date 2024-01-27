@@ -2322,7 +2322,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 43.836414
+                "Relative": 2465.1326
               }
             }
           ]
