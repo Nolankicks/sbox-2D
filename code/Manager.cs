@@ -83,11 +83,13 @@ public sealed class Manager : Component
 			if (theme == Theme.grass)
 			{
 				overrideMaterial = grasssMaterial;
+				modelRender.Tint = Color.White;
 			}
 			
 			if (theme == Theme.stone)
 			{
 				overrideMaterial = stoneMaterial;
+				modelRender.Tint = Color.White;
 			}
 			modelRender.MaterialOverride = overrideMaterial;
 

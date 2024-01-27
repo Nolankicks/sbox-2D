@@ -68,9 +68,14 @@
         {
           "__type": "Manager",
           "ableToInput": false,
-          "sceneFile": null,
+          "color": "0,0,0,0",
+          "grasssMaterial": null,
+          "menuScene": null,
+          "overideColor": false,
+          "platforms": [],
+          "stoneMaterial": null,
           "testBool": false,
-          "updateUi": null
+          "theme": "none"
         }
       ]
     }
