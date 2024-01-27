@@ -28,11 +28,13 @@ public sealed class Attack : Component
 	[Property] public bool ShowGunPistol = false;
 	[Property] public bool ShowGunSmg = false;
 	[Property] public bool HasGunSmg = false;
+	
 	[Property] public bool Run = false;
 	[Property] float gunRange {get; set;}
 	[Property] public bool PistolGunEnabled {get; set;} = false;
 	[Property] public bool SmgGunEnabled {get; set;} = false;
 	[Property] public bool RPGGunEnabled {get; set;} = false;
+	[Property] public bool DuccBlasterEnabled {get; set;} = false;
 	[Property] public SoundEvent gunSound {get; set;}
 	[Property] public GameObject impactEffect {get; set;}
 	[Property] public RPG rpg {get; set;}
@@ -85,6 +87,13 @@ public sealed class Attack : Component
 			PistolGunEnabled = false;
 			SmgGunEnabled = false;
 		}
+		if (DuccBlasterEnabled)
+		{
+			PistolGunEnabled = false;
+			SmgGunEnabled = false;
+			RPGGunEnabled = false;
+		}
+		
 		
 
 		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );
@@ -111,7 +120,7 @@ public sealed class Attack : Component
 		var camFoward = body.Transform.Rotation;
 		var tr = Scene.Trace.Ray(body.Transform.Position, body.Transform.Position + camFoward.Forward * 100).WithTag("bad").Run();
 
-			if (Input.Pressed("attack1") && tr.Hit && !PistolGunEnabled && !SmgGunEnabled && !RPGGunEnabled)
+			if (Input.Pressed("attack1") && tr.Hit && !PistolGunEnabled && !SmgGunEnabled && !RPGGunEnabled && !DuccBlasterEnabled)
 			{
 			
 			

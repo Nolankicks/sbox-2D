@@ -1,0 +1,45 @@
+{
+  "RootObject": {
+    "Id": "0df3ba2e-e3d6-45b3-abb2-4cb8dac467fb",
+    "Name": "duccbullet",
+    "Scale": "5,5,5",
+    "Tags": "playerbullet",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "BodyGroups": 18446744073709551615,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/duck_decoration/duck_decoration.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "ModelCollider",
+        "IsTrigger": false,
+        "Model": "models/duck_decoration/duck_decoration.vmdl",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "Rigidbody",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "DuccBullet"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "duccsoft.duck_decoration"
+  ]
+}
