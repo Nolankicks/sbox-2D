@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "2941ad33-c56a-4694-8d76-9f4e9a0d97cf",
+    "Id": "7598a7ae-32fc-426b-983f-2a16daf1bf1a",
     "Name": "zombie",
     "Tags": "bad,zombie",
     "Enabled": true,
@@ -9,12 +9,12 @@
         "__type": "Zombie",
         "body": {
           "_type": "component",
-          "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
+          "go": "c65ae894-fa9b-4c21-a0e2-0433198a6b73",
           "component_type": "SkinnedModelRenderer"
         },
         "characterController": {
           "_type": "component",
-          "go": "2941ad33-c56a-4694-8d76-9f4e9a0d97cf",
+          "go": "7598a7ae-32fc-426b-983f-2a16daf1bf1a",
           "component_type": "CharacterController"
         },
         "Speed": 150,
@@ -35,7 +35,7 @@
         "LookAtEnabled": false,
         "Target": {
           "_type": "component",
-          "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
+          "go": "c65ae894-fa9b-4c21-a0e2-0433198a6b73",
           "component_type": "SkinnedModelRenderer"
         }
       },
@@ -60,7 +60,7 @@
     ],
     "Children": [
       {
-        "Id": "4e532a09-940c-4440-9134-3f2a6ddb5727",
+        "Id": "c65ae894-fa9b-4c21-a0e2-0433198a6b73",
         "Name": "body",
         "Enabled": true,
         "Components": [
@@ -75,111 +75,10 @@
             "RenderType": "On",
             "Tint": "1,1,1,1"
           }
-        ],
-        "Children": [
-          {
-            "Id": "31ac536d-a89b-46b3-95cd-4fcc3c75f693",
-            "Name": "Cloths",
-            "Position": "73.46608,64.91307,59.23728",
-            "Children": [
-              {
-                "Id": "1382af9c-e858-435f-a777-930953c97a56",
-                "Name": "gloves",
-                "Position": "72.04712,69.69989,59.23476",
-                "Enabled": true,
-                "Components": [
-                  {
-                    "__type": "SkinnedModelRenderer",
-                    "BodyGroups": 18446744073709551615,
-                    "BoneMergeTarget": {
-                      "_type": "component",
-                      "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
-                      "component_type": "SkinnedModelRenderer"
-                    },
-                    "CreateBoneObjects": false,
-                    "MaterialGroup": null,
-                    "MaterialOverride": null,
-                    "Model": "models/citizen_clothes/gloves/boxing_gloves/models/boxing_gloves_blue.vmdl",
-                    "RenderType": "On",
-                    "Tint": "1,1,1,1"
-                  }
-                ]
-              },
-              {
-                "Id": "4166db12-53ef-4ec4-adb4-2adeb9e77d5e",
-                "Name": "head",
-                "Position": "144.0943,139.3998,118.4695",
-                "Enabled": true,
-                "Components": [
-                  {
-                    "__type": "SkinnedModelRenderer",
-                    "BodyGroups": 18446744073709551615,
-                    "BoneMergeTarget": {
-                      "_type": "component",
-                      "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
-                      "component_type": "SkinnedModelRenderer"
-                    },
-                    "CreateBoneObjects": false,
-                    "MaterialGroup": null,
-                    "MaterialOverride": null,
-                    "Model": "models/citizen_clothes/hat/boxing_headgear/models/boxing_headgear_blue.vmdl",
-                    "RenderType": "On",
-                    "Tint": "1,1,1,1"
-                  }
-                ]
-              },
-              {
-                "Id": "d0c744cf-d163-4a47-9aa8-c35d0e7cabdf",
-                "Name": "shirt",
-                "Position": "72.04712,69.69989,59.23476",
-                "Enabled": true,
-                "Components": [
-                  {
-                    "__type": "SkinnedModelRenderer",
-                    "BodyGroups": 18446744073709551615,
-                    "BoneMergeTarget": {
-                      "_type": "component",
-                      "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
-                      "component_type": "SkinnedModelRenderer"
-                    },
-                    "CreateBoneObjects": false,
-                    "MaterialGroup": null,
-                    "MaterialOverride": null,
-                    "Model": "models/citizen_clothes/shorts/boxing_shorts/models/boxing_shorts_blue.vmdl",
-                    "RenderType": "On",
-                    "Tint": "1,1,1,1"
-                  }
-                ]
-              },
-              {
-                "Id": "15413c2a-f4ff-4f0b-9528-9b0f081e95f3",
-                "Name": "shoes",
-                "Position": "72.04712,69.69989,59.23476",
-                "Enabled": true,
-                "Components": [
-                  {
-                    "__type": "SkinnedModelRenderer",
-                    "BodyGroups": 18446744073709551615,
-                    "BoneMergeTarget": {
-                      "_type": "component",
-                      "go": "4e532a09-940c-4440-9134-3f2a6ddb5727",
-                      "component_type": "SkinnedModelRenderer"
-                    },
-                    "CreateBoneObjects": false,
-                    "MaterialGroup": null,
-                    "MaterialOverride": null,
-                    "Model": "models/citizen_clothes/shoes/boxing_boots/models/boxing_boots_blue.vmdl",
-                    "RenderType": "On",
-                    "Tint": "1,1,1,1"
-                  }
-                ]
-              }
-            ]
-          }
         ]
       },
       {
-        "Id": "304a94dd-102b-4047-8a5b-6b901577bdc6",
+        "Id": "06f35cdb-08f5-4f82-9df7-260cd6f01374",
         "Name": "trigger",
         "Enabled": true,
         "Components": [
@@ -194,7 +93,11 @@
           },
           {
             "__type": "ShooterTrigger",
-            "badguy": "prefabs/zombie.prefab",
+            "body": {
+              "_type": "component",
+              "go": "c65ae894-fa9b-4c21-a0e2-0433198a6b73",
+              "component_type": "SkinnedModelRenderer"
+            },
             "humanRagdoll": "prefabs/ragdoll.prefab",
             "particleEffect": "prefabs/burst.prefab",
             "zombieRagdoll": "prefabs/zombieragdoll.prefab"

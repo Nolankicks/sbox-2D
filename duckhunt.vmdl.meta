@@ -18,7 +18,7 @@
       "PackageReferences": null,
       "EditorReferences": null,
       "Metadata": {
-        "SingleAssetSource": "models/duckhunt.vmdl"
+        "SingleAssetSource": "duckhunt.vmdl"
       }
     }
   }

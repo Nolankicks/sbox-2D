@@ -38,7 +38,7 @@
           "Acceleration": 10,
           "GroundAngle": 45,
           "Height": 64,
-          "IgnoreLayers": "player,bad,ragdoll",
+          "IgnoreLayers": "player,bad,ragdoll,zombie",
           "Radius": 16,
           "StepHeight": 18
         },
@@ -2192,7 +2192,11 @@
             },
             {
               "__type": "ShooterTrigger",
-              "badguy": "de12a866-f86b-4d28-9771-195ad24e0a2d",
+              "body": {
+                "_type": "component",
+                "go": "de12a866-f86b-4d28-9771-195ad24e0a2d",
+                "component_type": "SkinnedModelRenderer"
+              },
               "humanRagdoll": "prefabs/ragdoll.prefab",
               "particleEffect": "prefabs/burst.prefab",
               "zombieRagdoll": "prefabs/zombieragdoll.prefab"
@@ -2369,7 +2373,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 7225.165
+                "Relative": 2656.0283
               }
             }
           ]
@@ -2396,7 +2400,7 @@
               "__type": "DuccSpawner",
               "duccPowerUp": "prefabs/duccspawner.prefab",
               "timeSinceSpawn": {
-                "Relative": 7225.165
+                "Relative": 2656.0283
               }
             }
           ]

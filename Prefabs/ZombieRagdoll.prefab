@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "7cb5576e-811f-4502-b5f4-819a49ef8a78",
+    "Id": "96ac8622-0601-410d-91f9-489cb6158265",
     "Name": "zombieragdoll",
     "Enabled": true,
     "Components": [
@@ -21,114 +21,13 @@
         "Model": "models/citizen/citizen.vmdl",
         "Renderer": {
           "_type": "component",
-          "go": "7cb5576e-811f-4502-b5f4-819a49ef8a78",
+          "go": "96ac8622-0601-410d-91f9-489cb6158265",
           "component_type": "SkinnedModelRenderer"
         },
         "RigidbodyFlags": 0
       },
       {
         "__type": "Despawner"
-      }
-    ],
-    "Children": [
-      {
-        "Id": "24476591-d019-4557-a3cb-385909543d31",
-        "Name": "Cloths",
-        "Position": "73.46608,64.91307,59.23728",
-        "Children": [
-          {
-            "Id": "1553e28e-b0cc-4b16-9160-420defb777f2",
-            "Name": "gloves",
-            "Position": "72.04712,69.69989,59.23476",
-            "Enabled": true,
-            "Components": [
-              {
-                "__type": "SkinnedModelRenderer",
-                "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": {
-                  "_type": "component",
-                  "go": "7cb5576e-811f-4502-b5f4-819a49ef8a78",
-                  "component_type": "SkinnedModelRenderer"
-                },
-                "CreateBoneObjects": false,
-                "MaterialGroup": null,
-                "MaterialOverride": null,
-                "Model": "models/citizen_clothes/gloves/boxing_gloves/models/boxing_gloves_blue.vmdl",
-                "RenderType": "On",
-                "Tint": "1,1,1,1"
-              }
-            ]
-          },
-          {
-            "Id": "1ad14b52-7531-4189-bb91-7821a0c4ff92",
-            "Name": "head",
-            "Position": "144.0943,139.3998,118.4695",
-            "Enabled": true,
-            "Components": [
-              {
-                "__type": "SkinnedModelRenderer",
-                "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": {
-                  "_type": "component",
-                  "go": "7cb5576e-811f-4502-b5f4-819a49ef8a78",
-                  "component_type": "SkinnedModelRenderer"
-                },
-                "CreateBoneObjects": false,
-                "MaterialGroup": null,
-                "MaterialOverride": null,
-                "Model": "models/citizen_clothes/hat/boxing_headgear/models/boxing_headgear_blue.vmdl",
-                "RenderType": "On",
-                "Tint": "1,1,1,1"
-              }
-            ]
-          },
-          {
-            "Id": "c806905c-8062-4e11-a06c-83fbe66a6ff1",
-            "Name": "shirt",
-            "Position": "72.04712,69.69989,59.23476",
-            "Enabled": true,
-            "Components": [
-              {
-                "__type": "SkinnedModelRenderer",
-                "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": {
-                  "_type": "component",
-                  "go": "7cb5576e-811f-4502-b5f4-819a49ef8a78",
-                  "component_type": "SkinnedModelRenderer"
-                },
-                "CreateBoneObjects": false,
-                "MaterialGroup": null,
-                "MaterialOverride": null,
-                "Model": "models/citizen_clothes/shorts/boxing_shorts/models/boxing_shorts_blue.vmdl",
-                "RenderType": "On",
-                "Tint": "1,1,1,1"
-              }
-            ]
-          },
-          {
-            "Id": "57386fbc-5113-4e21-aaa8-e4c850d54a7d",
-            "Name": "shoes",
-            "Position": "72.04712,69.69989,59.23476",
-            "Enabled": true,
-            "Components": [
-              {
-                "__type": "SkinnedModelRenderer",
-                "BodyGroups": 18446744073709551615,
-                "BoneMergeTarget": {
-                  "_type": "component",
-                  "go": "7cb5576e-811f-4502-b5f4-819a49ef8a78",
-                  "component_type": "SkinnedModelRenderer"
-                },
-                "CreateBoneObjects": false,
-                "MaterialGroup": null,
-                "MaterialOverride": null,
-                "Model": "models/citizen_clothes/shoes/boxing_boots/models/boxing_boots_blue.vmdl",
-                "RenderType": "On",
-                "Tint": "1,1,1,1"
-              }
-            ]
-          }
-        ]
       }
     ]
   },

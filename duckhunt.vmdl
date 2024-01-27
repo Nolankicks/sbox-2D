@@ -15,7 +15,7 @@
 						[
 							{
 								from = "material #25.vmat"
-								to = "models/test.vmat"
+								to = "duck-hunt-dif.vmat"
 							},
 						]
 						use_global_default = false
@@ -29,7 +29,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/duckhuntv2.fbx"
+						filename = "duckhuntv2.fbx"
 						import_translation = [ 0.0, 284.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 0.02
