@@ -1,0 +1,91 @@
+{
+  "Id": "f9dcbd14-7538-4cbd-bafd-85ead1416311",
+  "GameObjects": [
+    {
+      "Id": "1ee7a662-d44d-469d-aa24-4a9be172c2cc",
+      "Name": "Camera",
+      "Position": "-20.49694,-36.99603,65.92299",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "Id": "fa3d15a9-1701-42db-9633-c2d41f402e3a",
+      "Name": "Screen",
+      "Position": "-20.49694,-36.99603,65.92299",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        }
+      ],
+      "Children": [
+        {
+          "Id": "c3f94ead-ccd0-4add-b60b-3b9ee24128b5",
+          "Name": "ui",
+          "Position": "-20.49694,-36.99603,65.92299",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "goodmenu",
+              "manager": {
+                "_type": "component",
+                "go": "0493baa6-8917-4fe9-9bb3-b472e2dfe403",
+                "component_type": "Manager"
+              },
+              "MyStringValue": "Hello World!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "0493baa6-8917-4fe9-9bb3-b472e2dfe403",
+      "Name": "Manager",
+      "Position": "-20.49694,-36.99603,65.92299",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Manager",
+          "ableToInput": false,
+          "sceneFile": null,
+          "testBool": false,
+          "updateUi": null
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "coolmenu",
+  "Description": "",
+  "__references": []
+}
