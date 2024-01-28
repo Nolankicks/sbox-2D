@@ -4,7 +4,8 @@
     {
       "Id": "1ee7a662-d44d-469d-aa24-4a9be172c2cc",
       "Name": "Camera",
-      "Position": "-20.49694,-36.99603,65.92299",
+      "Position": "39.48454,57.32219,20.65004",
+      "Rotation": "-0.03378266,-0.1260786,-0.2566048,0.9576623",
       "Tags": "maincamera",
       "Enabled": true,
       "Components": [
@@ -12,7 +13,7 @@
           "__type": "CameraComponent",
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
-          "FieldOfView": 60,
+          "FieldOfView": 30.23,
           "IsMainCamera": true,
           "Orthographic": false,
           "OrthographicHeight": 1204,
@@ -49,6 +50,7 @@
           "Components": [
             {
               "__type": "goodmenu",
+              "GameScene": "scenes/2dmain.scene",
               "manager": {
                 "_type": "component",
                 "go": "0493baa6-8917-4fe9-9bb3-b472e2dfe403",
@@ -76,6 +78,42 @@
           "stoneMaterial": null,
           "testBool": false,
           "theme": "none"
+        }
+      ]
+    },
+    {
+      "Id": "8bfb5fc1-400b-41c4-bb56-5e4bfc152381",
+      "Name": "Object",
+      "Position": "160,0,0",
+      "Rotation": "0,0,0.9914448,0.1305264",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "6eb7074c-8025-4daf-b18b-fdcd16fa8d7d",
+      "Name": "Sun",
+      "Position": "64,77.00681,96",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
         }
       ]
     }

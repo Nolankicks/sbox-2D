@@ -1,5 +1,7 @@
 @using Sandbox;
 @using Sandbox.UI;
+@using System.Linq;
+@using System.Collections.Generic;
 @inherits PanelComponent
 
 <root>
@@ -31,7 +33,17 @@
 		</div>
 	</div>
 	
-	
+	<div class="right">
+		<div class="title">SURVIVE TERRY</div>
+
+
+		<div class="themeHolder">
+			Theme
+			<DropDown @ref=Themes></DropDown>
+		</div>
+
+		<button @onclick=@StartGame>Start Game</button>
+	</div>
 	
 
 </root>
@@ -40,9 +52,38 @@
 {
 	[Property] Manager manager { get; set; }
 
+	[Property] SceneFile GameScene { get; set; }
+
+	DropDown Themes { get; set; }
+
+	protected override void OnEnabled()
+	{
+		base.OnEnabled();
+
+	}
+
+	void StartGame()
+	{
+		Log.Info("test");
+		FileSystem.Data.WriteAllText("player.txt", Themes.Selected.Value.ToString());
+		GameManager.ActiveScene.Load(GameScene);
+	}
+
+	protected override void OnTreeFirstBuilt()
+	{
+		base.OnTreeFirstBuilt();
+		Themes.Options = new()
+		{
+			new Option("Default", 1),
+			new Option("Grass", 2),
+			new Option("Stone", 3)
+		};
+		Themes.Selected = Themes.Options.First();
+	}
+
 
 	string IsMe(Sandbox.Services.Leaderboards.Entry entry)
-    {
+	{
         return entry.Me ? "me" : "";
     }
 
@@ -51,5 +92,5 @@
         return $"avatar:{entry.SteamId}";
     }
 
-	protected override int BuildHash() => System.HashCode.Combine(  manager.Score, manager.HighScore );
+	protected override int BuildHash() => System.HashCode.Combine(  manager.Score, manager.HighScore, Themes.GetHashCode() );
 }
