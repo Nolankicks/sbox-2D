@@ -26,7 +26,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/2dmain.scene",
+    "StartupScene": "scenes/coolmenu.scene",
     "ProjectTemplate": null,
     "MapStartupScene": null,
     "LaunchMode": "Normal",

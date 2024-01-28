@@ -2,7 +2,8 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using Microsoft.VisualBasic;
 using Sandbox;
-using Sandbox.Citizen;
+using Sandbox.UI;
+using System.Linq;
 
 public sealed class Manager : Component
 {
@@ -38,6 +39,8 @@ public sealed class Manager : Component
 	{
 		StartGame();
 		ableToInput = false;
+		var themeValue = Sandbox.FileSystem.Data.ReadAllText( "player.txt" ).ToInt() - 1;
+		theme = (Theme)themeValue;
 	}
 
 	protected override void OnUpdate()
