@@ -2373,7 +2373,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 1135.9141
+                "Relative": 672.28265
               }
             }
           ]
@@ -2400,7 +2400,7 @@
               "__type": "DuccSpawner",
               "duccPowerUp": "prefabs/duccspawner.prefab",
               "timeSinceSpawn": {
-                "Relative": 1135.9141
+                "Relative": 672.28265
               }
             }
           ]

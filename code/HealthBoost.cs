@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Runtime.CompilerServices;
 using Sandbox;
 [Group( "Trigger" )]
@@ -8,7 +9,7 @@ public sealed class HealthBoost : Component, Component.ITriggerListener //Change
 
 [Property] public SoundEvent healthSound {get; set;}
 [Property] public GameObject crushedCan {get; set;}
-	
+HealthManager healthManager => Scene.GetAllComponents<HealthManager>().FirstOrDefault();
 
 
 	protected override void OnStart()
@@ -19,21 +20,21 @@ public sealed class HealthBoost : Component, Component.ITriggerListener //Change
 
     void ITriggerListener.OnTriggerEnter(Collider other)
     {
-		var healthManager = other.GameObject.Components.Get<HealthManager>();
+		
 		if (other.Tags.Has("player"))
 	{
 		if (healthManager.healthNumber + 50f < healthManager.maxHealth)
 		{
-		healthManager.healthNumber += 100;
+			healthManager.maxHealth += 100;
 		}
 		else
 		{
 			healthManager.healthNumber = healthManager.maxHealth;
 		}
-		
+
 		Sound.Play(healthSound);
 		GameObject.Destroy();
-    	crushedCan.Clone(GameObject.Transform.Position);
+		crushedCan.Clone(GameObject.Transform.Position);
 	}
 		
 
