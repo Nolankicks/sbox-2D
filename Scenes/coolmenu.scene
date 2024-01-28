@@ -72,6 +72,7 @@
           "ableToInput": false,
           "color": "0,0,0,0",
           "grasssMaterial": null,
+          "mattMaterial": null,
           "menuScene": null,
           "overideColor": false,
           "platforms": [],

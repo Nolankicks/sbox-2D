@@ -2314,6 +2314,7 @@
               "ableToInput": true,
               "color": "1,0,0,1",
               "grasssMaterial": "materials/grass/floor_grass_dirt_weed_blend_a.vmat",
+              "mattMaterial": "materials/matt.vmat",
               "menuScene": "scenes/coolmenu.scene",
               "overideColor": false,
               "platforms": [
@@ -2373,7 +2374,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 31.83908
+                "Relative": 475.4279
               }
             }
           ]
@@ -2400,7 +2401,7 @@
               "__type": "DuccSpawner",
               "duccPowerUp": "prefabs/duccspawner.prefab",
               "timeSinceSpawn": {
-                "Relative": 31.83908
+                "Relative": 475.4279
               }
             }
           ]
@@ -2444,6 +2445,7 @@
     "duccsoft.duck_decoration",
     "facepunch.concrete_trim_02",
     "facepunch.floor_grass_dirt_weed_blend_a",
-    "facepunch.w_mp5"
+    "facepunch.w_mp5",
+    "videogames.matt_pyramid"
   ]
 }

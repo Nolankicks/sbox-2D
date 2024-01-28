@@ -21,12 +21,14 @@ public sealed class Manager : Component
 		[Icon("grass")]
 		grass,
 		[Icon("view_in_ar")]
-		stone
+		stone,
+		matt
 	}
 	
 	[Property] public Theme theme {get; set;}
 	[Property] public Material grasssMaterial {get; set;}
 	[Property] public Material stoneMaterial {get; set;}
+	[Property] public Material mattMaterial {get; set;}
 	public Material overrideMaterial {get; set;}
 	[Property] public bool overideColor {get; set;}
 	[Property] Color color {get; set;}
