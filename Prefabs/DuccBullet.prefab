@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "24d1bd63-6007-4127-a6ee-37b93e1f271d",
+    "Id": "eb7cfe91-a962-4f6e-b048-497c11ac4583",
     "Name": "duccbullet",
     "Scale": "5,5,5",
     "Tags": "playerbullet",
@@ -33,6 +33,9 @@
       },
       {
         "__type": "DuccBullet"
+      },
+      {
+        "__type": "Despawner"
       }
     ]
   },
