@@ -2374,7 +2374,7 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": "prefabs/healthboost.prefab",
               "timeSinceSpawn": {
-                "Relative": 475.4279
+                "Relative": 629.99164
               }
             }
           ]
@@ -2401,7 +2401,7 @@
               "__type": "DuccSpawner",
               "duccPowerUp": "prefabs/duccspawner.prefab",
               "timeSinceSpawn": {
-                "Relative": 475.4279
+                "Relative": 629.99164
               }
             }
           ]
@@ -2440,6 +2440,7 @@
   },
   "Title": "2dmain",
   "Description": "",
+  "LastSaved": "2024-01-29T10:35:46.6601935-05:00",
   "__references": [
     "caro.sky_001",
     "duccsoft.duck_decoration",
