@@ -1,0 +1,34 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<button @onclick=@UpgradeSpeed>Upgrade Speed</button>
+	<button @onclick=@RecievePistol>Recieve Pistol</button>
+</root>
+
+@code
+{
+
+	[Property, TextArea] public string MyStringValue { get; set; } = "Hello World!";
+	[Property] public PlayerController Player { get; set; }
+	[Property] public Manager manager { get; set; }
+	[Property] public Attack attack { get; set; }
+	
+	void UpgradeSpeed()
+	{
+		Player.Speed += 100;
+		manager.AddScore();
+	}
+
+	void RecievePistol()
+	{
+		attack.PistolGunEnabled = true;
+		manager.AddScore();
+	}
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( MyStringValue );
+}
