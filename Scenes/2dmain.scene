@@ -84,7 +84,7 @@
           },
           "bullet": {
             "_type": "gameobject",
-            "go": "975d477b-a8bb-4999-a306-30601c761559",
+            "go": "e3fb412a-0bb6-4830-8395-6211ebdcc034",
             "prefab": "prefabs/playerbullet.prefab"
           },
           "deathSound": "sounds/deathsound.sound",
@@ -102,12 +102,12 @@
           "gunSound": "sounds/guns/m1911/pistol_shoot.sound",
           "humanRagdoll": {
             "_type": "gameobject",
-            "go": "b0fa4146-3bf8-4404-befc-24967f3f8c77",
+            "go": "74941a01-3d50-44c2-8447-de300d38ed7b",
             "prefab": "prefabs/ragdoll.prefab"
           },
           "impactEffect": {
             "_type": "gameobject",
-            "go": "ded48159-52c0-434f-9f3d-c30b4c9a1992",
+            "go": "027b3c08-9433-45dd-8dc8-99028bf0e0da",
             "prefab": "prefabs/impact_default.prefab"
           },
           "manager": {
@@ -117,7 +117,7 @@
           },
           "particleEffect": {
             "_type": "gameobject",
-            "go": "165f2555-6b7a-4883-90c0-eb61163b06d7",
+            "go": "2f6bee50-ba2c-48f4-91b0-203df1250192",
             "prefab": "prefabs/burst.prefab"
           },
           "pistol": {
@@ -147,7 +147,7 @@
           "soundEvent": "sounds/punch.sound",
           "zombieRagdoll": {
             "_type": "gameobject",
-            "go": "d8d7214c-64d7-4092-a1c2-ab405aae4d43",
+            "go": "0b32b4e8-48fd-4052-98ae-5080fe33dc69",
             "prefab": "prefabs/zombieragdoll.prefab"
           }
         },
@@ -163,7 +163,7 @@
           "__type": "HealthTrigger",
           "emitter": {
             "_type": "gameobject",
-            "go": "bcfade05-520d-4e65-b21c-5e54d12de977",
+            "go": "e1bc5e05-6942-453d-adc1-4db7ee54c64f",
             "prefab": "prefabs/burst.prefab"
           },
           "healthManager": {
@@ -188,7 +188,7 @@
           },
           "impactEffect": {
             "_type": "gameobject",
-            "go": "00c34a85-30f3-4ffa-b5df-5b838aa473b6",
+            "go": "330aaf2c-decd-4b8d-acd4-e85eb0583e82",
             "prefab": "prefabs/impact_default.prefab"
           },
           "maxAmmo": 360,
@@ -222,7 +222,7 @@
           },
           "shell": {
             "_type": "gameobject",
-            "go": "2517b3b3-df05-4953-9855-13d4139acb8e",
+            "go": "0e40a59f-9d5f-4ac6-b028-54eeab6157ee",
             "prefab": "prefabs/shell.prefab"
           },
           "speed": 0
@@ -244,7 +244,7 @@
           },
           "bullet": {
             "_type": "gameobject",
-            "go": "eef2acbb-04dd-44c0-9edb-fe9df82e7925",
+            "go": "65f65d53-52e0-4003-b79b-30fe4bad681a",
             "prefab": "prefabs/duccbullet.prefab"
           },
           "quackSound": "sounds/quack.sound"
@@ -1447,7 +1447,7 @@
           },
           "bullet": {
             "_type": "gameobject",
-            "go": "5cf6f794-8707-442c-8a4f-6017a26bc4cf",
+            "go": "67fe89eb-fd7c-45eb-b18e-be37a7d84446",
             "prefab": "prefabs/badguybullet.prefab"
           }
         },
@@ -2266,17 +2266,17 @@
               },
               "humanRagdoll": {
                 "_type": "gameobject",
-                "go": "409a3988-cb3f-4705-bd6e-8e870cd7bb7a",
+                "go": "7c6ec962-8bfd-4e7c-bd34-56c45f8e493a",
                 "prefab": "prefabs/ragdoll.prefab"
               },
               "particleEffect": {
                 "_type": "gameobject",
-                "go": "d78cea80-bb68-44a8-b49f-12968b9182ea",
+                "go": "071f3fa2-74d5-4955-8c76-1474ee304c95",
                 "prefab": "prefabs/burst.prefab"
               },
               "zombieRagdoll": {
                 "_type": "gameobject",
-                "go": "16381eb8-376c-4d01-9fac-504371784001",
+                "go": "1eb9eca9-9046-457e-8d23-f127cfadf709",
                 "prefab": "prefabs/zombieragdoll.prefab"
               }
             }
@@ -2488,12 +2488,12 @@
               },
               "pistol": {
                 "_type": "gameobject",
-                "go": "bac8cf49-a9bc-463d-8971-044f6b8ada6d",
+                "go": "908dea15-7a48-47f9-8f30-cfca1486c7dd",
                 "prefab": "prefabs/gunitem.prefab"
               },
               "rpg": {
                 "_type": "gameobject",
-                "go": "5c9aa62b-9087-4df0-8190-80bfb7bee7f2",
+                "go": "c45c0591-a983-48a6-96d9-9dbe29b8a7bd",
                 "prefab": "prefabs/rpgpowerup.prefab"
               }
             }
@@ -2509,11 +2509,11 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": {
                 "_type": "gameobject",
-                "go": "dcab224a-0530-486e-948c-aac1358c7dbd",
+                "go": "390d1232-529a-4a5e-9c69-e674160504dc",
                 "prefab": "prefabs/healthboost.prefab"
               },
               "timeSinceSpawn": {
-                "Relative": 447.7887
+                "Relative": 28.5703
               }
             }
           ]
@@ -2528,7 +2528,7 @@
               "__type": "ZombieSpawner",
               "ZombiePrefab": {
                 "_type": "gameobject",
-                "go": "8f5d5680-29b3-4a59-833b-99587434fe4b",
+                "go": "f2f51b45-2da0-4459-8197-07d77b775f3c",
                 "prefab": "prefabs/zombie.prefab"
               }
             }
@@ -2544,11 +2544,11 @@
               "__type": "DuccSpawner",
               "duccPowerUp": {
                 "_type": "gameobject",
-                "go": "5281c072-1638-4675-95e1-28b1eb56b44f",
+                "go": "b41cba0a-ecce-4e5a-b7fc-609faa7d7a0f",
                 "prefab": "prefabs/duccspawner.prefab"
               },
               "timeSinceSpawn": {
-                "Relative": 447.7887
+                "Relative": 28.5703
               }
             }
           ]
@@ -2587,7 +2587,7 @@
   },
   "Title": "2dmain",
   "Description": "",
-  "LastSaved": "2024-01-31T10:56:19.7133742-05:00",
+  "LastSaved": "2024-01-31T11:59:06.6640545-05:00",
   "__references": [
     "caro.sky_001",
     "duccsoft.duck_decoration",
