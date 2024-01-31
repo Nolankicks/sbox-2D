@@ -36,6 +36,7 @@ public sealed class Manager : Component
 	[Property] Color color {get; set;}
 
 	[Property] List<GameObject> platforms {get; set;}
+	
 
 	public Sandbox.Services.Leaderboards.Board Leaderboard;
 
@@ -52,12 +53,20 @@ public sealed class Manager : Component
 		if (ShouldUpgrade)
 		{
 			newUpgradeUi.Enabled = true;
+			foreach (var badguy in Scene.GetAllComponents<Shooter>())
+			{
+				badguy.GameObject.Destroy();
+			}
+			foreach (var zombie in Scene.GetAllComponents<Zombie>())
+			{
+				zombie.GameObject.Destroy();
+			}
 		}
 		else
 		{
 			newUpgradeUi.Enabled = false;
 		}
-
+		
 
 		if (ShouldAddScore)
 		{
@@ -79,6 +88,19 @@ public sealed class Manager : Component
 		{
 			testBool = false;
 		}
+		if (Score % 50 == 0 && Score != 0)
+		{
+			ShouldUpgrade = true;
+		}
+		else
+		{
+			ShouldUpgrade = false;
+		}
+
+		
+
+
+
 		if (testBool)
 		{
 			//var badguys = GameObject.Tags.Has("badguy");

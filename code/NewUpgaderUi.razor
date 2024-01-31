@@ -12,10 +12,11 @@
 	[Property, TextArea] public string MyStringValue { get; set; } = "Hello World!";
 	[Property] public PlayerController Player { get; set; }
 	[Property] public Manager manager { get; set; }
+	
 	void UpgradeSpeed()
 	{
 		Player.Speed += 200;
-		manager.ShouldUpgrade = false;
+		manager.AddScore();
 	}
 
 	/// <summary>
