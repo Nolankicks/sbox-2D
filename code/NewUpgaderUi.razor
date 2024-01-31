@@ -4,6 +4,7 @@
 
 <root>
 	<button @onclick=@UpgradeSpeed>Upgrade Speed</button>
+	<button @onclick=@RecievePistol>Recieve Pistol</button>
 </root>
 
 @code
@@ -12,10 +13,17 @@
 	[Property, TextArea] public string MyStringValue { get; set; } = "Hello World!";
 	[Property] public PlayerController Player { get; set; }
 	[Property] public Manager manager { get; set; }
+	[Property] public Attack attack { get; set; }
 	
 	void UpgradeSpeed()
 	{
-		Player.Speed += 200;
+		Player.Speed += 100;
+		manager.AddScore();
+	}
+
+	void RecievePistol()
+	{
+		attack.PistolGunEnabled = true;
 		manager.AddScore();
 	}
 
