@@ -58,6 +58,12 @@
               }
             }
           ]
+        },
+        {
+          "Id": "0ba6c8af-fa18-47f6-bb06-b9e11d88ab25",
+          "Name": "upgrade ui",
+          "Position": "-234.956,421.5539,7.873016",
+          "Enabled": true
         }
       ]
     },
@@ -74,8 +80,13 @@
           "grasssMaterial": null,
           "mattMaterial": null,
           "menuScene": null,
+          "newUpgradeUi": {
+            "_type": "gameobject",
+            "go": "0ba6c8af-fa18-47f6-bb06-b9e11d88ab25"
+          },
           "overideColor": false,
           "platforms": [],
+          "ShouldUpgrade": false,
           "stoneMaterial": null,
           "testBool": false,
           "theme": "none"
@@ -130,5 +141,6 @@
   },
   "Title": "coolmenu",
   "Description": "",
+  "LastSaved": "2024-01-31T17:12:00.1616481-05:00",
   "__references": []
 }
