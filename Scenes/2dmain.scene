@@ -84,7 +84,7 @@
           },
           "bullet": {
             "_type": "gameobject",
-            "go": "a9721aa1-1db8-4149-aa43-d1475f61f776",
+            "go": "48e9cda2-614e-4791-bae9-8b3ea148e86d",
             "prefab": "prefabs/playerbullet.prefab"
           },
           "deathSound": "sounds/deathsound.sound",
@@ -102,12 +102,12 @@
           "gunSound": "sounds/guns/m1911/pistol_shoot.sound",
           "humanRagdoll": {
             "_type": "gameobject",
-            "go": "cdb05a9d-a83e-4672-8b1d-fc2ddffeea4b",
+            "go": "436ec3bb-cb8d-4cfa-b600-013d0d9506e1",
             "prefab": "prefabs/ragdoll.prefab"
           },
           "impactEffect": {
             "_type": "gameobject",
-            "go": "471b0f43-2765-4b72-89ae-e010eaad4d8a",
+            "go": "91b3f8f4-0f18-45ef-b86c-78497e5330f7",
             "prefab": "prefabs/impact_default.prefab"
           },
           "manager": {
@@ -117,7 +117,7 @@
           },
           "particleEffect": {
             "_type": "gameobject",
-            "go": "d39a59b3-7787-434c-8470-de2da070aea7",
+            "go": "64c4cb3a-7b1e-498b-bfba-dc350a5bdbd0",
             "prefab": "prefabs/burst.prefab"
           },
           "pistol": {
@@ -147,7 +147,7 @@
           "soundEvent": "sounds/punch.sound",
           "zombieRagdoll": {
             "_type": "gameobject",
-            "go": "1a776737-7150-477c-93f9-b0dd115279f5",
+            "go": "31750ae7-a136-4443-86ed-fe90a7b75658",
             "prefab": "prefabs/zombieragdoll.prefab"
           }
         },
@@ -163,7 +163,7 @@
           "__type": "HealthTrigger",
           "emitter": {
             "_type": "gameobject",
-            "go": "bd403721-20aa-4994-b21d-d42abb79f049",
+            "go": "a32ed0d0-a2ca-4e5e-9d97-6717027d630b",
             "prefab": "prefabs/burst.prefab"
           },
           "healthManager": {
@@ -188,7 +188,7 @@
           },
           "impactEffect": {
             "_type": "gameobject",
-            "go": "b397f16e-c89a-4d04-921d-f316f2c4e4d7",
+            "go": "bc7e3df6-c0fe-46b2-bbeb-2c94fe2d08de",
             "prefab": "prefabs/impact_default.prefab"
           },
           "maxAmmo": 360,
@@ -222,7 +222,7 @@
           },
           "shell": {
             "_type": "gameobject",
-            "go": "e02a0ecf-8963-438f-8c59-66062c241b4a",
+            "go": "5fbf6f81-d014-4f1d-8a61-ddf44ed4c6c6",
             "prefab": "prefabs/shell.prefab"
           },
           "speed": 0
@@ -244,7 +244,7 @@
           },
           "bullet": {
             "_type": "gameobject",
-            "go": "32ae5b70-98bd-4020-a6e0-8b9aca00d077",
+            "go": "e7309590-56d2-4607-9d62-ddf5f670e5dc",
             "prefab": "prefabs/duccbullet.prefab"
           },
           "quackSound": "sounds/quack.sound"
@@ -1447,7 +1447,7 @@
           },
           "bullet": {
             "_type": "gameobject",
-            "go": "b61a30c0-20c7-4234-ae3c-b502671f84c9",
+            "go": "97e38ebf-a792-4150-b8ed-730cd532ff2f",
             "prefab": "prefabs/badguybullet.prefab"
           }
         },
@@ -2266,17 +2266,17 @@
               },
               "humanRagdoll": {
                 "_type": "gameobject",
-                "go": "e12e90ed-3ad9-45c3-91f2-23f9653cb727",
+                "go": "8d80416b-9deb-43b5-9606-5dbc5d1af87c",
                 "prefab": "prefabs/ragdoll.prefab"
               },
               "particleEffect": {
                 "_type": "gameobject",
-                "go": "61c1a626-ae2f-413f-b425-8b9bb12d80d6",
+                "go": "6974687a-3fbb-435b-b3e4-aabf367387fe",
                 "prefab": "prefabs/burst.prefab"
               },
               "zombieRagdoll": {
                 "_type": "gameobject",
-                "go": "49e17b0d-260d-4f6d-af98-3d57b75a73af",
+                "go": "c86554e2-7d9c-4537-9d75-f17b015d6da9",
                 "prefab": "prefabs/zombieragdoll.prefab"
               }
             }
@@ -2483,12 +2483,12 @@
               },
               "pistol": {
                 "_type": "gameobject",
-                "go": "653f4efa-eba3-4394-9693-a1d2d4be70a8",
+                "go": "584e9f21-41e3-4d10-8ec8-d9870f18fd58",
                 "prefab": "prefabs/gunitem.prefab"
               },
               "rpg": {
                 "_type": "gameobject",
-                "go": "0776fa31-616d-40c1-a7f9-c8b5aaf3c26d",
+                "go": "0c1c0629-deaa-4394-9319-af4514b1e84b",
                 "prefab": "prefabs/rpgpowerup.prefab"
               }
             }
@@ -2504,11 +2504,11 @@
               "__type": "HealthBoostSpawner",
               "healthBoost": {
                 "_type": "gameobject",
-                "go": "2e6f4ff5-b645-4f54-aae9-a80bcc878eb1",
+                "go": "fe7273d8-2269-4b6d-b385-4b89b9e88664",
                 "prefab": "prefabs/healthboost.prefab"
               },
               "timeSinceSpawn": {
-                "Relative": 861.52124
+                "Relative": 54.747204
               }
             }
           ]
@@ -2523,7 +2523,7 @@
               "__type": "ZombieSpawner",
               "ZombiePrefab": {
                 "_type": "gameobject",
-                "go": "310839c2-2034-48b5-b157-557b1d765a6f",
+                "go": "b14b96c5-0098-4272-b805-53489a9243d9",
                 "prefab": "prefabs/zombie.prefab"
               }
             }
@@ -2539,11 +2539,11 @@
               "__type": "DuccSpawner",
               "duccPowerUp": {
                 "_type": "gameobject",
-                "go": "35fd24e3-f423-4407-92db-7a906f3a8fc6",
+                "go": "36cd658f-be7d-424f-991c-c1abef652b44",
                 "prefab": "prefabs/duccspawner.prefab"
               },
               "timeSinceSpawn": {
-                "Relative": 861.52124
+                "Relative": 54.747204
               }
             }
           ]
@@ -2582,7 +2582,7 @@
   },
   "Title": "2dmain",
   "Description": "",
-  "LastSaved": "2024-01-30T21:38:17.4969212-05:00",
+  "LastSaved": "2024-01-30T21:44:30.6066674-05:00",
   "__references": [
     "caro.sky_001",
     "duccsoft.duck_decoration",
