@@ -55,7 +55,10 @@
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
             "component_type": "CharacterController"
           },
-          "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
+          "eye": {
+            "_type": "gameobject",
+            "go": "4ec32484-7bcd-4ec7-92c2-15cc014d7358"
+          },
           "Friction": 7,
           "JumpForce": 200,
           "MaxForce": 50,
@@ -79,7 +82,11 @@
             "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
             "component_type": "SkinnedModelRenderer"
           },
-          "bullet": "prefabs/playerbullet.prefab",
+          "bullet": {
+            "_type": "gameobject",
+            "go": "5120d95f-cfeb-4c38-a049-50367c9ee4a4",
+            "prefab": "prefabs/playerbullet.prefab"
+          },
           "deathSound": "sounds/deathsound.sound",
           "duccBlaster": {
             "_type": "component",
@@ -87,18 +94,36 @@
             "component_type": "DuccBlaster"
           },
           "DuccBlasterEnabled": false,
-          "eye": "4ec32484-7bcd-4ec7-92c2-15cc014d7358",
+          "eye": {
+            "_type": "gameobject",
+            "go": "4ec32484-7bcd-4ec7-92c2-15cc014d7358"
+          },
           "gunRange": 10000,
           "gunSound": "sounds/guns/m1911/pistol_shoot.sound",
-          "humanRagdoll": "prefabs/ragdoll.prefab",
-          "impactEffect": "prefabs/impact_default.prefab",
+          "humanRagdoll": {
+            "_type": "gameobject",
+            "go": "d1dd1b3e-de70-485a-a94d-2b0d70289e32",
+            "prefab": "prefabs/ragdoll.prefab"
+          },
+          "impactEffect": {
+            "_type": "gameobject",
+            "go": "f5c22551-f059-4ed0-bcb2-ccb0a8fed05f",
+            "prefab": "prefabs/impact_default.prefab"
+          },
           "manager": {
             "_type": "component",
             "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
             "component_type": "Manager"
           },
-          "particleEffect": "prefabs/burst.prefab",
-          "pistol": "a73e1eaf-3908-44f4-99c1-5da6c5a91d09",
+          "particleEffect": {
+            "_type": "gameobject",
+            "go": "94058a87-6b4b-4acc-9d00-46ffc18cc17c",
+            "prefab": "prefabs/burst.prefab"
+          },
+          "pistol": {
+            "_type": "gameobject",
+            "go": "a73e1eaf-3908-44f4-99c1-5da6c5a91d09"
+          },
           "PistolGunEnabled": false,
           "punchSound": "sounds/punch.sound",
           "Range": 50,
@@ -114,10 +139,17 @@
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
             "component_type": "SMG"
           },
-          "smgGun": "a3f2fcf3-c2f1-49f9-b23e-928abcbedb8f",
+          "smgGun": {
+            "_type": "gameobject",
+            "go": "a3f2fcf3-c2f1-49f9-b23e-928abcbedb8f"
+          },
           "SmgGunEnabled": false,
           "soundEvent": "sounds/punch.sound",
-          "zombieRagdoll": "prefabs/zombieragdoll.prefab"
+          "zombieRagdoll": {
+            "_type": "gameobject",
+            "go": "afa7ff1b-83dc-4fbd-9670-496e7e42c99d",
+            "prefab": "prefabs/zombieragdoll.prefab"
+          }
         },
         {
           "__type": "HealthManager",
@@ -129,7 +161,11 @@
         },
         {
           "__type": "HealthTrigger",
-          "emitter": "prefabs/burst.prefab",
+          "emitter": {
+            "_type": "gameobject",
+            "go": "b828759c-b703-4311-8231-00c834a7ef1a",
+            "prefab": "prefabs/burst.prefab"
+          },
           "healthManager": {
             "_type": "component",
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
@@ -146,8 +182,15 @@
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
             "component_type": "Attack"
           },
-          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
-          "impactEffect": "prefabs/impact_default.prefab",
+          "body": {
+            "_type": "gameobject",
+            "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
+          },
+          "impactEffect": {
+            "_type": "gameobject",
+            "go": "deec7af1-8624-4dfb-89d1-ea0792a874c7",
+            "prefab": "prefabs/impact_default.prefab"
+          },
           "maxAmmo": 360,
           "playerAnimation": {
             "_type": "component",
@@ -168,10 +211,20 @@
             "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
             "component_type": "Attack"
           },
-          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
+          "body": {
+            "_type": "gameobject",
+            "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
+          },
           "Lifetime": 0,
-          "rpgModel": "efe8f605-bed0-4335-83aa-088eb4be7a91",
-          "shell": "prefabs/shell.prefab",
+          "rpgModel": {
+            "_type": "gameobject",
+            "go": "efe8f605-bed0-4335-83aa-088eb4be7a91"
+          },
+          "shell": {
+            "_type": "gameobject",
+            "go": "0e7ebc02-0cff-4945-a881-8d12c0140992",
+            "prefab": "prefabs/shell.prefab"
+          },
           "speed": 0
         },
         {
@@ -181,9 +234,19 @@
             "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
             "component_type": "CitizenAnimationHelper"
           },
-          "blaster": "944f5bce-b21e-4a4e-ba64-5400e3cfbe6f",
-          "body": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e",
-          "bullet": "prefabs/duccbullet.prefab",
+          "blaster": {
+            "_type": "gameobject",
+            "go": "944f5bce-b21e-4a4e-ba64-5400e3cfbe6f"
+          },
+          "body": {
+            "_type": "gameobject",
+            "go": "7eb7e2ad-0b9e-4240-8752-f79b7a24cf9e"
+          },
+          "bullet": {
+            "_type": "gameobject",
+            "go": "55b6ead9-f910-4dc7-bd8a-78f935a72b5e",
+            "prefab": "prefabs/duccbullet.prefab"
+          },
           "quackSound": "sounds/quack.sound"
         }
       ],
@@ -1382,7 +1445,11 @@
             "go": "de12a866-f86b-4d28-9771-195ad24e0a2d",
             "component_type": "CitizenAnimationHelper"
           },
-          "bullet": "prefabs/badguybullet.prefab"
+          "bullet": {
+            "_type": "gameobject",
+            "go": "d44072e1-a8e6-4fff-9b06-f05ec8f72a84",
+            "prefab": "prefabs/badguybullet.prefab"
+          }
         },
         {
           "__type": "TerryManager",
@@ -2197,9 +2264,21 @@
                 "go": "de12a866-f86b-4d28-9771-195ad24e0a2d",
                 "component_type": "SkinnedModelRenderer"
               },
-              "humanRagdoll": "prefabs/ragdoll.prefab",
-              "particleEffect": "prefabs/burst.prefab",
-              "zombieRagdoll": "prefabs/zombieragdoll.prefab"
+              "humanRagdoll": {
+                "_type": "gameobject",
+                "go": "5ec88522-397b-49f8-b555-457a15fb4a7b",
+                "prefab": "prefabs/ragdoll.prefab"
+              },
+              "particleEffect": {
+                "_type": "gameobject",
+                "go": "febe4b49-15ae-4bb2-855f-8e3f5638c00a",
+                "prefab": "prefabs/burst.prefab"
+              },
+              "zombieRagdoll": {
+                "_type": "gameobject",
+                "go": "5703e758-0c6a-45e5-94bb-4bfadbe9034c",
+                "prefab": "prefabs/zombieragdoll.prefab"
+              }
             }
           ]
         }
@@ -2250,7 +2329,6 @@
           "Id": "adc50ec8-81e6-45b8-aa32-fc419aa40492",
           "Name": "UpdateUi",
           "Position": "-554.5608,3.096012,123.0684",
-          "Enabled": true,
           "Components": [
             {
               "__type": "UpdateUi",
@@ -2287,11 +2365,35 @@
           "Id": "df550cfe-61bc-410c-8624-768cd28c7e42",
           "Name": "PlayMusic",
           "Position": "116.3402,-200.8769,13.8819",
-          "Enabled": true,
           "Components": [
             {
               "__type": "PlayMusic",
-              "gameObject": "c2b54d8a-9178-4b23-a0d0-0c6860100053"
+              "gameObject": {
+                "_type": "gameobject",
+                "go": "c2b54d8a-9178-4b23-a0d0-0c6860100053"
+              }
+            }
+          ]
+        },
+        {
+          "Id": "c7fa7840-d842-4d49-9a96-6a364ec98491",
+          "Name": "NewUi",
+          "Position": "533.4901,33.82528,-293.0393",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "NewUpgaderUi",
+              "manager": {
+                "_type": "component",
+                "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
+                "component_type": "Manager"
+              },
+              "MyStringValue": "Hello World!",
+              "Player": {
+                "_type": "component",
+                "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
+                "component_type": "PlayerController"
+              }
             }
           ]
         }
@@ -2316,13 +2418,30 @@
               "grasssMaterial": "materials/grass/floor_grass_dirt_weed_blend_a.vmat",
               "mattMaterial": "materials/matt.vmat",
               "menuScene": "scenes/coolmenu.scene",
+              "newUpgradeUi": {
+                "_type": "gameobject",
+                "go": "c7fa7840-d842-4d49-9a96-6a364ec98491"
+              },
               "overideColor": false,
               "platforms": [
-                "8ea3d8be-5cd4-430d-a780-b1fb88845aea",
-                "45b6a1ac-39df-41f6-964a-2fef44f6fe82",
-                "88154fa6-6c6c-4464-8013-e604cc4f4a25",
-                "933912b4-0807-46da-aa8c-e625a01d8ffe"
+                {
+                  "_type": "gameobject",
+                  "go": "8ea3d8be-5cd4-430d-a780-b1fb88845aea"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "45b6a1ac-39df-41f6-964a-2fef44f6fe82"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "88154fa6-6c6c-4464-8013-e604cc4f4a25"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "933912b4-0807-46da-aa8c-e625a01d8ffe"
+                }
               ],
+              "ShouldUpgrade": false,
               "stoneMaterial": "materials/trimsheets/concrete/concrete_trim_02.vmat",
               "testBool": false,
               "theme": "none"
@@ -2333,7 +2452,6 @@
           "Id": "d5dd255c-c671-4d7d-bb94-4aa9fdb2006e",
           "Name": "TerrySpawner",
           "Position": "702.6836,129.6039,-274.7043",
-          "Enabled": true,
           "Components": [
             {
               "__type": "TerrySpawner",
@@ -2342,7 +2460,10 @@
                 "go": "d440e8d5-76d7-42b4-ba1c-5bb2a38c1777",
                 "component_type": "Manager"
               },
-              "terry": "de12a866-f86b-4d28-9771-195ad24e0a2d"
+              "terry": {
+                "_type": "gameobject",
+                "go": "de12a866-f86b-4d28-9771-195ad24e0a2d"
+              }
             }
           ]
         },
@@ -2350,7 +2471,6 @@
           "Id": "9370ab63-7554-46b5-9128-39a9bdade34c",
           "Name": "GunManager",
           "Position": "-194.3236,-259.3071,92.1468",
-          "Enabled": true,
           "Components": [
             {
               "__type": "GunItemSpawner",
@@ -2359,8 +2479,16 @@
                 "go": "af9abf97-07b0-4ced-abd7-182deb27c5d1",
                 "component_type": "Attack"
               },
-              "pistol": "prefabs/gunitem.prefab",
-              "rpg": "prefabs/rpgpowerup.prefab"
+              "pistol": {
+                "_type": "gameobject",
+                "go": "b5bbadd9-7917-434f-9c9c-a5b19666f88d",
+                "prefab": "prefabs/gunitem.prefab"
+              },
+              "rpg": {
+                "_type": "gameobject",
+                "go": "f895176f-3ca5-45bc-87aa-84039301a496",
+                "prefab": "prefabs/rpgpowerup.prefab"
+              }
             }
           ]
         },
@@ -2368,13 +2496,16 @@
           "Id": "3fcce9b9-a607-4501-a1af-43a36ad108dd",
           "Name": "HealthBoost Spawner",
           "Position": "727.2636,56.90359,-246.886",
-          "Enabled": true,
           "Components": [
             {
               "__type": "HealthBoostSpawner",
-              "healthBoost": "prefabs/healthboost.prefab",
+              "healthBoost": {
+                "_type": "gameobject",
+                "go": "6b898d20-6e60-4a76-9478-1c3479174595",
+                "prefab": "prefabs/healthboost.prefab"
+              },
               "timeSinceSpawn": {
-                "Relative": 629.99164
+                "Relative": 488.3228
               }
             }
           ]
@@ -2383,11 +2514,14 @@
           "Id": "48a7141c-1e2c-4f4c-93c4-6a1c1aea7bc3",
           "Name": "ZombieSpawner",
           "Position": "-67.63303,-138.7413,66.1544",
-          "Enabled": true,
           "Components": [
             {
               "__type": "ZombieSpawner",
-              "ZombiePrefab": "prefabs/zombie.prefab"
+              "ZombiePrefab": {
+                "_type": "gameobject",
+                "go": "be47b017-2eb5-401a-ae80-0d797e0af2d9",
+                "prefab": "prefabs/zombie.prefab"
+              }
             }
           ]
         },
@@ -2395,13 +2529,16 @@
           "Id": "0183be25-9ed2-4b64-832b-6a816c1c8106",
           "Name": "Ducc Spawner",
           "Position": "132.8496,-255.2738,38.00241",
-          "Enabled": true,
           "Components": [
             {
               "__type": "DuccSpawner",
-              "duccPowerUp": "prefabs/duccspawner.prefab",
+              "duccPowerUp": {
+                "_type": "gameobject",
+                "go": "353de2ee-89b5-4446-8129-eb8c3b5da09f",
+                "prefab": "prefabs/duccspawner.prefab"
+              },
               "timeSinceSpawn": {
-                "Relative": 629.99164
+                "Relative": 488.3228
               }
             }
           ]
@@ -2440,7 +2577,7 @@
   },
   "Title": "2dmain",
   "Description": "",
-  "LastSaved": "2024-01-29T10:35:46.6601935-05:00",
+  "LastSaved": "2024-01-30T19:58:50.5638416-05:00",
   "__references": [
     "caro.sky_001",
     "duccsoft.duck_decoration",

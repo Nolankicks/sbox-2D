@@ -1,0 +1,25 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<button @onclick=@UpgradeSpeed>Upgrade Speed</button>
+</root>
+
+@code
+{
+
+	[Property, TextArea] public string MyStringValue { get; set; } = "Hello World!";
+	[Property] public PlayerController Player { get; set; }
+	[Property] public Manager manager { get; set; }
+	void UpgradeSpeed()
+	{
+		Player.Speed += 200;
+		manager.ShouldUpgrade = false;
+	}
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( MyStringValue );
+}

@@ -14,6 +14,8 @@ public sealed class Manager : Component
 	[Property] public bool testBool {get; set;}
 	[Property] public bool ableToInput { get; set; } = false;
 	public bool ShouldAddScore { get; set; } = false;
+	[Property] public bool ShouldUpgrade { get; set; } = false;
+	[Property] public GameObject newUpgradeUi {get; set;}
 	public enum Theme
 	{
 		
@@ -47,6 +49,16 @@ public sealed class Manager : Component
 
 	protected override void OnUpdate()
 	{
+		if (ShouldUpgrade)
+		{
+			newUpgradeUi.Enabled = true;
+		}
+		else
+		{
+			newUpgradeUi.Enabled = false;
+		}
+
+
 		if (ShouldAddScore)
 		{
 			AddScore();
