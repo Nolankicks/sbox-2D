@@ -45,27 +45,6 @@ public sealed class PlayerController : Component
 		{
 			GameObject.Transform.Position = GameObject.Transform.Position.WithX(0);
 		}
-		
-
-
-
-			/*if (Input.Down("Left"))
-			{
-				body.Transform.Rotation = Rotation.FromYaw(90);
-				movement += Vector3.Left * Friction * Speed * Time.Delta;
-				inputTime = 0;
-			}
-			if (Input.Down("Right"))
-			{
-				body.Transform.Rotation = Rotation.FromYaw(-90);
-				movement += Vector3.Right * Friction * Speed * Time.Delta;
-				inputTime = 0;
-				
-			}
-			Transform.Position = Transform.Position.WithY(Math.Clamp(movement.y, -150, 150));
-			*/
-		
-		
 		if (cc.IsOnGround && Input.Pressed ("Jump"))
 		{
 			cc.Punch( Vector3.Up * 500 );
