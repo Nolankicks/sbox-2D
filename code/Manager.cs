@@ -12,7 +12,7 @@ public sealed class Manager : Component
 	public long Score { get; private set; } = 0;
 	public long HighScore { get; private set; } = 0;
 	[Property] public bool testBool {get; set;}
-	[Property] public bool ableToInput { get; set; } = false;
+	
 	public bool ShouldAddScore { get; set; } = false;
 	[Property] public bool ShouldUpgrade { get; set; } = false;
 	[Property] public GameObject newUpgradeUi {get; set;}
@@ -43,7 +43,7 @@ public sealed class Manager : Component
 	protected override void OnStart()
 	{
 		StartGame();
-		ableToInput = false;
+		
 		var themeValue = Sandbox.FileSystem.Data.ReadAllText( "player.txt" ).ToInt() - 1;
 		theme = (Theme)themeValue;
 	}
@@ -79,16 +79,8 @@ public sealed class Manager : Component
 		{
 			StartGame();
 		}
+		
 		if (Score % 100 == 0 && Score != 0)
-		{
-			testBool = true;
-			ableToInput = true;
-		}
-		else
-		{
-			testBool = false;
-		}
-		if (Score % 50 == 0 && Score != 0)
 		{
 			ShouldUpgrade = true;
 		}

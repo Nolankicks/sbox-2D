@@ -1,12 +1,16 @@
 {
   "RootObject": {
-    "Id": "04f4020f-9db6-4152-8ee0-457e61005ed0",
+    "Id": "7c5025f9-7bf4-4b3d-ac10-f2e8c00f93d2",
     "Name": "rpgtrigger",
     "Enabled": true,
     "Components": [
       {
         "__type": "RPGTrigger",
-        "explosion": "prefabs/rpgexplosion.prefab"
+        "explosion": {
+          "_type": "gameobject",
+          "go": "a088f45f-46a9-44cc-8ac7-cfaa069added",
+          "prefab": "prefabs/rpgexplosion.prefab"
+        }
       },
       {
         "__type": "BoxCollider",
@@ -15,6 +19,86 @@
         "Scale": "300,300,300",
         "Static": false,
         "Surface": null
+      },
+      {
+        "__type": "UpdateActionComponent",
+        "Action": {
+          "Kind": "Action",
+          "Version": 3,
+          "Variables": [
+            {
+              "Name": "_this",
+              "Type": "Sandbox.Game/Sandbox.Component",
+              "Default": {
+                "_type": "component",
+                "go": "7c5025f9-7bf4-4b3d-ac10-f2e8c00f93d2",
+                "component_type": "UpdateActionComponent"
+              }
+            }
+          ],
+          "Nodes": [
+            {
+              "Id": 0,
+              "Type": "input"
+            },
+            {
+              "Id": 1,
+              "Type": "time.delay",
+              "UserData": {
+                "Position": "224,32"
+              }
+            },
+            {
+              "Id": 2,
+              "Type": "scene.getobject",
+              "UserData": {
+                "Position": "-80,192"
+              }
+            },
+            {
+              "Id": 3,
+              "Type": "call",
+              "Properties": {
+                "_name": "Destroy",
+                "_type": "Sandbox.Game/Sandbox.GameObject",
+                "_isStatic": false
+              },
+              "UserData": {
+                "Position": "448,112"
+              }
+            }
+          ],
+          "Links": [
+            {
+              "SrcId": 0,
+              "SrcName": "_signal",
+              "DstId": 1,
+              "DstName": "_signal"
+            },
+            {
+              "Value": 2,
+              "DstId": 1,
+              "DstName": "seconds"
+            },
+            {
+              "SrcId": 1,
+              "SrcName": "_signal",
+              "DstId": 3,
+              "DstName": "_signal"
+            },
+            {
+              "SrcId": 2,
+              "SrcName": "_result",
+              "DstId": 3,
+              "DstName": "_target"
+            }
+          ],
+          "UserData": {
+            "Title": "Action",
+            "id": "b2b6dc14-2bd8-430a-bf8d-8c2dac72946d",
+            "ReferencedComponentTypes": []
+          }
+        }
       }
     ]
   },
