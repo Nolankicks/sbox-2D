@@ -17,6 +17,7 @@
 	[Property] public Manager manager { get; set; }
 	[Property] public Attack attack { get; set; }
 	[Property] public HealthManager health { get; set; }
+	[Property] public SMG smg { get; set; }
 	
 	void UpgradeSpeed()
 	{
@@ -32,8 +33,15 @@
 
 	void RecieveSMG()
 	{
+		//Enable the SMG gun and give it ammo
 		attack.SmgGunEnabled = true;
+		smg.ammo = 512;
+		//Add Score
 		manager.AddScore();
+		//Disable the other guns
+		attack.PistolGunEnabled = false;
+		attack.RPGGunEnabled = false;
+		attack.DuccBlasterEnabled = false;
 	}
 	void IncreaseMaxHealth()
 	{

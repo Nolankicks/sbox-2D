@@ -24,7 +24,6 @@ public sealed class RPGTrigger : Component, Component.ITriggerListener
 		GameObject.Destroy();
 		manager.ShouldAddScore = true;
 		Log.Info("Trigger");
-		
 		}
 		
 	}
