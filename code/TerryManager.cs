@@ -3,15 +3,16 @@ using Sandbox;
 
 public sealed class TerryManager : Component
 {
-	[Property] public SkinnedModelRenderer body {get; set;}
+	public PlayerController player;
+
+	protected override void OnAwake()
+	{
+		player = Scene.GetAllComponents<PlayerController>().FirstOrDefault();
+	}
 	
 	protected override void OnUpdate()
 	{
 		
-		
-		if (Transform.Rotation != body.Transform.Rotation)
-		{
-			Transform.Rotation = body.Transform.Rotation * Rotation.FromYaw(-180);
-		}
+		GameObject.Transform.Rotation = Rotation.LookAt(player.GameObject.Transform.Position - GameObject.Transform.Position);
 	}
 }
