@@ -257,6 +257,7 @@
           "Components": [
             {
               "__type": "SkinnedModelRenderer",
+              "AnimationGraph": null,
               "BodyGroups": 341,
               "BoneMergeTarget": null,
               "CreateBoneObjects": true,
@@ -301,6 +302,7 @@
                   "Components": [
                     {
                       "__type": "SkinnedModelRenderer",
+                      "AnimationGraph": null,
                       "BodyGroups": 18446744073709551615,
                       "BoneMergeTarget": {
                         "_type": "component",
@@ -324,6 +326,7 @@
                   "Components": [
                     {
                       "__type": "SkinnedModelRenderer",
+                      "AnimationGraph": null,
                       "BodyGroups": 18446744073709551615,
                       "BoneMergeTarget": {
                         "_type": "component",
@@ -347,6 +350,7 @@
                   "Components": [
                     {
                       "__type": "SkinnedModelRenderer",
+                      "AnimationGraph": null,
                       "BodyGroups": 18446744073709551615,
                       "BoneMergeTarget": {
                         "_type": "component",
@@ -370,6 +374,7 @@
                   "Components": [
                     {
                       "__type": "SkinnedModelRenderer",
+                      "AnimationGraph": null,
                       "BodyGroups": 18446744073709551615,
                       "BoneMergeTarget": {
                         "_type": "component",
@@ -740,6 +745,7 @@
                                                   "Components": [
                                                     {
                                                       "__type": "SkinnedModelRenderer",
+                                                      "AnimationGraph": null,
                                                       "BodyGroups": 18446744073709551615,
                                                       "BoneMergeTarget": null,
                                                       "CreateBoneObjects": false,
@@ -769,6 +775,7 @@
                                                   "Components": [
                                                     {
                                                       "__type": "SkinnedModelRenderer",
+                                                      "AnimationGraph": null,
                                                       "BodyGroups": 18446744073709551519,
                                                       "BoneMergeTarget": null,
                                                       "CreateBoneObjects": false,
@@ -823,6 +830,7 @@
                                                   "Components": [
                                                     {
                                                       "__type": "SkinnedModelRenderer",
+                                                      "AnimationGraph": null,
                                                       "BodyGroups": 18446744073709551615,
                                                       "BoneMergeTarget": null,
                                                       "CreateBoneObjects": false,
@@ -1603,7 +1611,7 @@
                 "prefab": "prefabs/healthboost.prefab"
               },
               "timeSinceSpawn": {
-                "Relative": 978.89655
+                "Relative": 465.3207
               }
             }
           ]
@@ -1636,7 +1644,7 @@
                 "prefab": "prefabs/duccspawner.prefab"
               },
               "timeSinceSpawn": {
-                "Relative": 978.89655
+                "Relative": 465.3207
               }
             }
           ]
@@ -1687,13 +1695,14 @@
   },
   "Title": "2dmain",
   "Description": "",
-  "LastSaved": "2024-02-07T11:50:23.9308436-05:00",
+  "LastSaved": "2024-02-14T21:42:19.396644-05:00",
   "__references": [
     "caro.sky_001",
     "duccsoft.duck_decoration",
     "facepunch.concrete_trim_02",
     "facepunch.floor_grass_dirt_weed_blend_a",
     "facepunch.w_mp5",
+    "facepunch.w_usp",
     "videogames.matt_pyramid"
   ]
 }

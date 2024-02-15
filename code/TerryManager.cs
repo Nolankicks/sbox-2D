@@ -13,6 +13,6 @@ public sealed class TerryManager : Component
 	protected override void OnUpdate()
 	{
 		
-		GameObject.Transform.Rotation = Rotation.LookAt(player.GameObject.Transform.Position - GameObject.Transform.Position);
+		//GameObject.Transform.Rotation = Rotation.LookAt(player.GameObject.Transform.Position - GameObject.Transform.Position);
 	}
 }
