@@ -33,7 +33,7 @@ public sealed class PlayerController : Component
 		{
 			body.Transform.Rotation = Rotation.FromYaw(90);
 		}
- 
+	
 
 
 		IsSprinting = Input.Down("Run");
@@ -58,35 +58,7 @@ public sealed class PlayerController : Component
 	}
 	protected override void OnFixedUpdate()
 	{
-		BuildWishVelocity();
 		Move();
-	}
-	void BuildWishVelocity()
-	{
-		WishVelocity = 0;
-		if (Input.Down("Left"))
-		{
-
-			WishVelocity += Vector3.Left * Friction * Speed * Time.Delta;
-			inputTime = 0;
-			
-			
-			body.Transform.Rotation = Rotation.FromYaw(90);
-
-		}
-		if (Input.Down("Right"))
-		{
-			WishVelocity += Vector3.Right * Friction * Speed * Time.Delta;
-			inputTime = 0;
-			body.Transform.Rotation = Rotation.FromYaw(-90);
-			
-		}
-
-		
-		WishVelocity = WishVelocity.WithZ(0);
-		if(!WishVelocity.IsNearZeroLength) WishVelocity = WishVelocity.Normal;
-		WishVelocity *= Speed;
-
 	}
 
 	private void UpdateAnimations()
@@ -106,31 +78,66 @@ public sealed class PlayerController : Component
 	}
 	void Move()
 	{
-		var gravity = Scene.PhysicsWorld.Gravity;
+		var halfGrav = Scene.PhysicsWorld.Gravity * Time.Delta * 0.5f;
+		var CC = cc;
+		WishVelocity = Input.AnalogMove.Normal;
 
-		if (cc.IsOnGround)
+		if (!WishVelocity.IsNearlyZero())
 		{
-			cc.Velocity = cc.Velocity.WithZ(0);
-			cc.Accelerate(WishVelocity);
-			cc.ApplyFriction(Friction);
+			WishVelocity = new Angles(0, 0, 0).ToRotation() * WishVelocity;
+			WishVelocity = WishVelocity.WithZ(0);
+			WishVelocity.ClampLength(1);
+			WishVelocity *= RunSpeed();
+			if (!cc.IsOnGround)
+			{
+				WishVelocity.ClampLength(50);
+			}
 		}
 
-		else
-		{
-			cc.Velocity += gravity * Time.Delta * 0.5f;
-			cc.Accelerate(WishVelocity.ClampLength(MaxForce));
-			cc.ApplyFriction(AirControl);
-		}
-		cc.Move();
-
-		if(!cc.IsOnGround)
-		{
-			cc.Velocity += gravity * Time.Delta * 0.5f;
-		}
-		else
-		{
-			cc.Velocity = cc.Velocity.WithZ(0);
-		}
+	CC.ApplyFriction( GetFriction() );
+	if (CC.IsOnGround)
+	{
+		CC.Accelerate(WishVelocity);
+		CC.Velocity = cc.Velocity.WithZ(0);
+	}
+	else
+	{
+		CC.Velocity += halfGrav;
+		CC.Accelerate(WishVelocity);
+	}
+	CC.Move();
+	if (!CC.IsOnGround)
+	{
+		cc.Velocity += halfGrav;
+	}
+	else
+	{
+		cc.Velocity = cc.Velocity.WithZ(0);
+	}
 	}
 	
+
+	public float GetFriction()
+	{
+		if (cc.IsOnGround)
+		{
+			return Friction;
+		}
+		else
+		{
+			return AirControl;
+		}
+	}
+
+	public float RunSpeed()
+	{
+		if (Input.Down("run"))
+		{
+			return Sprint;
+		}
+		else
+		{
+			return Speed;
+		}
+	}
 }

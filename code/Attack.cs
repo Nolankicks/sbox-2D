@@ -7,9 +7,6 @@ using Sandbox.Citizen;
 public sealed class Attack : Component
 {
 	public TimeSince timeSinceSpawn { get; set; }
-	
-	[Property] float Range { get; set; }
-	[Property] public SMG smg { get; set; }
 	[Property] public GameObject particleEffect {get; set;}
 	[Property] GameObject eye {get; set;}
 	[Property] SkinnedModelRenderer body {get; set;}
@@ -24,11 +21,6 @@ public sealed class Attack : Component
 	[Property] public GameObject bullet {get; set;}
 	[Property] public GameObject pistol {get; set;}
 	[Property] public GameObject smgGun {get; set;}
-	[Property] public bool HasGunPistol = false;
-	[Property] public bool ShowGunPistol = false;
-	[Property] public bool ShowGunSmg = false;
-	[Property] public bool HasGunSmg = false;
-	
 	[Property] public bool Run = false;
 	[Property] float gunRange {get; set;}
 	[Property] public bool PistolGunEnabled {get; set;} = false;
@@ -39,6 +31,7 @@ public sealed class Attack : Component
 	[Property] public GameObject impactEffect {get; set;}
 	[Property] public RPG rpg {get; set;}
 	[Property] public DuccBlaster duccBlaster {get; set;}
+	[Property] public GameObject CurrentWeapon {get; set;}
 	protected override void OnAwake()
 	{
 		/*
@@ -172,10 +165,6 @@ public sealed class Attack : Component
 
 void GunPowerUp()
 {
-
-		
-		
-
 	if (timeSinceSpawn > 10)
 	{
 		PistolGunEnabled = false;

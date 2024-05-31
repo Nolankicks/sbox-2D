@@ -1,0 +1,307 @@
+{
+  "__guid": "be1edc90-3189-4be6-8949-649d539d3afc",
+  "GameObjects": [
+    {
+      "__guid": "0d5c89dd-954f-41ba-92f7-9a569cc56505",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-576,-64,256",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "4343b47c-3bd1-46e3-a8ae-c9cd573f69d5",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": true,
+          "OrthographicHeight": 784.2017,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "93b15303-6fad-4733-9652-8c547e763484",
+      "Flags": 0,
+      "Name": "Box",
+      "Position": "0,-64,32",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MeshComponent",
+          "__guid": "9420923e-9a44-4e77-b479-6ebb2352bbe8",
+          "Collision": "Mesh",
+          "Color": "1,1,1,1",
+          "HideInGame": false,
+          "IsTrigger": false,
+          "Mesh": {
+            "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
+            "Positions": [
+              "-128,-576,32",
+              "128,-576,32",
+              "128,576,32",
+              "-128,576,32",
+              "-128,576,-32",
+              "128,576,-32",
+              "128,-576,-32",
+              "-128,-576,-32"
+            ],
+            "TextureCoord": [
+              "1,4.5",
+              "-1,-0.25",
+              "1,-4.5",
+              "-4.5,-0.25",
+              "-1,-4.5",
+              "-1,-0.25",
+              "-1,4.5",
+              "-4.5,-0.25",
+              "1,-4.5",
+              "1,0.25",
+              "1,4.5",
+              "4.5,0.25",
+              "-1,4.5",
+              "1,0.25",
+              "-1,-4.5",
+              "4.5,0.25",
+              "4.5,-0.25",
+              "-1,0.25",
+              "-4.5,0.25",
+              "1,-0.25",
+              "-4.5,0.25",
+              "1,-0.25",
+              "4.5,-0.25",
+              "-1,0.25"
+            ],
+            "TextureUAxis": [
+              "1,0,0",
+              "1,0,-0",
+              "0,-1,0",
+              "0,1,0",
+              "-1,0,0",
+              "1,-0,0"
+            ],
+            "TextureVAxis": [
+              "0,-1,0",
+              "0,-1,0",
+              "0,0,-1",
+              "-0,0,-1",
+              "0,0,-1",
+              "-0,0,-1"
+            ],
+            "TextureScale": [
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25"
+            ],
+            "TextureOffset": [
+              "0,256",
+              "0,256",
+              "256,128",
+              "256,128",
+              "0,128",
+              "0,128"
+            ],
+            "MaterialIndex": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "EdgeFlags": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "Materials": [
+              "materials/dev/reflectivity_30.vmat"
+            ]
+          },
+          "SmoothingAngle": 40,
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "5d2e6606-066e-497c-a048-0f6f94d552af",
+      "Flags": 0,
+      "Name": "Sun",
+      "Position": "-726.011,73.91322,531.7452",
+      "Rotation": "0,0.258819,0,0.9659258",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "95599ff2-772d-48bd-be21-12e55e7f4f38",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0.05882,0.07451,0.08235,1"
+        }
+      ]
+    },
+    {
+      "__guid": "5bce3020-2df0-4e3b-9d40-7a0f34a56799",
+      "Flags": 0,
+      "Name": "Player",
+      "Position": "-726.011,64,531.7452",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "PlayerController",
+          "__guid": "6f50107f-6b1f-4913-8d89-0e37d5b4c0ea",
+          "AirControl": 0.1,
+          "body": {
+            "_type": "component",
+            "component_id": "be96caaf-4110-469c-b9f6-0e2472ce8515",
+            "go": "294979f4-3b26-4873-a36e-e818719a5257",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "cc": {
+            "_type": "component",
+            "component_id": "08c67efc-6aa2-4061-b060-1962238e7724",
+            "go": "5bce3020-2df0-4e3b-9d40-7a0f34a56799",
+            "component_type": "CharacterController"
+          },
+          "eye": {
+            "_type": "gameobject",
+            "go": "f5699aa1-451e-46f6-97c1-33131c730e30"
+          },
+          "Friction": 6,
+          "JumpForce": 900,
+          "MaxForce": 50,
+          "Speed": 100,
+          "Sprint": 250
+        },
+        {
+          "__type": "Sandbox.CharacterController",
+          "__guid": "08c67efc-6aa2-4061-b060-1962238e7724",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18,
+          "UseCollisionRules": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "294979f4-3b26-4873-a36e-e818719a5257",
+          "Flags": 0,
+          "Name": "Body",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "be96caaf-4110-469c-b9f6-0e2472ce8515",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            },
+            {
+              "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+              "__guid": "64b8e976-4f33-4adf-9569-0aa42af51446",
+              "BodyWeight": 1,
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "LookAtEnabled": false,
+              "Target": {
+                "_type": "component",
+                "component_id": "be96caaf-4110-469c-b9f6-0e2472ce8515",
+                "go": "294979f4-3b26-4873-a36e-e818719a5257",
+                "component_type": "SkinnedModelRenderer"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "f5699aa1-451e-46f6-97c1-33131c730e30",
+          "Flags": 0,
+          "Name": "eye",
+          "Position": "0,0,64",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "newmainscene",
+  "Description": "",
+  "LastSaved": "2024-05-31T14:42:09.4521466-04:00",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

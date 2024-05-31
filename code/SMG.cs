@@ -48,14 +48,6 @@ public sealed class SMG : Component
 		if (ammo == 60)
 		{
 			ableShoot = false;
-		if (Input.Pressed("reload") && attack.HasGunSmg && ammo == 60 )
-		{
-			timeSinceReload = 0;
-			playerAnimation.Target.Set("b_reload", true);
-			ammo -= 1;
-			ableShoot = true;
-		}
-
 		}
 
 	}
