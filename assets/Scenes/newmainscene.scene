@@ -273,6 +273,10 @@
           "__type": "PlayerController",
           "__guid": "6f50107f-6b1f-4913-8d89-0e37d5b4c0ea",
           "AirControl": 0.1,
+          "BloodEffect": {
+            "_type": "gameobject",
+            "prefab": "prefabs/old prefabs/burst.prefab"
+          },
           "body": {
             "_type": "component",
             "component_id": "be96caaf-4110-469c-b9f6-0e2472ce8515",
@@ -1370,7 +1374,7 @@
           "Async": false,
           "Gun": {
             "_type": "gameobject",
-            "prefab": "prefabs/mp5.prefab"
+            "prefab": "prefabs/ducc.prefab"
           },
           "GunModel": "models/weapons/sbox_smg_mp5/w_mp5.vmdl",
           "Time": 0
@@ -1398,7 +1402,7 @@
         {
           "__type": "Spinner",
           "__guid": "2f156dbb-db36-4811-93d1-1f052405403d",
-          "rotation": "0,0,0.008726535,0.9999619"
+          "rotation": "0,0,0.04361939,0.9990482"
         }
       ]
     },
@@ -1458,7 +1462,6 @@
       "Flags": 0,
       "Name": "ItemSpawner",
       "Position": "45.64879,-292.8463,57.88223",
-      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -1468,10 +1471,13 @@
           "MaxSpawnRate": 5,
           "MinSpawnRate": 1,
           "ObjectsToSpawn": [
-            null
+            {
+              "_type": "gameobject",
+              "prefab": "prefabs/old prefabs/healthboost.prefab"
+            }
           ],
           "RandomSpawnRate": false,
-          "SpawnRate": 5
+          "SpawnRate": 10
         }
       ]
     },
@@ -1524,25 +1530,29 @@
       ]
     },
     {
-      "__guid": "276a8fa3-45a0-49b9-91b1-9a9ee3936ef5",
+      "__guid": "e7f160bf-47ca-4d23-9410-5e030776ed0b",
       "Flags": 0,
       "Name": "Screen",
-      "Position": "175.0368,-6.466852,62.73043",
+      "Position": "-110.7877,-91.21133,107.3512",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.ScreenPanel",
-          "__guid": "bfb5bf15-3521-4a09-a1b9-53422dc15963",
+          "__guid": "d9ae0f91-ddac-4b47-8233-96b7dd0eaa78",
           "AutoScreenScale": true,
           "Opacity": 1,
           "Scale": 1,
           "ZIndex": 100
         },
         {
+          "__type": "HealthUi",
+          "__guid": "4b706394-099b-4310-91eb-ad278c5d17a8"
+        },
+        {
           "__type": "Hud",
-          "__guid": "cf880c07-c9ee-4165-96ca-495008cb71b8",
+          "__guid": "3ce1f0a8-9245-4077-a17e-32c467452285",
           "manager": {
             "_type": "component",
             "component_id": "021241b7-a453-4255-a288-45f12bd1eae3",
@@ -1576,7 +1586,7 @@
   },
   "Title": "newmainscene",
   "Description": "",
-  "LastSaved": "2024-05-31T17:19:47.8318816-04:00",
+  "LastSaved": "2024-05-31T17:51:03.8269831-04:00",
   "ResourceVersion": 1,
   "__references": [
     "facepunch.w_mp5",

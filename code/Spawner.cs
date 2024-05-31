@@ -21,7 +21,6 @@ public sealed class Spawner : Component
     while (true)
     {
         var spawns = Scene.GetAllComponents<SpawnPoint>().ToList();
-        if (spawns.Count == 0 || ObjectsToSpawn.Count == 0) continue;
 
         var randomSpawn = Game.Random.FromList(spawns);
         var randomObject = Game.Random.FromList(ObjectsToSpawn);
@@ -29,11 +28,6 @@ public sealed class Spawner : Component
         if (randomSpawn != null && randomObject != null)
         {
             var clonedObject = randomObject.Clone(randomSpawn.Transform.World);
-            if (clonedObject == null)
-            {
-                Log.Error("Failed to clone object");
-                continue;
-            }
         }
 
         if (RandomSpawnRate)

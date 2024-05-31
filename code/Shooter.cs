@@ -10,6 +10,7 @@ public sealed class Shooter : Component
 	[Property] public GameObject bullet {get; set;}
 	[Property] public CitizenAnimationHelper animationHelper {get; set;}
 	[Property] public GameObject body {get; set;}
+	[Property] public SoundEvent ShootSound {get; set;}
 	PlayerController player;
 	protected override void OnStart()
 	{
@@ -26,7 +27,7 @@ public sealed class Shooter : Component
 			timeSinceShoot = 0;
 			Shoot();
 			animationHelper.Target.Set("b_attack", true);
-			
+			Sound.Play(ShootSound);
 
 		}
 

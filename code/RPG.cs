@@ -6,9 +6,8 @@ using Sandbox.Citizen;
 public sealed class RPG : Component
 {
 	[Property] public GameObject shell { get; set; }
-	[Property] public float speed { get; set; }
-	[Property] public GameObject body { get; set; }
-	[Property] public CitizenAnimationHelper animationHelper { get; set; }
+	public GameObject body { get; set; }
+	public CitizenAnimationHelper animationHelper { get; set; }
 	protected override void OnUpdate()
 	{
 		body = Scene.GetAllComponents<PlayerController>().FirstOrDefault().body.GameObject;

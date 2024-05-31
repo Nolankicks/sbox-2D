@@ -78,7 +78,7 @@ public sealed class PlayerController : Component
 	public void TakeDamage(int damage)
 	{
 		Health -= damage;
-		BloodEffect.Clone(GameObject.Transform.Position + Vector3.Up * 55);
+		//BloodEffect.Clone(GameObject.Transform.Position + Vector3.Up * 55);
 		if (Health <= 0)
 		{
 			Health = 0;

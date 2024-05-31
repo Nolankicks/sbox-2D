@@ -1,48 +1,58 @@
 {
   "RootObject": {
-    "Id": "eb7cfe91-a962-4f6e-b048-497c11ac4583",
+    "__guid": "eb7cfe91-a962-4f6e-b048-497c11ac4583",
+    "Flags": 0,
     "Name": "duccbullet",
     "Scale": "5,5,5",
     "Tags": "playerbullet",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
     "Components": [
       {
-        "__type": "ModelRenderer",
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "9a461fd0-c919-4eae-a42b-0fd08d7a2538",
         "BodyGroups": 18446744073709551615,
-        "MaterialGroup": null,
-        "MaterialOverride": null,
         "Model": "models/duck_decoration/duck_decoration.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
       {
-        "__type": "ModelCollider",
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "e5564509-1cd8-402f-92fd-12e98d4dfec8",
         "IsTrigger": true,
         "Model": "models/duck_decoration/duck_decoration.vmdl",
-        "Static": false,
-        "Surface": null
+        "Static": false
       },
       {
-        "__type": "Rigidbody",
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "23f4f0b3-c579-421f-b3c9-20925a85ca13",
         "AngularDamping": 0,
         "Gravity": true,
         "LinearDamping": 0,
         "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
         "RigidbodyFlags": 0,
         "StartAsleep": false
       },
       {
-        "__type": "DuccBullet"
+        "__type": "Despawner",
+        "__guid": "ceb530a5-ff76-4570-817d-1ff08d8d9abf"
       },
       {
-        "__type": "Despawner"
+        "__type": "HurtTrigger",
+        "__guid": "a72bed56-a7d5-4ba3-9ec4-9ea4b8b4b9ce"
       }
-    ]
+    ],
+    "Children": []
   },
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "ResourceVersion": 1,
   "__references": [
     "duccsoft.duck_decoration"
-  ]
+  ],
+  "__version": 1
 }

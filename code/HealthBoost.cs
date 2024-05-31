@@ -21,9 +21,9 @@ PlayerController PlayerController;
     void ITriggerListener.OnTriggerEnter(Collider other)
     {
 		
-	if (other.Tags.Has("player"))
+	if (other.GameObject.Parent.Components.TryGet<PlayerController>(out var player, FindMode.EverythingInSelfAndParent))
 	{
-		PlayerController.Heal(50);
+		player.Heal(50);
 		Sound.Play(healthSound);
 		GameObject.Destroy();
 		crushedCan.Clone(GameObject.Transform.Position);

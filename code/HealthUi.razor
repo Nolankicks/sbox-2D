@@ -1,25 +1,30 @@
 @using Sandbox;
 @using Sandbox.UI;
+@using System.Linq;
 @inherits PanelComponent
 
 <root>
-	<div class="health3">Ammo: @smg.ammo</div>
-	<div class="health2">Max Health: @health.maxHealth</div>
- 	<div class="health">Health: @health.healthNumber</div>
-	
+	@if (Player is not null)
+	{
+		<div class="health">Health: @Player.Health</div>
+	}
 <root>
 
 
 
 @code
 {
-	 [Property] public HealthManager health { get; set; }
-	[Property] public SMG smg { get; set; }
-	 [Property] public Attack attack { get; set; }
+	public PlayerController Player { get; set; }
+	public SMG smg { get; set; }
+
+	protected override void OnUpdate()
+	{
+		Player = Scene.GetAllComponents<PlayerController>().FirstOrDefault();
+	}
 
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>
-	protected override int BuildHash() => System.HashCode.Combine(health?.healthNumber, health?.maxHealth, smg?.ammo);
+	protected override int BuildHash() => System.HashCode.Combine(Player.Health);
 }

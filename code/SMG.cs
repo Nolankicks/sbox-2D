@@ -29,8 +29,10 @@ public sealed class SMG : Component
 		if (Input.Down("attack1") && ammo > 0)
 		{
 			Shoot();
-			
-			
+		}
+		if (ammo <= 0)
+		{
+			GameObject.Destroy();
 		}
 	}
 
