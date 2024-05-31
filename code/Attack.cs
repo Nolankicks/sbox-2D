@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.AccessControl;
+using System.Security.Cryptography.X509Certificates;
 using Sandbox;
 using Sandbox.Citizen;
 
@@ -8,44 +9,36 @@ public sealed class Attack : Component
 {
 	public TimeSince timeSinceSpawn { get; set; }
 	[Property] public GameObject particleEffect {get; set;}
-	[Property] GameObject eye {get; set;}
-	[Property] SkinnedModelRenderer body {get; set;}
 	[Property] CitizenAnimationHelper animationHelper {get; set;}
 	[Property] public SoundEvent deathSound {get; set;}
-	[Property] SoundEvent soundEvent { get; set; }
 	[Property] public GameObject humanRagdoll { get; set; }
 	[Property] public GameObject zombieRagdoll { get; set; }	
 	[Property] public Rotation rotation { get; set; }
-	[Property] public Manager manager {get; set;}
+	public Manager manager {get; set;}
 	[Property] public SoundEvent punchSound {get; set;}
-	protected override void OnAwake()
+	public PlayerController controller { get; set; }
+	protected override void OnStart()
 	{
-		/*
-		HasGunSmg = true;
-		ShowGunSmg = true;
-		HasGunSmg = true;
-		*/
+		manager = Scene.GetAllComponents<Manager>().FirstOrDefault();
 	}
 	protected override void OnUpdate()
 	{
-		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );
-		if(Input.Pressed("attack1"))
+	controller = Scene.GetAllComponents<PlayerController>().FirstOrDefault( x => !x.IsProxy);
+	if (controller is null) return;
+	animationHelper = controller.animationHelper;
+	if(Input.Pressed("attack1") && animationHelper is not null)
 	{	
-			Fire();
-			animationHelper.Target.Set("b_attack", true);
-			
+			if (!IsProxy)
+			{
+				Fire();
+			}
+			animationHelper.Target.Set("b_attack", true);	
 	}
-	
-
-
-
-
-
-
-	void Fire()
+}
+void Fire()
 	{
-		//Perform a trace foward
 		animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Punch;
+		var body = controller.body.GameObject;
 		var camFoward = body.Transform.Rotation;
 		var tr = Scene.Trace.Ray(body.Transform.Position, body.Transform.Position + camFoward.Forward * 100).WithTag("bad").Run();
 
@@ -84,6 +77,4 @@ public sealed class Attack : Component
 			}
 			}
 		}
-
-}
 }

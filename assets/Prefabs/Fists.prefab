@@ -1,0 +1,38 @@
+{
+  "RootObject": {
+    "__guid": "3c02a3b3-2638-42ab-96e4-6e5b879b0f51",
+    "Flags": 0,
+    "Name": "fists",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "Components": [
+      {
+        "__type": "Attack",
+        "__guid": "70e1ccc9-715f-43a7-b6b3-89104972917c",
+        "deathSound": "sounds/hurtsound.sound",
+        "humanRagdoll": {
+          "_type": "gameobject",
+          "prefab": "prefabs/old prefabs/ragdoll.prefab"
+        },
+        "particleEffect": {
+          "_type": "gameobject",
+          "prefab": "prefabs/old prefabs/burst.prefab"
+        },
+        "punchSound": "sounds/guns/kill.sound",
+        "rotation": "0,0,0,0",
+        "zombieRagdoll": {
+          "_type": "gameobject",
+          "prefab": "prefabs/old prefabs/zombieragdoll.prefab"
+        }
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

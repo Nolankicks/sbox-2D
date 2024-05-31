@@ -1,0 +1,195 @@
+{
+  "__guid": "3f5da345-0ba3-46e4-90c7-615d13142dd9",
+  "GameObjects": [
+    {
+      "__guid": "b9269fe8-96d6-4527-84af-3c5b3e4f07c0",
+      "Flags": 0,
+      "Name": "Map",
+      "Position": "149.995,149.995,-212.125",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "394abafe-d6af-462f-83c6-58d5d435405b",
+          "MapName": "facepunch.construct",
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "c51369a8-05e6-41d4-88af-35154df75b02",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "84,-420,68",
+      "Rotation": "0,0,0.9659259,-0.2588188",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "e22ee257-e75d-47c9-8344-2fce10a22f21",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 65,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "OpiumPostprocess",
+          "__guid": "fcf2adee-68fe-4184-97da-8158f42bebb1"
+        },
+        {
+          "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+          "__guid": "2034829c-c0fe-40ce-932d-0b005b94e7cd",
+          "BodyWeight": 1,
+          "EyesWeight": 1,
+          "HeadWeight": 1,
+          "LookAt": {
+            "_type": "gameobject",
+            "go": "c51369a8-05e6-41d4-88af-35154df75b02"
+          },
+          "LookAtEnabled": true,
+          "Target": {
+            "_type": "component",
+            "component_id": "0617d776-fe1a-4f8e-8673-48bf472107c6",
+            "go": "d092828b-09ce-4364-acc6-0bb6c94fd43d",
+            "component_type": "SkinnedModelRenderer"
+          }
+        }
+      ]
+    },
+    {
+      "__guid": "d092828b-09ce-4364-acc6-0bb6c94fd43d",
+      "Flags": 0,
+      "Name": "terry",
+      "Position": "-88,-480,8",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "0617d776-fe1a-4f8e-8673-48bf472107c6",
+          "BodyGroups": 341,
+          "CreateBoneObjects": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "OnComponentStart": {
+            "__version": 7,
+            "__guid": "cc885c47-ac17-4bb1-93c0-d653cd6dc96f",
+            "UserData": {
+              "Title": "On Component Start",
+              "ReferencedComponentTypes": [
+                "Sandbox.Game/Sandbox.SkinnedModelRenderer"
+              ]
+            },
+            "Variables": [],
+            "Nodes": [
+              {
+                "Id": 0,
+                "Type": "input"
+              },
+              {
+                "Id": 1,
+                "Type": "scene.get",
+                "Properties": {
+                  "T": "Sandbox.Game/Sandbox.SkinnedModelRenderer"
+                },
+                "UserData": {
+                  "Position": "-32,160"
+                }
+              },
+              {
+                "Id": 3,
+                "Type": "call",
+                "Properties": {
+                  "_name": "Set",
+                  "_type": "Sandbox.Game/Sandbox.SkinnedModelRenderer",
+                  "_isStatic": false
+                },
+                "UserData": {
+                  "Position": "320,0"
+                }
+              }
+            ],
+            "Links": [
+              {
+                "SrcId": 0,
+                "SrcName": "_target",
+                "DstId": 1,
+                "DstName": "_this"
+              },
+              {
+                "SrcId": 0,
+                "SrcName": "_signal",
+                "DstId": 3,
+                "DstName": "_signal"
+              },
+              {
+                "SrcId": 1,
+                "SrcName": "_result",
+                "DstId": 3,
+                "DstName": "_target"
+              },
+              {
+                "Value": "holdtype_pose",
+                "DstId": 3,
+                "DstName": "v"
+              },
+              {
+                "Value": {
+                  "$type": "Simple",
+                  "Type": "System.Private.CoreLib/System.Single",
+                  "Value": 2
+                },
+                "DstId": 3,
+                "DstName": "value"
+              }
+            ]
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "postprocess_showcase",
+  "Description": "",
+  "LastSaved": "2024-05-11T13:20:50.3214295-04:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

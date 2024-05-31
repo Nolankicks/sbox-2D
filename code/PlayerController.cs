@@ -17,25 +17,22 @@ public sealed class PlayerController : Component
 	[Property] public SkinnedModelRenderer body {get; set;}
 	[Property] public CharacterController cc {get; set;}
 	//[Property] TimeSpan timeSpan {get; set;}
-	CitizenAnimationHelper animationHelper;
-	public Vector3 WishVelocity = Vector3.Zero;
-	private TimeSince inputTime;
-	Vector3 movement;
+	public CitizenAnimationHelper animationHelper;
+	[Sync] public Vector3 WishVelocity { get; set; }
+	[Sync] public int Health { get; set; } = 100;
+	[Property] public SceneFile CurrentScene { get; set; }
 	public bool IsSprinting;
 	public bool IsRunning;
 	protected override void OnStart()
 	{
 		animationHelper = Components.Get<CitizenAnimationHelper>(FindMode.EverythingInSelfAndChildren);
 	}
-	protected override void OnUpdate()
+	protected override void OnFixedUpdate()
 	{
-		if (body.Transform.Rotation != Rotation.FromYaw(90) && body.Transform.Rotation != Rotation.FromYaw(-90))
+		UpdateAnimations();
+		if (!IsProxy)
 		{
-			body.Transform.Rotation = Rotation.FromYaw(90);
-		}
-	
-
-
+		Move();
 		IsSprinting = Input.Down("Run");
 		var cam = Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
 		var campos = eye.Transform.Position;
@@ -50,17 +47,35 @@ public sealed class PlayerController : Component
 			cc.Punch( Vector3.Up * 500 );
 			animationHelper?.TriggerJump();
 		Sound.Play( "ui.navigate.forward" );
+		}
+		if (body.Transform.Rotation != Rotation.FromYaw(90) && body.Transform.Rotation != Rotation.FromYaw(-90))
+		{
+			body.Transform.Rotation = Rotation.FromYaw(90);
+		}
+		if (Input.Pressed("right"))
+		{
+			body.Transform.Rotation = Rotation.FromYaw(-90);
+		}
+		if (Input.Pressed("left"))
+		{
+			body.Transform.Rotation = Rotation.FromYaw(90);
+		}
+	}
 	
-
 	}
-
-		UpdateAnimations();
-	}
-	protected override void OnFixedUpdate()
+	public void TakeDamage(int damage)
 	{
-		Move();
+		Health -= damage;
+		if (Health <= 0)
+		{
+			Health = 0;
+			Death();
+		}
 	}
-
+	public void Death()
+	{
+		Game.ActiveScene.Load(CurrentScene);
+	}
 	private void UpdateAnimations()
 	{
 		if ( animationHelper is not null )
@@ -71,16 +86,13 @@ public sealed class PlayerController : Component
 			animationHelper.Height = 1f;
 			animationHelper.IsGrounded = cc.IsOnGround;
 			animationHelper.MoveStyle = CitizenAnimationHelper.MoveStyles.Run;
-			
-
-
 		}
 	}
 	void Move()
 	{
 		var halfGrav = Scene.PhysicsWorld.Gravity * Time.Delta * 0.5f;
 		var CC = cc;
-		WishVelocity = Input.AnalogMove.Normal;
+		WishVelocity = Input.AnalogMove.Normal.WithX(0);
 
 		if (!WishVelocity.IsNearlyZero())
 		{
@@ -108,11 +120,11 @@ public sealed class PlayerController : Component
 	CC.Move();
 	if (!CC.IsOnGround)
 	{
-		cc.Velocity += halfGrav;
+		CC.Velocity += halfGrav;
 	}
 	else
 	{
-		cc.Velocity = cc.Velocity.WithZ(0);
+		CC.Velocity = CC.Velocity.WithZ(0);
 	}
 	}
 	

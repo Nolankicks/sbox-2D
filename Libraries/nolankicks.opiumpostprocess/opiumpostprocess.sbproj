@@ -1,0 +1,14 @@
+{
+  "Title": "Opium Postprocess",
+  "Type": "library",
+  "Org": "nolankicks",
+  "Ident": "opiumpostprocess",
+  "Tags": null,
+  "Schema": 1,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Metadata": {
+    "CsProjName": ""
+  }
+}
