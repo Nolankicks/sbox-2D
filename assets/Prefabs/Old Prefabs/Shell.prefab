@@ -1,46 +1,60 @@
 {
   "RootObject": {
-    "Id": "462da522-c002-4c84-b719-e8cc735d8b43",
+    "__guid": "462da522-c002-4c84-b719-e8cc735d8b43",
+    "Flags": 0,
     "Name": "shell",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
     "Components": [
       {
-        "__type": "ModelRenderer",
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "0c104b2e-babd-4443-bd76-26efec1595f9",
         "BodyGroups": 18446744073709551615,
-        "MaterialGroup": null,
-        "MaterialOverride": null,
         "Model": "models/rpg7_rocket.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
       {
-        "__type": "Rigidbody",
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "0413e7ee-b89e-452a-a247-9e085bee3ff5",
         "AngularDamping": 0,
         "Gravity": true,
         "LinearDamping": 0,
         "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
         "RigidbodyFlags": 0,
         "StartAsleep": false
       },
       {
-        "__type": "BoxCollider",
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "973fd354-e538-4be7-adf6-4f50bf70375b",
         "Center": "13.56572,0.240581,1.653239",
         "IsTrigger": false,
         "Scale": "42.16209,8.782475,11.0402",
-        "Static": false,
-        "Surface": null
+        "Static": false
       },
       {
         "__type": "RPGCollision",
-        "explosion": "prefabs/rpgexplosion.prefab",
+        "__guid": "1d306b60-2878-4524-88a1-1dc94f3eb4f7",
+        "explosion": {
+          "_type": "gameobject",
+          "prefab": "prefabs/old prefabs/rpgexplosion.prefab"
+        },
         "explosionSound": "sounds/explosion.sound",
-        "self": "prefabs/shell.prefab",
-        "trigger": "prefabs/rpgtrigger.prefab"
+        "trigger": {
+          "_type": "gameobject",
+          "prefab": "prefabs/old prefabs/rpgtrigger.prefab"
+        }
       }
-    ]
+    ],
+    "Children": []
   },
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
-  "__references": []
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
 }

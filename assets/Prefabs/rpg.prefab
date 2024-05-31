@@ -1,0 +1,28 @@
+{
+  "RootObject": {
+    "__guid": "3ec3133a-56c6-4c8b-8beb-6beca75b3292",
+    "Flags": 0,
+    "Name": "rpg",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "Components": [
+      {
+        "__type": "RPG",
+        "__guid": "0db0831f-4d26-4f4b-8b11-a23a8ca6e66c",
+        "shell": {
+          "_type": "gameobject",
+          "prefab": "prefabs/old prefabs/shell.prefab"
+        },
+        "speed": 0
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

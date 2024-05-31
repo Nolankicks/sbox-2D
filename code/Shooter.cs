@@ -21,7 +21,6 @@ public sealed class Shooter : Component
 	var targetRot = Rotation.LookAt(player.Transform.Position.WithZ(Transform.Position.z) - body.Transform.Position);
 	body.Transform.Rotation = Rotation.Slerp(body.Transform.Rotation, targetRot, Time.Delta * 5.0f);
 	animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
-		//GameObject.Transform.Rotation = cc.Transform.Rotation;
 		if (timeSinceShoot > 1f)
 		{
 			timeSinceShoot = 0;
@@ -35,9 +34,10 @@ public sealed class Shooter : Component
 
 	void Shoot()
 	{
-		timeSinceShoot = 0;
-		var bulletGo = bullet.Clone(GameObject.Transform.Position + Vector3.Up * 40f);
-		var rb = bulletGo.Components.Get<Rigidbody>();
-		rb.Velocity = body.Transform.Rotation.Forward * 500f;
+		var tr = Scene.Trace.Ray(body.Transform.Position + Vector3.Up * 55, body.Transform.Position + body.Transform.Rotation.Forward * 1000).WithoutTags("bad").Run();
+		if (tr.Hit && tr.GameObject.Parent.Components.TryGet<PlayerController>(out var player, FindMode.EverythingInSelfAndDescendants))
+		{
+			player.TakeDamage(10);
+		}
 	}
 }

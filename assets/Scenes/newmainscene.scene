@@ -51,75 +51,76 @@
           "HideInGame": false,
           "IsTrigger": false,
           "Mesh": {
-            "Topology": "H4sIAAAAAAAACl2Shw6DQAxDuUL3oJPuPf//B1s/ySdFPcniII7jJIyKovgIQ4HTEiqhI/SEgTASJsJG2AkH4SQkg5x4Hs7le2m9InCX/g7arhVrr0NON\u002BiW5s7NJbdvj8k51F2EHob2n8yH21gL7bF7S\u002BbDvZuHRm3NZD7caeh55u\u002B8dx172VdlL3WYxdw\u002Bsr\u002BVPZauwWwuQXP9N6smaPPceid5X\u002Bzo6js97AX2RRw\u002B3Kfv1D0K7JI4fLhv39E4WzPPEu7N/ohTCw7v\u002BMc7T2LkMEt6JE4\u002BudREHw94oQf4HP4dZpr3ihd64B0NZsvOiKHPPpgpc2FWX53sEW/oo/EDO65Op\u002BgCAAA=",
+            "Topology": "H4sIAAAAAAAACuWRUQ6CMBBEtxapCoiAwBW8/wV1J3lNNkRPYJP30XZ2ujvtzezl9M7kJKdxWufi3JzVGZz3YUkrTk5c8uk4z/hZ0D45F2feMu6k3UNNCb4Z7YxWtVd6rH2r5yXM0DFbQi/thldhrjv3LdqVOnmMeCb00j7CzBPn2hfuhlC/4FGzmOmj9lffyryhbFLIbz9ktTFz8\u002BU//m0pP/2HMlUuyuqXVn/yAV2uXQPsAgAA",
             "Positions": [
-              "-127.9998,-511.9999,32",
-              "128.0002,-511.9999,32",
-              "128,576,32",
-              "-128,576,32",
-              "-128,576,-32",
-              "128,576,-32",
-              "128.0002,-511.9999,-32",
-              "-127.9998,-511.9999,-32",
-              "128.0004,-639.9999,32",
-              "-127.9997,-639.9999,32",
-              "-127.9997,-639.9999,-32",
-              "128.0004,-639.9999,-32"
+              "-127.9995,-512,32.00001",
+              "128.0005,-512,32.00001",
+              "128.0002,575.9999,32.00001",
+              "-127.9997,575.9999,32.00001",
+              "-127.9997,575.9999,-31.99999",
+              "128.0002,575.9999,-31.99999",
+              "128.0005,-512,-31.99999",
+              "-127.9995,-512,-31.99999",
+              "128.0006,-640,32.00001",
+              "-127.9995,-640,32.00001",
+              "-127.9995,-640,-31.99999",
+              "128.0006,-640,-31.99999"
             ],
             "TextureCoord": [
-              "1.000002,4.5",
-              "-0.9999983,4.5",
-              "1,-4",
-              "-4.5,-0.5",
-              "-1,-4",
-              "-1,-0.5",
-              "-0.9999984,4.5",
-              "-4,-0.5",
-              "1,-4",
-              "1,0",
-              "1.000002,4.5",
-              "4,0",
-              "-0.9999984,4.5",
-              "1.000002,4.5",
-              "-1,-4",
-              "4.5,0",
-              "4.5,-0.5",
-              "4.5,0",
-              "-4,0",
-              "1,-0.5",
-              "-4.5,0",
-              "-4.5,-0.5",
-              "4,-0.5",
-              "-1,0",
-              "-0.9999974,-0.5",
-              "1.000003,5.5",
-              "-0.9999974,0",
-              "5.5,-0.5",
-              "1.000003,0",
-              "-0.9999973,5.5",
-              "1.000003,-0.5",
-              "-5.5,0",
-              "-5.5,-0.5",
-              "1.000002,4.5",
-              "-4.5,0",
-              "1.000003,5.5",
-              "-0.9999973,5.5",
-              "4.5,-0.5",
-              "5.5,0",
-              "-0.9999983,4.5"
+              "1.000004,4.500001",
+              "-0.9999965,-0.5000001",
+              "1.000002,-3.999999",
+              "-4.5,-0.5000001",
+              "-0.999998,-3.999999",
+              "-1.000002,-0.5000001",
+              "-0.9999964,4.500001",
+              "-3.999999,-0.5000001",
+              "1.000002,-3.999999",
+              "0.999998,-0.00000005960464",
+              "1.000004,4.500001",
+              "3.999999,-0.00000005960464",
+              "-0.9999964,4.500001",
+              "1.000004,-0.00000005960464",
+              "-0.999998,-3.999999",
+              "4.500001,-0.00000005960464",
+              "4.500001,-0.5000001",
+              "-0.9999965,-0.00000005960464",
+              "-3.999999,-0.00000005960464",
+              "0.999998,-0.5000001",
+              "-4.5,-0.00000005960464",
+              "1.000004,-0.5000001",
+              "3.999999,-0.5000001",
+              "-1.000002,-0.00000005960464",
+              "-0.9999956,-0.5000001",
+              "2.000005,5.500001",
+              "-0.9999956,-0.00000005960464",
+              "5.500001,-0.5000001",
+              "1.000005,-0.00000005960464",
+              "0.000004649162,5.500001",
+              "1.000005,-0.5000001",
+              "-5.500001,-0.00000005960464",
+              "-5.500001,-0.5000001",
+              "2.000003,4.500001",
+              "-4.500001,-0.00000005960464",
+              "2.000005,5.500001",
+              "0.000004649162,5.500001",
+              "4.500001,-0.5000001",
+              "5.500001,-0.00000005960464",
+              "0.000003695488,4.500001"
             ],
             "TextureUAxis": [
-              "1,-0.00000000701227,0",
-              "1,-0.000000007012312,-0",
-              "0.0000001823201,-1,0",
-              "-0.0000001823201,1,0",
+              "1,0.00000000701235,0",
+              "1,0.00000000701235,0",
+              "0.0000001893324,-1,0",
+              "-0.0000002804925,1,0",
               "-1,0,0",
               "1,-0,0",
               "1,-0,0",
               "-0.000001549721,1,0",
               "1,-0.0000001788141,0",
               "0.0000007748604,-1,0",
-              "1,-0.0000001788141,0"
+              "1,-0.0000001788141,0",
+              "1,-0,0"
             ],
             "TextureVAxis": [
               "0,-1,0",
@@ -132,35 +133,39 @@
               "0,-0,-1",
               "0,-1,0",
               "0,0,-1",
-              "0,-1,0"
+              "0,-1,0",
+              "0,0,-1"
             ],
             "TextureScale": [
               "0.2499999,0.25",
+              "0.2499999,0.25",
               "0.25,0.25",
               "0.25,0.25",
-              "0.25,0.25",
-              "0.25,0.25",
+              "0.2499999,0.25",
               "0.25,0.25",
               "0.25,0.25",
               "0.25,0.25",
               "0.2500001,0.25",
               "0.25,0.25",
-              "0.2500001,0.25"
+              "0.2500001,0.25",
+              "0.2499999,0.25"
             ],
             "TextureOffset": [
-              "0.0001220703,0.0002441406",
-              "0,0.0002441406",
-              "0.0002441406,0",
-              "0,0",
-              "0,0",
+              "512,0.0002441406",
+              "512,0.0002441406",
+              "0.0003662109,0.000007629396",
+              "0.0001220703,0",
+              "511.9999,0.000007629396",
               "0,0",
               "0,0",
               "0.0002441406,0",
               "511.9995,0.0004882812",
               "0.0009765625,0",
-              "511.9995,0.0004882812"
+              "511.9995,0.0004882812",
+              "511.9999,0.000007629396"
             ],
             "MaterialIndex": [
+              8,
               8,
               8,
               8,
@@ -285,8 +290,10 @@
             "go": "f5699aa1-451e-46f6-97c1-33131c730e30"
           },
           "Friction": 6,
+          "Health": 100,
           "JumpForce": 900,
           "MaxForce": 50,
+          "MaxHealth": 200,
           "Speed": 100,
           "Sprint": 250
         },
@@ -1350,8 +1357,9 @@
     {
       "__guid": "0224ac94-de63-4632-9f87-8101d878fde6",
       "Flags": 0,
-      "Name": "Object",
-      "Position": "0,-448,84.05099",
+      "Name": "SMGPowerUp",
+      "Position": "-16,-384,96",
+      "Scale": "3,3,3",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -1376,11 +1384,21 @@
           "Static": false
         },
         {
+          "__type": "Spinner",
+          "__guid": "a759e91e-dbff-4fb6-a807-9c4e49762faa",
+          "rotation": "0,0,0,0"
+        },
+        {
           "__type": "Sandbox.ModelRenderer",
-          "__guid": "5825d554-795e-4c3e-9914-7f843f1c9525",
+          "__guid": "4d7c9866-dd60-4712-b91c-de930b22ab48",
           "BodyGroups": 18446744073709551615,
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Spinner",
+          "__guid": "2f156dbb-db36-4811-93d1-1f052405403d",
+          "rotation": "0,0,0.008726535,0.9999619"
         }
       ]
     },
@@ -1436,313 +1454,101 @@
       ]
     },
     {
-      "__guid": "adfabba2-6123-49b4-9397-a60ff8b69ac0",
+      "__guid": "9d891b44-d22f-482c-88ab-445e5b4648c5",
       "Flags": 0,
-      "Name": "Agent",
-      "Position": "0,232.0017,64",
+      "Name": "ItemSpawner",
+      "Position": "45.64879,-292.8463,57.88223",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
         {
-          "__type": "BadGuy",
-          "__guid": "3b41c4d2-865d-4732-ae67-8702791cabed",
-          "ImpactEffect": {
-            "_type": "gameobject",
-            "prefab": "prefabs/old prefabs/burst.prefab"
-          },
-          "OnComponentUpdate": {
-            "__version": 7,
-            "__guid": "310be454-f4b4-4150-b8aa-1d7460f7ae83",
-            "UserData": {
-              "Title": "On Component Update",
-              "ReferencedComponentTypes": [
-                "BadGuy",
-                "Sandbox.NavMeshAgent",
-                "Sandbox.Citizen.CitizenAnimationHelper"
-              ]
+          "__type": "Spawner",
+          "__guid": "efbf6580-8155-4c86-a213-3f6435050ff2",
+          "MaxSpawnRate": 5,
+          "MinSpawnRate": 1,
+          "ObjectsToSpawn": [
+            null
+          ],
+          "RandomSpawnRate": false,
+          "SpawnRate": 5
+        }
+      ]
+    },
+    {
+      "__guid": "102bace4-0a70-4309-ab80-5d6b8a6edea4",
+      "Flags": 0,
+      "Name": "BadGuySpawner",
+      "Position": "-50.48236,-98.18687,90.66138",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Spawner",
+          "__guid": "58504409-ea45-418f-a1b2-651571aec0a6",
+          "MaxSpawnRate": 5,
+          "MinSpawnRate": 1,
+          "ObjectsToSpawn": [
+            {
+              "_type": "gameobject",
+              "prefab": "prefabs/old prefabs/bigbigshitter.prefab"
             },
-            "Variables": [],
-            "Nodes": [
-              {
-                "Id": 0,
-                "Type": "input",
-                "UserData": {
-                  "Position": "-144,0"
-                }
-              },
-              {
-                "Id": 1,
-                "Type": "scene.get",
-                "Properties": {
-                  "T": "BadGuy"
-                },
-                "UserData": {
-                  "Position": "-0,208"
-                }
-              },
-              {
-                "Id": 9,
-                "Type": "call",
-                "Properties": {
-                  "_isStatic": false,
-                  "_name": "MoveToPlayer",
-                  "_type": "BadGuy"
-                },
-                "UserData": {
-                  "Position": "272,0"
-                }
-              },
-              {
-                "Id": 13,
-                "Type": "scene.get",
-                "Properties": {
-                  "T": "Sandbox.NavMeshAgent"
-                },
-                "UserData": {
-                  "Position": "-272,304",
-                  "Labels": {
-                    "_result": "Agent"
-                  }
-                }
-              },
-              {
-                "Id": 14,
-                "Type": "property",
-                "Properties": {
-                  "_name": "WishVelocity",
-                  "_type": "Sandbox.NavMeshAgent"
-                },
-                "UserData": {
-                  "Position": "272,144"
-                }
-              },
-              {
-                "Id": 19,
-                "Type": "call",
-                "Properties": {
-                  "_isStatic": false,
-                  "_name": "WithWishVelocity",
-                  "_type": "Sandbox.Citizen.CitizenAnimationHelper"
-                },
-                "UserData": {
-                  "Position": "640,0"
-                }
-              },
-              {
-                "Id": 20,
-                "Type": "property",
-                "Properties": {
-                  "_name": "Velocity",
-                  "_type": "Sandbox.NavMeshAgent"
-                },
-                "UserData": {
-                  "Position": "752,128"
-                }
-              },
-              {
-                "Id": 21,
-                "Type": "call",
-                "Properties": {
-                  "_isStatic": false,
-                  "_name": "WithVelocity",
-                  "_type": "Sandbox.Citizen.CitizenAnimationHelper"
-                },
-                "UserData": {
-                  "Position": "1024,-0"
-                }
-              },
-              {
-                "Id": 23,
-                "Type": "scene.ref",
-                "Properties": {
-                  "gameobject": {
-                    "_type": "gameobject",
-                    "go": "f25c2060-ff51-4d5e-869a-3645673f4dea"
-                  }
-                },
-                "UserData": {
-                  "Position": "48,432"
-                }
-              },
-              {
-                "Id": 24,
-                "Type": "scene.get",
-                "ParentId": 23,
-                "Properties": {
-                  "T": "Sandbox.Citizen.CitizenAnimationHelper"
-                }
-              },
-              {
-                "Id": 29,
-                "Type": "Attack Player",
-                "UserData": {
-                  "Position": "-368,176"
-                }
-              },
-              {
-                "Id": 30,
-                "Type": "property",
-                "ParentId": 29,
-                "Properties": {
-                  "_name": "GameObject",
-                  "_type": "Sandbox.Component"
-                }
-              }
-            ],
-            "Links": [
-              {
-                "SrcId": 0,
-                "SrcName": "_target",
-                "DstId": 1,
-                "DstName": "_this"
-              },
-              {
-                "SrcId": 30,
-                "SrcName": "_result",
-                "DstId": 9,
-                "DstName": "Target"
-              },
-              {
-                "SrcId": 0,
-                "SrcName": "_signal",
-                "DstId": 9,
-                "DstName": "_signal"
-              },
-              {
-                "SrcId": 1,
-                "SrcName": "_result",
-                "DstId": 9,
-                "DstName": "_target"
-              },
-              {
-                "SrcId": 13,
-                "SrcName": "_result",
-                "DstId": 9,
-                "DstName": "agent"
-              },
-              {
-                "SrcId": 0,
-                "SrcName": "_target",
-                "DstId": 13,
-                "DstName": "_this"
-              },
-              {
-                "SrcId": 13,
-                "SrcName": "_result",
-                "DstId": 14,
-                "DstName": "_target"
-              },
-              {
-                "SrcId": 14,
-                "SrcName": "_result",
-                "DstId": 19,
-                "DstName": "Velocity"
-              },
-              {
-                "SrcId": 9,
-                "SrcName": "_signal",
-                "DstId": 19,
-                "DstName": "_signal"
-              },
-              {
-                "SrcId": 24,
-                "SrcName": "_result",
-                "DstId": 19,
-                "DstName": "_target"
-              },
-              {
-                "SrcId": 13,
-                "SrcName": "_result",
-                "DstId": 20,
-                "DstName": "_target"
-              },
-              {
-                "SrcId": 20,
-                "SrcName": "_result",
-                "DstId": 21,
-                "DstName": "Velocity"
-              },
-              {
-                "SrcId": 19,
-                "SrcName": "_signal",
-                "DstId": 21,
-                "DstName": "_signal"
-              },
-              {
-                "SrcId": 24,
-                "SrcName": "_result",
-                "DstId": 21,
-                "DstName": "_target"
-              },
-              {
-                "SrcId": 23,
-                "SrcName": "_result",
-                "DstId": 24,
-                "DstName": "_this"
-              },
-              {
-                "SrcId": 29,
-                "SrcName": "_result",
-                "DstId": 30,
-                "DstName": "_target"
-              }
-            ],
-            "Defaults": {
-              "$23.gameobject": {
-                "_type": "gameobject",
-                "go": "f25c2060-ff51-4d5e-869a-3645673f4dea"
-              }
+            {
+              "_type": "gameobject",
+              "prefab": "prefabs/old prefabs/zombie.prefab"
             }
-          }
+          ],
+          "RandomSpawnRate": true,
+          "SpawnRate": 5
+        }
+      ]
+    },
+    {
+      "__guid": "37d793b1-cfb5-4b6f-a383-da25925c63bd",
+      "Flags": 0,
+      "Name": "Manager",
+      "Position": "175.0368,-6.466852,62.73043",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Manager",
+          "__guid": "021241b7-a453-4255-a288-45f12bd1eae3",
+          "color": "1,1,1,1",
+          "menuScene": "scenes/newmainscene.scene",
+          "overideColor": false,
+          "platforms": []
+        }
+      ]
+    },
+    {
+      "__guid": "276a8fa3-45a0-49b9-91b1-9a9ee3936ef5",
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "175.0368,-6.466852,62.73043",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "bfb5bf15-3521-4a09-a1b9-53422dc15963",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
         },
         {
-          "__type": "Sandbox.NavMeshAgent",
-          "__guid": "fbbce132-4d51-4cb1-baf8-5417049a083b",
-          "Acceleration": 1000,
-          "Height": 64,
-          "MaxSpeed": 120,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": false
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "f25c2060-ff51-4d5e-869a-3645673f4dea",
-          "Flags": 0,
-          "Name": "body",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "bb6a2818-3aaf-4a54-8fd6-b1d19f3927e7",
-              "BodyGroups": 341,
-              "CreateBoneObjects": false,
-              "Model": "models/citizen/citizen.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
-            },
-            {
-              "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-              "__guid": "c5e5bf6d-1054-491c-87d3-cd8d7ed3c1ec",
-              "BodyWeight": 1,
-              "EyesWeight": 1,
-              "HeadWeight": 1,
-              "LookAtEnabled": false,
-              "Target": {
-                "_type": "component",
-                "component_id": "bb6a2818-3aaf-4a54-8fd6-b1d19f3927e7",
-                "go": "f25c2060-ff51-4d5e-869a-3645673f4dea",
-                "component_type": "SkinnedModelRenderer"
-              }
-            }
-          ]
+          "__type": "Hud",
+          "__guid": "cf880c07-c9ee-4165-96ca-495008cb71b8",
+          "manager": {
+            "_type": "component",
+            "component_id": "021241b7-a453-4255-a288-45f12bd1eae3",
+            "go": "37d793b1-cfb5-4b6f-a383-da25925c63bd",
+            "component_type": "Manager"
+          }
         }
       ]
     }
@@ -1770,15 +1576,15 @@
   },
   "Title": "newmainscene",
   "Description": "",
-  "LastSaved": "2024-05-31T16:36:12.2158371-04:00",
+  "LastSaved": "2024-05-31T17:19:47.8318816-04:00",
   "ResourceVersion": 1,
   "__references": [
     "facepunch.w_mp5",
+    "fpopium.bookshelf_01",
     "fpopium.carpet_d2",
     "fpopium.ceramic_tiles_b",
     "fpopium.concrete_c",
     "fpopium.plaster_f3",
-    "fpopium.plywood_trim",
     "wujekfoliarz.skyboxnowy"
   ],
   "__version": 1

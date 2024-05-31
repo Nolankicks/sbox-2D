@@ -1,30 +1,23 @@
+using System.Linq;
 using System.Security.Authentication;
 using Sandbox;
 using Sandbox.Citizen;
 
 public sealed class RPG : Component
 {
-	[Property] public Attack attack { get; set; }
-	
-	[Property] public GameObject rpgModel { get; set; }
 	[Property] public GameObject shell { get; set; }
 	[Property] public float speed { get; set; }
 	[Property] public GameObject body { get; set; }
-	[Property] public float Lifetime { get; set; }
 	[Property] public CitizenAnimationHelper animationHelper { get; set; }
 	protected override void OnUpdate()
 	{
-		/*if (attack.RPGGunEnabled)
-		{
-			animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.RPG;
-			rpgModel.Enabled = true;
-		}
-
-		if (Input.Pressed("attack1") && attack.RPGGunEnabled)
+		body = Scene.GetAllComponents<PlayerController>().FirstOrDefault().body.GameObject;
+		animationHelper = Scene.GetAllComponents<PlayerController>().FirstOrDefault().animationHelper;
+		animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.RPG;
+		if (Input.Pressed("attack1"))
 		{
 			Shoot();
-			
-		}*/
+		}
 	}
 
 	public void Shoot()
@@ -33,10 +26,5 @@ public sealed class RPG : Component
 		var rb = shellGo.Components.Get<Rigidbody>();
 		var collider = shellGo.Components.Get<BoxCollider>();
 		rb.Velocity = body.Transform.Rotation.Forward * 1000;
-		
-		
-
-
-
 	}
 }

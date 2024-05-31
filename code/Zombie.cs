@@ -10,7 +10,6 @@ public sealed class Zombie : Component
 	PlayerController controller => Scene.GetAllComponents<PlayerController>().FirstOrDefault();
 	[Property] public float Speed { get; set; }
 	public Vector3 target;
-	HealthManager health => Scene.GetAllComponents<HealthManager>().FirstOrDefault();
 	public Vector3 WishVelocity;
 	[Property] public SoundEvent traceHitSound { get; set; }
 	public TimeSince timeSinceHit = 0;
@@ -79,7 +78,10 @@ public sealed class Zombie : Component
            
             if (timeSinceHit > 2)
             {
-            	health.healthNumber -= 10;
+            	if (tr.GameObject.Parent.Components.TryGet<PlayerController>(out var player, FindMode.EverythingInSelfAndAncestors))
+				{
+					player.TakeDamage(10);
+				}
                	timeSinceHit = 0;
 			   	Sound.Play(traceHitSound, tr.HitPosition);
 			   citizenAnimationHelper.Target.Set("b_attack", true);

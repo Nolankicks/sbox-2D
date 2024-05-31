@@ -19,12 +19,16 @@ public sealed class PlayerController : Component
 	//[Property] TimeSpan timeSpan {get; set;}
 	public CitizenAnimationHelper animationHelper;
 	[Sync] public Vector3 WishVelocity { get; set; }
-	[Sync] public int Health { get; set; } = 100;
+	[Property, Sync] public int Health { get; set; } = 100;
+	[Property] public GameObject BloodEffect { get; set; }
 	[Property] public SceneFile CurrentScene { get; set; }
 	public bool IsSprinting;
 	public bool IsRunning;
+	[Property] public int MaxHealth { get; set; } = 200;
+	public Manager manager;
 	protected override void OnStart()
 	{
+		manager = Scene.GetAllComponents<Manager>().FirstOrDefault();
 		animationHelper = Components.Get<CitizenAnimationHelper>(FindMode.EverythingInSelfAndChildren);
 	}
 	protected override void OnFixedUpdate()
@@ -63,9 +67,18 @@ public sealed class PlayerController : Component
 	}
 	
 	}
+	public void Heal(int amount)
+	{
+		Health += amount;
+		if (Health > MaxHealth)
+		{
+			Health = MaxHealth;
+		}
+	}
 	public void TakeDamage(int damage)
 	{
 		Health -= damage;
+		BloodEffect.Clone(GameObject.Transform.Position + Vector3.Up * 55);
 		if (Health <= 0)
 		{
 			Health = 0;
@@ -74,7 +87,7 @@ public sealed class PlayerController : Component
 	}
 	public void Death()
 	{
-		Game.ActiveScene.Load(CurrentScene);
+		manager.EndGame();
 	}
 	private void UpdateAnimations()
 	{

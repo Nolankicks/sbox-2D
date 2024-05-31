@@ -1,41 +1,27 @@
 {
   "RootObject": {
-    "Id": "7c5025f9-7bf4-4b3d-ac10-f2e8c00f93d2",
+    "__guid": "7c5025f9-7bf4-4b3d-ac10-f2e8c00f93d2",
+    "Flags": 0,
     "Name": "rpgtrigger",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
     "Components": [
       {
         "__type": "RPGTrigger",
+        "__guid": "889667ae-dbf2-42de-8bee-1eafca42ccf1",
         "explosion": {
           "_type": "gameobject",
-          "go": "a088f45f-46a9-44cc-8ac7-cfaa069added",
           "prefab": "prefabs/rpgexplosion.prefab"
-        }
-      },
-      {
-        "__type": "BoxCollider",
-        "Center": "0,0,0",
-        "IsTrigger": true,
-        "Scale": "300,300,300",
-        "Static": false,
-        "Surface": null
-      },
-      {
-        "__type": "UpdateActionComponent",
-        "Action": {
-          "Kind": "Action",
-          "Version": 3,
-          "Variables": [
-            {
-              "Name": "_this",
-              "Type": "Sandbox.Game/Sandbox.Component",
-              "Default": {
-                "_type": "component",
-                "go": "7c5025f9-7bf4-4b3d-ac10-f2e8c00f93d2",
-                "component_type": "UpdateActionComponent"
-              }
-            }
-          ],
+        },
+        "OnComponentUpdate": {
+          "__version": 7,
+          "__guid": "930add9a-c9de-4a71-9975-e34c6537c420",
+          "UserData": {
+            "Title": "On Component Update",
+            "ReferencedComponentTypes": []
+          },
+          "Variables": [],
           "Nodes": [
             {
               "Id": 0,
@@ -45,14 +31,14 @@
               "Id": 1,
               "Type": "time.delay",
               "UserData": {
-                "Position": "224,32"
+                "Position": "288,0"
               }
             },
             {
               "Id": 2,
               "Type": "scene.getobject",
               "UserData": {
-                "Position": "-80,192"
+                "Position": "-16,160"
               }
             },
             {
@@ -64,7 +50,7 @@
                 "_isStatic": false
               },
               "UserData": {
-                "Position": "448,112"
+                "Position": "512,80"
               }
             }
           ],
@@ -92,18 +78,24 @@
               "DstId": 3,
               "DstName": "_target"
             }
-          ],
-          "UserData": {
-            "Title": "Action",
-            "id": "b2b6dc14-2bd8-430a-bf8d-8c2dac72946d",
-            "ReferencedComponentTypes": []
-          }
+          ]
         }
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "4071ae9f-c9f1-4d83-9453-e8175fb0072e",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Scale": "300,300,300",
+        "Static": false
       }
-    ]
+    ],
+    "Children": []
   },
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
-  "__references": []
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
 }

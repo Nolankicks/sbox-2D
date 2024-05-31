@@ -1,52 +1,57 @@
 {
   "RootObject": {
-    "Id": "39135af9-f921-4527-9537-60d1785bb978",
+    "__guid": "39135af9-f921-4527-9537-60d1785bb978",
+    "Flags": 0,
     "Name": "badguybullet",
     "Scale": "0.3,0.3,0.3",
     "Tags": "bullet",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
     "Components": [
       {
-        "__version": 0,
-        "__type": "ModelRenderer",
-        "__enabled": true,
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "162beb1f-e646-4722-bfe3-400caf589ee7",
         "BodyGroups": 18446744073709551615,
-        "MaterialGroup": null,
-        "MaterialOverride": null,
         "Model": "models/dev/sphere.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
       {
-        "__version": 0,
-        "__type": "Rigidbody",
-        "__enabled": true,
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "3ae4bd72-6b0e-4df2-b081-e8a36332d0f4",
         "AngularDamping": 0,
         "Gravity": false,
         "LinearDamping": 0,
         "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
         "RigidbodyFlags": 0,
         "StartAsleep": false
       },
       {
-        "__version": 0,
         "__type": "Despawner",
-        "__enabled": true
+        "__guid": "e5d7cb9d-7220-4585-add9-a8cd37308c45"
       },
       {
-        "__version": 0,
-        "__type": "SphereCollider",
-        "__enabled": true,
+        "__type": "Sandbox.SphereCollider",
+        "__guid": "44ba3cf7-7b3f-48d4-8a16-45faa61f410c",
         "Center": "0,0,0",
         "IsTrigger": true,
         "Radius": 10,
-        "Static": false,
-        "Surface": null
+        "Static": false
+      },
+      {
+        "__type": "HurtTrigger",
+        "__guid": "c2957157-d4d3-46e2-bae5-bf1cad7a5473"
       }
-    ]
+    ],
+    "Children": []
   },
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
-  "__references": []
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
 }

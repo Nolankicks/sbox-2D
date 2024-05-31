@@ -9,29 +9,21 @@ public sealed class HealthBoost : Component, Component.ITriggerListener //Change
 
 [Property] public SoundEvent healthSound {get; set;}
 [Property] public GameObject crushedCan {get; set;}
-HealthManager healthManager => Scene.GetAllComponents<HealthManager>().FirstOrDefault();
+PlayerController PlayerController;
 
 
 	protected override void OnStart()
     {
-      _iTouching = false;
+     PlayerController = Scene.GetAllComponents<PlayerController>().FirstOrDefault();
 
     }
 
     void ITriggerListener.OnTriggerEnter(Collider other)
     {
 		
-		if (other.Tags.Has("player"))
+	if (other.Tags.Has("player"))
 	{
-		if (healthManager.healthNumber + 50f < healthManager.maxHealth)
-		{
-			healthManager.maxHealth += 100;
-		}
-		else
-		{
-			healthManager.healthNumber = healthManager.maxHealth;
-		}
-
+		PlayerController.Heal(50);
 		Sound.Play(healthSound);
 		GameObject.Destroy();
 		crushedCan.Clone(GameObject.Transform.Position);
