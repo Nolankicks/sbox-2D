@@ -18,13 +18,13 @@ public sealed class GunItemSpawner : Component
 		var pisolRandom = PistolRandomNumber();
         
         
-		if (pisolRandom > 99.9f && !attack.SmgGunEnabled && !attack.PistolGunEnabled && !attack.RPGGunEnabled)
+		if (pisolRandom > 99.9f)
 		{
 			var pistolClone = pistol.Clone();
 			
 			pistolClone.Transform.Position = new Vector3(0, Random.Shared.Float(150, -500), 0);
 		}
-		if (rpgRandom > 99.9f && !attack.SmgGunEnabled && !attack.PistolGunEnabled && !attack.RPGGunEnabled)
+		if (rpgRandom > 99.9f)
 		{
 			var rpgClone = rpg.Clone();
 			

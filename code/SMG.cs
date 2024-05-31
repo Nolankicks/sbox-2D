@@ -16,40 +16,16 @@ public sealed class SMG : Component
 	public TimeSince timeSinceReload;
 	protected override void OnUpdate()
 	{
-		if (attack.PistolGunEnabled)
-		{
-			ableShoot = false;
-		}
-		else
-		{
-			ableShoot = true;
-		}
 		if (ammo > maxAmmo)
 		{
 			ammo = maxAmmo;
 		}
-		if (Input.Down("attack1") && attack.SmgGunEnabled && ableShoot)
+		if (Input.Down("attack1") && ableShoot && ammo > 0)
 		{
 			Shoot();
 			playerAnimation.Target.Set("b_attack", true);
-			attack.pistol.Enabled = false;
 			ammo -= 1;
 		}
-		
-		if (ammo <= 0)
-		{
-			ammo = 0;
-		}
-		if (ammo == 0)
-		{
-		attack.SmgGunEnabled = false;
-		}
-		
-		if (ammo == 60)
-		{
-			ableShoot = false;
-		}
-
 	}
 
 	public void Shoot()

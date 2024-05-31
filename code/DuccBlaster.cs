@@ -12,13 +12,9 @@ public sealed class DuccBlaster : Component
 	Attack attack => Scene.GetAllComponents<Attack>().FirstOrDefault();
 	protected override void OnUpdate()
 	{
-		if (attack.DuccBlasterEnabled)
-		{
 			animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
-			
-		}
-		if (Input.Pressed("attack1") && attack.DuccBlasterEnabled)
-		{
+		
+		if (Input.Pressed("attack1"))
 			Sound.Play(quackSound);
 			
 			var bulletGo = bullet.Clone(body.Transform.Position + body.Transform.Rotation.Up * 45f + body.Transform.Rotation.Forward * 100f, body.Transform.Rotation);
@@ -26,6 +22,4 @@ public sealed class DuccBlaster : Component
 			rb.Velocity = body.Transform.Rotation.Forward * 1000;
 		}
 
-	}
-	
 }

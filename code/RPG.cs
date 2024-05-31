@@ -14,7 +14,7 @@ public sealed class RPG : Component
 	[Property] public CitizenAnimationHelper animationHelper { get; set; }
 	protected override void OnUpdate()
 	{
-		if (attack.RPGGunEnabled)
+		/*if (attack.RPGGunEnabled)
 		{
 			animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.RPG;
 			rpgModel.Enabled = true;
@@ -24,7 +24,7 @@ public sealed class RPG : Component
 		{
 			Shoot();
 			
-		}
+		}*/
 	}
 
 	public void Shoot()

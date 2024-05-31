@@ -18,20 +18,6 @@ public sealed class Attack : Component
 	[Property] public Rotation rotation { get; set; }
 	[Property] public Manager manager {get; set;}
 	[Property] public SoundEvent punchSound {get; set;}
-	[Property] public GameObject bullet {get; set;}
-	[Property] public GameObject pistol {get; set;}
-	[Property] public GameObject smgGun {get; set;}
-	[Property] public bool Run = false;
-	[Property] float gunRange {get; set;}
-	[Property] public bool PistolGunEnabled {get; set;} = false;
-	[Property] public bool SmgGunEnabled {get; set;} = false;
-	[Property] public bool RPGGunEnabled {get; set;} = false;
-	[Property] public bool DuccBlasterEnabled {get; set;} = false;
-	[Property] public SoundEvent gunSound {get; set;}
-	[Property] public GameObject impactEffect {get; set;}
-	[Property] public RPG rpg {get; set;}
-	[Property] public DuccBlaster duccBlaster {get; set;}
-	[Property] public GameObject CurrentWeapon {get; set;}
 	protected override void OnAwake()
 	{
 		/*
@@ -42,73 +28,10 @@ public sealed class Attack : Component
 	}
 	protected override void OnUpdate()
 	{
-		if (SmgGunEnabled)
-		{
-			smgGun.Enabled = true;
-			RPGGunEnabled = false;
-			PistolGunEnabled = false;
-			DuccBlasterEnabled = false;
-		}
-		if (!SmgGunEnabled)
-		{
-			smgGun.Enabled = false;
-		}
-		
-		if (PistolGunEnabled)
-		{
-			pistol.Enabled = true;
-			RPGGunEnabled = false;
-			SmgGunEnabled = false;
-			DuccBlasterEnabled = false;
-		}
-		if (!PistolGunEnabled && !RPGGunEnabled && !DuccBlasterEnabled)
-		{
-			timeSinceSpawn = 0;
-		}
-		if (!PistolGunEnabled)
-		{
-			pistol.Enabled = false;
-		}
-		
-		if (timeSinceSpawn > 10)
-		{
-			RPGGunEnabled = false;
-			DuccBlasterEnabled = false;
-			
-		}
-
-		if (!RPGGunEnabled)
-		{
-			rpg.rpgModel.Enabled = false;
-		}
-		if (RPGGunEnabled)
-		{
-			PistolGunEnabled = false;
-			SmgGunEnabled = false;
-			DuccBlasterEnabled = false;
-		}
-		if (DuccBlasterEnabled)
-		{
-			PistolGunEnabled = false;
-			SmgGunEnabled = false;
-			RPGGunEnabled = false;
-			duccBlaster.blaster.Enabled = true;
-			
-		}
-		if (!DuccBlasterEnabled)
-		{
-			duccBlaster.blaster.Enabled = false;
-		}
-		
-		
-
 		var body = Scene.Components.Get<SkinnedModelRenderer>( FindMode.EverythingInDescendants );
 		if(Input.Pressed("attack1"))
-		{	
+	{	
 			Fire();
-			
-			
-			GunPowerUp();
 			animationHelper.Target.Set("b_attack", true);
 			
 	}
@@ -126,7 +49,7 @@ public sealed class Attack : Component
 		var camFoward = body.Transform.Rotation;
 		var tr = Scene.Trace.Ray(body.Transform.Position, body.Transform.Position + camFoward.Forward * 100).WithTag("bad").Run();
 
-			if (Input.Pressed("attack1") && tr.Hit && !PistolGunEnabled && !SmgGunEnabled && !RPGGunEnabled && !DuccBlasterEnabled)
+			if (Input.Pressed("attack1") && tr.Hit)
 			{
 			
 			
@@ -155,61 +78,12 @@ public sealed class Attack : Component
 			{
 			var zoragdollClone = zombieRagdoll.Clone(trgoPos + Vector3.Backward * 75, spawnRot);
 			}
-			if (Input.Pressed("attack1") && !SmgGunEnabled && !PistolGunEnabled && !RPGGunEnabled)
+			if (Input.Pressed("attack1"))
 			{
 				Sound.Play(punchSound);
 			}
 			}
 		}
-	
 
-void GunPowerUp()
-{
-	if (timeSinceSpawn > 10)
-	{
-		PistolGunEnabled = false;
-	}
-	if (Input.Pressed("attack1") && PistolGunEnabled)
-	{
-			
-	
-	PistolGunEnabled = true;
-	var camFoward = body.Transform.Rotation;
-	animationHelper.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
-	Sound.Play(gunSound);
-
-	var tr = Scene.Trace.Ray(body.Transform.Position, body.Transform.Position + camFoward.Forward * 5000).WithoutTags("player").Run();
-	if (!tr.Hit) return;
-	
-
-	if (tr.Hit)
-	{
-		Log.Info("hit");
-		var trgo = tr.GameObject;
-		Log.Info(trgo);
-		if (trgo.Tags.Has("bad"))
-		{
-			
-			trgo.Destroy();
-			Sound.Play(deathSound, tr.HitPosition);
-			var deathParticle = particleEffect;
-			deathParticle.Clone(new Transform(tr.HitPosition + Vector3.Up * 45, Rotation.LookAt(tr.Normal)));
-			manager.AddScore();
-			
-		}
-
-	}
-	if (impactEffect is not null)
-	{
-		impactEffect.Clone(new Transform(tr.HitPosition +Vector3.Up * 45, Rotation.LookAt(tr.Normal)));
-	}
-	
-	
-	
-	}
-	
-
-	
-}
 }
 }

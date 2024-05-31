@@ -13,7 +13,7 @@ public sealed class DuccPowerUp : Component, Component.ITriggerListener
 	{
 		if (other.Tags.Has("player"))
 		{
-			attack.DuccBlasterEnabled = true;
+			//attack.DuccBlasterEnabled = true;
 			GameObject.Destroy();
 		}
 	}

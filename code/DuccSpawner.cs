@@ -10,14 +10,14 @@ public sealed class DuccSpawner : Component
 	Attack attack => Scene.GetAllComponents<Attack>().FirstOrDefault();
 	
 	
-	void SpawnDucc()
+	/*void SpawnDucc()
 	{
 		if (!attack.DuccBlasterEnabled && !attack.RPGGunEnabled && !attack.SmgGunEnabled && !attack.PistolGunEnabled)
 		{
 		var duccGo = duccPowerUp.Clone();
 		duccGo.Transform.Position = new Vector3(0, Random.Shared.Float(-200, 200), 50);
 		}
-	}
+	}*/
 	TimeUntil nextSecond = 0f;
 	protected override void OnFixedUpdate()
 	{
@@ -27,7 +27,7 @@ public sealed class DuccSpawner : Component
 			GetRandom();
 			if (random >= 90f)
 			{
-				SpawnDucc();
+				//SpawnDucc();
 			}
 			nextSecond = 1f;
 		}

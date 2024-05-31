@@ -15,7 +15,7 @@ public sealed class RPGPowerUpTrigger : Component, Component.ITriggerListener
 		var attack = Scene.GetAllComponents<Attack>().FirstOrDefault();
 		if (other.GameObject.Tags.Has("player"))
 		{
-			attack.RPGGunEnabled = true;
+			//attack.RPGGunEnabled = true;
 			GameObject.Destroy();
 			Sound.Play(powerUpSound);
 		}

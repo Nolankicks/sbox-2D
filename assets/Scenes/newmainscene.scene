@@ -227,6 +227,10 @@
           "Radius": 16,
           "StepHeight": 18,
           "UseCollisionRules": false
+        },
+        {
+          "__type": "Inventory",
+          "__guid": "55fb365f-b055-46e0-87ab-7bc12bc3fa82"
         }
       ],
       "Children": [
@@ -300,7 +304,7 @@
   },
   "Title": "newmainscene",
   "Description": "",
-  "LastSaved": "2024-05-31T14:42:09.4521466-04:00",
+  "LastSaved": "2024-05-31T14:49:55.7086393-04:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1
