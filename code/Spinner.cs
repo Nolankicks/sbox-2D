@@ -2,9 +2,8 @@ using Sandbox;
 
 public sealed class Spinner : Component
 {
-	[Property] public Rotation rotation { get; set; }
-	protected override void OnUpdate()
+	protected override void OnFixedUpdate()
 	{
-		GameObject.Transform.Rotation *= rotation;
+		GameObject.Transform.Rotation *= new Angles(0, 1, 0).ToRotation();
 	}
 }

@@ -21,7 +21,6 @@ public sealed class Spawner : Component
     while (true)
     {
         var spawns = Scene.GetAllComponents<SpawnPoint>().ToList();
-
         var randomSpawn = Game.Random.FromList(spawns);
         var randomObject = Game.Random.FromList(ObjectsToSpawn);
 

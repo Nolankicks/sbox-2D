@@ -1562,8 +1562,7 @@
         },
         {
           "__type": "Spinner",
-          "__guid": "7ad929a6-2238-4d29-8a39-b6d64325057e",
-          "rotation": "0,0,0,0"
+          "__guid": "7ad929a6-2238-4d29-8a39-b6d64325057e"
         },
         {
           "__type": "Sandbox.ModelRenderer",
@@ -1575,8 +1574,7 @@
         },
         {
           "__type": "Spinner",
-          "__guid": "51ca2f1e-a515-4af8-962d-3ada758d23d4",
-          "rotation": "0,0,0.04361939,0.9990482"
+          "__guid": "51ca2f1e-a515-4af8-962d-3ada758d23d4"
         }
       ]
     }
@@ -1604,7 +1602,7 @@
   },
   "Title": "newmainscene",
   "Description": "",
-  "LastSaved": "2024-06-01T17:56:06.1683723-04:00",
+  "LastSaved": "2024-06-01T18:03:01.4867733-04:00",
   "ResourceVersion": 1,
   "__references": [
     "fpopium.bookshelf_01",
