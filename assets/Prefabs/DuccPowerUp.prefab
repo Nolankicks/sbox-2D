@@ -1,0 +1,60 @@
+{
+  "RootObject": {
+    "__guid": "7e9db2f5-39c1-4d22-a7ef-2aec76b606d7",
+    "Flags": 0,
+    "Name": "DuccPowerUp",
+    "Position": "17.53296,-310.731,64.00002",
+    "Scale": "5,5,5",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "Components": [
+      {
+        "__type": "AddGunTrigger",
+        "__guid": "60407d62-bb5a-40c9-9acc-4c9ee2befad6",
+        "Async": false,
+        "Gun": {
+          "_type": "gameobject",
+          "prefab": "prefabs/ducc.prefab"
+        },
+        "GunModel": "models/duck_decoration/duck_decoration.vmdl",
+        "Offset": "2.836,0.417,-4.287",
+        "Time": 5
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "ea838520-1a46-4b53-9ed1-98e1922b7691",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Scale": "25,25,25",
+        "Static": false
+      },
+      {
+        "__type": "Spinner",
+        "__guid": "1cacc574-3865-428f-9b28-412b74c62916",
+        "rotation": "0,0,0,0"
+      },
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "cc7fee9d-efe6-4f1b-a347-653702305521",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/duck_decoration/duck_decoration.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Spinner",
+        "__guid": "7d5ddc60-c962-4579-afaa-2b4cd5adf918",
+        "rotation": "0,0,0.04361939,0.9990482"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [
+    "duccsoft.duck_decoration"
+  ],
+  "__version": 1
+}

@@ -5,6 +5,7 @@ public sealed class AddGunTrigger : Component, Component.ITriggerListener
 	[Property] public bool Async { get; set; }
 	[Property, ShowIf("Async", true)] public float Time { get; set; }
 	public delegate void AddWeaponAction(Inventory inventory, Model model, GameObject Player);
+	[Property] public Vector3 Offset { get; set; }
 	[Property] public AddWeaponAction OnAddWeapon { get; set; }
 	[Property] public Model GunModel { get; set; }
 	[Property] public GameObject Gun { get; set; }
@@ -20,12 +21,13 @@ public sealed class AddGunTrigger : Component, Component.ITriggerListener
 			OnAddWeapon?.Invoke(inv, GunModel, other.GameObject.Parent);
 			if (Async)
 			{
-				inv.SetCurrentObjectAsync(Gun, GunModel, Time);
+				inv.SetCurrentObjectAsync(Gun, GunModel, Time, Offset);
 			}
 			else
 			{
-				inv.SetCurrentObject(Gun, GunModel);
+				inv.SetCurrentObject(Gun, GunModel, Offset);
 			}
+			GameObject.Destroy();
 		}
 	}
 

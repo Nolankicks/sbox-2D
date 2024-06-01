@@ -322,8 +322,8 @@
           },
           "HoldObjectRenderer": {
             "_type": "component",
-            "component_id": "1f525203-bfbc-45c1-80b3-5a2b66748836",
-            "go": "a40b98f5-6394-4d57-868f-ced48f2fd420",
+            "component_id": "f995d77a-dc60-4a94-a53f-a318a044c370",
+            "go": "6dab0031-0da8-4d40-ab3f-ad81f41d11c4",
             "component_type": "SkinnedModelRenderer"
           }
         }
@@ -833,15 +833,26 @@
                                               "Enabled": true,
                                               "NetworkMode": 2,
                                               "NetworkInterpolation": true,
-                                              "Components": [
+                                              "Children": [
                                                 {
-                                                  "__type": "Sandbox.SkinnedModelRenderer",
-                                                  "__guid": "1f525203-bfbc-45c1-80b3-5a2b66748836",
-                                                  "BodyGroups": 18446744073709551615,
-                                                  "CreateBoneObjects": false,
-                                                  "RenderType": "On",
-                                                  "Tint": "1,1,1,1",
-                                                  "UseAnimGraph": true
+                                                  "__guid": "6dab0031-0da8-4d40-ab3f-ad81f41d11c4",
+                                                  "Flags": 0,
+                                                  "Name": "HoldRenderer",
+                                                  "Position": "0,0,0",
+                                                  "Enabled": true,
+                                                  "NetworkMode": 2,
+                                                  "NetworkInterpolation": true,
+                                                  "Components": [
+                                                    {
+                                                      "__type": "Sandbox.SkinnedModelRenderer",
+                                                      "__guid": "f995d77a-dc60-4a94-a53f-a318a044c370",
+                                                      "BodyGroups": 18446744073709551615,
+                                                      "CreateBoneObjects": false,
+                                                      "RenderType": "On",
+                                                      "Tint": "1,1,1,1",
+                                                      "UseAnimGraph": true
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
@@ -1359,54 +1370,6 @@
       ]
     },
     {
-      "__guid": "0224ac94-de63-4632-9f87-8101d878fde6",
-      "Flags": 0,
-      "Name": "SMGPowerUp",
-      "Position": "-16,-384,96",
-      "Scale": "3,3,3",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "AddGunTrigger",
-          "__guid": "f1cc5bf2-ae8c-4f60-a2c0-080dd1b50fca",
-          "Async": false,
-          "Gun": {
-            "_type": "gameobject",
-            "prefab": "prefabs/ducc.prefab"
-          },
-          "GunModel": "models/weapons/sbox_smg_mp5/w_mp5.vmdl",
-          "Time": 0
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "394aea28-94e0-4993-8d7a-3f652651ca7f",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
-        },
-        {
-          "__type": "Spinner",
-          "__guid": "a759e91e-dbff-4fb6-a807-9c4e49762faa",
-          "rotation": "0,0,0,0"
-        },
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "4d7c9866-dd60-4712-b91c-de930b22ab48",
-          "BodyGroups": 18446744073709551615,
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Spinner",
-          "__guid": "2f156dbb-db36-4811-93d1-1f052405403d",
-          "rotation": "0,0,0.04361939,0.9990482"
-        }
-      ]
-    },
-    {
       "__guid": "2f6b235a-3534-4870-a55e-76b6c57ab91e",
       "Flags": 0,
       "Name": "Spawn",
@@ -1462,6 +1425,7 @@
       "Flags": 0,
       "Name": "ItemSpawner",
       "Position": "45.64879,-292.8463,57.88223",
+      "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
       "Components": [
@@ -1474,6 +1438,10 @@
             {
               "_type": "gameobject",
               "prefab": "prefabs/old prefabs/healthboost.prefab"
+            },
+            {
+              "_type": "gameobject",
+              "prefab": "prefabs/smgpowerup.prefab"
             }
           ],
           "RandomSpawnRate": false,
@@ -1561,6 +1529,56 @@
           }
         }
       ]
+    },
+    {
+      "__guid": "7e9db2f5-39c1-4d22-a7ef-2aec76b606d7",
+      "Flags": 0,
+      "Name": "RpgPowerup",
+      "Position": "17.53296,-310.731,64.00002",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "AddGunTrigger",
+          "__guid": "f1607b3b-f872-4fcc-855f-6718ae5187a0",
+          "Async": false,
+          "Gun": {
+            "_type": "gameobject",
+            "prefab": "prefabs/rpg.prefab"
+          },
+          "GunModel": "models/weapons/rpg7.vmdl",
+          "Offset": "2.836,0.417,-4.287",
+          "Time": 5
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "21ff457b-f462-453f-b898-c29c76b40f13",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "25,25,25",
+          "Static": false
+        },
+        {
+          "__type": "Spinner",
+          "__guid": "7ad929a6-2238-4d29-8a39-b6d64325057e",
+          "rotation": "0,0,0,0"
+        },
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "d96976af-d9d3-4835-bbd3-769a3ce3593a",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/weapons/rpg7.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Spinner",
+          "__guid": "51ca2f1e-a515-4af8-962d-3ada758d23d4",
+          "rotation": "0,0,0.04361939,0.9990482"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -1586,10 +1604,9 @@
   },
   "Title": "newmainscene",
   "Description": "",
-  "LastSaved": "2024-05-31T17:51:03.8269831-04:00",
+  "LastSaved": "2024-06-01T17:48:34.480023-04:00",
   "ResourceVersion": 1,
   "__references": [
-    "facepunch.w_mp5",
     "fpopium.bookshelf_01",
     "fpopium.carpet_d2",
     "fpopium.ceramic_tiles_b",

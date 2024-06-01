@@ -8,6 +8,7 @@ public sealed class SMG : Component
 	[Property] public GameObject impactEffect { get; set; }
 	public CitizenAnimationHelper playerAnimation { get; set; }
 	[Property] public SoundEvent shootSound { get; set; }
+	public Inventory inventory { get; set; }
 	public GameObject body { get; set; }
 	[Property] public long ammo { get; set; }
 	public TimeSince timeSinceShoot = 0;
@@ -18,6 +19,7 @@ public sealed class SMG : Component
 	protected override void OnUpdate()
 	{
 		controller = Scene.GetAllComponents<PlayerController>().FirstOrDefault( x => !x.IsProxy);
+		inventory = Scene.GetAllComponents<Inventory>().FirstOrDefault();
 		if (controller is null) return;
 		playerAnimation = controller.animationHelper;
 		body = controller.body.GameObject;
@@ -32,7 +34,7 @@ public sealed class SMG : Component
 		}
 		if (ammo <= 0)
 		{
-			GameObject.Destroy();
+			Inventory.Instance.ResetWeapons();
 		}
 	}
 

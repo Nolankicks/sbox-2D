@@ -1,0 +1,60 @@
+{
+  "RootObject": {
+    "__guid": "0224ac94-de63-4632-9f87-8101d878fde6",
+    "Flags": 0,
+    "Name": "SMGPowerUp",
+    "Position": "-469.4952,-384,96",
+    "Scale": "5,5,5",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "Components": [
+      {
+        "__type": "AddGunTrigger",
+        "__guid": "f1cc5bf2-ae8c-4f60-a2c0-080dd1b50fca",
+        "Async": false,
+        "Gun": {
+          "_type": "gameobject",
+          "prefab": "prefabs/mp5.prefab"
+        },
+        "GunModel": "models/weapons/sbox_smg_mp5/w_mp5.vmdl",
+        "Offset": "2.836,0.417,-4.287",
+        "Time": 5
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "394aea28-94e0-4993-8d7a-3f652651ca7f",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Scale": "25,25,25",
+        "Static": false
+      },
+      {
+        "__type": "Spinner",
+        "__guid": "a759e91e-dbff-4fb6-a807-9c4e49762faa",
+        "rotation": "0,0,0,0"
+      },
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "4d7c9866-dd60-4712-b91c-de930b22ab48",
+        "BodyGroups": 3,
+        "Model": "models/weapons/sbox_smg_mp5/w_mp5.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Spinner",
+        "__guid": "2f156dbb-db36-4811-93d1-1f052405403d",
+        "rotation": "0,0,0.04361939,0.9990482"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.w_mp5"
+  ],
+  "__version": 1
+}
