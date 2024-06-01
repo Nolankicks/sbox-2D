@@ -1543,7 +1543,7 @@
         {
           "__type": "AddGunTrigger",
           "__guid": "f1607b3b-f872-4fcc-855f-6718ae5187a0",
-          "Async": false,
+          "Async": true,
           "Gun": {
             "_type": "gameobject",
             "prefab": "prefabs/rpg.prefab"
@@ -1604,7 +1604,7 @@
   },
   "Title": "newmainscene",
   "Description": "",
-  "LastSaved": "2024-06-01T17:48:34.480023-04:00",
+  "LastSaved": "2024-06-01T17:56:06.1683723-04:00",
   "ResourceVersion": 1,
   "__references": [
     "fpopium.bookshelf_01",

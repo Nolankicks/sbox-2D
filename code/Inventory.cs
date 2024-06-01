@@ -24,8 +24,9 @@ public sealed class Inventory : Component
 		CurrentObject.Destroy();
 		var newObj = obj.Clone();
 		CurrentObject = newObj;
-		obj.Parent = GameObject;
+		newObj.Parent = GameObject;
 		await GameTask.DelaySeconds(time);
+		if (obj == null) return;
 		HoldObjectRenderer.Transform.LocalPosition = Vector3.Zero;
 		HoldObjectRenderer.Enabled = false;
 		CurrentObject.Destroy();
