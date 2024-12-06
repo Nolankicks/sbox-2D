@@ -1,23 +1,73 @@
 {
   "RootObject": {
-    "Id": "ae890081-493a-4c59-9097-8a40fb031b33",
-    "Name": "Explosion",
+    "__guid": "ae890081-493a-4c59-9097-8a40fb031b33",
+    "Flags": 0,
+    "Name": "rpgexplosion",
+    "Tags": "particles",
     "Enabled": true,
     "Components": [
       {
-        "__type": "LegacyParticleSystem",
-        "ControlPoints": [],
-        "Looped": false,
-        "Particles": "particles/explosion/barrel_explosion/explosion_fire_ring.vpcf",
-        "PlaybackSpeed": 1
+        "__type": "Despawner",
+        "__guid": "a407d4d0-fa13-4c4f-86a7-734c1b646ffb",
+        "despawnTime": 0.5
       },
       {
-        "__type": "Despawner"
+        "__type": "Sandbox.SpriteRenderer",
+        "__guid": "b47ef686-d923-481a-83d1-92853ec53bec",
+        "Additive": false,
+        "CastShadows": false,
+        "Color": "1,1,1,1",
+        "DepthFeather": 0,
+        "FlipHorizontal": false,
+        "FlipVertical": false,
+        "FogStrength": 1,
+        "Lighting": false,
+        "Opaque": false,
+        "Pivot": "0.5,0.5",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "Size": "500,500",
+        "Texture": "particles/explosion/explosion003.vtex"
       }
-    ]
+    ],
+    "Children": [],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
   },
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
-  "__references": []
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.explosion003#45304"
+  ],
+  "HasUnsavedChanges": false,
+  "__version": 1
 }

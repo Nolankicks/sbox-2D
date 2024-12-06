@@ -23,3 +23,5 @@ code/Editor/.vscode/*
 *.*_c
 *.los
 *.vpk
+
+.sbox/*

@@ -4,7 +4,7 @@ using Sandbox.Citizen;
 
 public sealed class Zombie : Component
 {
-	CitizenAnimationHelper citizenAnimationHelper => Components.Get<CitizenAnimationHelper>(FindMode.InSelf);
+	CitizenAnimationHelper citizenAnimationHelper => Components.Get<CitizenAnimationHelper>( FindMode.InSelf );
 	[Property] public SkinnedModelRenderer body { get; set; }
 	[Property] public CharacterController characterController { get; set; }
 	PlayerController controller => Scene.GetAllComponents<PlayerController>().FirstOrDefault();
@@ -19,8 +19,9 @@ public sealed class Zombie : Component
 	}
 	protected override void OnUpdate()
 	{
+		if ( !controller.IsValid() || !body.IsValid() || !characterController.IsValid() )
+			return;
 
-		
 		target = controller.GameObject.Transform.Position;
 		BuildWishVelocity();
 		UpdateMovement();
@@ -39,14 +40,14 @@ public sealed class Zombie : Component
 
 	void UpdateMovement()
 	{
-		
-		characterController.ApplyFriction(GetFriction());
+		characterController.ApplyFriction( GetFriction() );
 
-		if (characterController.IsOnGround)
+		if ( characterController.IsOnGround )
 		{
-			characterController.Accelerate(WishVelocity);
-			characterController.Velocity = characterController.Velocity.WithZ(0);
+			characterController.Accelerate( WishVelocity );
+			characterController.Velocity = characterController.Velocity.WithZ( 0 );
 		}
+		
 		characterController.Move();
 	}
 	float GetFriction()
@@ -57,36 +58,39 @@ public sealed class Zombie : Component
 	}
 	void UpdateAnimations()
 	{
-		
-		if ( target != Vector3.Zero )
+		if ( target != Vector3.Zero && body.IsValid() )
 		{
 			var targetRot = Rotation.LookAt( target.WithZ( Transform.Position.z ) - Transform.Position, Vector3.Up );
 			body.Transform.Rotation = Rotation.Slerp( body.Transform.Rotation, targetRot, Time.Delta * 10f );
 		}
 
-		citizenAnimationHelper.WithWishVelocity( WishVelocity );
-		citizenAnimationHelper.WithVelocity( characterController.Velocity );
-		
+		citizenAnimationHelper?.WithWishVelocity( WishVelocity );
+		citizenAnimationHelper?.WithVelocity( characterController.Velocity );
 	}
 
 	void Trace()
 	{
+		if ( !body.IsValid() )
+			return;
+
 		var lookDir = body.Transform.Rotation;
-		var tr = Scene.Trace.Ray(body.Transform.Position, body.Transform.Position + lookDir.Forward * 50).WithoutTags("bad").Run();
-		if (tr.Hit && tr.GameObject.Tags.Has("player"))
-        {
-           
-            if (timeSinceHit > 2)
-            {
-            	if (tr.GameObject.Parent.Components.TryGet<PlayerController>(out var player, FindMode.EverythingInSelfAndAncestors))
+		var tr = Scene.Trace.Ray( body.Transform.Position, body.Transform.Position + lookDir.Forward * 50 ).WithoutTags( "bad" ).Run();
+		if ( tr.Hit && tr.GameObject.Tags.Has( "player" ) )
+		{
+			if ( timeSinceHit > 2 )
+			{
+				if ( tr.GameObject.Parent.Components.TryGet<PlayerController>( out var player, FindMode.EverythingInSelfAndAncestors ) )
 				{
-					player.TakeDamage(10);
+					player.TakeDamage( 10 );
 				}
-               	timeSinceHit = 0;
-			   	Sound.Play(traceHitSound, tr.HitPosition);
-			   citizenAnimationHelper.Target.Set("b_attack", true);
-            }
-            
-        }
+
+				timeSinceHit = 0;
+
+				Sound.Play( traceHitSound, tr.HitPosition );
+
+				citizenAnimationHelper?.Target?.Set( "b_attack", true );
+			}
+
+		}
 	}
 }

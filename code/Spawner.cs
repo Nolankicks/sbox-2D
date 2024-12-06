@@ -8,35 +8,47 @@ public sealed class Spawner : Component
 {
 	[Property] public List<GameObject> ObjectsToSpawn { get; set; } = new();
 	[Property] public bool RandomSpawnRate { get; set; }
-	[Property, ShowIf("RandomSpawnRate", false)] public float SpawnRate { get; set; } = 5;
-	[Property, ShowIf("RandomSpawnRate", true)] public int MinSpawnRate { get; set; } = 1;
-	[Property, ShowIf("RandomSpawnRate", true)] public int MaxSpawnRate { get; set; } = 5;
-	protected override void OnStart() 
+	[Property, ShowIf( "RandomSpawnRate", false )] public float SpawnRate { get; set; } = 5;
+	[Property, ShowIf( "RandomSpawnRate", true )] public int MinSpawnRate { get; set; } = 1;
+	[Property, ShowIf( "RandomSpawnRate", true )] public int MaxSpawnRate { get; set; } = 5;
+	
+	protected override void OnStart()
 	{
 		_ = SpawnItems();
 	}
 
 	public async Task SpawnItems()
-{
-    while (true)
-    {
-        var spawns = Scene.GetAllComponents<SpawnPoint>().ToList();
-        var randomSpawn = Game.Random.FromList(spawns);
-        var randomObject = Game.Random.FromList(ObjectsToSpawn);
+	{
+		while ( true )
+		{
+			var spawns = Scene?.GetAllComponents<SpawnPoint>()?.ToList();
 
-        if (randomSpawn != null && randomObject != null)
-        {
-            var clonedObject = randomObject.Clone(randomSpawn.Transform.World);
-        }
+			if ( spawns?.Count == 0 )
+				return;
+			
+			var randomSpawn = Game.Random.FromList( spawns );
 
-        if (RandomSpawnRate)
-        {
-            await GameTask.DelayRealtimeSeconds(Random.Shared.Int(MinSpawnRate, MaxSpawnRate));
-        }
-        else
-        {
-            await GameTask.DelayRealtimeSeconds(SpawnRate);
-        }
-    }
-}
+			if ( !randomSpawn.IsValid() )
+				return;
+			
+			if ( ObjectsToSpawn is not null && ObjectsToSpawn.Count == 0 )
+				return;
+			
+			var randomObject = Game.Random.FromList( ObjectsToSpawn );
+
+			if ( randomSpawn.IsValid() && randomObject.IsValid() )
+			{
+				randomObject?.Clone( randomSpawn.Transform.World );
+			}
+
+			if ( RandomSpawnRate )
+			{
+				await Task.DelayRealtimeSeconds( Random.Shared.Int( MinSpawnRate, MaxSpawnRate ) );
+			}
+			else
+			{
+				await Task.DelayRealtimeSeconds( SpawnRate );
+			}
+		}
+	}
 }

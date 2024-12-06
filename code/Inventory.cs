@@ -9,50 +9,78 @@ public sealed class Inventory : Component
 	protected override void OnStart()
 	{
 		Instance = this;
-		HoldObjectRenderer.Enabled = false;
-		if (IsProxy) return;
+
+		if ( HoldObjectRenderer.IsValid() )
+			HoldObjectRenderer.Enabled = false;
+
+		if ( IsProxy ) return;
+
 		var newFists = FistsObject.Clone();
 		CurrentObject = newFists;
 		newFists.Parent = GameObject;
 	}
 
-	public async void SetCurrentObjectAsync(GameObject obj, Model GunModel, float time, Vector3 Offset = default)
+	public async void SetCurrentObjectAsync( GameObject obj, Model GunModel, float time, Vector3 Offset = default )
 	{
-		HoldObjectRenderer.Enabled = true;
-		HoldObjectRenderer.Transform.LocalPosition = Offset;
-		HoldObjectRenderer.Model = GunModel;
-		CurrentObject.Destroy();
+		if ( HoldObjectRenderer.IsValid() )
+		{
+			HoldObjectRenderer.Enabled = true;
+			HoldObjectRenderer.Transform.LocalPosition = Offset;
+			HoldObjectRenderer.Model = GunModel;
+		}
+
+		CurrentObject?.Destroy();
+
 		var newObj = obj.Clone();
 		CurrentObject = newObj;
 		newObj.Parent = GameObject;
-		await GameTask.DelaySeconds(time);
-		if (obj == null) return;
-		HoldObjectRenderer.Transform.LocalPosition = Vector3.Zero;
-		HoldObjectRenderer.Enabled = false;
-		CurrentObject.Destroy();
+
+		await Task.DelaySeconds( time );
+
+		if ( HoldObjectRenderer.IsValid() )
+		{
+			HoldObjectRenderer.Transform.LocalPosition = Vector3.Zero;
+			HoldObjectRenderer.Enabled = false;
+			CurrentObject.Destroy();
+		}
+
 		var newFists = FistsObject.Clone();
 		CurrentObject = newFists;
-		FistsObject.Parent = GameObject;
+		newFists.Parent = GameObject;
 	}
-	public void SetCurrentObject(GameObject obj, Model GunModel, Vector3 Offset = default)
+
+	public void SetCurrentObject( GameObject obj, Model GunModel, Vector3 Offset = default )
 	{
-		if (IsProxy) return;
-		HoldObjectRenderer.Enabled = true;
-		HoldObjectRenderer.Transform.LocalPosition = Offset;
-		HoldObjectRenderer.Model = GunModel;
-		CurrentObject.Destroy();
+		if ( IsProxy ) return;
+
+		if ( HoldObjectRenderer.IsValid() )
+		{
+			HoldObjectRenderer.Enabled = true;
+			HoldObjectRenderer.Transform.LocalPosition = Offset;
+			HoldObjectRenderer.Model = GunModel;
+		}
+
+		CurrentObject?.Destroy();
+
 		var newObj = obj.Clone();
 		newObj.NetworkSpawn();
+
 		CurrentObject = newObj;
 		newObj.Parent = GameObject;
 	}
+
 	public void ResetWeapons()
 	{
-		if (IsProxy) return;
-		HoldObjectRenderer.Transform.LocalPosition = Vector3.Zero;
-		HoldObjectRenderer.Enabled = false;
-		CurrentObject.Destroy();
-		var newFists = FistsObject.Clone();
+		if ( IsProxy ) return;
+
+		if ( HoldObjectRenderer.IsValid() )
+		{
+			HoldObjectRenderer.Transform.LocalPosition = Vector3.Zero;
+			HoldObjectRenderer.Enabled = false;
+			CurrentObject.Destroy();
+		}
+
+		var newFists = FistsObject?.Clone();
 		CurrentObject = newFists;
 		newFists.Parent = GameObject;
 	}
